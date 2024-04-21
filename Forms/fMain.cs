@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Elearning.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,9 @@ namespace Elearning
 
         private void fMain_Load(object sender, EventArgs e)
         {
-            panelMain.Controls.Add(new UserControls.ucMain());
+            ucMain ucMain = new ucMain();
+            ucMain.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(ucMain);
         }
     }
 }

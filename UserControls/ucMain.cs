@@ -17,28 +17,10 @@ namespace Elearning.UserControls
             InitializeComponent();
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            btnHome.BackColor = Color.FromArgb(66, 135, 245);
-            btnMyLearning.BackColor = Color.White;
-
-            // set ucHome to the panelMain
-        }
-
-        private void btnMyLearning_Click(object sender, EventArgs e)
-        {
-            btnMyLearning.BackColor = Color.FromArgb(66, 135, 245);
-            btnHome.BackColor = Color.White;
-
-            // set ucMyLearning to the panelMain
-        }
-
         private void ucMain_Load(object sender, EventArgs e)
         {
-            btnHome.BackColor = Color.FromArgb(66, 135, 245);
-            btnMyLearning.BackColor = Color.White;
-
-            // set ucHome to the panelMain
+            // set ucHome to the tabHome
+            // set ucMyLearning to the tabMyLearning
         }
     }
 }

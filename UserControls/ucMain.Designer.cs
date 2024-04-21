@@ -28,74 +28,82 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelTab = new System.Windows.Forms.Panel();
-            this.btnMyLearning = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
-            this.panelMain = new System.Windows.Forms.Panel();
-            this.panelTab.SuspendLayout();
+            this.tabControl = new Siticone.Desktop.UI.WinForms.SiticoneTabControl();
+            this.tabHome = new System.Windows.Forms.TabPage();
+            this.tabMyLearning = new System.Windows.Forms.TabPage();
+            this.tabControl.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelTab
+            // tabControl
             // 
-            this.panelTab.Controls.Add(this.btnMyLearning);
-            this.panelTab.Controls.Add(this.btnHome);
-            this.panelTab.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTab.Location = new System.Drawing.Point(0, 0);
-            this.panelTab.Name = "panelTab";
-            this.panelTab.Size = new System.Drawing.Size(1222, 77);
-            this.panelTab.TabIndex = 0;
+            this.tabControl.Controls.Add(this.tabHome);
+            this.tabControl.Controls.Add(this.tabMyLearning);
+            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl.ItemSize = new System.Drawing.Size(200, 60);
+            this.tabControl.Location = new System.Drawing.Point(0, 0);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(1222, 753);
+            this.tabControl.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
+            this.tabControl.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(140)))), ((int)(((byte)(231)))));
+            this.tabControl.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl.TabButtonHoverState.ForeColor = System.Drawing.Color.White;
+            this.tabControl.TabButtonHoverState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.tabControl.TabButtonIdleState.BorderColor = System.Drawing.Color.Empty;
+            this.tabControl.TabButtonIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.tabControl.TabButtonIdleState.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl.TabButtonIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(171)))), ((int)(((byte)(238)))));
+            this.tabControl.TabButtonIdleState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.tabControl.TabButtonSelectedState.BorderColor = System.Drawing.Color.Empty;
+            this.tabControl.TabButtonSelectedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.tabControl.TabButtonSelectedState.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl.TabButtonSelectedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.tabControl.TabButtonSelectedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.tabControl.TabButtonSize = new System.Drawing.Size(200, 60);
+            this.tabControl.TabIndex = 0;
+            this.tabControl.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.tabControl.TabMenuOrientation = Siticone.Desktop.UI.WinForms.TabMenuOrientation.HorizontalTop;
             // 
-            // btnMyLearning
+            // tabHome
             // 
-            this.btnMyLearning.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnMyLearning.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMyLearning.Location = new System.Drawing.Point(238, 0);
-            this.btnMyLearning.Name = "btnMyLearning";
-            this.btnMyLearning.Size = new System.Drawing.Size(238, 77);
-            this.btnMyLearning.TabIndex = 1;
-            this.btnMyLearning.Text = "My learning";
-            this.btnMyLearning.UseVisualStyleBackColor = true;
-            this.btnMyLearning.Click += new System.EventHandler(this.btnMyLearning_Click);
+            this.tabHome.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabHome.Location = new System.Drawing.Point(4, 74);
+            this.tabHome.Name = "tabHome";
+            this.tabHome.Padding = new System.Windows.Forms.Padding(3);
+            this.tabHome.Size = new System.Drawing.Size(1214, 675);
+            this.tabHome.TabIndex = 0;
+            this.tabHome.Text = "Home";
+            this.tabHome.UseVisualStyleBackColor = true;
             // 
-            // btnHome
+            // tabMyLearning
             // 
-            this.btnHome.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnHome.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.Location = new System.Drawing.Point(0, 0);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(238, 77);
-            this.btnHome.TabIndex = 0;
-            this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // panelMain
-            // 
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 77);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1222, 676);
-            this.panelMain.TabIndex = 1;
+            this.tabMyLearning.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabMyLearning.Location = new System.Drawing.Point(4, 64);
+            this.tabMyLearning.Name = "tabMyLearning";
+            this.tabMyLearning.Padding = new System.Windows.Forms.Padding(3);
+            this.tabMyLearning.Size = new System.Drawing.Size(1214, 685);
+            this.tabMyLearning.TabIndex = 1;
+            this.tabMyLearning.Text = "My Learning";
+            this.tabMyLearning.UseVisualStyleBackColor = true;
             // 
             // ucMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panelMain);
-            this.Controls.Add(this.panelTab);
+            this.Controls.Add(this.tabControl);
             this.Name = "ucMain";
             this.Size = new System.Drawing.Size(1222, 753);
             this.Load += new System.EventHandler(this.ucMain_Load);
-            this.panelTab.ResumeLayout(false);
+            this.tabControl.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panelTab;
-        private System.Windows.Forms.Panel panelMain;
-        private System.Windows.Forms.Button btnMyLearning;
-        private System.Windows.Forms.Button btnHome;
+        private Siticone.Desktop.UI.WinForms.SiticoneTabControl tabControl;
+        private System.Windows.Forms.TabPage tabHome;
+        private System.Windows.Forms.TabPage tabMyLearning;
     }
 }

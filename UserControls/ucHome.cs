@@ -10,21 +10,26 @@ using System.Windows.Forms;
 
 namespace Elearning.UserControls
 {
-    public partial class ucMain : UserControl
+    public partial class ucHome : UserControl
     {
         public EventHandler viewDetailsClicked;
-        public ucMain()
+        public ucHome()
         {
             InitializeComponent();
+            this.flowLayout.AutoScroll = true;
+            this.flowLayout.VerticalScroll.Visible = true;
         }
 
-        private void ucMain_Load(object sender, EventArgs e)
+        private void ucHome_Load(object sender, EventArgs e)
         {
-            // set ucHome to the tabHome
-            ucHome ucHome = new ucHome();
-            ucHome.Dock = DockStyle.Fill;
-            ucHome.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
-            tabHome.Controls.Add(ucHome);
+            for (int i = 0; i < 10; i++)
+            {
+                ucCoursePreview item = new ucCoursePreview();
+                item.Dock = DockStyle.Top;
+                item.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
+                this.flowLayout.Controls.Add(item);
+            }
+
         }
 
         private void ucCoursePreview_viewDetailsClicked(object sender, EventArgs e)

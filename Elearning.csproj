@@ -63,6 +63,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\ucCourseInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucCourseInfo.Designer.cs">
+      <DependentUpon>ucCourseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucCoursePreview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucCoursePreview.Designer.cs">
+      <DependentUpon>ucCoursePreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucHome.Designer.cs">
+      <DependentUpon>ucHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucMain.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -85,6 +103,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\ucCourseInfo.resx">
+      <DependentUpon>ucCourseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucCoursePreview.resx">
+      <DependentUpon>ucCoursePreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucHome.resx">
+      <DependentUpon>ucHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucMain.resx">
       <DependentUpon>ucMain.cs</DependentUpon>
     </EmbeddedResource>

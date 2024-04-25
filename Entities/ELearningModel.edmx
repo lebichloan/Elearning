@@ -1,0 +1,751 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ELEARNINGModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ACCOUNT">
+          <Key>
+            <PropertyRef Name="acc_id" />
+          </Key>
+          <Property Name="acc_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fullname" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="username" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="email" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="avatar" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="user_password" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="user_role" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="COURSE">
+          <Key>
+            <PropertyRef Name="course_id" />
+          </Key>
+          <Property Name="course_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="course_name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="lecturer" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="course_image" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="created_by" Type="int" Nullable="false" />
+          <Property Name="price" Type="int" Nullable="false" />
+          <Property Name="course_description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="stars" Type="numeric" Precision="4" Scale="2" />
+        </EntityType>
+        <EntityType Name="COURSEPART">
+          <Key>
+            <PropertyRef Name="part_id" />
+          </Key>
+          <Property Name="part_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="course_id" Type="int" Nullable="false" />
+          <Property Name="part_name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="COURSERESOURCE">
+          <Key>
+            <PropertyRef Name="resource_id" />
+          </Key>
+          <Property Name="resource_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="part_id" Type="int" Nullable="false" />
+          <Property Name="resource_name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="resource_type" Type="int" Nullable="false" />
+          <Property Name="resource_filename" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="allow_download" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="COURSEREVIEW">
+          <Key>
+            <PropertyRef Name="review_id" />
+          </Key>
+          <Property Name="review_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="register_id" Type="int" Nullable="false" />
+          <Property Name="review_time" Type="datetime" Nullable="false" />
+          <Property Name="content" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="stars" Type="numeric" Precision="4" Scale="2" />
+        </EntityType>
+        <EntityType Name="COURSETEST">
+          <Key>
+            <PropertyRef Name="test_id" />
+          </Key>
+          <Property Name="test_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="part_id" Type="int" Nullable="false" />
+          <Property Name="test_name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="mandatory" Type="int" Nullable="false" />
+          <Property Name="test_maxtime" Type="time" Precision="7" Nullable="false" />
+          <Property Name="total_score" Type="int" Nullable="false" />
+          <Property Name="score_to_pass" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="REGISTER">
+          <Key>
+            <PropertyRef Name="register_id" />
+          </Key>
+          <Property Name="register_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="learner_id" Type="int" Nullable="false" />
+          <Property Name="course_id" Type="int" Nullable="false" />
+          <Property Name="registered_date" Type="datetime" Nullable="false" />
+          <Property Name="register_status" Type="int" Nullable="false" />
+          <Property Name="completion_score" Type="int" />
+          <Property Name="course_certificate" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="TESTQUESTION">
+          <Key>
+            <PropertyRef Name="question_id" />
+          </Key>
+          <Property Name="question_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="test_id" Type="int" Nullable="false" />
+          <Property Name="question_description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="question_type" Type="int" Nullable="false" />
+          <Property Name="choices" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="answer" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="score" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TESTRESULT">
+          <Key>
+            <PropertyRef Name="result_id" />
+          </Key>
+          <Property Name="result_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="register_id" Type="int" Nullable="false" />
+          <Property Name="test_id" Type="int" Nullable="false" />
+          <Property Name="test_ordinal" Type="int" Nullable="false" />
+          <Property Name="test_score" Type="int" Nullable="false" />
+          <Property Name="test_time" Type="time" Precision="7" Nullable="false" />
+          <Property Name="is_passed" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__COURSE__created___52593CB8">
+          <End Role="ACCOUNT" Type="Self.ACCOUNT" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="COURSE" Type="Self.COURSE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ACCOUNT">
+              <PropertyRef Name="acc_id" />
+            </Principal>
+            <Dependent Role="COURSE">
+              <PropertyRef Name="created_by" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__COURSEPAR__cours__571DF1D5">
+          <End Role="COURSE" Type="Self.COURSE" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="COURSEPART" Type="Self.COURSEPART" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COURSE">
+              <PropertyRef Name="course_id" />
+            </Principal>
+            <Dependent Role="COURSEPART">
+              <PropertyRef Name="course_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__COURSERES__part___59FA5E80">
+          <End Role="COURSEPART" Type="Self.COURSEPART" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="COURSERESOURCE" Type="Self.COURSERESOURCE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COURSEPART">
+              <PropertyRef Name="part_id" />
+            </Principal>
+            <Dependent Role="COURSERESOURCE">
+              <PropertyRef Name="part_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__COURSEREV__regis__66603565">
+          <End Role="REGISTER" Type="Self.REGISTER" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="COURSEREVIEW" Type="Self.COURSEREVIEW" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="REGISTER">
+              <PropertyRef Name="register_id" />
+            </Principal>
+            <Dependent Role="COURSEREVIEW">
+              <PropertyRef Name="register_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__COURSETES__part___5CD6CB2B">
+          <End Role="COURSEPART" Type="Self.COURSEPART" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="COURSETEST" Type="Self.COURSETEST" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COURSEPART">
+              <PropertyRef Name="part_id" />
+            </Principal>
+            <Dependent Role="COURSETEST">
+              <PropertyRef Name="part_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__REGISTER__course__6383C8BA">
+          <End Role="COURSE" Type="Self.COURSE" Multiplicity="1" />
+          <End Role="REGISTER" Type="Self.REGISTER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COURSE">
+              <PropertyRef Name="course_id" />
+            </Principal>
+            <Dependent Role="REGISTER">
+              <PropertyRef Name="course_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__REGISTER__learne__628FA481">
+          <End Role="ACCOUNT" Type="Self.ACCOUNT" Multiplicity="1" />
+          <End Role="REGISTER" Type="Self.REGISTER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ACCOUNT">
+              <PropertyRef Name="acc_id" />
+            </Principal>
+            <Dependent Role="REGISTER">
+              <PropertyRef Name="learner_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TESTQUEST__test___5FB337D6">
+          <End Role="COURSETEST" Type="Self.COURSETEST" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TESTQUESTION" Type="Self.TESTQUESTION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COURSETEST">
+              <PropertyRef Name="test_id" />
+            </Principal>
+            <Dependent Role="TESTQUESTION">
+              <PropertyRef Name="test_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TESTRESUL__regis__6A30C649">
+          <End Role="REGISTER" Type="Self.REGISTER" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TESTRESULT" Type="Self.TESTRESULT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="REGISTER">
+              <PropertyRef Name="register_id" />
+            </Principal>
+            <Dependent Role="TESTRESULT">
+              <PropertyRef Name="register_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TESTRESUL__test___6B24EA82">
+          <End Role="COURSETEST" Type="Self.COURSETEST" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TESTRESULT" Type="Self.TESTRESULT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COURSETEST">
+              <PropertyRef Name="test_id" />
+            </Principal>
+            <Dependent Role="TESTRESULT">
+              <PropertyRef Name="test_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ELEARNINGModelStoreContainer">
+          <EntitySet Name="ACCOUNT" EntityType="Self.ACCOUNT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="COURSE" EntityType="Self.COURSE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="COURSEPART" EntityType="Self.COURSEPART" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="COURSERESOURCE" EntityType="Self.COURSERESOURCE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="COURSEREVIEW" EntityType="Self.COURSEREVIEW" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="COURSETEST" EntityType="Self.COURSETEST" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="REGISTER" EntityType="Self.REGISTER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TESTQUESTION" EntityType="Self.TESTQUESTION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TESTRESULT" EntityType="Self.TESTRESULT" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__COURSE__created___52593CB8" Association="Self.FK__COURSE__created___52593CB8">
+            <End Role="ACCOUNT" EntitySet="ACCOUNT" />
+            <End Role="COURSE" EntitySet="COURSE" />
+          </AssociationSet>
+          <AssociationSet Name="FK__COURSEPAR__cours__571DF1D5" Association="Self.FK__COURSEPAR__cours__571DF1D5">
+            <End Role="COURSE" EntitySet="COURSE" />
+            <End Role="COURSEPART" EntitySet="COURSEPART" />
+          </AssociationSet>
+          <AssociationSet Name="FK__COURSERES__part___59FA5E80" Association="Self.FK__COURSERES__part___59FA5E80">
+            <End Role="COURSEPART" EntitySet="COURSEPART" />
+            <End Role="COURSERESOURCE" EntitySet="COURSERESOURCE" />
+          </AssociationSet>
+          <AssociationSet Name="FK__COURSEREV__regis__66603565" Association="Self.FK__COURSEREV__regis__66603565">
+            <End Role="REGISTER" EntitySet="REGISTER" />
+            <End Role="COURSEREVIEW" EntitySet="COURSEREVIEW" />
+          </AssociationSet>
+          <AssociationSet Name="FK__COURSETES__part___5CD6CB2B" Association="Self.FK__COURSETES__part___5CD6CB2B">
+            <End Role="COURSEPART" EntitySet="COURSEPART" />
+            <End Role="COURSETEST" EntitySet="COURSETEST" />
+          </AssociationSet>
+          <AssociationSet Name="FK__REGISTER__course__6383C8BA" Association="Self.FK__REGISTER__course__6383C8BA">
+            <End Role="COURSE" EntitySet="COURSE" />
+            <End Role="REGISTER" EntitySet="REGISTER" />
+          </AssociationSet>
+          <AssociationSet Name="FK__REGISTER__learne__628FA481" Association="Self.FK__REGISTER__learne__628FA481">
+            <End Role="ACCOUNT" EntitySet="ACCOUNT" />
+            <End Role="REGISTER" EntitySet="REGISTER" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TESTQUEST__test___5FB337D6" Association="Self.FK__TESTQUEST__test___5FB337D6">
+            <End Role="COURSETEST" EntitySet="COURSETEST" />
+            <End Role="TESTQUESTION" EntitySet="TESTQUESTION" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TESTRESUL__regis__6A30C649" Association="Self.FK__TESTRESUL__regis__6A30C649">
+            <End Role="REGISTER" EntitySet="REGISTER" />
+            <End Role="TESTRESULT" EntitySet="TESTRESULT" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TESTRESUL__test___6B24EA82" Association="Self.FK__TESTRESUL__test___6B24EA82">
+            <End Role="COURSETEST" EntitySet="COURSETEST" />
+            <End Role="TESTRESULT" EntitySet="TESTRESULT" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ELEARNINGModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ACCOUNT">
+          <Key>
+            <PropertyRef Name="acc_id" />
+          </Key>
+          <Property Name="acc_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fullname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="username" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="avatar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="user_password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="user_role" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="COURSEs" Relationship="Self.FK__COURSE__created___52593CB8" FromRole="ACCOUNT" ToRole="COURSE" />
+          <NavigationProperty Name="REGISTERs" Relationship="Self.FK__REGISTER__learne__628FA481" FromRole="ACCOUNT" ToRole="REGISTER" />
+        </EntityType>
+        <EntityType Name="COURSE">
+          <Key>
+            <PropertyRef Name="course_id" />
+          </Key>
+          <Property Name="course_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="course_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="lecturer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="course_image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="created_by" Type="Int32" Nullable="false" />
+          <Property Name="price" Type="Int32" Nullable="false" />
+          <Property Name="course_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="stars" Type="Decimal" Precision="4" Scale="2" />
+          <NavigationProperty Name="ACCOUNT" Relationship="Self.FK__COURSE__created___52593CB8" FromRole="COURSE" ToRole="ACCOUNT" />
+          <NavigationProperty Name="COURSEPARTs" Relationship="Self.FK__COURSEPAR__cours__571DF1D5" FromRole="COURSE" ToRole="COURSEPART" />
+          <NavigationProperty Name="REGISTERs" Relationship="Self.FK__REGISTER__course__6383C8BA" FromRole="COURSE" ToRole="REGISTER" />
+        </EntityType>
+        <EntityType Name="COURSEPART">
+          <Key>
+            <PropertyRef Name="part_id" />
+          </Key>
+          <Property Name="part_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="course_id" Type="Int32" Nullable="false" />
+          <Property Name="part_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="COURSE" Relationship="Self.FK__COURSEPAR__cours__571DF1D5" FromRole="COURSEPART" ToRole="COURSE" />
+          <NavigationProperty Name="COURSERESOURCEs" Relationship="Self.FK__COURSERES__part___59FA5E80" FromRole="COURSEPART" ToRole="COURSERESOURCE" />
+          <NavigationProperty Name="COURSETESTs" Relationship="Self.FK__COURSETES__part___5CD6CB2B" FromRole="COURSEPART" ToRole="COURSETEST" />
+        </EntityType>
+        <EntityType Name="COURSERESOURCE">
+          <Key>
+            <PropertyRef Name="resource_id" />
+          </Key>
+          <Property Name="resource_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="part_id" Type="Int32" Nullable="false" />
+          <Property Name="resource_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="resource_type" Type="Int32" Nullable="false" />
+          <Property Name="resource_filename" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="allow_download" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="COURSEPART" Relationship="Self.FK__COURSERES__part___59FA5E80" FromRole="COURSERESOURCE" ToRole="COURSEPART" />
+        </EntityType>
+        <EntityType Name="COURSEREVIEW">
+          <Key>
+            <PropertyRef Name="review_id" />
+          </Key>
+          <Property Name="review_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="register_id" Type="Int32" Nullable="false" />
+          <Property Name="review_time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="stars" Type="Decimal" Precision="4" Scale="2" />
+          <NavigationProperty Name="REGISTER" Relationship="Self.FK__COURSEREV__regis__66603565" FromRole="COURSEREVIEW" ToRole="REGISTER" />
+        </EntityType>
+        <EntityType Name="COURSETEST">
+          <Key>
+            <PropertyRef Name="test_id" />
+          </Key>
+          <Property Name="test_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="part_id" Type="Int32" Nullable="false" />
+          <Property Name="test_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mandatory" Type="Int32" Nullable="false" />
+          <Property Name="test_maxtime" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="total_score" Type="Int32" Nullable="false" />
+          <Property Name="score_to_pass" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="COURSEPART" Relationship="Self.FK__COURSETES__part___5CD6CB2B" FromRole="COURSETEST" ToRole="COURSEPART" />
+          <NavigationProperty Name="TESTQUESTIONs" Relationship="Self.FK__TESTQUEST__test___5FB337D6" FromRole="COURSETEST" ToRole="TESTQUESTION" />
+          <NavigationProperty Name="TESTRESULTs" Relationship="Self.FK__TESTRESUL__test___6B24EA82" FromRole="COURSETEST" ToRole="TESTRESULT" />
+        </EntityType>
+        <EntityType Name="REGISTER">
+          <Key>
+            <PropertyRef Name="register_id" />
+          </Key>
+          <Property Name="register_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="learner_id" Type="Int32" Nullable="false" />
+          <Property Name="course_id" Type="Int32" Nullable="false" />
+          <Property Name="registered_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="register_status" Type="Int32" Nullable="false" />
+          <Property Name="completion_score" Type="Int32" />
+          <Property Name="course_certificate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ACCOUNT" Relationship="Self.FK__REGISTER__learne__628FA481" FromRole="REGISTER" ToRole="ACCOUNT" />
+          <NavigationProperty Name="COURSE" Relationship="Self.FK__REGISTER__course__6383C8BA" FromRole="REGISTER" ToRole="COURSE" />
+          <NavigationProperty Name="COURSEREVIEWs" Relationship="Self.FK__COURSEREV__regis__66603565" FromRole="REGISTER" ToRole="COURSEREVIEW" />
+          <NavigationProperty Name="TESTRESULTs" Relationship="Self.FK__TESTRESUL__regis__6A30C649" FromRole="REGISTER" ToRole="TESTRESULT" />
+        </EntityType>
+        <EntityType Name="TESTQUESTION">
+          <Key>
+            <PropertyRef Name="question_id" />
+          </Key>
+          <Property Name="question_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="test_id" Type="Int32" Nullable="false" />
+          <Property Name="question_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="question_type" Type="Int32" Nullable="false" />
+          <Property Name="choices" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="score" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="COURSETEST" Relationship="Self.FK__TESTQUEST__test___5FB337D6" FromRole="TESTQUESTION" ToRole="COURSETEST" />
+        </EntityType>
+        <EntityType Name="TESTRESULT">
+          <Key>
+            <PropertyRef Name="result_id" />
+          </Key>
+          <Property Name="result_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="register_id" Type="Int32" Nullable="false" />
+          <Property Name="test_id" Type="Int32" Nullable="false" />
+          <Property Name="test_ordinal" Type="Int32" Nullable="false" />
+          <Property Name="test_score" Type="Int32" Nullable="false" />
+          <Property Name="test_time" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="is_passed" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="COURSETEST" Relationship="Self.FK__TESTRESUL__test___6B24EA82" FromRole="TESTRESULT" ToRole="COURSETEST" />
+          <NavigationProperty Name="REGISTER" Relationship="Self.FK__TESTRESUL__regis__6A30C649" FromRole="TESTRESULT" ToRole="REGISTER" />
+        </EntityType>
+        <Association Name="FK__COURSE__created___52593CB8">
+          <End Role="ACCOUNT" Type="Self.ACCOUNT" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="COURSE" Type="Self.COURSE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ACCOUNT">
+              <PropertyRef Name="acc_id" />
+            </Principal>
+            <Dependent Role="COURSE">
+              <PropertyRef Name="created_by" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__REGISTER__learne__628FA481">
+          <End Role="ACCOUNT" Type="Self.ACCOUNT" Multiplicity="1" />
+          <End Role="REGISTER" Type="Self.REGISTER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ACCOUNT">
+              <PropertyRef Name="acc_id" />
+            </Principal>
+            <Dependent Role="REGISTER">
+              <PropertyRef Name="learner_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__COURSEPAR__cours__571DF1D5">
+          <End Role="COURSE" Type="Self.COURSE" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="COURSEPART" Type="Self.COURSEPART" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COURSE">
+              <PropertyRef Name="course_id" />
+            </Principal>
+            <Dependent Role="COURSEPART">
+              <PropertyRef Name="course_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__REGISTER__course__6383C8BA">
+          <End Role="COURSE" Type="Self.COURSE" Multiplicity="1" />
+          <End Role="REGISTER" Type="Self.REGISTER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COURSE">
+              <PropertyRef Name="course_id" />
+            </Principal>
+            <Dependent Role="REGISTER">
+              <PropertyRef Name="course_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__COURSERES__part___59FA5E80">
+          <End Role="COURSEPART" Type="Self.COURSEPART" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="COURSERESOURCE" Type="Self.COURSERESOURCE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COURSEPART">
+              <PropertyRef Name="part_id" />
+            </Principal>
+            <Dependent Role="COURSERESOURCE">
+              <PropertyRef Name="part_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__COURSETES__part___5CD6CB2B">
+          <End Role="COURSEPART" Type="Self.COURSEPART" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="COURSETEST" Type="Self.COURSETEST" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COURSEPART">
+              <PropertyRef Name="part_id" />
+            </Principal>
+            <Dependent Role="COURSETEST">
+              <PropertyRef Name="part_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__COURSEREV__regis__66603565">
+          <End Role="REGISTER" Type="Self.REGISTER" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="COURSEREVIEW" Type="Self.COURSEREVIEW" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="REGISTER">
+              <PropertyRef Name="register_id" />
+            </Principal>
+            <Dependent Role="COURSEREVIEW">
+              <PropertyRef Name="register_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TESTQUEST__test___5FB337D6">
+          <End Role="COURSETEST" Type="Self.COURSETEST" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TESTQUESTION" Type="Self.TESTQUESTION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COURSETEST">
+              <PropertyRef Name="test_id" />
+            </Principal>
+            <Dependent Role="TESTQUESTION">
+              <PropertyRef Name="test_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TESTRESUL__test___6B24EA82">
+          <End Role="COURSETEST" Type="Self.COURSETEST" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TESTRESULT" Type="Self.TESTRESULT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COURSETEST">
+              <PropertyRef Name="test_id" />
+            </Principal>
+            <Dependent Role="TESTRESULT">
+              <PropertyRef Name="test_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TESTRESUL__regis__6A30C649">
+          <End Role="REGISTER" Type="Self.REGISTER" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TESTRESULT" Type="Self.TESTRESULT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="REGISTER">
+              <PropertyRef Name="register_id" />
+            </Principal>
+            <Dependent Role="TESTRESULT">
+              <PropertyRef Name="register_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ELEARNINGEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ACCOUNTs" EntityType="Self.ACCOUNT" />
+          <EntitySet Name="COURSEs" EntityType="Self.COURSE" />
+          <EntitySet Name="COURSEPARTs" EntityType="Self.COURSEPART" />
+          <EntitySet Name="COURSERESOURCEs" EntityType="Self.COURSERESOURCE" />
+          <EntitySet Name="COURSEREVIEWs" EntityType="Self.COURSEREVIEW" />
+          <EntitySet Name="COURSETESTs" EntityType="Self.COURSETEST" />
+          <EntitySet Name="REGISTERs" EntityType="Self.REGISTER" />
+          <EntitySet Name="TESTQUESTIONs" EntityType="Self.TESTQUESTION" />
+          <EntitySet Name="TESTRESULTs" EntityType="Self.TESTRESULT" />
+          <AssociationSet Name="FK__COURSE__created___52593CB8" Association="Self.FK__COURSE__created___52593CB8">
+            <End Role="ACCOUNT" EntitySet="ACCOUNTs" />
+            <End Role="COURSE" EntitySet="COURSEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__REGISTER__learne__628FA481" Association="Self.FK__REGISTER__learne__628FA481">
+            <End Role="ACCOUNT" EntitySet="ACCOUNTs" />
+            <End Role="REGISTER" EntitySet="REGISTERs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__COURSEPAR__cours__571DF1D5" Association="Self.FK__COURSEPAR__cours__571DF1D5">
+            <End Role="COURSE" EntitySet="COURSEs" />
+            <End Role="COURSEPART" EntitySet="COURSEPARTs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__REGISTER__course__6383C8BA" Association="Self.FK__REGISTER__course__6383C8BA">
+            <End Role="COURSE" EntitySet="COURSEs" />
+            <End Role="REGISTER" EntitySet="REGISTERs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__COURSERES__part___59FA5E80" Association="Self.FK__COURSERES__part___59FA5E80">
+            <End Role="COURSEPART" EntitySet="COURSEPARTs" />
+            <End Role="COURSERESOURCE" EntitySet="COURSERESOURCEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__COURSETES__part___5CD6CB2B" Association="Self.FK__COURSETES__part___5CD6CB2B">
+            <End Role="COURSEPART" EntitySet="COURSEPARTs" />
+            <End Role="COURSETEST" EntitySet="COURSETESTs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__COURSEREV__regis__66603565" Association="Self.FK__COURSEREV__regis__66603565">
+            <End Role="REGISTER" EntitySet="REGISTERs" />
+            <End Role="COURSEREVIEW" EntitySet="COURSEREVIEWs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TESTQUEST__test___5FB337D6" Association="Self.FK__TESTQUEST__test___5FB337D6">
+            <End Role="COURSETEST" EntitySet="COURSETESTs" />
+            <End Role="TESTQUESTION" EntitySet="TESTQUESTIONs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TESTRESUL__test___6B24EA82" Association="Self.FK__TESTRESUL__test___6B24EA82">
+            <End Role="COURSETEST" EntitySet="COURSETESTs" />
+            <End Role="TESTRESULT" EntitySet="TESTRESULTs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TESTRESUL__regis__6A30C649" Association="Self.FK__TESTRESUL__regis__6A30C649">
+            <End Role="REGISTER" EntitySet="REGISTERs" />
+            <End Role="TESTRESULT" EntitySet="TESTRESULTs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ELEARNINGModelStoreContainer" CdmEntityContainer="ELEARNINGEntities">
+          <EntitySetMapping Name="ACCOUNTs">
+            <EntityTypeMapping TypeName="ELEARNINGModel.ACCOUNT">
+              <MappingFragment StoreEntitySet="ACCOUNT">
+                <ScalarProperty Name="acc_id" ColumnName="acc_id" />
+                <ScalarProperty Name="fullname" ColumnName="fullname" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="avatar" ColumnName="avatar" />
+                <ScalarProperty Name="user_password" ColumnName="user_password" />
+                <ScalarProperty Name="user_role" ColumnName="user_role" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="COURSEs">
+            <EntityTypeMapping TypeName="ELEARNINGModel.COURSE">
+              <MappingFragment StoreEntitySet="COURSE">
+                <ScalarProperty Name="course_id" ColumnName="course_id" />
+                <ScalarProperty Name="course_name" ColumnName="course_name" />
+                <ScalarProperty Name="lecturer" ColumnName="lecturer" />
+                <ScalarProperty Name="course_image" ColumnName="course_image" />
+                <ScalarProperty Name="created_by" ColumnName="created_by" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="course_description" ColumnName="course_description" />
+                <ScalarProperty Name="stars" ColumnName="stars" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="COURSEPARTs">
+            <EntityTypeMapping TypeName="ELEARNINGModel.COURSEPART">
+              <MappingFragment StoreEntitySet="COURSEPART">
+                <ScalarProperty Name="part_id" ColumnName="part_id" />
+                <ScalarProperty Name="course_id" ColumnName="course_id" />
+                <ScalarProperty Name="part_name" ColumnName="part_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="COURSERESOURCEs">
+            <EntityTypeMapping TypeName="ELEARNINGModel.COURSERESOURCE">
+              <MappingFragment StoreEntitySet="COURSERESOURCE">
+                <ScalarProperty Name="resource_id" ColumnName="resource_id" />
+                <ScalarProperty Name="part_id" ColumnName="part_id" />
+                <ScalarProperty Name="resource_name" ColumnName="resource_name" />
+                <ScalarProperty Name="resource_type" ColumnName="resource_type" />
+                <ScalarProperty Name="resource_filename" ColumnName="resource_filename" />
+                <ScalarProperty Name="allow_download" ColumnName="allow_download" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="COURSEREVIEWs">
+            <EntityTypeMapping TypeName="ELEARNINGModel.COURSEREVIEW">
+              <MappingFragment StoreEntitySet="COURSEREVIEW">
+                <ScalarProperty Name="review_id" ColumnName="review_id" />
+                <ScalarProperty Name="register_id" ColumnName="register_id" />
+                <ScalarProperty Name="review_time" ColumnName="review_time" />
+                <ScalarProperty Name="content" ColumnName="content" />
+                <ScalarProperty Name="stars" ColumnName="stars" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="COURSETESTs">
+            <EntityTypeMapping TypeName="ELEARNINGModel.COURSETEST">
+              <MappingFragment StoreEntitySet="COURSETEST">
+                <ScalarProperty Name="test_id" ColumnName="test_id" />
+                <ScalarProperty Name="part_id" ColumnName="part_id" />
+                <ScalarProperty Name="test_name" ColumnName="test_name" />
+                <ScalarProperty Name="mandatory" ColumnName="mandatory" />
+                <ScalarProperty Name="test_maxtime" ColumnName="test_maxtime" />
+                <ScalarProperty Name="total_score" ColumnName="total_score" />
+                <ScalarProperty Name="score_to_pass" ColumnName="score_to_pass" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="REGISTERs">
+            <EntityTypeMapping TypeName="ELEARNINGModel.REGISTER">
+              <MappingFragment StoreEntitySet="REGISTER">
+                <ScalarProperty Name="register_id" ColumnName="register_id" />
+                <ScalarProperty Name="learner_id" ColumnName="learner_id" />
+                <ScalarProperty Name="course_id" ColumnName="course_id" />
+                <ScalarProperty Name="registered_date" ColumnName="registered_date" />
+                <ScalarProperty Name="register_status" ColumnName="register_status" />
+                <ScalarProperty Name="completion_score" ColumnName="completion_score" />
+                <ScalarProperty Name="course_certificate" ColumnName="course_certificate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TESTQUESTIONs">
+            <EntityTypeMapping TypeName="ELEARNINGModel.TESTQUESTION">
+              <MappingFragment StoreEntitySet="TESTQUESTION">
+                <ScalarProperty Name="question_id" ColumnName="question_id" />
+                <ScalarProperty Name="test_id" ColumnName="test_id" />
+                <ScalarProperty Name="question_description" ColumnName="question_description" />
+                <ScalarProperty Name="question_type" ColumnName="question_type" />
+                <ScalarProperty Name="choices" ColumnName="choices" />
+                <ScalarProperty Name="answer" ColumnName="answer" />
+                <ScalarProperty Name="score" ColumnName="score" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TESTRESULTs">
+            <EntityTypeMapping TypeName="ELEARNINGModel.TESTRESULT">
+              <MappingFragment StoreEntitySet="TESTRESULT">
+                <ScalarProperty Name="result_id" ColumnName="result_id" />
+                <ScalarProperty Name="register_id" ColumnName="register_id" />
+                <ScalarProperty Name="test_id" ColumnName="test_id" />
+                <ScalarProperty Name="test_ordinal" ColumnName="test_ordinal" />
+                <ScalarProperty Name="test_score" ColumnName="test_score" />
+                <ScalarProperty Name="test_time" ColumnName="test_time" />
+                <ScalarProperty Name="is_passed" ColumnName="is_passed" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

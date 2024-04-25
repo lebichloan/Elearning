@@ -1,0 +1,96 @@
+CREATE DATABASE ELEARNING
+GO
+USE ELEARNING
+
+GO
+CREATE TABLE USERS (
+	user_id INT PRIMARY KEY IDENTITY(1,1),
+	fullname NVARCHAR(MAX) NOT NULL, 
+	username NVARCHAR(MAX) NOT NULL, 
+	email NVARCHAR(MAX) NOT NULL, 
+	avatar NVARCHAR(MAX) NOT NULL, 
+	user_password NVARCHAR(MAX) NOT NULL, 
+	user_role INT NOT NULL DEFAULT 0, 
+)
+
+GO
+CREATE TABLE COURSE (
+	course_id INT PRIMARY KEY IDENTITY(1,1),
+	course_name NVARCHAR(MAX) NOT NULL, 
+	lecturer NVARCHAR(MAX) NOT NULL, 
+	course_image NVARCHAR(MAX) NOT NULL, 
+	created_by INT FOREIGN KEY REFERENCES USERS on delete cascade NOT NULL,
+	price INT NOT NULL DEFAULT 0, 
+	course_description NVARCHAR(MAX) NOT NULL, 
+	stars numeric(4,2) DEFAULT 0,
+)
+
+GO
+CREATE TABLE COURSEPART (
+	part_id INT PRIMARY KEY IDENTITY(1,1),
+	course_id INT FOREIGN KEY REFERENCES COURSE on delete cascade NOT NULL,
+	part_name NVARCHAR(MAX) NOT NULL, 
+)
+
+GO
+CREATE TABLE COURSERESOURCE (
+	resource_id INT PRIMARY KEY IDENTITY(1,1),
+	part_id INT FOREIGN KEY REFERENCES COURSEPART on delete cascade NOT NULL,
+	resource_name NVARCHAR(MAX) NOT NULL, 
+	resource_type INT NOT NULL,
+	resource_filename NVARCHAR(MAX) NOT NULL, 
+	allow_download INT NOT NULL,
+)
+
+GO
+CREATE TABLE COURSETEST (
+	test_id INT PRIMARY KEY IDENTITY(1,1),
+	part_id INT FOREIGN KEY REFERENCES COURSEPART on delete cascade NOT NULL,
+	test_name NVARCHAR(MAX) NOT NULL, 
+	mandatory INT NOT NULL,
+	test_maxtime TIME NOT NULL,
+	total_score INT NOT NULL,
+	score_to_pass INT NOT NULL,
+)
+
+GO
+CREATE TABLE TESTQUESTION (
+	question_id INT PRIMARY KEY IDENTITY(1,1),
+	test_id INT FOREIGN KEY REFERENCES COURSETEST on delete cascade NOT NULL,
+	question_description NVARCHAR(MAX) NOT NULL, 
+	question_type INT NOT NULL,
+	choices NVARCHAR(MAX) NOT NULL,
+	answer NVARCHAR(MAX) NOT NULL, 
+	score INT NOT NULL,
+)
+
+GO
+CREATE TABLE REGISTER (
+	register_id INT PRIMARY KEY IDENTITY(1,1),
+	learner_id INT REFERENCES USERS NOT NULL,
+	course_id INT REFERENCES COURSE NOT NULL,
+	registered_date DATETIME NOT NULL,
+	register_status INT NOT NULL, 
+	completion_score INT,
+	course_certificate NVARCHAR(MAX), 
+)
+
+GO
+CREATE TABLE COURSEREVIEW (
+	review_id INT PRIMARY KEY IDENTITY(1,1),
+	register_id INT FOREIGN KEY REFERENCES REGISTER on delete cascade NOT NULL,
+	review_time DATETIME NOT NULL,
+	content NVARCHAR(MAX) NOT NULL, 
+	stars numeric(4,2) DEFAULT 0,
+)
+
+GO
+CREATE TABLE TESTRESULT (
+	result_id INT PRIMARY KEY IDENTITY(1,1),
+	register_id INT FOREIGN KEY REFERENCES REGISTER on delete cascade NOT NULL,
+	test_id INT FOREIGN KEY REFERENCES COURSETEST on delete cascade NOT NULL,
+	test_ordinal INT NOT NULL,
+	test_score INT NOT NULL,
+	test_time TIME NOT NULL,
+	is_passed INT NOT NULL,
+)

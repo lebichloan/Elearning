@@ -36,6 +36,7 @@
             // 
             // tabControl
             // 
+            this.tabControl.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.tabControl.Controls.Add(this.tabHome);
             this.tabControl.Controls.Add(this.tabMyLearning);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -63,15 +64,14 @@
             this.tabControl.TabButtonSize = new System.Drawing.Size(200, 60);
             this.tabControl.TabIndex = 0;
             this.tabControl.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
-            this.tabControl.TabMenuOrientation = Siticone.Desktop.UI.WinForms.TabMenuOrientation.HorizontalTop;
             // 
             // tabHome
             // 
             this.tabHome.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabHome.Location = new System.Drawing.Point(4, 74);
+            this.tabHome.Location = new System.Drawing.Point(64, 4);
             this.tabHome.Name = "tabHome";
             this.tabHome.Padding = new System.Windows.Forms.Padding(3);
-            this.tabHome.Size = new System.Drawing.Size(1214, 675);
+            this.tabHome.Size = new System.Drawing.Size(1154, 745);
             this.tabHome.TabIndex = 0;
             this.tabHome.Text = "Home";
             this.tabHome.UseVisualStyleBackColor = true;
@@ -79,10 +79,10 @@
             // tabMyLearning
             // 
             this.tabMyLearning.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabMyLearning.Location = new System.Drawing.Point(4, 64);
+            this.tabMyLearning.Location = new System.Drawing.Point(204, 4);
             this.tabMyLearning.Name = "tabMyLearning";
             this.tabMyLearning.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMyLearning.Size = new System.Drawing.Size(1214, 685);
+            this.tabMyLearning.Size = new System.Drawing.Size(1014, 745);
             this.tabMyLearning.TabIndex = 1;
             this.tabMyLearning.Text = "My Learning";
             this.tabMyLearning.UseVisualStyleBackColor = true;

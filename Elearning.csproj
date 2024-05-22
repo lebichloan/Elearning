@@ -42,6 +42,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="QRCoder">
+      <HintPath>C:\Users\lebic\OneDrive\Hình ảnh\Ảnh chụp màn hình\CS251\Icon\QRCoder.dll</HintPath>
+    </Reference>
     <Reference Include="Siticone.Desktop.UI, Version=2.1.1.0, Culture=neutral, PublicKeyToken=9683591576b7f0b4, processorArchitecture=MSIL">
       <HintPath>packages\Siticone.Desktop.UI.2.1.1\lib\net40\Siticone.Desktop.UI.dll</HintPath>
     </Reference>
@@ -94,6 +97,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ELearningModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CourseTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CourseTest.Designer.cs">
+      <DependentUpon>CourseTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\fMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +115,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\RegisterPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegisterPayment.Designer.cs">
+      <DependentUpon>RegisterPayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\REGISTER.cs">
@@ -116,6 +131,63 @@
     </Compile>
     <Compile Include="Entities\TESTRESULT.cs">
       <DependentUpon>ELearningModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CourseResource\itemFile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CourseResource\itemFile.Designer.cs">
+      <DependentUpon>itemFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CourseResource\itemVideo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CourseResource\itemVideo.Designer.cs">
+      <DependentUpon>itemVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CourseResource\ucCoursePart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CourseResource\ucCoursePart.Designer.cs">
+      <DependentUpon>ucCoursePart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CourseTest\ucCheckbox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CourseTest\ucCheckbox.Designer.cs">
+      <DependentUpon>ucCheckbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CourseTest\ucMutiChoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CourseTest\ucMutiChoice.Designer.cs">
+      <DependentUpon>ucMutiChoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CourseTest\ucShortAnswer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CourseTest\ucShortAnswer.Designer.cs">
+      <DependentUpon>ucShortAnswer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CourseTest\ucTestQuestion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CourseTest\ucTestQuestion.Designer.cs">
+      <DependentUpon>ucTestQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CourseTest\ucTotal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CourseTest\ucTotal.Designer.cs">
+      <DependentUpon>ucTotal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucCourse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucCourse.Designer.cs">
+      <DependentUpon>ucCourse.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ucCourseInfo.cs">
       <SubType>UserControl</SubType>
@@ -141,11 +213,17 @@
     <Compile Include="UserControls\ucMain.Designer.cs">
       <DependentUpon>ucMain.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\CourseTest.resx">
+      <DependentUpon>CourseTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegisterPayment.resx">
+      <DependentUpon>RegisterPayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -157,6 +235,33 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\CourseResource\itemFile.resx">
+      <DependentUpon>itemFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CourseResource\itemVideo.resx">
+      <DependentUpon>itemVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CourseResource\ucCoursePart.resx">
+      <DependentUpon>ucCoursePart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CourseTest\ucCheckbox.resx">
+      <DependentUpon>ucCheckbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CourseTest\ucMutiChoice.resx">
+      <DependentUpon>ucMutiChoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CourseTest\ucShortAnswer.resx">
+      <DependentUpon>ucShortAnswer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CourseTest\ucTestQuestion.resx">
+      <DependentUpon>ucTestQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CourseTest\ucTotal.resx">
+      <DependentUpon>ucTotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucCourse.resx">
+      <DependentUpon>ucCourse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucCourseInfo.resx">
       <DependentUpon>ucCourseInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,6 +318,37 @@
       <DependentUpon>ELearningModel.edmx</DependentUpon>
       <LastGenOutput>ELearningModel.cs</LastGenOutput>
     </Content>
+    <Content Include="images\icons\circle_filled_icon.png" />
+    <Content Include="images\icons\circle_icon.png" />
+    <Content Include="images\icons\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

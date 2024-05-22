@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.conInfo = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
-            this.lbLecturer = new System.Windows.Forms.Label();
-            this.lbCourseName = new System.Windows.Forms.Label();
             this.btnViewDetails = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.lbCourseName = new System.Windows.Forms.Label();
+            this.lbLecturer = new System.Windows.Forms.Label();
             this.pbImaga = new Siticone.Desktop.UI.WinForms.SiticonePictureBox();
             this.conInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImaga)).BeginInit();
@@ -51,30 +51,6 @@
             this.conInfo.TabIndex = 1;
             this.conInfo.Text = "siticoneContainerControl1";
             // 
-            // lbLecturer
-            // 
-            this.lbLecturer.BackColor = System.Drawing.Color.Transparent;
-            this.lbLecturer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbLecturer.Font = new System.Drawing.Font("Segoe UI Symbol", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLecturer.Location = new System.Drawing.Point(4, 10);
-            this.lbLecturer.Name = "lbLecturer";
-            this.lbLecturer.Size = new System.Drawing.Size(220, 10);
-            this.lbLecturer.TabIndex = 0;
-            this.lbLecturer.Text = "Prof. Nguyen Tran Dang Vo";
-            this.lbLecturer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbCourseName
-            // 
-            this.lbCourseName.BackColor = System.Drawing.Color.Transparent;
-            this.lbCourseName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbCourseName.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCourseName.Location = new System.Drawing.Point(4, 20);
-            this.lbCourseName.Name = "lbCourseName";
-            this.lbCourseName.Size = new System.Drawing.Size(220, 50);
-            this.lbCourseName.TabIndex = 1;
-            this.lbCourseName.Text = "Introduction to Programming with C++: Basic mini course I";
-            this.lbCourseName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // btnViewDetails
             // 
             this.btnViewDetails.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -91,6 +67,30 @@
             this.btnViewDetails.TabIndex = 2;
             this.btnViewDetails.Text = "View details";
             this.btnViewDetails.Click += new System.EventHandler(this.btnViewDetails_Click);
+            // 
+            // lbCourseName
+            // 
+            this.lbCourseName.BackColor = System.Drawing.Color.Transparent;
+            this.lbCourseName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbCourseName.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCourseName.Location = new System.Drawing.Point(4, 20);
+            this.lbCourseName.Name = "lbCourseName";
+            this.lbCourseName.Size = new System.Drawing.Size(220, 50);
+            this.lbCourseName.TabIndex = 1;
+            this.lbCourseName.Text = "Introduction to Programming with C++: Basic mini course I";
+            this.lbCourseName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbLecturer
+            // 
+            this.lbLecturer.BackColor = System.Drawing.Color.Transparent;
+            this.lbLecturer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbLecturer.Font = new System.Drawing.Font("Segoe UI Symbol", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLecturer.Location = new System.Drawing.Point(4, 10);
+            this.lbLecturer.Name = "lbLecturer";
+            this.lbLecturer.Size = new System.Drawing.Size(220, 10);
+            this.lbLecturer.TabIndex = 0;
+            this.lbLecturer.Text = "Prof. Nguyen Tran Dang Vo";
+            this.lbLecturer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pbImaga
             // 

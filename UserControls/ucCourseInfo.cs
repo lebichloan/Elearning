@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Elearning.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,12 @@ namespace Elearning.UserControls
         private void btnBackHome_Click(object sender, EventArgs e)
         {
             backHomeClicked?.Invoke(this, e);
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            RegisterPayment registerPayment = new RegisterPayment();
+            registerPayment.ShowDialog();
         }
     }
 }

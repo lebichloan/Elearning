@@ -31,23 +31,23 @@
             this.lbCourseName = new System.Windows.Forms.Label();
             this.lbLecturer = new System.Windows.Forms.Label();
             this.conTop = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
-            this.siticoneContainerControl2 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
-            this.siticoneContainerControl3 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
-            this.siticoneContainerControl4 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
-            this.btnBackHome = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.btnRegister = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneContainerControl1 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
+            this.siticoneContainerControl2 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
+            this.siticoneContainerControl4 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
+            this.btnRegister = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.siticoneContainerControl3 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
+            this.btnBackHome = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.conTop.SuspendLayout();
-            this.siticoneContainerControl2.SuspendLayout();
-            this.siticoneContainerControl3.SuspendLayout();
-            this.siticoneContainerControl4.SuspendLayout();
             this.siticoneContainerControl1.SuspendLayout();
+            this.siticoneContainerControl2.SuspendLayout();
+            this.siticoneContainerControl4.SuspendLayout();
+            this.siticoneContainerControl3.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbCourseName
             // 
             this.lbCourseName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbCourseName.Font = new System.Drawing.Font("UTM Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCourseName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCourseName.Location = new System.Drawing.Point(0, 0);
             this.lbCourseName.Name = "lbCourseName";
             this.lbCourseName.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
@@ -81,6 +81,18 @@
             this.conTop.TabIndex = 2;
             this.conTop.Text = "siticoneContainerControl1";
             // 
+            // siticoneContainerControl1
+            // 
+            this.siticoneContainerControl1.Controls.Add(this.lbLecturer);
+            this.siticoneContainerControl1.Controls.Add(this.lbCourseName);
+            this.siticoneContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.siticoneContainerControl1.FillColor = System.Drawing.Color.Transparent;
+            this.siticoneContainerControl1.Location = new System.Drawing.Point(0, 0);
+            this.siticoneContainerControl1.Name = "siticoneContainerControl1";
+            this.siticoneContainerControl1.Size = new System.Drawing.Size(982, 80);
+            this.siticoneContainerControl1.TabIndex = 2;
+            this.siticoneContainerControl1.Text = "siticoneContainerControl1";
+            // 
             // siticoneContainerControl2
             // 
             this.siticoneContainerControl2.Controls.Add(this.siticoneContainerControl4);
@@ -94,18 +106,6 @@
             this.siticoneContainerControl2.TabIndex = 1;
             this.siticoneContainerControl2.Text = "siticoneContainerControl2";
             // 
-            // siticoneContainerControl3
-            // 
-            this.siticoneContainerControl3.Controls.Add(this.btnBackHome);
-            this.siticoneContainerControl3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.siticoneContainerControl3.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneContainerControl3.Location = new System.Drawing.Point(127, 5);
-            this.siticoneContainerControl3.Name = "siticoneContainerControl3";
-            this.siticoneContainerControl3.Padding = new System.Windows.Forms.Padding(3);
-            this.siticoneContainerControl3.Size = new System.Drawing.Size(120, 70);
-            this.siticoneContainerControl3.TabIndex = 0;
-            this.siticoneContainerControl3.Text = "siticoneContainerControl3";
-            // 
             // siticoneContainerControl4
             // 
             this.siticoneContainerControl4.Controls.Add(this.btnRegister);
@@ -117,6 +117,35 @@
             this.siticoneContainerControl4.Size = new System.Drawing.Size(120, 70);
             this.siticoneContainerControl4.TabIndex = 3;
             this.siticoneContainerControl4.Text = "Enroll now";
+            // 
+            // btnRegister
+            // 
+            this.btnRegister.BorderRadius = 2;
+            this.btnRegister.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRegister.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRegister.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRegister.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRegister.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnRegister.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.ForeColor = System.Drawing.Color.White;
+            this.btnRegister.Location = new System.Drawing.Point(3, 3);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(114, 64);
+            this.btnRegister.TabIndex = 0;
+            this.btnRegister.Text = "Register";
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
+            // siticoneContainerControl3
+            // 
+            this.siticoneContainerControl3.Controls.Add(this.btnBackHome);
+            this.siticoneContainerControl3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.siticoneContainerControl3.FillColor = System.Drawing.Color.Transparent;
+            this.siticoneContainerControl3.Location = new System.Drawing.Point(127, 5);
+            this.siticoneContainerControl3.Name = "siticoneContainerControl3";
+            this.siticoneContainerControl3.Padding = new System.Windows.Forms.Padding(3);
+            this.siticoneContainerControl3.Size = new System.Drawing.Size(120, 70);
+            this.siticoneContainerControl3.TabIndex = 0;
+            this.siticoneContainerControl3.Text = "siticoneContainerControl3";
             // 
             // btnBackHome
             // 
@@ -135,34 +164,6 @@
             this.btnBackHome.Text = "Back to home";
             this.btnBackHome.Click += new System.EventHandler(this.btnBackHome_Click);
             // 
-            // btnRegister
-            // 
-            this.btnRegister.BorderRadius = 2;
-            this.btnRegister.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRegister.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRegister.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRegister.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRegister.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnRegister.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.ForeColor = System.Drawing.Color.White;
-            this.btnRegister.Location = new System.Drawing.Point(3, 3);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(114, 64);
-            this.btnRegister.TabIndex = 0;
-            this.btnRegister.Text = "Register";
-            // 
-            // siticoneContainerControl1
-            // 
-            this.siticoneContainerControl1.Controls.Add(this.lbLecturer);
-            this.siticoneContainerControl1.Controls.Add(this.lbCourseName);
-            this.siticoneContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.siticoneContainerControl1.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneContainerControl1.Location = new System.Drawing.Point(0, 0);
-            this.siticoneContainerControl1.Name = "siticoneContainerControl1";
-            this.siticoneContainerControl1.Size = new System.Drawing.Size(982, 80);
-            this.siticoneContainerControl1.TabIndex = 2;
-            this.siticoneContainerControl1.Text = "siticoneContainerControl1";
-            // 
             // ucCourseInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -171,10 +172,10 @@
             this.Name = "ucCourseInfo";
             this.Size = new System.Drawing.Size(1233, 667);
             this.conTop.ResumeLayout(false);
-            this.siticoneContainerControl2.ResumeLayout(false);
-            this.siticoneContainerControl3.ResumeLayout(false);
-            this.siticoneContainerControl4.ResumeLayout(false);
             this.siticoneContainerControl1.ResumeLayout(false);
+            this.siticoneContainerControl2.ResumeLayout(false);
+            this.siticoneContainerControl4.ResumeLayout(false);
+            this.siticoneContainerControl3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

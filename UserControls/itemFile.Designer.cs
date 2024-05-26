@@ -1,4 +1,4 @@
-﻿namespace Elearning.UserControls.CourseResource
+﻿namespace Elearning.UserControls
 {
     partial class itemFile
     {

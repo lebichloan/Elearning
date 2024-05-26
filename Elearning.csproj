@@ -136,12 +136,6 @@
     <Compile Include="Forms\fAdminEditCourse.Designer.cs">
       <DependentUpon>fAdminEditCourse.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\fAdminEditSyllabus.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\fAdminEditSyllabus.Designer.cs">
-      <DependentUpon>fAdminEditSyllabus.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\fAdminMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,22 +198,22 @@
     <Compile Include="UserControls\ucAdminResource.Designer.cs">
       <DependentUpon>ucAdminResource.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\CourseResource\itemFile.cs">
+    <Compile Include="UserControls\itemFile.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\CourseResource\itemFile.Designer.cs">
+    <Compile Include="UserControls\itemFile.Designer.cs">
       <DependentUpon>itemFile.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\CourseResource\itemVideo.cs">
+    <Compile Include="UserControls\itemVideo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\CourseResource\itemVideo.Designer.cs">
+    <Compile Include="UserControls\itemVideo.Designer.cs">
       <DependentUpon>itemVideo.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\CourseResource\ucCoursePart.cs">
+    <Compile Include="UserControls\ucCoursePart.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\CourseResource\ucCoursePart.Designer.cs">
+    <Compile Include="UserControls\ucCoursePart.Designer.cs">
       <DependentUpon>ucCoursePart.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\CourseTest\ucCheckbox.cs">
@@ -297,9 +291,6 @@
     <EmbeddedResource Include="Forms\fAdminEditCourse.resx">
       <DependentUpon>fAdminEditCourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\fAdminEditSyllabus.resx">
-      <DependentUpon>fAdminEditSyllabus.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\fAdminMain.resx">
       <DependentUpon>fAdminMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -322,13 +313,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserControls\CourseResource\itemFile.resx">
+    <EmbeddedResource Include="UserControls\itemFile.resx">
       <DependentUpon>itemFile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\CourseResource\itemVideo.resx">
+    <EmbeddedResource Include="UserControls\itemVideo.resx">
       <DependentUpon>itemVideo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\CourseResource\ucCoursePart.resx">
+    <EmbeddedResource Include="UserControls\ucCoursePart.resx">
       <DependentUpon>ucCoursePart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CourseTest\ucCheckbox.resx">

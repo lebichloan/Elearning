@@ -12,15 +12,23 @@ namespace Elearning.Entities
     using System;
     using System.Collections.Generic;
     
-    public partial class COURSERESOURCE
+    public partial class CourseResource
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public CourseResource()
+        {
+            this.CourseTests = new HashSet<CourseTest>();
+        }
+    
         public int resource_id { get; set; }
-        public int part_id { get; set; }
+        public int module_id { get; set; }
         public string resource_name { get; set; }
         public int resource_type { get; set; }
         public string resource_filename { get; set; }
         public int allow_download { get; set; }
     
-        public virtual COURSEPART COURSEPART { get; set; }
+        public virtual CourseModule CourseModule { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CourseTest> CourseTests { get; set; }
     }
 }

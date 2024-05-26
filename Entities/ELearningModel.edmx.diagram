@@ -4,26 +4,26 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="08ddc4d42f314834902aa7365793a629" Name="Diagram1">
-        <EntityTypeShape EntityType="ELEARNINGModel.ACCOUNT" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="ELEARNINGModel.COURSE" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ELEARNINGModel.COURSEPART" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ELEARNINGModel.COURSERESOURCE" Width="1.5" PointX="7.5" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ELEARNINGModel.COURSEREVIEW" Width="1.5" PointX="7.5" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ELEARNINGModel.COURSETEST" Width="1.5" PointX="7.5" PointY="8.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ELEARNINGModel.REGISTER" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ELEARNINGModel.TESTQUESTION" Width="1.5" PointX="9.75" PointY="8.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ELEARNINGModel.TESTRESULT" Width="1.5" PointX="12.75" PointY="8.25" IsExpanded="true" />
-        <AssociationConnector Association="ELEARNINGModel.FK__COURSE__created___52593CB8" ManuallyRouted="false" />
-        <AssociationConnector Association="ELEARNINGModel.FK__REGISTER__learne__628FA481" ManuallyRouted="false" />
-        <AssociationConnector Association="ELEARNINGModel.FK__COURSEPAR__cours__571DF1D5" ManuallyRouted="false" />
-        <AssociationConnector Association="ELEARNINGModel.FK__REGISTER__course__6383C8BA" ManuallyRouted="false" />
-        <AssociationConnector Association="ELEARNINGModel.FK__COURSERES__part___59FA5E80" ManuallyRouted="false" />
-        <AssociationConnector Association="ELEARNINGModel.FK__COURSETES__part___5CD6CB2B" ManuallyRouted="false" />
-        <AssociationConnector Association="ELEARNINGModel.FK__COURSEREV__regis__66603565" ManuallyRouted="false" />
-        <AssociationConnector Association="ELEARNINGModel.FK__TESTQUEST__test___5FB337D6" ManuallyRouted="false" />
-        <AssociationConnector Association="ELEARNINGModel.FK__TESTRESUL__test___6B24EA82" ManuallyRouted="false" />
-        <AssociationConnector Association="ELEARNINGModel.FK__TESTRESUL__regis__6A30C649" ManuallyRouted="false" />
+      <Diagram DiagramId="0773db767483481586257469aa578f4c" Name="Diagram1">
+        <EntityTypeShape EntityType="ELearningDbModel.Account" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELearningDbModel.Course" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELearningDbModel.CourseModule" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELearningDbModel.CourseResource" Width="1.5" PointX="7.5" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELearningDbModel.CourseReview" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELearningDbModel.CourseTest" Width="1.5" PointX="9.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELearningDbModel.Register" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELearningDbModel.TestQuestion" Width="1.5" PointX="12" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELearningDbModel.TestResult" Width="1.5" PointX="15" PointY="5" IsExpanded="true" />
+        <AssociationConnector Association="ELearningDbModel.FK__Course__created___3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="ELearningDbModel.FK__Register__learne__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="ELearningDbModel.FK__CourseMod__cours__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="ELearningDbModel.FK__Register__course__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="ELearningDbModel.FK__CourseRes__modul__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="ELearningDbModel.FK__CourseTes__resou__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="ELearningDbModel.FK__CourseRev__regis__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="ELearningDbModel.FK__TestQuest__test___4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="ELearningDbModel.FK__TestResul__test___5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="ELearningDbModel.FK__TestResul__regis__5535A963" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

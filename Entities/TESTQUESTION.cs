@@ -12,7 +12,7 @@ namespace Elearning.Entities
     using System;
     using System.Collections.Generic;
     
-    public partial class TESTQUESTION
+    public partial class TestQuestion
     {
         public int question_id { get; set; }
         public int test_id { get; set; }
@@ -22,6 +22,6 @@ namespace Elearning.Entities
         public string answer { get; set; }
         public int score { get; set; }
     
-        public virtual COURSETEST COURSETEST { get; set; }
+        public virtual CourseTest CourseTest { get; set; }
     }
 }

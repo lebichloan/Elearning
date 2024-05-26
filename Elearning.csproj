@@ -61,22 +61,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\ACCOUNT.cs">
+    <Compile Include="Entities\Account.cs">
       <DependentUpon>ELearningModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities\COURSE.cs">
+    <Compile Include="Entities\Course.cs">
       <DependentUpon>ELearningModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities\COURSEPART.cs">
+    <Compile Include="Entities\CourseModule.cs">
       <DependentUpon>ELearningModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities\COURSERESOURCE.cs">
+    <Compile Include="Entities\CourseResource.cs">
       <DependentUpon>ELearningModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities\COURSEREVIEW.cs">
+    <Compile Include="Entities\CourseReview.cs">
       <DependentUpon>ELearningModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities\COURSETEST.cs">
+    <Compile Include="Entities\CourseTest.cs">
       <DependentUpon>ELearningModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\ELearningModel.Context.cs">
@@ -94,6 +94,51 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ELearningModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Register.cs">
+      <DependentUpon>ELearningModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>ELearningModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_helpdiagrams_Result.cs">
+      <DependentUpon>ELearningModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TestQuestion.cs">
+      <DependentUpon>ELearningModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TestResult.cs">
+      <DependentUpon>ELearningModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fAdminAddCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fAdminAddCourse.Designer.cs">
+      <DependentUpon>fAdminAddCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fAdminAddResource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fAdminAddResource.Designer.cs">
+      <DependentUpon>fAdminAddResource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fAdminEditCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fAdminEditCourse.Designer.cs">
+      <DependentUpon>fAdminEditCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fAdminEditSyllabus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fAdminEditSyllabus.Designer.cs">
+      <DependentUpon>fAdminEditSyllabus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fAdminMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fAdminMain.Designer.cs">
+      <DependentUpon>fAdminMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\fMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,14 +153,41 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Entities\REGISTER.cs">
-      <DependentUpon>ELearningModel.tt</DependentUpon>
+    <Compile Include="UserControls\ucAdminCourseInfo.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Entities\TESTQUESTION.cs">
-      <DependentUpon>ELearningModel.tt</DependentUpon>
+    <Compile Include="UserControls\ucAdminCourseInfo.Designer.cs">
+      <DependentUpon>ucAdminCourseInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Entities\TESTRESULT.cs">
-      <DependentUpon>ELearningModel.tt</DependentUpon>
+    <Compile Include="UserControls\ucAdminCourseModule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucAdminCourseModule.Designer.cs">
+      <DependentUpon>ucAdminCourseModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucAdminCoursePreview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucAdminCoursePreview.Designer.cs">
+      <DependentUpon>ucAdminCoursePreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucAdminEditSyllabus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucAdminEditSyllabus.Designer.cs">
+      <DependentUpon>ucAdminEditSyllabus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucAdminHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucAdminHome.Designer.cs">
+      <DependentUpon>ucAdminHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucAdminResource.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucAdminResource.Designer.cs">
+      <DependentUpon>ucAdminResource.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ucCourseInfo.cs">
       <SubType>UserControl</SubType>
@@ -141,6 +213,21 @@
     <Compile Include="UserControls\ucMain.Designer.cs">
       <DependentUpon>ucMain.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\fAdminAddCourse.resx">
+      <DependentUpon>fAdminAddCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fAdminAddResource.resx">
+      <DependentUpon>fAdminAddResource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fAdminEditCourse.resx">
+      <DependentUpon>fAdminEditCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fAdminEditSyllabus.resx">
+      <DependentUpon>fAdminEditSyllabus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fAdminMain.resx">
+      <DependentUpon>fAdminMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +244,24 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\ucAdminCourseInfo.resx">
+      <DependentUpon>ucAdminCourseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucAdminCourseModule.resx">
+      <DependentUpon>ucAdminCourseModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucAdminCoursePreview.resx">
+      <DependentUpon>ucAdminCoursePreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucAdminEditSyllabus.resx">
+      <DependentUpon>ucAdminEditSyllabus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucAdminHome.resx">
+      <DependentUpon>ucAdminHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucAdminResource.resx">
+      <DependentUpon>ucAdminResource.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucCourseInfo.resx">
       <DependentUpon>ucCourseInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +308,11 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="images\icons\videoIcon.png" />
+    <None Include="images\icons\testIcon.png" />
+    <None Include="images\icons\pdfIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Entities\ELearningModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ELearningModel.edmx</DependentUpon>
@@ -213,6 +323,8 @@
       <DependentUpon>ELearningModel.edmx</DependentUpon>
       <LastGenOutput>ELearningModel.cs</LastGenOutput>
     </Content>
+    <None Include="images\icons\remove.png" />
+    <None Include="images\icons\add.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

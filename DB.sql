@@ -1,9 +1,9 @@
-CREATE DATABASE ELEARNING
+CREATE DATABASE ELearningDb
 GO
-USE ELEARNING
+USE ELearningDb
 
 GO
-CREATE TABLE ACCOUNT (
+CREATE TABLE Account (
 	acc_id INT PRIMARY KEY IDENTITY(1,1),
 	fullname NVARCHAR(MAX) NOT NULL, 
 	username NVARCHAR(MAX) NOT NULL, 
@@ -14,39 +14,44 @@ CREATE TABLE ACCOUNT (
 )
 
 GO
-CREATE TABLE COURSE (
+
+CREATE TABLE Course (
 	course_id INT PRIMARY KEY IDENTITY(1,1),
 	course_name NVARCHAR(MAX) NOT NULL, 
 	lecturer NVARCHAR(MAX) NOT NULL, 
+	difficulty NVARCHAR(20) CHECK (difficulty IN ('Beginner', 'Intermediate', 'Advanced')) NOT NULL,
+	category NVARCHAR(50) DEFAULT 'None',
 	course_image NVARCHAR(MAX) NOT NULL, 
 	created_by INT FOREIGN KEY REFERENCES ACCOUNT on delete cascade NOT NULL,
+	created_at SMALLDATETIME,
 	price INT NOT NULL DEFAULT 0, 
 	course_description NVARCHAR(MAX) NOT NULL, 
 	stars numeric(4,2) DEFAULT 0,
 )
 
 GO
-CREATE TABLE COURSEPART (
-	part_id INT PRIMARY KEY IDENTITY(1,1),
+
+CREATE TABLE CourseModule (
+	module_id INT PRIMARY KEY IDENTITY(1,1),
 	course_id INT FOREIGN KEY REFERENCES COURSE on delete cascade NOT NULL,
-	part_name NVARCHAR(MAX) NOT NULL, 
+	module_name NVARCHAR(MAX) NOT NULL, 
 )
 
 GO
-CREATE TABLE COURSERESOURCE (
+
+CREATE TABLE CourseResource (
 	resource_id INT PRIMARY KEY IDENTITY(1,1),
-	part_id INT FOREIGN KEY REFERENCES COURSEPART on delete cascade NOT NULL,
+	module_id INT FOREIGN KEY REFERENCES CourseModule on delete cascade NOT NULL,
 	resource_name NVARCHAR(MAX) NOT NULL, 
 	resource_type INT NOT NULL,
 	resource_filename NVARCHAR(MAX) NOT NULL, 
-	allow_download INT NOT NULL,
+	allow_download INT NOT NULL DEFAULT 0,
 )
 
 GO
-CREATE TABLE COURSETEST (
+CREATE TABLE CourseTest (
 	test_id INT PRIMARY KEY IDENTITY(1,1),
-	part_id INT FOREIGN KEY REFERENCES COURSEPART on delete cascade NOT NULL,
-	test_name NVARCHAR(MAX) NOT NULL, 
+	resource_id INT FOREIGN KEY REFERENCES CourseResource on delete cascade NOT NULL,
 	mandatory INT NOT NULL,
 	test_maxtime TIME NOT NULL,
 	total_score INT NOT NULL,
@@ -54,7 +59,7 @@ CREATE TABLE COURSETEST (
 )
 
 GO
-CREATE TABLE TESTQUESTION (
+CREATE TABLE TestQuestion (
 	question_id INT PRIMARY KEY IDENTITY(1,1),
 	test_id INT FOREIGN KEY REFERENCES COURSETEST on delete cascade NOT NULL,
 	question_description NVARCHAR(MAX) NOT NULL, 
@@ -65,30 +70,32 @@ CREATE TABLE TESTQUESTION (
 )
 
 GO
-CREATE TABLE REGISTER (
+CREATE TABLE Register (
 	register_id INT PRIMARY KEY IDENTITY(1,1),
 	learner_id INT REFERENCES ACCOUNT NOT NULL,
 	course_id INT REFERENCES COURSE NOT NULL,
 	registered_date DATETIME NOT NULL,
 	register_status INT NOT NULL, 
-	completion_score INT,
+	completion_score FLOAT,
 	course_certificate NVARCHAR(MAX), 
 )
 
 GO
-CREATE TABLE COURSEREVIEW (
+
+CREATE TABLE CourseReview (
 	review_id INT PRIMARY KEY IDENTITY(1,1),
-	register_id INT FOREIGN KEY REFERENCES REGISTER on delete cascade NOT NULL,
+	register_id INT FOREIGN KEY REFERENCES Register on delete cascade NOT NULL,
 	review_time DATETIME NOT NULL,
 	content NVARCHAR(MAX) NOT NULL, 
-	stars numeric(4,2) DEFAULT 0,
+	stars INT DEFAULT 0,
 )
 
 GO
-CREATE TABLE TESTRESULT (
+
+CREATE TABLE TestResult (
 	result_id INT PRIMARY KEY IDENTITY(1,1),
-	register_id INT FOREIGN KEY REFERENCES REGISTER on delete cascade NOT NULL,
-	test_id INT FOREIGN KEY REFERENCES COURSETEST on delete cascade NOT NULL,
+	register_id INT FOREIGN KEY REFERENCES Register on delete cascade NOT NULL,
+	test_id INT FOREIGN KEY REFERENCES CourseTest on delete cascade NOT NULL,
 	test_ordinal INT NOT NULL,
 	test_score INT NOT NULL,
 	test_time TIME NOT NULL,

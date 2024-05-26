@@ -12,13 +12,13 @@ namespace Elearning.Entities
     using System;
     using System.Collections.Generic;
     
-    public partial class ACCOUNT
+    public partial class Account
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ACCOUNT()
+        public Account()
         {
-            this.COURSEs = new HashSet<COURSE>();
-            this.REGISTERs = new HashSet<REGISTER>();
+            this.Courses = new HashSet<Course>();
+            this.Registers = new HashSet<Register>();
         }
     
         public int acc_id { get; set; }
@@ -30,8 +30,8 @@ namespace Elearning.Entities
         public int user_role { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<COURSE> COURSEs { get; set; }
+        public virtual ICollection<Course> Courses { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<REGISTER> REGISTERs { get; set; }
+        public virtual ICollection<Register> Registers { get; set; }
     }
 }

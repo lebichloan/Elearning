@@ -10,16 +10,10 @@
 namespace Elearning.Entities
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class CourseReview
+    public partial class sp_helpdiagramdefinition_Result
     {
-        public int review_id { get; set; }
-        public int register_id { get; set; }
-        public System.DateTime review_time { get; set; }
-        public string content { get; set; }
-        public Nullable<int> stars { get; set; }
-    
-        public virtual Register Register { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

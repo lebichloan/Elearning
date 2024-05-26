@@ -12,7 +12,7 @@ namespace Elearning.Entities
     using System;
     using System.Collections.Generic;
     
-    public partial class TESTRESULT
+    public partial class TestResult
     {
         public int result_id { get; set; }
         public int register_id { get; set; }
@@ -22,7 +22,7 @@ namespace Elearning.Entities
         public System.TimeSpan test_time { get; set; }
         public int is_passed { get; set; }
     
-        public virtual COURSETEST COURSETEST { get; set; }
-        public virtual REGISTER REGISTER { get; set; }
+        public virtual CourseTest CourseTest { get; set; }
+        public virtual Register Register { get; set; }
     }
 }

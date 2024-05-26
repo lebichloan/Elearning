@@ -12,28 +12,31 @@ namespace Elearning.Entities
     using System;
     using System.Collections.Generic;
     
-    public partial class COURSE
+    public partial class Course
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public COURSE()
+        public Course()
         {
-            this.COURSEPARTs = new HashSet<COURSEPART>();
-            this.REGISTERs = new HashSet<REGISTER>();
+            this.CourseModules = new HashSet<CourseModule>();
+            this.Registers = new HashSet<Register>();
         }
     
         public int course_id { get; set; }
         public string course_name { get; set; }
         public string lecturer { get; set; }
+        public string difficulty { get; set; }
         public string course_image { get; set; }
         public int created_by { get; set; }
+        public Nullable<System.DateTime> created_at { get; set; }
         public int price { get; set; }
         public string course_description { get; set; }
         public Nullable<decimal> stars { get; set; }
+        public string category { get; set; }
     
-        public virtual ACCOUNT ACCOUNT { get; set; }
+        public virtual Account Account { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<COURSEPART> COURSEPARTs { get; set; }
+        public virtual ICollection<CourseModule> CourseModules { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<REGISTER> REGISTERs { get; set; }
+        public virtual ICollection<Register> Registers { get; set; }
     }
 }

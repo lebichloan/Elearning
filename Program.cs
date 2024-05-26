@@ -1,5 +1,8 @@
 ﻿using Elearning.Entities;
+using Elearning.Forms;
 using System;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -15,9 +18,40 @@ namespace Elearning
         public static string COURSES_IMG_PATH = System.IO.Path.GetFullPath(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..")) 
                                             + "\\images\\courses_images\\";
 
+        public static int TYPE_VIDEO = 0;
+        public static int TYPE_DOC = 1;
+        public static int TYPE_TEST = 2;
+
+        public static int ROLE_ADMIN = 1;
+        public static int ROLE_LEARNER = 0;
+
+        public static string[] COURSE_DIFFICULTIES = {"Beginner", "Intermediate", "Advanced" };
+        public static string[] COURSE_CATEGORIES = { "Development", "Business", "IT & Software", "Office Productivity", "Personal Development", "Design", "Marketing", "Lifestyle", "Photography", "Health & Fitness", "Music", "Teaching & Academics" };
+        public static string[] RESOURCE_TYPE = { "Video", "Document", "Test" };
         // Create a new instance of the ELEARNINGEntities, use this instance to interact with the database
         // example: var accounts = Program.provider.ACCOUNTs.ToList();
-        public static ELEARNINGEntities provider = new ELEARNINGEntities();
+        public static ELearningDbEntities provider = new ELearningDbEntities();
+
+        public static void RollBack()
+        {
+            // rollback all changes made to the database
+            var changedEntries = provider.ChangeTracker.Entries().Where(x => x.State != EntityState.Unchanged).ToList();
+
+            foreach (var entry in changedEntries)
+            {
+                switch (entry.State)
+                {
+                    case EntityState.Modified:
+                    case EntityState.Deleted:
+                        entry.State = EntityState.Modified; //Revert changes made to deleted entity.
+                        entry.State = EntityState.Unchanged;
+                        break;
+                    case EntityState.Added:
+                        entry.State = EntityState.Detached;
+                        break;
+                }
+            }
+        }
 
         /// <summary>
         /// The main entry point for the application.
@@ -27,7 +61,7 @@ namespace Elearning
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fMain());
+            Application.Run(new fAdminMain());
         }
     }
 }

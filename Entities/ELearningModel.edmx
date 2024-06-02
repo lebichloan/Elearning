@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="ELearningDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="ELearningDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Account">
           <Key>
             <PropertyRef Name="acc_id" />
@@ -96,6 +96,7 @@
           <Property Name="choices" Type="nvarchar(max)" Nullable="false" />
           <Property Name="answer" Type="nvarchar(max)" Nullable="false" />
           <Property Name="score" Type="int" Nullable="false" />
+          <Property Name="question_order" Type="int" />
         </EntityType>
         <EntityType Name="TestResult">
           <Key>
@@ -296,7 +297,8 @@
             <End Role="TestResult" EntitySet="TestResult" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ELearningDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -322,6 +324,7 @@
           <Property Name="course_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="lecturer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="difficulty" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="course_image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="created_by" Type="Int32" Nullable="false" />
           <Property Name="created_at" Type="DateTime" Precision="0" />
@@ -331,7 +334,6 @@
           <NavigationProperty Name="Account" Relationship="Self.FK__Course__created___3C69FB99" FromRole="Course" ToRole="Account" />
           <NavigationProperty Name="CourseModules" Relationship="Self.FK__CourseMod__cours__412EB0B6" FromRole="Course" ToRole="CourseModule" />
           <NavigationProperty Name="Registers" Relationship="Self.FK__Register__course__4E88ABD4" FromRole="Course" ToRole="Register" />
-          <Property Name="category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="CourseModule">
           <Key>
@@ -339,9 +341,9 @@
           </Key>
           <Property Name="module_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="course_id" Type="Int32" Nullable="false" />
+          <Property Name="module_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Course" Relationship="Self.FK__CourseMod__cours__412EB0B6" FromRole="CourseModule" ToRole="Course" />
           <NavigationProperty Name="CourseResources" Relationship="Self.FK__CourseRes__modul__440B1D61" FromRole="CourseModule" ToRole="CourseResource" />
-          <Property Name="module_name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="CourseResource">
           <Key>
@@ -408,6 +410,7 @@
           <Property Name="choices" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="score" Type="Int32" Nullable="false" />
+          <Property Name="question_order" Type="Int32" />
           <NavigationProperty Name="CourseTest" Relationship="Self.FK__TestQuest__test___4AB81AF0" FromRole="TestQuestion" ToRole="CourseTest" />
         </EntityType>
         <EntityType Name="TestResult">
@@ -610,48 +613,7 @@
             <End Role="Register" EntitySet="Registers" />
             <End Role="TestResult" EntitySet="TestResults" />
           </AssociationSet>
-          <FunctionImport Name="sp_alterdiagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-            <Parameter Name="version" Mode="In" Type="Int32" />
-            <Parameter Name="definition" Mode="In" Type="Binary" />
-          </FunctionImport>
-          <FunctionImport Name="sp_creatediagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-            <Parameter Name="version" Mode="In" Type="Int32" />
-            <Parameter Name="definition" Mode="In" Type="Binary" />
-          </FunctionImport>
-          <FunctionImport Name="sp_dropdiagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(ELearningDbModel.sp_helpdiagramdefinition_Result)">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(ELearningDbModel.sp_helpdiagrams_Result)">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="sp_renamediagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-            <Parameter Name="new_diagramname" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="sp_upgraddiagrams" />
         </EntityContainer>
-        <ComplexType Name="sp_helpdiagramdefinition_Result">
-          <Property Type="Int32" Name="version" Nullable="true" />
-          <Property Type="Binary" Name="definition" Nullable="true" />
-        </ComplexType>
-        <ComplexType Name="sp_helpdiagrams_Result">
-          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
-          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
-          <Property Type="Int32" Name="ID" Nullable="false" />
-          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
-          <Property Type="Int32" Name="OwnerID" Nullable="false" />
-        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -674,11 +636,11 @@
           <EntitySetMapping Name="Courses">
             <EntityTypeMapping TypeName="ELearningDbModel.Course">
               <MappingFragment StoreEntitySet="Course">
-                <ScalarProperty Name="category" ColumnName="category" />
                 <ScalarProperty Name="course_id" ColumnName="course_id" />
                 <ScalarProperty Name="course_name" ColumnName="course_name" />
                 <ScalarProperty Name="lecturer" ColumnName="lecturer" />
                 <ScalarProperty Name="difficulty" ColumnName="difficulty" />
+                <ScalarProperty Name="category" ColumnName="category" />
                 <ScalarProperty Name="course_image" ColumnName="course_image" />
                 <ScalarProperty Name="created_by" ColumnName="created_by" />
                 <ScalarProperty Name="created_at" ColumnName="created_at" />
@@ -691,9 +653,9 @@
           <EntitySetMapping Name="CourseModules">
             <EntityTypeMapping TypeName="ELearningDbModel.CourseModule">
               <MappingFragment StoreEntitySet="CourseModule">
-                <ScalarProperty Name="module_name" ColumnName="module_name" />
                 <ScalarProperty Name="module_id" ColumnName="module_id" />
                 <ScalarProperty Name="course_id" ColumnName="course_id" />
+                <ScalarProperty Name="module_name" ColumnName="module_name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -755,6 +717,7 @@
                 <ScalarProperty Name="choices" ColumnName="choices" />
                 <ScalarProperty Name="answer" ColumnName="answer" />
                 <ScalarProperty Name="score" ColumnName="score" />
+                <ScalarProperty Name="question_order" ColumnName="question_order" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -771,7 +734,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          </EntityContainerMapping>
+        </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>

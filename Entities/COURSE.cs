@@ -25,13 +25,13 @@ namespace Elearning.Entities
         public string course_name { get; set; }
         public string lecturer { get; set; }
         public string difficulty { get; set; }
+        public string category { get; set; }
         public string course_image { get; set; }
         public int created_by { get; set; }
         public Nullable<System.DateTime> created_at { get; set; }
         public int price { get; set; }
         public string course_description { get; set; }
         public Nullable<decimal> stars { get; set; }
-        public string category { get; set; }
     
         public virtual Account Account { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

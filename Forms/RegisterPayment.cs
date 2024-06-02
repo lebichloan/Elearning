@@ -23,64 +23,64 @@ namespace Elearning.Forms
         private void btnVisa_Click(object sender, EventArgs e)
         {
             idPayment = 1;
-            picVisa.Image = Image.FromFile("D:\\Code\\C#\\Elearning\\images\\icons\\circle_filled_icon.png");
+            picVisa.Image = Image.FromFile(Program.ICONS_PATH + "circle_filled_icon.png");
             btnVisa.BackColor = Color.WhiteSmoke;
 
-            picBanking.Image = Image.FromFile("D:\\Code\\C#\\Elearning\\images\\icons\\circle_icon.png");
+            picBanking.Image = Image.FromFile(Program.ICONS_PATH + "circle_icon.png");
             btnBanking.BackColor = Color.White;
 
-            picMomo.Image = Image.FromFile("D:\\Code\\C#\\Elearning\\images\\icons\\circle_icon.png");
+            picMomo.Image = Image.FromFile(Program.ICONS_PATH + "circle_icon.png");
             btnMoMo.BackColor = Color.White;
 
-            picCash.Image = Image.FromFile("D:\\Code\\C#\\Elearning\\images\\icons\\circle_icon.png");
+            picCash.Image = Image.FromFile(Program.ICONS_PATH + "circle_icon.png");
             btnCash.BackColor = Color.White;
         }
 
         private void btnBanking_Click(object sender, EventArgs e)
         {
             idPayment = 2;
-            picBanking.Image = Image.FromFile("D:\\Code\\C#\\Elearning\\images\\icons\\circle_filled_icon.png");
+            picBanking.Image = Image.FromFile(Program.ICONS_PATH + "circle_filled_icon.png");
             btnBanking.BackColor = Color.WhiteSmoke;
 
-            picVisa.Image = Image.FromFile("D:\\Code\\C#\\Elearning\\images\\icons\\circle_icon.png");
+            picVisa.Image = Image.FromFile(Program.ICONS_PATH + "circle_icon.png");
             btnVisa.BackColor = Color.White;
 
-            picMomo.Image = Image.FromFile("D:\\Code\\C#\\Elearning\\images\\icons\\circle_icon.png");
+            picMomo.Image = Image.FromFile(Program.ICONS_PATH + "circle_icon.png");
             btnMoMo.BackColor = Color.White;
 
-            picCash.Image = Image.FromFile("D:\\Code\\C#\\Elearning\\images\\icons\\circle_icon.png");
+            picCash.Image = Image.FromFile(Program.ICONS_PATH + "circle_icon.png");
             btnCash.BackColor = Color.White;
         }
 
         private void btnMoMo_Click(object sender, EventArgs e)
         {
             idPayment = 3;
-            picMomo.Image = Image.FromFile("D:\\Code\\C#\\Elearning\\images\\icons\\circle_filled_icon.png");
+            picMomo.Image = Image.FromFile(Program.ICONS_PATH + "circle_filled_icon.png");
             btnMoMo.BackColor = Color.WhiteSmoke;
 
-            picBanking.Image = Image.FromFile("D:\\Code\\C#\\Elearning\\images\\icons\\circle_icon.png");
+            picBanking.Image = Image.FromFile(Program.ICONS_PATH + "circle_icon.png");
             btnBanking.BackColor = Color.White;
 
-            picVisa.Image = Image.FromFile("D:\\Code\\C#\\Elearning\\images\\icons\\circle_icon.png");
+            picVisa.Image = Image.FromFile(Program.ICONS_PATH + "circle_icon.png");
             btnVisa.BackColor = Color.White;
 
-            picCash.Image = Image.FromFile("D:\\Code\\C#\\Elearning\\images\\icons\\circle_icon.png");
+            picCash.Image = Image.FromFile(Program.ICONS_PATH + "circle_icon.png");
             btnCash.BackColor = Color.White;
         }
 
         private void btnCash_Click(object sender, EventArgs e)
         {
             idPayment = 0;
-            picCash.Image = Image.FromFile("D:\\Code\\C#\\Elearning\\images\\icons\\circle_filled_icon.png");
+            picCash.Image = Image.FromFile(Program.ICONS_PATH + "circle_filled_icon.png");
             btnCash.BackColor = Color.WhiteSmoke;
 
-            picBanking.Image = Image.FromFile("D:\\Code\\C#\\Elearning\\images\\icons\\circle_icon.png");
+            picBanking.Image = Image.FromFile(Program.ICONS_PATH + "circle_icon.png");
             btnBanking.BackColor = Color.White;
 
-            picMomo.Image = Image.FromFile("D:\\Code\\C#\\Elearning\\images\\icons\\circle_icon.png");
+            picMomo.Image = Image.FromFile(Program.ICONS_PATH + "circle_icon.png");
             btnMoMo.BackColor = Color.White;
 
-            picVisa.Image = Image.FromFile("D:\\Code\\C#\\Elearning\\images\\icons\\circle_icon.png");
+            picVisa.Image = Image.FromFile(Program.ICONS_PATH + "circle_icon.png");
             btnVisa.BackColor = Color.White;
         }
 

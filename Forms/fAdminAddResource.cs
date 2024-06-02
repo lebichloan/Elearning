@@ -15,22 +15,38 @@ namespace Elearning.Forms
     public partial class fAdminAddResource : Form
     {
         public CourseModule module;
+        public CourseResource resource;
         public EventHandler evtReload;
+        bool isEdit = false;
         public fAdminAddResource()
         {
             InitializeComponent();
-        }
-
-        public fAdminAddResource(CourseModule module) : this()
-        {
-            this.module = module;
-
             for (int i = 0; i < Program.RESOURCE_TYPE.Length; ++i)
             {
                 cbType.Items.Add(Program.RESOURCE_TYPE[i]);
             }
 
             cbType.SelectedIndex = 0;
+            optNo.Checked = true;
+        }
+
+        public fAdminAddResource(CourseModule module) : this()
+        {
+            this.module = module;
+        }
+
+        public fAdminAddResource(CourseResource resource) : this()
+        {
+            // in the case of editing a resource
+            tbName.Text = resource.resource_name;
+            cbType.SelectedItem = Program.RESOURCE_TYPE[resource.resource_type];
+            cbType.Enabled = false;
+            optYes.Checked = resource.allow_download == 1;
+            optNo.Checked = resource.allow_download == 0;
+            lbTitle.Text = "Edit resource";
+
+            isEdit = true;
+            this.resource = resource;
         }
 
         private void btnChooseFile_Click(object sender, EventArgs e)
@@ -76,7 +92,7 @@ namespace Elearning.Forms
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void AddResource()
         {
             int type = 0;
             switch (cbType.SelectedItem.ToString())
@@ -126,10 +142,21 @@ namespace Elearning.Forms
                     Program.provider.SaveChanges();
                 }
 
-
+                if (type == Program.TYPE_TEST)
+                {
+                    // update the mandatory property of the test
+                    var test = Program.provider.CourseTests.Where(t => t.resource_id == id).FirstOrDefault();
+                    test.mandatory = Convert.ToInt32(optYes.Checked);
+                    Program.provider.SaveChanges();
+                    // show message box to ask if the user wants to add questions to the test
+                    if (MessageBox.Show("New test added. Would you like to add questions to the test now?", "Add questions", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        fAdminEditTest form = new fAdminEditTest(test);
+                        form.ShowDialog();  
+                    }
+                    return;
+                }
                 MessageBox.Show("Resource added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                evtReload?.Invoke(this, e);
             }
             catch (DbEntityValidationException ex)
             {
@@ -145,6 +172,38 @@ namespace Elearning.Forms
                 }
                 throw;
             }
+        }
+
+        private void EditResource()
+        {
+            resource.resource_name = tbName.Text;
+            resource.allow_download = cbType.SelectedItem.ToString() == "Video" || cbType.SelectedItem.ToString() == "Document" ? Convert.ToInt32(optYes.Checked) : 0;
+            if (tbPath.Text != "")
+            {
+                // remove the old file
+                System.IO.File.Delete(Program.RESOURCES_PATH + resource.resource_filename);
+                string path = Program.RESOURCES_PATH + resource.resource_id + tbPath.Text.Substring(tbPath.Text.LastIndexOf('.'));
+                System.IO.File.Copy(tbPath.Text, path);
+                resource.resource_filename = resource.resource_id + tbPath.Text.Substring(tbPath.Text.LastIndexOf('.'));
+            }
+            Program.provider.SaveChanges();
+
+            MessageBox.Show("Resource edited successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (isEdit)
+            {
+                EditResource();
+            }
+            else
+            {
+                AddResource();
+            }
+
+            evtReload?.Invoke(this, e);
         }
     }
 }

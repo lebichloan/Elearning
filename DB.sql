@@ -101,3 +101,23 @@ CREATE TABLE TestResult (
 	test_time TIME NOT NULL,
 	is_passed INT NOT NULL,
 )
+
+alter table TestQuestion add question_order int
+
+CREATE TRIGGER trg_Insert_CourseResource
+ON CourseResource
+AFTER INSERT
+AS
+BEGIN
+    -- Insert a new test for each inserted resource with resource_type = 2
+    INSERT INTO CourseTest (resource_id, mandatory, test_maxtime, total_score, score_to_pass)
+    SELECT 
+        resource_id,
+        0,  -- default value for mandatory
+        '00:00:00',  -- default value for test_maxtime
+        0,  -- default value for total_score
+        0   -- default value for score_to_pass
+    FROM inserted
+    WHERE resource_type = 2;
+END
+GO

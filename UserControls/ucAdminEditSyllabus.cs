@@ -94,13 +94,7 @@ namespace Elearning.UserControls
 
         private void btnSaveAll_Click(object sender, EventArgs e)
         {
-            evtExit?.Invoke(this, e);
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            // rollback changes
-            Program.RollBack();
+            Program.provider.SaveChanges();
             evtExit?.Invoke(this, e);
         }
     }

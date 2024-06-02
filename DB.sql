@@ -101,3 +101,62 @@ CREATE TABLE TestResult (
 	test_time TIME NOT NULL,
 	is_passed INT NOT NULL,
 )
+
+alter table TestQuestion add question_order int
+
+-- Trigger for handling INSERT operations
+CREATE TRIGGER trg_Insert_TestQuestion
+ON TestQuestion
+AFTER INSERT
+AS
+BEGIN
+    DECLARE @test_id INT, @max_order INT;
+
+    -- Get the test_id from the inserted row
+    SELECT @test_id = test_id FROM inserted;
+
+    -- Find the maximum order for the questions in the same test
+    SELECT @max_order = ISNULL(MAX(question_order), 0) FROM TestQuestion WHERE test_id = @test_id;
+
+    -- Update the inserted row with the next available order
+    UPDATE TestQuestion
+    SET question_order = @max_order + 1
+    WHERE question_id IN (SELECT question_id FROM inserted);
+END
+GO
+
+-- Trigger for handling DELETE operations
+CREATE TRIGGER trg_Delete_TestQuestion
+ON TestQuestion
+AFTER DELETE
+AS
+BEGIN
+    DECLARE @test_id INT, @deleted_order INT;
+
+    -- Get the test_id and the deleted order from the deleted row
+    SELECT @test_id = test_id, @deleted_order = question_order FROM deleted;
+
+    -- Update the order of the following questions
+    UPDATE TestQuestion
+    SET question_order = question_order - 1
+    WHERE test_id = @test_id AND question_order > @deleted_order;
+END
+GO
+
+CREATE TRIGGER trg_Insert_CourseResource
+ON CourseResource
+AFTER INSERT
+AS
+BEGIN
+    -- Insert a new test for each inserted resource with resource_type = 2
+    INSERT INTO CourseTest (resource_id, mandatory, test_maxtime, total_score, score_to_pass)
+    SELECT 
+        resource_id,
+        0,  -- default value for mandatory
+        '00:00:00',  -- default value for test_maxtime
+        0,  -- default value for total_score
+        0   -- default value for score_to_pass
+    FROM inserted
+    WHERE resource_type = 2;
+END
+GO

@@ -21,6 +21,7 @@ namespace Elearning.Entities
         public string choices { get; set; }
         public string answer { get; set; }
         public int score { get; set; }
+        public Nullable<int> question_order { get; set; }
     
         public virtual CourseTest CourseTest { get; set; }
     }

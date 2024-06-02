@@ -17,6 +17,8 @@ namespace Elearning
                                             + "\\resources\\";
         public static string COURSES_IMG_PATH = System.IO.Path.GetFullPath(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..")) 
                                             + "\\images\\courses_images\\";
+        public static string ICONS_PATH = System.IO.Path.GetFullPath(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..")) 
+                                            + "\\images\\icons\\";
 
         public static int TYPE_VIDEO = 0;
         public static int TYPE_DOC = 1;
@@ -25,9 +27,15 @@ namespace Elearning
         public static int ROLE_ADMIN = 1;
         public static int ROLE_LEARNER = 0;
 
+        public static int QUESTION_MULTIPLE_CHOICE_ONE_ANSWER = 0;
+        public static int QUESTION_MULTIPLE_CHOICE_MULTIPLE_ANSWERS = 1;
+        public static int QUESTION_SHORT_ANSWER = 2;
+
         public static string[] COURSE_DIFFICULTIES = {"Beginner", "Intermediate", "Advanced" };
         public static string[] COURSE_CATEGORIES = { "Development", "Business", "IT & Software", "Office Productivity", "Personal Development", "Design", "Marketing", "Lifestyle", "Photography", "Health & Fitness", "Music", "Teaching & Academics" };
         public static string[] RESOURCE_TYPE = { "Video", "Document", "Test" };
+        public static string[] QUESTION_TYPE = { "Multiple choice - One answer", "Multiple choice - Multiple answers", "Short answer" };
+
         // Create a new instance of the ELEARNINGEntities, use this instance to interact with the database
         // example: var accounts = Program.provider.ACCOUNTs.ToList();
         public static ELearningDbEntities provider = new ELearningDbEntities();
@@ -61,7 +69,7 @@ namespace Elearning
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fAdminMain());
+            Application.Run(new fLogin());
         }
     }
 }

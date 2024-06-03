@@ -237,7 +237,7 @@
     <Compile Include="UserControls\User\itemVideo.Designer.cs">
       <DependentUpon>itemVideo.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ucCoursePart.cs">
+    <Compile Include="UserControls\User\ucCourseModule.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\User\ucCourseModule.Designer.cs">
@@ -358,9 +358,6 @@
     <EmbeddedResource Include="UserControls\User\itemVideo.resx">
       <DependentUpon>itemVideo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucCoursePart.resx">
-      <DependentUpon>ucCoursePart.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CourseTest\ucCheckbox.resx">
       <DependentUpon>ucCheckbox.cs</DependentUpon>
     </EmbeddedResource>
@@ -399,6 +396,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\User\ucCourseInfo.resx">
       <DependentUpon>ucCourseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\User\ucCourseModule.resx">
+      <DependentUpon>ucCourseModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\User\ucCoursePreview.resx">
       <DependentUpon>ucCoursePreview.cs</DependentUpon>

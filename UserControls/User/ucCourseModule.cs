@@ -8,20 +8,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Elearning.UserControls
+namespace Elearning.UserControls.User
 {
     public partial class ucCourseModule : UserControl
     {
+        public EventHandler courseModuleClick;
         public ucCourseModule()
         {
             InitializeComponent();
         }
 
-        private int moduleid;
+        private int moduleId;
+        public ucCourseModule(int moduleID)
+        {
+            InitializeComponent();
+            this.moduleId = moduleID;
+        }
+
         public int moduleID
         {
-            get { return moduleid; }
-            set { moduleid = value; }
+            get { return this.moduleId; }
+            set { moduleId = value; }
         }
 
         public string moduleOrdinal
@@ -36,10 +43,9 @@ namespace Elearning.UserControls
             set { lblModuleName.Text = value; }
         }
 
-        public EventHandler courseModuleClick;
-        private void ucCouseModule_Clicked(object sender, EventArgs e)
+        private void ucCourseModule_Click(object sender, EventArgs e)
         {
-            courseModuleClick?.Invoke(this, e);
+            courseModuleClick.Invoke(this, e);
         }
     }
 }

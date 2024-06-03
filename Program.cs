@@ -10,8 +10,8 @@ namespace Elearning
 {
     internal static class Program
     {
-        public static string ICONS_PATH = System.IO.Path.GetFullPath(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\.."))
-                                    + "\\images\\icons\\";
+        //public static string ICONS_PATH = System.IO.Path.GetFullPath(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\.."))
+        //                            + "\\images\\icons\\";
 
         // Paths to folders in the project
         public static string AVARTAR_PATH = System.IO.Path.GetFullPath(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..")) 

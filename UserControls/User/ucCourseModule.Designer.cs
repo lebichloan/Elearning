@@ -1,4 +1,4 @@
-﻿namespace Elearning.UserControls
+﻿namespace Elearning.UserControls.User
 {
     partial class ucCourseModule
     {
@@ -28,57 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblModuleOrdinal = new System.Windows.Forms.Label();
             this.lblModuleName = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblModuleOrdinal = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // lblModuleOrdinal
-            // 
-            this.lblModuleOrdinal.AutoSize = true;
-            this.lblModuleOrdinal.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModuleOrdinal.Location = new System.Drawing.Point(15, 15);
-            this.lblModuleOrdinal.Margin = new System.Windows.Forms.Padding(5, 5, 0, 0);
-            this.lblModuleOrdinal.Name = "lblModuleOrdinal";
-            this.lblModuleOrdinal.Size = new System.Drawing.Size(59, 23);
-            this.lblModuleOrdinal.TabIndex = 3;
-            this.lblModuleOrdinal.Text = "label1";
-            this.lblModuleOrdinal.Click += new System.EventHandler(this.ucCouseModule_Clicked);
             // 
             // lblModuleName
             // 
             this.lblModuleName.AutoSize = true;
-            this.lblModuleName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModuleName.Location = new System.Drawing.Point(14, 53);
-            this.lblModuleName.Margin = new System.Windows.Forms.Padding(5, 15, 0, 25);
+            this.lblModuleName.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModuleName.Location = new System.Drawing.Point(62, 88);
             this.lblModuleName.Name = "lblModuleName";
-            this.lblModuleName.Size = new System.Drawing.Size(70, 28);
-            this.lblModuleName.TabIndex = 4;
+            this.lblModuleName.Size = new System.Drawing.Size(56, 23);
+            this.lblModuleName.TabIndex = 10;
             this.lblModuleName.Text = "label1";
-            this.lblModuleName.Click += new System.EventHandler(this.ucCouseModule_Clicked);
+            this.lblModuleName.Click += new System.EventHandler(this.ucCourseModule_Click);
             // 
-            // panel1
+            // lblModuleOrdinal
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(10, 89);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(763, 1);
-            this.panel1.TabIndex = 5;
-            this.panel1.Click += new System.EventHandler(this.ucCouseModule_Clicked);
+            this.lblModuleOrdinal.AutoSize = true;
+            this.lblModuleOrdinal.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModuleOrdinal.Location = new System.Drawing.Point(62, 38);
+            this.lblModuleOrdinal.Name = "lblModuleOrdinal";
+            this.lblModuleOrdinal.Size = new System.Drawing.Size(53, 23);
+            this.lblModuleOrdinal.TabIndex = 9;
+            this.lblModuleOrdinal.Text = "label1";
+            this.lblModuleOrdinal.Click += new System.EventHandler(this.ucCourseModule_Click);
             // 
             // ucCourseModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblModuleName);
             this.Controls.Add(this.lblModuleOrdinal);
-            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "ucCourseModule";
-            this.Padding = new System.Windows.Forms.Padding(10);
-            this.Size = new System.Drawing.Size(783, 100);
-            this.Click += new System.EventHandler(this.ucCouseModule_Clicked);
+            this.Size = new System.Drawing.Size(741, 150);
+            this.Click += new System.EventHandler(this.ucCourseModule_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -86,8 +71,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblModuleOrdinal;
         private System.Windows.Forms.Label lblModuleName;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblModuleOrdinal;
     }
 }

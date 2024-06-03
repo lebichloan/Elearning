@@ -1,4 +1,4 @@
-﻿namespace Elearning.UserControls
+﻿namespace Elearning.UserControls.User
 {
     partial class ucMyElearning
     {
@@ -56,6 +56,7 @@
             this.Controls.Add(this.layoutMyCourses);
             this.Name = "ucMyElearning";
             this.Size = new System.Drawing.Size(1101, 667);
+            this.Load += new System.EventHandler(this.ucMyElearning_Load);
             this.Load += new System.EventHandler(this.ucMyElearning_Load);
             this.ResumeLayout(false);
 

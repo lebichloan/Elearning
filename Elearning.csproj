@@ -246,9 +246,6 @@
     <Compile Include="UserControls\ucAdminSyllabus.Designer.cs">
       <DependentUpon>ucAdminSyllabus.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ucCoursePart.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="UserControls\User\ucCourseModule.Designer.cs">
       <DependentUpon>ucCourseModule.cs</DependentUpon>
     </Compile>
@@ -327,6 +324,18 @@
     <Compile Include="UserControls\ucAdminQuestion.Designer.cs">
       <DependentUpon>ucAdminQuestion.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\User\ucMyElearning.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\User\ucMyElearning.Designer.cs">
+      <DependentUpon>ucMyElearning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\User\ucProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\User\ucProfile.Designer.cs">
+      <DependentUpon>ucProfile.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\CourseTest.resx">
       <DependentUpon>CourseTest.cs</DependentUpon>
     </EmbeddedResource>
@@ -385,9 +394,6 @@
     <EmbeddedResource Include="UserControls\ucAdminSyllabus.resx">
       <DependentUpon>ucAdminSyllabus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucCoursePart.resx">
-      <DependentUpon>ucCoursePart.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CourseTest\ucCheckbox.resx">
       <DependentUpon>ucCheckbox.cs</DependentUpon>
     </EmbeddedResource>
@@ -441,6 +447,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucAdminQuestion.resx">
       <DependentUpon>ucAdminQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\User\ucMyElearning.resx">
+      <DependentUpon>ucMyElearning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\User\ucProfile.resx">
+      <DependentUpon>ucProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Entities\ELearningModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

@@ -9,11 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Elearning.UserControls
+namespace Elearning.UserControls.User
 {
     public partial class ucMyElearning : UserControl
     {
         public EventHandler viewDetailsClicked;
+        
         public ucMyElearning()
         {
             InitializeComponent();

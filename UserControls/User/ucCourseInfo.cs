@@ -109,11 +109,17 @@ namespace Elearning.UserControls
                     uc.Dock = DockStyle.Top;
                     uc.moduleOrdinal = string.Format("Module {0}:", count);
                     uc.moduleName = module.module_name;
+                    uc.courseModuleClick += ucCourseModule_Click;
                     layoutModule.Controls.Add(uc);
                 }
             }
 
             lblTotalModule.Text = String.Format("{0} moudules", count.ToString());
+        }
+
+        private void ucCourseModule_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

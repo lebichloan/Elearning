@@ -27,11 +27,19 @@ namespace Elearning.UserControls
         {
             this.question = question;
             this.conDetails = conDetails;
+
             if (question.question_type == Program.QUESTION_MULTIPLE_CHOICE_ONE_ANSWER)
             {
                 ucDetails = new ucAdminQstMC1(this.question);
-                ucDetails.Dock = DockStyle.Fill;
+            } else if (question.question_type == Program.QUESTION_MULTIPLE_CHOICE_MULTIPLE_ANSWERS)
+            {
+                ucDetails = new ucAdminQstMCM(this.question);
+            } else if (question.question_type == Program.QUESTION_SHORT_ANSWER)
+            {
+                ucDetails = new ucAdminQstShortAns(this.question);
             }
+            
+            ucDetails.Dock = DockStyle.Fill;
             LoadQuestion();
         }
 
@@ -50,6 +58,7 @@ namespace Elearning.UserControls
         {
             conDetails.Controls.Clear();
             conDetails.Controls.Add(ucDetails);
+            evtClicked?.Invoke(this, e);
         }
 
         public void UpdateQuestion()
@@ -57,6 +66,12 @@ namespace Elearning.UserControls
             if (question.question_type == Program.QUESTION_MULTIPLE_CHOICE_ONE_ANSWER)
             {
                 ((ucAdminQstMC1)ucDetails).UpdateQuestion();
+            } else if (question.question_type == Program.QUESTION_MULTIPLE_CHOICE_MULTIPLE_ANSWERS)
+            {
+                ((ucAdminQstMCM)ucDetails).UpdateQuestion();
+            } else if (question.question_type == Program.QUESTION_SHORT_ANSWER)
+            {
+                ((ucAdminQstShortAns)ucDetails).UpdateQuestion();
             }
         }
 
@@ -69,6 +84,16 @@ namespace Elearning.UserControls
         private void btnDelete_Click(object sender, EventArgs e)
         {
             evtDelete?.Invoke(this, e);
+        }
+
+        public void SetCheckedColor()
+        {
+            this.siticoneContainerControl1.FillColor = Color.FromArgb(151, 170, 232);
+        }
+
+        public void SetDefaultColor()
+        {
+            this.siticoneContainerControl1.FillColor = Color.White;
         }
     }
 }

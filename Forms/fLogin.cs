@@ -33,17 +33,16 @@ namespace Elearning.Forms
                 if (account.user_role == Program.ROLE_ADMIN)
                 {
                     // open admin form
-                    fAdminMain f = new fAdminMain();
+                    fAdminMain f = new fAdminMain(account);
                     f.ShowDialog();
-                    this.Hide();
                 }
                 else
                 {
                     // open student form
                     fMain f = new fMain();
                     f.ShowDialog();
-                    this.Hide();
                 }
+                this.Close();
             }
             else
             {

@@ -59,6 +59,7 @@
             this.picQRCode = new System.Windows.Forms.PictureBox();
             this.btnFinish = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.label21 = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.PictureBox();
             this.panPayment.SuspendLayout();
             this.btnCash.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCash)).BeginInit();
@@ -74,6 +75,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panQRCode.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picQRCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -441,12 +443,26 @@
             this.label21.TabIndex = 3;
             this.label21.Text = "Please scan this QR Code to payment";
             // 
+            // btnBack
+            // 
+            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
+            this.btnBack.Location = new System.Drawing.Point(28, 19);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Padding = new System.Windows.Forms.Padding(5);
+            this.btnBack.Size = new System.Drawing.Size(40, 40);
+            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnBack.TabIndex = 3;
+            this.btnBack.TabStop = false;
+            this.btnBack.Visible = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // RegisterPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(557, 687);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panQRCode);
             this.Controls.Add(this.panPayment);
@@ -476,6 +492,7 @@
             this.panQRCode.ResumeLayout(false);
             this.panQRCode.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picQRCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -513,5 +530,6 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.PictureBox picQRCode;
         private System.Windows.Forms.Label lblTotalCash;
+        private System.Windows.Forms.PictureBox btnBack;
     }
 }

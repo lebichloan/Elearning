@@ -1,4 +1,5 @@
-﻿using QRCoder;
+﻿using Elearning.Entities;
+using QRCoder;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,18 @@ namespace Elearning.Forms
 {
     public partial class RegisterPayment : Form
     {
+        public EventHandler backHomeClicked;
+
         public RegisterPayment()
         {
             InitializeComponent();
+        }
+
+        private int price;
+        public RegisterPayment(int price)
+        {
+            InitializeComponent();
+            this.price = price;
         }
 
         private int idPayment = 0;
@@ -89,16 +99,19 @@ namespace Elearning.Forms
             if (idPayment == 0)
             {
                 DialogResult result = MessageBox.Show(
-                    "Thanh toán thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information
+                    "Hoàn tất thanh toán. Đăng ký khóa học thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information
                     );
                 if (result == DialogResult.OK)
                 {
+                    backHomeClicked?.Invoke(this, e);
                     this.Close();
                 }
             }
             else
             {
                 panPayment.Visible = false;
+                lblTotalCash.Text = String.Format("{0} VNĐ", price.ToString());
+                btnBack.Visible = true;
                 panQRCode.Visible = true;
                 CreateQRCode();
             }
@@ -106,7 +119,7 @@ namespace Elearning.Forms
 
         private void CreateQRCode()
         {
-            string dataPayment = "aaa";
+            string dataPayment = price.ToString();
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
             QRCode qrCode = new QRCode(qrGenerator
                 .CreateQrCode(dataPayment, QRCodeGenerator.ECCLevel.Q));
@@ -117,12 +130,20 @@ namespace Elearning.Forms
         private void btnFinish_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show(
-                "Thanh toán thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information
+                "Hoàn tất thanh toán. Đăng ký khóa học thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information
                 );
             if (result == DialogResult.OK)
             {
+                backHomeClicked?.Invoke(this, e);
                 this.Close();
             }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            panPayment.Visible = true;
+            btnBack.Visible = false;
+            panQRCode.Visible = false;
         }
     }
 }

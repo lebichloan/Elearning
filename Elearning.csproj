@@ -225,28 +225,28 @@
     <Compile Include="UserControls\ucAdminResource.Designer.cs">
       <DependentUpon>ucAdminResource.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\itemFile.cs">
+    <Compile Include="UserControls\User\itemFile.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\itemFile.Designer.cs">
+    <Compile Include="UserControls\User\itemFile.Designer.cs">
       <DependentUpon>itemFile.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\itemVideo.cs">
+    <Compile Include="UserControls\User\itemVideo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\itemVideo.Designer.cs">
+    <Compile Include="UserControls\User\itemVideo.Designer.cs">
       <DependentUpon>itemVideo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\ucAdminSyllabus.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\ucAdminSyllabus.Designer.cs">
-      <DependentUpon>ucAdminSyllabus.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ucCoursePart.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\ucCoursePart.Designer.cs">
+    <Compile Include="UserControls\User\ucCourseModule.Designer.cs">
+      <DependentUpon>ucCourseModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\User\ucCoursePart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\User\ucCoursePart.Designer.cs">
       <DependentUpon>ucCoursePart.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\CourseTest\ucCheckbox.cs">
@@ -282,41 +282,35 @@
     <Compile Include="UserControls\CustomButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UserControls\ucCourse.cs">
+    <Compile Include="UserControls\User\ucCourse.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\ucCourse.Designer.cs">
+    <Compile Include="UserControls\User\ucCourse.Designer.cs">
       <DependentUpon>ucCourse.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ucCourseInfo.cs">
+    <Compile Include="UserControls\User\ucCourseInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\ucCourseInfo.Designer.cs">
+    <Compile Include="UserControls\User\ucCourseInfo.Designer.cs">
       <DependentUpon>ucCourseInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ucCoursePreview.cs">
+    <Compile Include="UserControls\User\ucCoursePreview.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\ucCoursePreview.Designer.cs">
+    <Compile Include="UserControls\User\ucCoursePreview.Designer.cs">
       <DependentUpon>ucCoursePreview.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ucHome.cs">
+    <Compile Include="UserControls\User\ucHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\ucHome.Designer.cs">
+    <Compile Include="UserControls\User\ucHome.Designer.cs">
       <DependentUpon>ucHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ucMain.cs">
+    <Compile Include="UserControls\User\ucMain.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\ucMain.Designer.cs">
+    <Compile Include="UserControls\User\ucMain.Designer.cs">
       <DependentUpon>ucMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\ucAdminQuestion.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\ucAdminQuestion.Designer.cs">
-      <DependentUpon>ucAdminQuestion.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\CourseTest.resx">
       <DependentUpon>CourseTest.cs</DependentUpon>
@@ -358,23 +352,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserControls\itemFile.resx">
+    <EmbeddedResource Include="UserControls\User\itemFile.resx">
       <DependentUpon>itemFile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\itemVideo.resx">
+    <EmbeddedResource Include="UserControls\User\itemVideo.resx">
       <DependentUpon>itemVideo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucAdminChoice.resx">
-      <DependentUpon>ucAdminChoice.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucAdminDescription.resx">
-      <DependentUpon>ucAdminDescription.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucAdminQstMC1.resx">
-      <DependentUpon>ucAdminQstMC1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucAdminSyllabus.resx">
-      <DependentUpon>ucAdminSyllabus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucCoursePart.resx">
       <DependentUpon>ucCoursePart.cs</DependentUpon>
@@ -394,7 +376,7 @@
     <EmbeddedResource Include="UserControls\CourseTest\ucTotal.resx">
       <DependentUpon>ucTotal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucCourse.resx">
+    <EmbeddedResource Include="UserControls\User\ucCourse.resx">
       <DependentUpon>ucCourse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucAdminCourseInfo.resx">
@@ -415,20 +397,17 @@
     <EmbeddedResource Include="UserControls\ucAdminResource.resx">
       <DependentUpon>ucAdminResource.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucCourseInfo.resx">
+    <EmbeddedResource Include="UserControls\User\ucCourseInfo.resx">
       <DependentUpon>ucCourseInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucCoursePreview.resx">
+    <EmbeddedResource Include="UserControls\User\ucCoursePreview.resx">
       <DependentUpon>ucCoursePreview.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucHome.resx">
+    <EmbeddedResource Include="UserControls\User\ucHome.resx">
       <DependentUpon>ucHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucMain.resx">
+    <EmbeddedResource Include="UserControls\User\ucMain.resx">
       <DependentUpon>ucMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucAdminQuestion.resx">
-      <DependentUpon>ucAdminQuestion.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Entities\ELearningModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -486,6 +465,8 @@
     <Content Include="images\icons\circle_filled_icon.png" />
     <Content Include="images\icons\circle_icon.png" />
     <Content Include="images\icons\close.png" />
+    <Content Include="images\icons\play.png" />
+    <Content Include="images\icons\stop.png" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="AxWMPLib">
@@ -518,6 +499,11 @@
   <ItemGroup>
     <None Include="images\icons\remove.png" />
     <None Include="images\icons\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\avatars\" />
+    <Folder Include="images\courses_images\" />
+    <Folder Include="images\resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

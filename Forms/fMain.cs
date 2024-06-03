@@ -1,4 +1,5 @@
-﻿using Elearning.UserControls;
+﻿using Elearning.Entities;
+using Elearning.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,13 +25,16 @@ namespace Elearning
             this.ucMain = new ucMain();
             this.ucMain.Dock = DockStyle.Fill;
             this.ucMain.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
+            this.ucMain.viewMyCourseClicked += ucMyElearning_viewMyCourseClicked;
             panelMain.Controls.Add(ucMain);
         }
 
         private void ucCoursePreview_viewDetailsClicked(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
-            ucCourseInfo ucCourseInfo = new ucCourseInfo();
+            ucMain ucmain = sender as ucMain;
+            Course course = ucmain.coursePreviewClicked;
+            ucCourseInfo ucCourseInfo = new ucCourseInfo(course);
             ucCourseInfo.Dock = DockStyle.Fill;
             ucCourseInfo.backHomeClicked += ucCourseInfo_backHomeClicked;
             panelMain.Controls.Add(ucCourseInfo);
@@ -45,6 +49,17 @@ namespace Elearning
         {
             panelMain.Controls.Clear();
             panelMain.Controls.Add(this.ucMain);
+        }
+
+        private void ucMyElearning_viewMyCourseClicked(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            ucMain ucmain = sender as ucMain;
+            Course course = ucmain.coursePreviewClicked;
+            ucCourse ucCourse = new ucCourse(course);
+            ucCourse.Dock = DockStyle.Fill;
+            ucCourse.backHomeClicked += ucCourseInfo_backHomeClicked;
+            panelMain.Controls.Add(ucCourse);
         }
 
     }

@@ -62,11 +62,13 @@
             // 
             this.lbCourseName.AutoSize = true;
             this.lbCourseName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbCourseName.Font = new System.Drawing.Font("UTM Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCourseName.Location = new System.Drawing.Point(10, 50);
+            this.lbCourseName.Font = new System.Drawing.Font("UTM Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCourseName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.lbCourseName.Location = new System.Drawing.Point(8, 41);
+            this.lbCourseName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCourseName.Name = "lbCourseName";
-            this.lbCourseName.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lbCourseName.Size = new System.Drawing.Size(217, 41);
+            this.lbCourseName.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.lbCourseName.Size = new System.Drawing.Size(185, 36);
             this.lbCourseName.TabIndex = 1;
             this.lbCourseName.Text = "Course Name";
             // 
@@ -74,8 +76,9 @@
             // 
             this.lbLecturerName.AutoSize = true;
             this.lbLecturerName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbLecturerName.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLecturerName.Location = new System.Drawing.Point(10, 91);
+            this.lbLecturerName.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLecturerName.Location = new System.Drawing.Point(8, 77);
+            this.lbLecturerName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbLecturerName.Name = "lbLecturerName";
             this.lbLecturerName.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.lbLecturerName.Size = new System.Drawing.Size(156, 28);
@@ -115,7 +118,8 @@
             this.siticoneContainerControl6.Controls.Add(this.siticoneContainerControl7);
             this.siticoneContainerControl6.Controls.Add(this.lbDifficulty);
             this.siticoneContainerControl6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticoneContainerControl6.Location = new System.Drawing.Point(10, 118);
+            this.siticoneContainerControl6.Location = new System.Drawing.Point(8, 105);
+            this.siticoneContainerControl6.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneContainerControl6.Name = "siticoneContainerControl6";
             this.siticoneContainerControl6.Padding = new System.Windows.Forms.Padding(10, 8, 8, 8);
             this.siticoneContainerControl6.Size = new System.Drawing.Size(602, 41);
@@ -301,27 +305,11 @@
             // 
             // siticoneSeparator1
             // 
-            this.lbDescription.AutoSize = true;
-            this.lbDescription.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbDescription.Font = new System.Drawing.Font("Segoe UI Variable Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDescription.Location = new System.Drawing.Point(0, 41);
-            this.lbDescription.Name = "lbDescription";
-            this.lbDescription.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lbDescription.Size = new System.Drawing.Size(328, 27);
-            this.lbDescription.TabIndex = 3;
-            this.lbDescription.Text = "This is the description of the course";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("UTM Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label1.Size = new System.Drawing.Size(196, 41);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Description";
+            this.siticoneSeparator1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.siticoneSeparator1.Location = new System.Drawing.Point(0, 102);
+            this.siticoneSeparator1.Name = "siticoneSeparator1";
+            this.siticoneSeparator1.Size = new System.Drawing.Size(1035, 10);
+            this.siticoneSeparator1.TabIndex = 0;
             // 
             // conSyllabus
             // 

@@ -240,6 +240,15 @@
     <Compile Include="UserControls\User\ucCourseModule.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UserControls\ucAdminSyllabus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucAdminSyllabus.Designer.cs">
+      <DependentUpon>ucAdminSyllabus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucCoursePart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserControls\User\ucCourseModule.Designer.cs">
       <DependentUpon>ucCourseModule.cs</DependentUpon>
     </Compile>
@@ -312,6 +321,12 @@
     <Compile Include="UserControls\User\ucMain.Designer.cs">
       <DependentUpon>ucMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucAdminQuestion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucAdminQuestion.Designer.cs">
+      <DependentUpon>ucAdminQuestion.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\CourseTest.resx">
       <DependentUpon>CourseTest.cs</DependentUpon>
     </EmbeddedResource>
@@ -357,6 +372,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\User\itemVideo.resx">
       <DependentUpon>itemVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucAdminChoice.resx">
+      <DependentUpon>ucAdminChoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucAdminDescription.resx">
+      <DependentUpon>ucAdminDescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucAdminQstMC1.resx">
+      <DependentUpon>ucAdminQstMC1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucAdminSyllabus.resx">
+      <DependentUpon>ucAdminSyllabus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucCoursePart.resx">
+      <DependentUpon>ucCoursePart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CourseTest\ucCheckbox.resx">
       <DependentUpon>ucCheckbox.cs</DependentUpon>
@@ -408,6 +438,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\User\ucMain.resx">
       <DependentUpon>ucMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucAdminQuestion.resx">
+      <DependentUpon>ucAdminQuestion.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Entities\ELearningModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

@@ -72,7 +72,7 @@ namespace Elearning
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fAdminMain());
+            Application.Run(new fLogin());
         }
     }
 }

@@ -1,10 +1,12 @@
 ﻿using Elearning.Entities;
 using Elearning.Forms;
 using Elearning.UserControls.User;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Validation;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,6 +19,8 @@ namespace Elearning.UserControls
     {
         public EventHandler backHomeClicked;
         private Course course;
+        private Account currentAccount = fLogin.currentAccount;
+        private Register register;
         public ucCourseInfo()
         {
             InitializeComponent();
@@ -26,6 +30,9 @@ namespace Elearning.UserControls
         {
             InitializeComponent();
             this.course = course;
+            register = Program.provider.Registers.FirstOrDefault(
+                x => x.course_id == course.course_id && x.learner_id == currentAccount.acc_id
+                );
             InitUI(course);
         }
 
@@ -38,18 +45,45 @@ namespace Elearning.UserControls
         {
             if (course.price == 0)
             {
-                DialogResult result = MessageBox.Show(
-                    "Đăng ký khóa học thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information
-                    );
-                if (result == DialogResult.OK)
+                try
                 {
-                    backHomeClicked?.Invoke(this, e);
-                }
+                    Register newRegister = new Register();
+                    newRegister.learner_id = currentAccount.acc_id;
+                    newRegister.course_id = course.course_id;
+                    newRegister.registered_date = DateTime.Now;
+                    newRegister.register_status = 1;
+                    newRegister.completion_score = 0;
+                    newRegister.course_certificate = null;
+                    Program.provider.Registers.Add(newRegister);
+                    Program.provider.SaveChanges();
 
+                    DialogResult result = MessageBox.Show(
+                        "Đăng ký khóa học thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information
+                        );
+
+                    if (result == DialogResult.OK)
+                    {
+                        backHomeClicked?.Invoke(this, e);
+                    }
+                }
+                catch (DbEntityValidationException ex)
+                {
+                    foreach (var eve in ex.EntityValidationErrors)
+                    {
+                        Console.WriteLine("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
+                            eve.Entry.Entity.GetType().Name, eve.Entry.State);
+                        foreach (var ve in eve.ValidationErrors)
+                        {
+                            Console.WriteLine("- Property: \"{0}\", Error: \"{1}\"",
+                                ve.PropertyName, ve.ErrorMessage);
+                        }
+                    }
+                    throw;
+                }
             }
             else
             {
-                RegisterPayment registerPayment = new RegisterPayment(course.price);
+                RegisterPayment registerPayment = new RegisterPayment(course);
                 registerPayment.backHomeClicked += backHomeClicked;
                 registerPayment.ShowDialog();
             }
@@ -57,6 +91,15 @@ namespace Elearning.UserControls
 
         private void InitUI(Course course)
         {
+            if (register == null)
+            {
+                btnRegister.Enabled = true;
+            }
+            else
+            {
+                btnRegister.Enabled = false;
+            }
+
             picCourseImage.Image = Image.FromFile(Program.COURSES_IMG_PATH + course.course_image);
             
             lblCourseName.Text = course.course_name;

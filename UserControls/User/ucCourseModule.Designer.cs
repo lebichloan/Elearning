@@ -30,6 +30,7 @@
         {
             this.lblModuleName = new System.Windows.Forms.Label();
             this.lblModuleOrdinal = new System.Windows.Forms.Label();
+            this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.SuspendLayout();
             // 
             // lblModuleName
@@ -37,7 +38,7 @@
             this.lblModuleName.AutoSize = true;
             this.lblModuleName.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModuleName.Location = new System.Drawing.Point(62, 88);
+            this.lblModuleName.Location = new System.Drawing.Point(50, 81);
             this.lblModuleName.Name = "lblModuleName";
             this.lblModuleName.Size = new System.Drawing.Size(56, 23);
             this.lblModuleName.TabIndex = 10;
@@ -48,21 +49,32 @@
             // 
             this.lblModuleOrdinal.AutoSize = true;
             this.lblModuleOrdinal.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModuleOrdinal.Location = new System.Drawing.Point(62, 38);
+            this.lblModuleOrdinal.Location = new System.Drawing.Point(50, 30);
             this.lblModuleOrdinal.Name = "lblModuleOrdinal";
             this.lblModuleOrdinal.Size = new System.Drawing.Size(53, 23);
             this.lblModuleOrdinal.TabIndex = 9;
             this.lblModuleOrdinal.Text = "label1";
             this.lblModuleOrdinal.Click += new System.EventHandler(this.ucCourseModule_Click);
             // 
+            // siticonePanel1
+            // 
+            this.siticonePanel1.BackColor = System.Drawing.Color.Black;
+            this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.siticonePanel1.Location = new System.Drawing.Point(15, 116);
+            this.siticonePanel1.Name = "siticonePanel1";
+            this.siticonePanel1.Size = new System.Drawing.Size(711, 1);
+            this.siticonePanel1.TabIndex = 11;
+            // 
             // ucCourseModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.siticonePanel1);
             this.Controls.Add(this.lblModuleName);
             this.Controls.Add(this.lblModuleOrdinal);
             this.Name = "ucCourseModule";
-            this.Size = new System.Drawing.Size(741, 150);
+            this.Padding = new System.Windows.Forms.Padding(15);
+            this.Size = new System.Drawing.Size(741, 132);
             this.Click += new System.EventHandler(this.ucCourseModule_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -73,5 +85,6 @@
 
         private System.Windows.Forms.Label lblModuleName;
         private System.Windows.Forms.Label lblModuleOrdinal;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
     }
 }

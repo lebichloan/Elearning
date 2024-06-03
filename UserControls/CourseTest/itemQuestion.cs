@@ -8,19 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Elearning.Forms
+namespace Elearning.UserControls.CourseTest
 {
-    public partial class CourseTest : Form
+    public partial class itemQuestion : UserControl
     {
-        public CourseTest()
+        public itemQuestion()
         {
             InitializeComponent();
         }
 
-        public CourseTest(int resourceID)
+        public string questionOrdinal
         {
-            InitializeComponent();
-
+            get { return btnQuestionOrdinal.Text; }
+            set { btnQuestionOrdinal.Text = value; }
         }
     }
 }

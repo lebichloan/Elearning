@@ -1,4 +1,5 @@
 ﻿using Elearning.Entities;
+using Elearning.Forms;
 using Elearning.UserControls.User;
 using System;
 using System.Collections.Generic;
@@ -119,10 +120,22 @@ namespace Elearning.UserControls
                     }
                     else if (resource.resource_type == 2)
                     {
-
+                        itemTest itemtest = new itemTest();
+                        itemtest.Dock = DockStyle.Top;
+                        itemtest.resourceId = resource.resource_id;
+                        itemtest.testName = resource.resource_name;
+                        itemtest.goToTest += GoToTest;
+                        layoutResource.Controls.Add(itemtest);
                     }
                 }
             }
+        }
+
+        private void GoToTest(object sender, EventArgs e)
+        {
+            itemTest itemtest = (itemTest)sender;
+            fCourseTest courseTest = new fCourseTest(itemtest.resourceId, false);
+            courseTest.ShowDialog();
         }
 
         private void ucCourseModule_viewModuleClicked(object sender, EventArgs e)

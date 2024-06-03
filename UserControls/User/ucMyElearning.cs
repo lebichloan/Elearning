@@ -1,4 +1,5 @@
 ﻿using Elearning.Entities;
+using Elearning.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,8 +40,16 @@ namespace Elearning.UserControls.User
                 layoutMyCourses.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100 / columns));
             }
 
-            var courses = Program.provider.Courses.ToList();
-            foreach (Course course in courses)
+            Account currentAccount = fLogin.currentAccount;
+
+            List<Course> allCourses = (
+                from course in Program.provider.Courses
+                join register in Program.provider.Registers on course.course_id equals register.course_id
+                join account in Program.provider.Accounts on register.learner_id equals account.acc_id
+                select course
+            ).ToList();
+
+            foreach (Course course in allCourses)
             {
                 ucCoursePreview ucCourse = new ucCoursePreview();
                 ucCourse.coursePreviewClicked = course;

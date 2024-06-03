@@ -20,8 +20,8 @@ namespace Elearning.UserControls.CourseTest
         private int idQuestion;
         public int id
         {
-            get { return id; }
-            set { id = value; }
+            get { return idQuestion; }
+            set { idQuestion = value; }
         }
 
         private bool isTick = false;
@@ -52,6 +52,7 @@ namespace Elearning.UserControls.CourseTest
             else
             {
                 panAnswer.Visible = false;
+                panAnswer.Size = new Size(0, 0);
                 picTick.Visible = false;
                 lblTick.Enabled = true;
                 panContent.Enabled = true;
@@ -88,6 +89,12 @@ namespace Elearning.UserControls.CourseTest
             set { lblQuestion.Text = value; }
         }
 
+        public string questionScore
+        {
+            get { return lblQuestionScore.Text; }
+            set { lblQuestionScore.Text = value; }
+        }
+
         public string answerState
         {
             get { return lblStateAnswer.Text; }
@@ -100,13 +107,24 @@ namespace Elearning.UserControls.CourseTest
             set { lblTrueAnswer.Text = value; }
         }
 
-        public EventHandler ucTestQuestionLoadAnswer;
-
         public EventHandler ucTestQuestionTickClick;
 
-        private void ucTestQuestion_Load(object sender, EventArgs e)
+        public void ucTestQuestion_LoadAnswer(int type, string choice)
         {
-            ucTestQuestionLoadAnswer?.Invoke(this, e);
+            if (type == 0)
+            {
+                string[] answerArray = choice.Split('\n');
+                foreach (string answer in answerArray)
+                {
+                    if (answer != "")
+                    {
+                        CheckBox itemCheckBox = new CheckBox();
+                        itemCheckBox.Text = answer;
+                        itemCheckBox.Dock = DockStyle.Top;
+                        panChooseAnswer.Controls.Add(itemCheckBox);
+                    }
+                }
+            }
         }
 
         private void lblTick_Click(object sender, EventArgs e)

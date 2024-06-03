@@ -1,9 +1,11 @@
 ﻿using Elearning.Entities;
+using Microsoft.Win32;
 using QRCoder;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Validation;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,17 +17,18 @@ namespace Elearning.Forms
     public partial class RegisterPayment : Form
     {
         public EventHandler backHomeClicked;
+        private Account currentAccount = fLogin.currentAccount;
+        private Course course = new Course();
 
         public RegisterPayment()
         {
             InitializeComponent();
         }
 
-        private int price;
-        public RegisterPayment(int price)
+        public RegisterPayment(Course course)
         {
             InitializeComponent();
-            this.price = price;
+            this.course = course;
         }
 
         private int idPayment = 0;
@@ -98,19 +101,46 @@ namespace Elearning.Forms
         {
             if (idPayment == 0)
             {
-                DialogResult result = MessageBox.Show(
-                    "Hoàn tất thanh toán. Đăng ký khóa học thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information
-                    );
-                if (result == DialogResult.OK)
+                try
                 {
-                    backHomeClicked?.Invoke(this, e);
-                    this.Close();
+                    Register register = new Register();
+                    register.learner_id = currentAccount.acc_id;
+                    register.course_id = course.course_id;
+                    register.registered_date = DateTime.Now;
+                    register.register_status = 1;
+                    register.completion_score = 0;
+                    register.course_certificate = null;
+                    Program.provider.Registers.Add(register);
+                    Program.provider.SaveChanges();
+
+                    DialogResult result = MessageBox.Show(
+                        "Hoàn tất thanh toán. Đăng ký khóa học thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information
+                        );
+                    if (result == DialogResult.OK)
+                    {
+                        backHomeClicked?.Invoke(this, e);
+                        this.Close();
+                    }
+                }
+                catch (DbEntityValidationException ex)
+                {
+                    foreach (var eve in ex.EntityValidationErrors)
+                    {
+                        Console.WriteLine("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
+                            eve.Entry.Entity.GetType().Name, eve.Entry.State);
+                        foreach (var ve in eve.ValidationErrors)
+                        {
+                            Console.WriteLine("- Property: \"{0}\", Error: \"{1}\"",
+                                ve.PropertyName, ve.ErrorMessage);
+                        }
+                    }
+                    throw;
                 }
             }
             else
             {
                 panPayment.Visible = false;
-                lblTotalCash.Text = String.Format("{0} VNĐ", price.ToString());
+                lblTotalCash.Text = String.Format("{0} VNĐ", course.price.ToString());
                 btnBack.Visible = true;
                 panQRCode.Visible = true;
                 CreateQRCode();
@@ -119,7 +149,7 @@ namespace Elearning.Forms
 
         private void CreateQRCode()
         {
-            string dataPayment = price.ToString();
+            string dataPayment = course.price.ToString();
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
             QRCode qrCode = new QRCode(qrGenerator
                 .CreateQrCode(dataPayment, QRCodeGenerator.ECCLevel.Q));
@@ -129,13 +159,40 @@ namespace Elearning.Forms
 
         private void btnFinish_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(
-                "Hoàn tất thanh toán. Đăng ký khóa học thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information
-                );
-            if (result == DialogResult.OK)
+            try
             {
-                backHomeClicked?.Invoke(this, e);
-                this.Close();
+                Register register = new Register();
+                register.learner_id = currentAccount.acc_id;
+                register.course_id = course.course_id;
+                register.registered_date = DateTime.Now;
+                register.register_status = 1;
+                register.completion_score = 0;
+                register.course_certificate = null;
+                Program.provider.Registers.Add(register);
+                Program.provider.SaveChanges();
+
+                DialogResult result = MessageBox.Show(
+                    "Hoàn tất thanh toán. Đăng ký khóa học thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information
+                    );
+                if (result == DialogResult.OK)
+                {
+                    backHomeClicked?.Invoke(this, e);
+                    this.Close();
+                }
+            }
+            catch (DbEntityValidationException ex)
+            {
+                foreach (var eve in ex.EntityValidationErrors)
+                {
+                    Console.WriteLine("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
+                        eve.Entry.Entity.GetType().Name, eve.Entry.State);
+                    foreach (var ve in eve.ValidationErrors)
+                    {
+                        Console.WriteLine("- Property: \"{0}\", Error: \"{1}\"",
+                            ve.PropertyName, ve.ErrorMessage);
+                    }
+                }
+                throw;
             }
         }
 

@@ -29,23 +29,39 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucTestQuestion));
+            this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.panQuestion = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.picTick = new System.Windows.Forms.PictureBox();
             this.lblQuestionScore = new System.Windows.Forms.Label();
             this.lblTick = new System.Windows.Forms.Label();
             this.lblState = new System.Windows.Forms.Label();
             this.lblNumber = new System.Windows.Forms.Label();
-            this.panContent = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.lblQuestion = new System.Windows.Forms.Label();
+            this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.panAnswer = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.lblTrueAnswer = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblStateAnswer = new System.Windows.Forms.Label();
+            this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.panContent = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.panChooseAnswer = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.lblQuestion = new System.Windows.Forms.Label();
+            this.siticonePanel1.SuspendLayout();
             this.panQuestion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTick)).BeginInit();
-            this.panContent.SuspendLayout();
+            this.siticonePanel2.SuspendLayout();
             this.panAnswer.SuspendLayout();
+            this.panContent.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // siticonePanel1
+            // 
+            this.siticonePanel1.Controls.Add(this.panQuestion);
+            this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.siticonePanel1.Location = new System.Drawing.Point(15, 15);
+            this.siticonePanel1.Name = "siticonePanel1";
+            this.siticonePanel1.Padding = new System.Windows.Forms.Padding(10);
+            this.siticonePanel1.Size = new System.Drawing.Size(170, 408);
+            this.siticonePanel1.TabIndex = 26;
             // 
             // panQuestion
             // 
@@ -56,11 +72,12 @@
             this.panQuestion.Controls.Add(this.lblTick);
             this.panQuestion.Controls.Add(this.lblState);
             this.panQuestion.Controls.Add(this.lblNumber);
-            this.panQuestion.Location = new System.Drawing.Point(19, 19);
+            this.panQuestion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panQuestion.Location = new System.Drawing.Point(10, 10);
             this.panQuestion.Name = "panQuestion";
             this.panQuestion.Padding = new System.Windows.Forms.Padding(5);
             this.panQuestion.Size = new System.Drawing.Size(150, 200);
-            this.panQuestion.TabIndex = 23;
+            this.panQuestion.TabIndex = 24;
             // 
             // picTick
             // 
@@ -96,7 +113,6 @@
             this.lblTick.Size = new System.Drawing.Size(60, 23);
             this.lblTick.TabIndex = 21;
             this.lblTick.Text = "Đặt cờ";
-            this.lblTick.Click += new System.EventHandler(this.lblTick_Click);
             // 
             // lblState
             // 
@@ -121,36 +137,30 @@
             this.lblNumber.TabIndex = 17;
             this.lblNumber.Text = "Câu 1:";
             // 
-            // panContent
+            // siticonePanel2
             // 
-            this.panContent.AutoSize = true;
-            this.panContent.Controls.Add(this.lblQuestion);
-            this.panContent.Location = new System.Drawing.Point(176, 19);
-            this.panContent.Name = "panContent";
-            this.panContent.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
-            this.panContent.Size = new System.Drawing.Size(680, 275);
-            this.panContent.TabIndex = 24;
-            // 
-            // lblQuestion
-            // 
-            this.lblQuestion.AutoSize = true;
-            this.lblQuestion.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuestion.Location = new System.Drawing.Point(20, 20);
-            this.lblQuestion.Margin = new System.Windows.Forms.Padding(20, 10, 0, 0);
-            this.lblQuestion.Name = "lblQuestion";
-            this.lblQuestion.Size = new System.Drawing.Size(56, 23);
-            this.lblQuestion.TabIndex = 18;
-            this.lblQuestion.Text = "Câu 1:";
+            this.siticonePanel2.Controls.Add(this.panContent);
+            this.siticonePanel2.Controls.Add(this.siticonePanel3);
+            this.siticonePanel2.Controls.Add(this.panAnswer);
+            this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.siticonePanel2.Location = new System.Drawing.Point(185, 15);
+            this.siticonePanel2.Name = "siticonePanel2";
+            this.siticonePanel2.Padding = new System.Windows.Forms.Padding(10);
+            this.siticonePanel2.Size = new System.Drawing.Size(982, 408);
+            this.siticonePanel2.TabIndex = 27;
             // 
             // panAnswer
             // 
+            this.panAnswer.BorderColor = System.Drawing.Color.Black;
+            this.panAnswer.BorderThickness = 1;
             this.panAnswer.Controls.Add(this.lblTrueAnswer);
             this.panAnswer.Controls.Add(this.label3);
             this.panAnswer.Controls.Add(this.lblStateAnswer);
-            this.panAnswer.Location = new System.Drawing.Point(176, 300);
+            this.panAnswer.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panAnswer.Location = new System.Drawing.Point(10, 278);
             this.panAnswer.Name = "panAnswer";
-            this.panAnswer.Size = new System.Drawing.Size(680, 120);
-            this.panAnswer.TabIndex = 25;
+            this.panAnswer.Size = new System.Drawing.Size(962, 120);
+            this.panAnswer.TabIndex = 27;
             this.panAnswer.Visible = false;
             // 
             // lblTrueAnswer
@@ -186,45 +196,93 @@
             this.lblStateAnswer.TabIndex = 18;
             this.lblStateAnswer.Text = "Câu trả lời của bạn đúng";
             // 
+            // siticonePanel3
+            // 
+            this.siticonePanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.siticonePanel3.Location = new System.Drawing.Point(10, 268);
+            this.siticonePanel3.Name = "siticonePanel3";
+            this.siticonePanel3.Size = new System.Drawing.Size(962, 10);
+            this.siticonePanel3.TabIndex = 29;
+            // 
+            // panContent
+            // 
+            this.panContent.AutoSize = true;
+            this.panContent.BorderColor = System.Drawing.Color.Black;
+            this.panContent.BorderThickness = 1;
+            this.panContent.Controls.Add(this.panChooseAnswer);
+            this.panContent.Controls.Add(this.lblQuestion);
+            this.panContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panContent.Location = new System.Drawing.Point(10, 10);
+            this.panContent.Name = "panContent";
+            this.panContent.Padding = new System.Windows.Forms.Padding(20, 10, 20, 20);
+            this.panContent.Size = new System.Drawing.Size(962, 258);
+            this.panContent.TabIndex = 30;
+            // 
+            // panChooseAnswer
+            // 
+            this.panChooseAnswer.AutoSize = true;
+            this.panChooseAnswer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panChooseAnswer.Location = new System.Drawing.Point(20, 38);
+            this.panChooseAnswer.Name = "panChooseAnswer";
+            this.panChooseAnswer.Padding = new System.Windows.Forms.Padding(10);
+            this.panChooseAnswer.Size = new System.Drawing.Size(922, 200);
+            this.panChooseAnswer.TabIndex = 19;
+            // 
+            // lblQuestion
+            // 
+            this.lblQuestion.AutoSize = true;
+            this.lblQuestion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblQuestion.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestion.Location = new System.Drawing.Point(20, 10);
+            this.lblQuestion.Margin = new System.Windows.Forms.Padding(20, 10, 0, 0);
+            this.lblQuestion.Name = "lblQuestion";
+            this.lblQuestion.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.lblQuestion.Size = new System.Drawing.Size(56, 28);
+            this.lblQuestion.TabIndex = 18;
+            this.lblQuestion.Text = "Câu 1:";
+            // 
             // ucTestQuestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.panQuestion);
-            this.Controls.Add(this.panContent);
-            this.Controls.Add(this.panAnswer);
+            this.Controls.Add(this.siticonePanel2);
+            this.Controls.Add(this.siticonePanel1);
             this.Margin = new System.Windows.Forms.Padding(10);
             this.Name = "ucTestQuestion";
             this.Padding = new System.Windows.Forms.Padding(15);
-            this.Size = new System.Drawing.Size(875, 438);
-            this.Load += new System.EventHandler(this.ucTestQuestion_Load);
+            this.Size = new System.Drawing.Size(1182, 438);
+            this.siticonePanel1.ResumeLayout(false);
             this.panQuestion.ResumeLayout(false);
             this.panQuestion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTick)).EndInit();
-            this.panContent.ResumeLayout(false);
-            this.panContent.PerformLayout();
+            this.siticonePanel2.ResumeLayout(false);
+            this.siticonePanel2.PerformLayout();
             this.panAnswer.ResumeLayout(false);
             this.panAnswer.PerformLayout();
+            this.panContent.ResumeLayout(false);
+            this.panContent.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
+        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
         private Siticone.Desktop.UI.WinForms.SiticonePanel panQuestion;
+        private System.Windows.Forms.PictureBox picTick;
+        private System.Windows.Forms.Label lblQuestionScore;
         private System.Windows.Forms.Label lblTick;
         private System.Windows.Forms.Label lblState;
         private System.Windows.Forms.Label lblNumber;
-        private Siticone.Desktop.UI.WinForms.SiticonePanel panContent;
-        private System.Windows.Forms.Label lblQuestion;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel2;
         private Siticone.Desktop.UI.WinForms.SiticonePanel panAnswer;
         private System.Windows.Forms.Label lblTrueAnswer;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblStateAnswer;
-        private System.Windows.Forms.Label lblQuestionScore;
-        private System.Windows.Forms.PictureBox picTick;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel panContent;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel panChooseAnswer;
+        private System.Windows.Forms.Label lblQuestion;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel3;
     }
 }

@@ -80,7 +80,7 @@
             this.siticoneContainerControl3.Controls.Add(this.label2);
             this.siticoneContainerControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticoneContainerControl3.Location = new System.Drawing.Point(0, 49);
-            this.siticoneContainerControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.siticoneContainerControl3.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneContainerControl3.Name = "siticoneContainerControl3";
             this.siticoneContainerControl3.Padding = new System.Windows.Forms.Padding(27, 6, 27, 18);
             this.siticoneContainerControl3.Size = new System.Drawing.Size(651, 314);
@@ -98,7 +98,7 @@
             this.btnSave.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(27, 241);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(597, 55);
             this.btnSave.TabIndex = 9;
@@ -111,7 +111,7 @@
             this.conChooseFile.Controls.Add(this.btnChooseFile);
             this.conChooseFile.Dock = System.Windows.Forms.DockStyle.Top;
             this.conChooseFile.Location = new System.Drawing.Point(27, 179);
-            this.conChooseFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.conChooseFile.Margin = new System.Windows.Forms.Padding(4);
             this.conChooseFile.Name = "conChooseFile";
             this.conChooseFile.Size = new System.Drawing.Size(597, 44);
             this.conChooseFile.TabIndex = 7;
@@ -131,7 +131,7 @@
             this.tbPath.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbPath.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbPath.Location = new System.Drawing.Point(113, 0);
-            this.tbPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPath.Margin = new System.Windows.Forms.Padding(4);
             this.tbPath.Name = "tbPath";
             this.tbPath.PasswordChar = '\0';
             this.tbPath.PlaceholderText = "";
@@ -145,7 +145,7 @@
             this.btnChooseFile.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnChooseFile.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChooseFile.Location = new System.Drawing.Point(0, 0);
-            this.btnChooseFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChooseFile.Margin = new System.Windows.Forms.Padding(4);
             this.btnChooseFile.Name = "btnChooseFile";
             this.btnChooseFile.Size = new System.Drawing.Size(113, 44);
             this.btnChooseFile.TabIndex = 0;
@@ -304,7 +304,7 @@
             this.tbName.ForeColor = System.Drawing.Color.Black;
             this.tbName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbName.Location = new System.Drawing.Point(27, 27);
-            this.tbName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbName.Margin = new System.Windows.Forms.Padding(4);
             this.tbName.Name = "tbName";
             this.tbName.PasswordChar = '\0';
             this.tbName.PlaceholderText = "";

@@ -126,19 +126,19 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="tbPassword.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAEOSURBVDhPlZJLTgJBFEU7YQyIRPwsR03UmQmoQ12AccAC
-        DHshTIifVTgzzoxOgS040fg7p3mdQBq64SQnefW6qqvqdicFbOAxHkW9Fjf4gX+h9TWuxAX+4i3uhL3o
-        dbCUF+xPyzkG+Dwti/nCS3Tnw9D6Cj+xFO/8it9Rq7U960L20EljbGM1PMV39NkuLuURXbyZjuZpoM/u
-        09EC3N2k3Vla6K5vuGUDztA5ZpLjBD2iR5YDdKz7NqCGjv3BcticfUEFn0JrqaNz/DtzGM4PGljGMMw4
-        R+csvIIYovc2MOmG0sQJ3qWjJRikSauBeWd1ZxePsPAzii95QI+ahWjt5ytdPIv3NFjdtpEnSf4BgA1A
-        OmklxAAAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EQAACxEBf2RfkQAAAQ5JREFUOE+VkktOAkEURTthDIhE/CxHTdSZCahDXYBxwAIMeyFMiJ9VODPOjE6B
+        LTjR+DuneZ1AGrrhJCd59bqqq+p2JwVs4DEeRb0WN/iBf6H1Na7EBf7iLe6Eveh1sJQX7E/LOQb4PC2L
+        +cJLdOfD0PoKP7EU7/yK31GrtT3rQvbQSWNsYzU8xXf02S4u5RFdvJmO5mmgz+7T0QLc3aTdWVrorm+4
+        ZQPO0DlmkuMEPaJHlgN0rPs2oIaO/cFy2Jx9QQWfQmupo3P8O3MYzg8aWMYwzDhH5yy8ghii9zYw6YbS
+        xAnepaMlGKRJq4F5Z3VnF4+w8DOKL3lAj5qFaO3nK108i/c0WN22kSdJ/gGADUA6aSXEAAAAAABJRU5E
+        rkJggg==
 </value>
   </data>
   <data name="tbUsername.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAAJpJREFUOE/dkE0OQUEQBmdlR+xxI0KcSfzcBzscgwPgADiAKjMWkvde2k5UUklP
+        DgAACw4BQL7hQQAAAJpJREFUOE/dkE0OQUEQBmdlR+xxI0KcSfzcBzscgwPgADiAKjMWkvde2k5UUklP
         J939ZdLP0sIVXvGCy9IL48Aae9jHDS4wjFcdfDNAe2GqFpxzGcO4xnaJw1ucYxg/zCUm8bLDX33iCA/4
         KO5xiCG8dsQxtosTPOEMG/Gyw93X6xN7LmlMYmwv1zHFXS6ruaOR6+jgLZd/QkpPHuEdJQaopmwAAAAA
         SUVORK5CYII=
@@ -147,7 +147,7 @@
   <data name="siticoneContainerControl13.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAACp1JREFUeF7tnQXINU0Zhj8Vu7u7O7EVO7HAbrAVA/S3GxVRf7u7uxvswEQFu7FF
+        DgAACw4BQL7hQQAACp1JREFUeF7tnQXINU0Zhj8Vu7u7O7EVO7HAbrAVA/S3GxVRf7u7uxvswEQFu7FF
         bOz2vuDccDvOnrN7ztk9e953brjg+2b37Lw7z+7EM8/MHmlqampq2ledTdxKHC3eIb4ovrfg2+LTgvQn
         iJuL04qmLess4tHiy+I/A/mX+Lw4SpxGNG2gC4k3iX+IWmEP5W/ipeLsommATiFeLP4pagX7A/Fq8TBB
         9XV9cQ1xA3Fbwdv0RvFzUfv938WTxAlE0wpdV/xMlIX4XfEIcS4xRBcRTxQ/FeU1aXcuLZoqOoZ4qKDO

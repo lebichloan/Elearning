@@ -52,7 +52,6 @@
             this.siticoneHtmlLabel1 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.siticoneContainerControl4 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.siticoneContainerControl12 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
-            this.siticoneHtmlLabel4 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.siticoneContainerControl14 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.siticoneSeparator2 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
             this.siticoneHtmlLabel3 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
@@ -347,7 +346,6 @@
             // siticoneContainerControl12
             // 
             this.siticoneContainerControl12.BorderRadius = 10;
-            this.siticoneContainerControl12.Controls.Add(this.siticoneHtmlLabel4);
             this.siticoneContainerControl12.Controls.Add(this.siticoneContainerControl14);
             this.siticoneContainerControl12.Controls.Add(this.siticoneHtmlLabel3);
             this.siticoneContainerControl12.Controls.Add(this.siticoneContainerControl13);
@@ -358,18 +356,6 @@
             this.siticoneContainerControl12.Size = new System.Drawing.Size(260, 264);
             this.siticoneContainerControl12.TabIndex = 0;
             this.siticoneContainerControl12.Text = "siticoneContainerControl12";
-            // 
-            // siticoneHtmlLabel4
-            // 
-            this.siticoneHtmlLabel4.AutoSize = false;
-            this.siticoneHtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneHtmlLabel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticoneHtmlLabel4.Location = new System.Drawing.Point(0, 202);
-            this.siticoneHtmlLabel4.Name = "siticoneHtmlLabel4";
-            this.siticoneHtmlLabel4.Size = new System.Drawing.Size(260, 36);
-            this.siticoneHtmlLabel4.TabIndex = 3;
-            this.siticoneHtmlLabel4.Text = "by: thungan";
-            this.siticoneHtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // siticoneContainerControl14
             // 
@@ -472,6 +458,5 @@
         private Siticone.Desktop.UI.WinForms.SiticoneContainerControl siticoneContainerControl14;
         private Siticone.Desktop.UI.WinForms.SiticoneSeparator siticoneSeparator2;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel3;
-        private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel4;
     }
 }

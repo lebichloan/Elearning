@@ -11,11 +11,10 @@ using System.Windows.Forms;
 
 namespace Elearning.UserControls
 {
-    public partial class ucAdminQstMC1 : UserControl
+    public partial class ucAdminQstMCM : UserControl
     {
         TestQuestion question;
-
-        public ucAdminQstMC1()
+        public ucAdminQstMCM()
         {
             InitializeComponent();
 
@@ -24,7 +23,7 @@ namespace Elearning.UserControls
             this.flpChoices.HorizontalScroll.Visible = false;
         }
 
-        public ucAdminQstMC1(TestQuestion question) : this()
+        public ucAdminQstMCM(TestQuestion question) : this()
         {
             this.question = question;
             tbQuestion.Text = question.question_description;
@@ -33,14 +32,14 @@ namespace Elearning.UserControls
             if (question.choices != null)
             {
                 string[] choices = question.choices.Split('\n');
-                int correctChoice = int.Parse(question.answer);
+                string[] correctChoices = question.answer.Split(';');
 
                 for (int i = 0; i < choices.Length - 1; i++)
                 {
                     var uc = newUcAdminChoice(choices[i]);
                     flpChoices.Controls.Add(uc);
 
-                    if (i == correctChoice)
+                    if (correctChoices.Contains(i.ToString()))
                     {
                         uc.Checked();
                     }
@@ -71,22 +70,30 @@ namespace Elearning.UserControls
 
         private void ucChoice_Checked(object sender, EventArgs e)
         {
-            var checkedUc = (ucAdminChoice)sender;
-            if (checkedUc.IsChecked())
+            var uc = sender as ucAdminChoice;
+            if (uc.IsChecked())
             {
-                return;
-            }
-
-            foreach (ucAdminChoice uc in flpChoices.Controls)
-            {
-                if (uc != checkedUc)
+                // check if there is other checked choice
+                bool found = false;
+                foreach (var control in flpChoices.Controls)
                 {
-                    uc.Unchecked();
+                    var choice = control as ucAdminChoice;
+                    if (choice != uc && choice.IsChecked())
+                    {
+                        found = true;
+                        break;
+                    }
                 }
+                if (!found)
+                {
+                    return;
+                }
+                uc.Unchecked();
             }
-
-            checkedUc.Checked();
-
+            else
+            {
+                uc.Checked();
+            }
         }
 
         public string ChoicesToString()
@@ -99,17 +106,19 @@ namespace Elearning.UserControls
             return ret;
         }
 
-        public string GetCorrectChoice()
+        public string GetCorrectChoices()
         {
-            for (int i = 0; i < flpChoices.Controls.Count; i++)
+            string ret = "";
+            int i = 0;
+            foreach (ucAdminChoice uc in flpChoices.Controls)
             {
-                var uc = (ucAdminChoice)flpChoices.Controls[i];
                 if (uc.IsChecked())
                 {
-                    return i.ToString();
+                    ret += i + ";";
                 }
+                i++;
             }
-            return "";
+            return ret;
         }
 
         public string GetDescription()
@@ -124,13 +133,14 @@ namespace Elearning.UserControls
                 return 0;
             }
             return int.Parse(tbPoint.Text);
-        } 
+        }
+
         public void UpdateQuestion()
         {
             question.question_description = GetDescription();
             question.score = GetScore();
             question.choices = ChoicesToString();
-            question.answer = GetCorrectChoice().ToString();
+            question.answer = GetCorrectChoices();
         }
     }
 }

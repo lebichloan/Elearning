@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Validation;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -61,7 +62,12 @@ namespace Elearning.Forms
         private void ucQuestion_Click(object sender, EventArgs e)
         {
             var ucQuestion = (ucAdminQuestion)sender;
-            var question = ucQuestion.question;
+
+            foreach (ucAdminQuestion uc in this.flpQuestions.Controls)
+            {
+                uc.SetDefaultColor();
+            }
+            ucQuestion.SetCheckedColor();
         }
 
         private void ucQuestion_Delete(object sender, EventArgs e)
@@ -100,7 +106,6 @@ namespace Elearning.Forms
             {
                 var ucQuestion = (ucAdminQuestion)this.flpQuestions.Controls[i];
                 ucQuestion.UpdateQuestion();
-
             }
 
             foreach (var question in test.TestQuestions)
@@ -113,10 +118,26 @@ namespace Elearning.Forms
         private void btnSaveCont_Click(object sender, EventArgs e)
         {
             update();
-
-            Program.provider.SaveChanges();
-            MessageBox.Show("Changes have been saved successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            evtReload?.Invoke(this, e);
+            try
+            {
+                Program.provider.SaveChanges();
+                MessageBox.Show("Changes have been saved successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                evtReload?.Invoke(this, e);
+            }
+            catch (DbEntityValidationException ex)
+            {
+                foreach (var eve in ex.EntityValidationErrors)
+                {
+                    Console.WriteLine("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
+                        eve.Entry.Entity.GetType().Name, eve.Entry.State);
+                    foreach (var ve in eve.ValidationErrors)
+                    {
+                        Console.WriteLine("- Property: \"{0}\", Error: \"{1}\"",
+                            ve.PropertyName, ve.ErrorMessage);
+                    }
+                }
+                throw;
+            }
         }
 
         private void btnSaveExit_Click(object sender, EventArgs e)

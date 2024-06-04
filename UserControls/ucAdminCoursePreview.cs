@@ -43,5 +43,11 @@ namespace Elearning.UserControls
             pbImage.Image = Image.FromFile(Program.COURSES_IMG_PATH + course.course_image);
             pbImage.SizeMode = PictureBoxSizeMode.Zoom;
         }
+
+        public void SetImageToNone()
+        {
+            pbImage.Image.Dispose();
+            pbImage.Image = null;
+        }
     }
 }

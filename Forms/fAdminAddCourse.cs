@@ -48,6 +48,7 @@ namespace Elearning.Forms
             fileDialog.Filter = "Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png";
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {
+                pbThumbnailPreview.Image.Dispose();
                 pbThumbnailPreview.Image = Image.FromFile(fileDialog.FileName);
                 pbThumbnailPreview.SizeMode = PictureBoxSizeMode.Zoom;
                 tbPath.Text = fileDialog.FileName;

@@ -18,6 +18,7 @@ namespace Elearning.UserControls
         public Course course;
         ucAdminDescription ucDescription;
         ucAdminSyllabus ucSyllabus;
+        ucAdminCoursePreview ucPreview;
         public ucAdminCourseInfo()
         {
             InitializeComponent();
@@ -36,7 +37,7 @@ namespace Elearning.UserControls
 
         }
 
-        public ucAdminCourseInfo(Course course) : this()
+        public ucAdminCourseInfo(Course course, ucAdminCoursePreview ucPreview) : this()
         {
             this.course = course;
 
@@ -48,6 +49,7 @@ namespace Elearning.UserControls
             ucSyllabus = new ucAdminSyllabus(course);
             ucSyllabus.Dock = DockStyle.Fill;
             conSyllabus.Controls.Add(ucSyllabus);
+            this.ucPreview = ucPreview;
         }
 
         private void ucAdminCourseInfo_Load(object sender, EventArgs e)
@@ -91,6 +93,12 @@ namespace Elearning.UserControls
         private void btnEditInfor_Click(object sender, EventArgs e)
         {
             fAdminEditCourse fEditCourse = new fAdminEditCourse(course);
+            fEditCourse.evtSetImageToNone += (s, ev) =>
+            {
+                pbCourseImage.Image.Dispose();
+                pbCourseImage.Image = null;
+                ucPreview.SetImageToNone();
+            };
             fEditCourse.evtReload += (s, ev) =>
             {
                 LoadInfo();

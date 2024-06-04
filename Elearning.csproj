@@ -552,12 +552,14 @@
       <DependentUpon>ELearningModel.edmx</DependentUpon>
       <LastGenOutput>ELearningModel.cs</LastGenOutput>
     </Content>
+    <None Include="images\icons\add-white.png" />
     <Content Include="images\icons\circle_filled_icon.png" />
     <Content Include="images\icons\circle_icon.png" />
     <None Include="images\icons\clear.png" />
     <Content Include="images\icons\close.png" />
     <Content Include="images\icons\play.png" />
     <None Include="images\icons\refresh.png" />
+    <None Include="images\icons\search-white.png" />
     <Content Include="images\icons\stop.png" />
   </ItemGroup>
   <ItemGroup>

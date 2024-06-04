@@ -527,8 +527,10 @@
     </Content>
     <Content Include="images\icons\circle_filled_icon.png" />
     <Content Include="images\icons\circle_icon.png" />
+    <None Include="images\icons\clear.png" />
     <Content Include="images\icons\close.png" />
     <Content Include="images\icons\play.png" />
+    <None Include="images\icons\refresh.png" />
     <Content Include="images\icons\stop.png" />
   </ItemGroup>
   <ItemGroup>

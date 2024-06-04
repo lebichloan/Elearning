@@ -166,7 +166,7 @@
             this.siticoneContainerControl5.Controls.Add(this.siticoneContainerControl6);
             this.siticoneContainerControl5.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneContainerControl5.Location = new System.Drawing.Point(20, 60);
-            this.siticoneContainerControl5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneContainerControl5.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneContainerControl5.Name = "siticoneContainerControl5";
             this.siticoneContainerControl5.Size = new System.Drawing.Size(448, 63);
             this.siticoneContainerControl5.TabIndex = 12;
@@ -178,7 +178,7 @@
             this.siticoneContainerControl1.Controls.Add(this.optYes);
             this.siticoneContainerControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.siticoneContainerControl1.Location = new System.Drawing.Point(201, 22);
-            this.siticoneContainerControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneContainerControl1.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneContainerControl1.Name = "siticoneContainerControl1";
             this.siticoneContainerControl1.Padding = new System.Windows.Forms.Padding(1, 1, 3, 0);
             this.siticoneContainerControl1.Size = new System.Drawing.Size(270, 41);
@@ -191,7 +191,7 @@
             this.optNo.BackColor = System.Drawing.Color.White;
             this.optNo.Dock = System.Windows.Forms.DockStyle.Left;
             this.optNo.Location = new System.Drawing.Point(52, 1);
-            this.optNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.optNo.Margin = new System.Windows.Forms.Padding(2);
             this.optNo.Name = "optNo";
             this.optNo.Padding = new System.Windows.Forms.Padding(4, 0, 4, 4);
             this.optNo.Size = new System.Drawing.Size(47, 40);
@@ -206,7 +206,7 @@
             this.optYes.BackColor = System.Drawing.Color.Transparent;
             this.optYes.Dock = System.Windows.Forms.DockStyle.Left;
             this.optYes.Location = new System.Drawing.Point(1, 1);
-            this.optYes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.optYes.Margin = new System.Windows.Forms.Padding(2);
             this.optYes.Name = "optYes";
             this.optYes.Padding = new System.Windows.Forms.Padding(4, 0, 4, 4);
             this.optYes.Size = new System.Drawing.Size(51, 40);
@@ -220,7 +220,7 @@
             this.siticoneContainerControl8.Controls.Add(this.cbType);
             this.siticoneContainerControl8.Dock = System.Windows.Forms.DockStyle.Left;
             this.siticoneContainerControl8.Location = new System.Drawing.Point(0, 22);
-            this.siticoneContainerControl8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneContainerControl8.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneContainerControl8.Name = "siticoneContainerControl8";
             this.siticoneContainerControl8.Padding = new System.Windows.Forms.Padding(1, 1, 3, 0);
             this.siticoneContainerControl8.Size = new System.Drawing.Size(201, 41);
@@ -239,7 +239,7 @@
             this.cbType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbType.ItemHeight = 30;
             this.cbType.Location = new System.Drawing.Point(1, 1);
-            this.cbType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbType.Margin = new System.Windows.Forms.Padding(2);
             this.cbType.Name = "cbType";
             this.cbType.Size = new System.Drawing.Size(197, 36);
             this.cbType.TabIndex = 0;
@@ -251,7 +251,7 @@
             this.siticoneContainerControl6.Controls.Add(this.label7);
             this.siticoneContainerControl6.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneContainerControl6.Location = new System.Drawing.Point(0, 0);
-            this.siticoneContainerControl6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneContainerControl6.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneContainerControl6.Name = "siticoneContainerControl6";
             this.siticoneContainerControl6.Size = new System.Drawing.Size(448, 22);
             this.siticoneContainerControl6.TabIndex = 0;
@@ -320,7 +320,7 @@
             this.ClientSize = new System.Drawing.Size(488, 295);
             this.Controls.Add(this.siticoneContainerControl3);
             this.Controls.Add(this.lbTitle);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "fAdminAddResource";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.siticoneContainerControl3.ResumeLayout(false);

@@ -53,6 +53,22 @@ namespace Elearning.UserControls
                 ucAdminCoursePreview ucCourse = NewUcAdminCoursePreview(course);
                 layoutCourses.Controls.Add(ucCourse);
             }
+
+            // Load course difficulties to cbFilterDiff
+            cbFilterDiff.Items.Add("All");
+            foreach (string difficulty in Program.COURSE_DIFFICULTIES)
+            {
+                cbFilterDiff.Items.Add(difficulty);
+            }
+            cbFilterDiff.SelectedIndex = 0;
+
+            // Load course categories to cbFilterCategory
+            cbFilterCategory.Items.Add("All");
+            foreach (string category in Program.COURSE_CATEGORIES)
+            {
+                cbFilterCategory.Items.Add(category);
+            }
+            cbFilterCategory.SelectedIndex = 0;
         }
 
         public ucAdminCoursePreview NewUcAdminCoursePreview(Course course)
@@ -63,6 +79,19 @@ namespace Elearning.UserControls
             return ucCoursePreview;
         }
 
+        public void Reload()
+        {
+            foreach (Control control in layoutCourses.Controls)
+            {
+                var uc = control as ucAdminCoursePreview;
+                uc.Reload();
+                uc.Visible = true;
+            }
+
+            tbSearch.Text = "";
+            cbFilterDiff.SelectedIndex = 0;
+            cbFilterCategory.SelectedIndex = 0;
+        }
         private void btnAddCourse_Click(object sender, EventArgs e)
         {
             fAdminAddCourse addCourse = new fAdminAddCourse();
@@ -89,7 +118,121 @@ namespace Elearning.UserControls
 
         private void ucInfo_backClicked(object sender, EventArgs e)
         {
+            Reload();
             containerMain.Controls.Remove((ucAdminCourseInfo)sender);
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            // Search for the course with the keyword
+            string keyword = tbSearch.Text;
+            keyword = keyword.Trim();
+            if (keyword == "")
+            {
+                return;
+            }
+
+            foreach (Control control in layoutCourses.Controls)
+            {
+                if (control is ucAdminCoursePreview)
+                {
+                    ucAdminCoursePreview ucCourse = (ucAdminCoursePreview)control;
+                    if (ucCourse.course.course_name.ToLower().Contains(keyword.ToLower()) || 
+                        ucCourse.course.lecturer.ToLower().Contains(keyword.ToLower()))
+                    {
+                        ucCourse.Visible = true;
+                    }
+                    else
+                    {
+                        ucCourse.Visible = false;
+                    }
+                }
+            }
+
+        }
+
+        private void tbSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            // if the user presses Enter key, search for the course
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearch_Click(sender, e);
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            Reload();
+        }
+
+        private void cbFilterDiff_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var difficulty = cbFilterDiff.SelectedItem.ToString();
+            foreach (Control control in layoutCourses.Controls)
+            {
+                if (control is ucAdminCoursePreview)
+                {
+                    ucAdminCoursePreview ucCourse = (ucAdminCoursePreview)control;
+                    if (difficulty != "All" && ucCourse.course.difficulty != difficulty)
+                    {
+                        ucCourse.Visible = false;
+                    }
+                    else
+                    {
+                        ucCourse.Visible = true;
+                    }
+                }
+            }
+
+            if (cbFilterCategory.SelectedItem == null) return;
+
+            var category = cbFilterCategory.SelectedItem.ToString();
+            foreach (Control control in layoutCourses.Controls)
+            {
+                if (control is ucAdminCoursePreview)
+                {
+                    ucAdminCoursePreview ucCourse = (ucAdminCoursePreview)control;
+                    if (category != "All" && ucCourse.course.category != category)
+                    {
+                        ucCourse.Visible = false;
+                    }
+                }
+            }
+        }
+
+        private void cbFilterCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var category = cbFilterCategory.SelectedItem.ToString();
+            foreach (Control control in layoutCourses.Controls)
+            {
+                if (control is ucAdminCoursePreview)
+                {
+                    ucAdminCoursePreview ucCourse = (ucAdminCoursePreview)control;
+                    if (category != "All" && ucCourse.course.category != category)
+                    {
+                        ucCourse.Visible = false;
+                    }
+                    else
+                    {
+                        ucCourse.Visible = true;
+                    }
+                }
+            }
+
+            if (cbFilterDiff.SelectedItem == null) return;
+
+            var difficulty = cbFilterDiff.SelectedItem.ToString();
+            foreach (Control control in layoutCourses.Controls)
+            {
+                if (control is ucAdminCoursePreview)
+                {
+                    ucAdminCoursePreview ucCourse = (ucAdminCoursePreview)control;
+                    if (difficulty != "All" && ucCourse.course.difficulty != difficulty)
+                    {
+                        ucCourse.Visible = false;
+                    }
+                }
+            }
         }
     }
 }

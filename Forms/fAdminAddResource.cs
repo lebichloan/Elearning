@@ -201,6 +201,12 @@ namespace Elearning.Forms
             else
             {
                 AddResource();
+                
+                // clear all fields
+                tbName.Text = "";
+                tbPath.Text = "";
+                cbType.SelectedIndex = 0;
+                optNo.Checked = true;
             }
 
             evtReload?.Invoke(this, e);

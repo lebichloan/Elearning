@@ -79,13 +79,13 @@ namespace Elearning.Forms
                 if (tbPath.Text != "")
                 {
                     // Remove the old image file
-                    System.IO.File.Delete(Program.COURSES_IMG_PATH + course.course_image);
                     // Copy the image to the courses image folder defined in Program.COURSES_IMG_PATH, the file name should be the course_id, and the extension should be the same as the original file.
                     course.course_image = course.course_id + System.IO.Path.GetExtension(tbPath.Text);
                     System.IO.File.Copy(tbPath.Text, course.course_image);
                 }
                 Program.provider.SaveChanges();
                 MessageBox.Show("Edited course successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             catch (DbEntityValidationException ex)
             {

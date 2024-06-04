@@ -35,5 +35,13 @@ namespace Elearning.UserControls
         {
             viewDetailClicked?.Invoke(this, e);
         }
+
+        public void Reload()
+        {
+            lbCourseName.Text = course.course_name;
+            lbLecturer.Text = course.lecturer;
+            pbImage.Image = Image.FromFile(Program.COURSES_IMG_PATH + course.course_image);
+            pbImage.SizeMode = PictureBoxSizeMode.Zoom;
+        }
     }
 }

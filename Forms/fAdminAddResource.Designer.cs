@@ -46,12 +46,17 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tbName = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.lbDisplayType = new System.Windows.Forms.Label();
+            this.optDisplayOne = new System.Windows.Forms.RadioButton();
+            this.optDisplayAll = new System.Windows.Forms.RadioButton();
+            this.conDisplayType = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.siticoneContainerControl3.SuspendLayout();
             this.conChooseFile.SuspendLayout();
             this.siticoneContainerControl5.SuspendLayout();
             this.siticoneContainerControl1.SuspendLayout();
             this.siticoneContainerControl8.SuspendLayout();
             this.siticoneContainerControl6.SuspendLayout();
+            this.conDisplayType.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbTitle
@@ -62,7 +67,7 @@
             this.lbTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
             this.lbTitle.Location = new System.Drawing.Point(0, 0);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(488, 40);
+            this.lbTitle.Size = new System.Drawing.Size(454, 40);
             this.lbTitle.TabIndex = 1;
             this.lbTitle.Text = "Add New Resource";
             this.lbTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -71,6 +76,7 @@
             // 
             this.siticoneContainerControl3.BorderColor = System.Drawing.Color.Silver;
             this.siticoneContainerControl3.BorderRadius = 4;
+            this.siticoneContainerControl3.Controls.Add(this.conDisplayType);
             this.siticoneContainerControl3.Controls.Add(this.btnSave);
             this.siticoneContainerControl3.Controls.Add(this.conChooseFile);
             this.siticoneContainerControl3.Controls.Add(this.lbChooseFile);
@@ -82,7 +88,7 @@
             this.siticoneContainerControl3.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneContainerControl3.Name = "siticoneContainerControl3";
             this.siticoneContainerControl3.Padding = new System.Windows.Forms.Padding(20, 5, 20, 15);
-            this.siticoneContainerControl3.Size = new System.Drawing.Size(488, 255);
+            this.siticoneContainerControl3.Size = new System.Drawing.Size(454, 317);
             this.siticoneContainerControl3.TabIndex = 2;
             this.siticoneContainerControl3.Text = "Course Name*";
             // 
@@ -99,7 +105,7 @@
             this.btnSave.Location = new System.Drawing.Point(27, 241);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(448, 45);
+            this.btnSave.Size = new System.Drawing.Size(414, 45);
             this.btnSave.TabIndex = 9;
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -112,7 +118,7 @@
             this.conChooseFile.Location = new System.Drawing.Point(27, 179);
             this.conChooseFile.Margin = new System.Windows.Forms.Padding(4);
             this.conChooseFile.Name = "conChooseFile";
-            this.conChooseFile.Size = new System.Drawing.Size(448, 36);
+            this.conChooseFile.Size = new System.Drawing.Size(414, 36);
             this.conChooseFile.TabIndex = 7;
             this.conChooseFile.Text = "siticoneContainerControl4";
             // 
@@ -136,7 +142,7 @@
             this.tbPath.PlaceholderText = "";
             this.tbPath.ReadOnly = true;
             this.tbPath.SelectedText = "";
-            this.tbPath.Size = new System.Drawing.Size(363, 36);
+            this.tbPath.Size = new System.Drawing.Size(329, 36);
             this.tbPath.TabIndex = 1;
             // 
             // btnChooseFile
@@ -159,7 +165,7 @@
             this.lbChooseFile.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbChooseFile.Location = new System.Drawing.Point(20, 123);
             this.lbChooseFile.Name = "lbChooseFile";
-            this.lbChooseFile.Size = new System.Drawing.Size(448, 22);
+            this.lbChooseFile.Size = new System.Drawing.Size(414, 22);
             this.lbChooseFile.TabIndex = 6;
             this.lbChooseFile.Text = "Choose resource\'s file ";
             this.lbChooseFile.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -173,7 +179,7 @@
             this.siticoneContainerControl5.Location = new System.Drawing.Point(20, 60);
             this.siticoneContainerControl5.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneContainerControl5.Name = "siticoneContainerControl5";
-            this.siticoneContainerControl5.Size = new System.Drawing.Size(448, 63);
+            this.siticoneContainerControl5.Size = new System.Drawing.Size(414, 63);
             this.siticoneContainerControl5.TabIndex = 12;
             this.siticoneContainerControl5.Text = "siticoneContainerControl5";
             // 
@@ -258,7 +264,7 @@
             this.siticoneContainerControl6.Location = new System.Drawing.Point(0, 0);
             this.siticoneContainerControl6.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneContainerControl6.Name = "siticoneContainerControl6";
-            this.siticoneContainerControl6.Size = new System.Drawing.Size(448, 22);
+            this.siticoneContainerControl6.Size = new System.Drawing.Size(414, 22);
             this.siticoneContainerControl6.TabIndex = 0;
             this.siticoneContainerControl6.Text = "siticoneContainerControl6";
             // 
@@ -305,7 +311,7 @@
             this.tbName.PasswordChar = '\0';
             this.tbName.PlaceholderText = "";
             this.tbName.SelectedText = "";
-            this.tbName.Size = new System.Drawing.Size(448, 38);
+            this.tbName.Size = new System.Drawing.Size(414, 38);
             this.tbName.TabIndex = 1;
             // 
             // label2
@@ -315,18 +321,73 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(20, 5);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(448, 17);
+            this.label2.Size = new System.Drawing.Size(414, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Resource\'s name";
+            // 
+            // lbDisplayType
+            // 
+            this.lbDisplayType.BackColor = System.Drawing.Color.Transparent;
+            this.lbDisplayType.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbDisplayType.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDisplayType.Location = new System.Drawing.Point(0, 0);
+            this.lbDisplayType.Name = "lbDisplayType";
+            this.lbDisplayType.Size = new System.Drawing.Size(414, 27);
+            this.lbDisplayType.TabIndex = 13;
+            this.lbDisplayType.Text = "Questions\' display type";
+            this.lbDisplayType.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // optDisplayOne
+            // 
+            this.optDisplayOne.BackColor = System.Drawing.Color.Transparent;
+            this.optDisplayOne.Dock = System.Windows.Forms.DockStyle.Top;
+            this.optDisplayOne.Location = new System.Drawing.Point(0, 55);
+            this.optDisplayOne.Margin = new System.Windows.Forms.Padding(2);
+            this.optDisplayOne.Name = "optDisplayOne";
+            this.optDisplayOne.Padding = new System.Windows.Forms.Padding(4, 0, 4, 4);
+            this.optDisplayOne.Size = new System.Drawing.Size(414, 22);
+            this.optDisplayOne.TabIndex = 14;
+            this.optDisplayOne.TabStop = true;
+            this.optDisplayOne.Text = "One question each page";
+            this.optDisplayOne.UseVisualStyleBackColor = false;
+            // 
+            // optDisplayAll
+            // 
+            this.optDisplayAll.BackColor = System.Drawing.Color.Transparent;
+            this.optDisplayAll.Dock = System.Windows.Forms.DockStyle.Top;
+            this.optDisplayAll.Location = new System.Drawing.Point(0, 27);
+            this.optDisplayAll.Margin = new System.Windows.Forms.Padding(2);
+            this.optDisplayAll.Name = "optDisplayAll";
+            this.optDisplayAll.Padding = new System.Windows.Forms.Padding(4, 0, 4, 4);
+            this.optDisplayAll.Size = new System.Drawing.Size(414, 28);
+            this.optDisplayAll.TabIndex = 15;
+            this.optDisplayAll.TabStop = true;
+            this.optDisplayAll.Text = "All questions in one page";
+            this.optDisplayAll.UseVisualStyleBackColor = false;
+            // 
+            // conDisplayType
+            // 
+            this.conDisplayType.Controls.Add(this.optDisplayOne);
+            this.conDisplayType.Controls.Add(this.optDisplayAll);
+            this.conDisplayType.Controls.Add(this.lbDisplayType);
+            this.conDisplayType.Dock = System.Windows.Forms.DockStyle.Top;
+            this.conDisplayType.Location = new System.Drawing.Point(20, 181);
+            this.conDisplayType.Name = "conDisplayType";
+            this.conDisplayType.Size = new System.Drawing.Size(414, 77);
+            this.conDisplayType.TabIndex = 16;
+            this.conDisplayType.Text = "siticoneContainerControl2";
             // 
             // fAdminAddResource
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 295);
+            this.ClientSize = new System.Drawing.Size(454, 357);
             this.Controls.Add(this.siticoneContainerControl3);
             this.Controls.Add(this.lbTitle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "fAdminAddResource";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.siticoneContainerControl3.ResumeLayout(false);
@@ -336,6 +397,7 @@
             this.siticoneContainerControl1.PerformLayout();
             this.siticoneContainerControl8.ResumeLayout(false);
             this.siticoneContainerControl6.ResumeLayout(false);
+            this.conDisplayType.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -360,5 +422,9 @@
         private System.Windows.Forms.RadioButton optNo;
         private System.Windows.Forms.RadioButton optYes;
         private System.Windows.Forms.Label lbOption;
+        private System.Windows.Forms.RadioButton optDisplayAll;
+        private System.Windows.Forms.RadioButton optDisplayOne;
+        private System.Windows.Forms.Label lbDisplayType;
+        private Siticone.Desktop.UI.WinForms.SiticoneContainerControl conDisplayType;
     }
 }

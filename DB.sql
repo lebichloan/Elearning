@@ -121,3 +121,19 @@ BEGIN
     WHERE resource_type = 2;
 END
 GO
+
+alter table CourseTest add display_type int check (display_type in (0, 1)) default 0 -- 0 -> hien all cau trong 1 trang, 1 -> hien 1 cau 1 trang
+
+go
+
+alter table Course add discount int check (discount >= 0 and discount <= 100) default 0 -- phan tram giam gia
+alter table Course add discount_end_date smalldatetime
+go
+
+alter table CourseModule add description nvarchar(256) -- mo ta module
+
+go
+
+update Course set discount = 0 where discount is null
+update CourseTest set display_type = 0 where display_type is null
+update CourseModule set description = '' where description is null

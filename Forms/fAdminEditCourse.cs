@@ -119,5 +119,28 @@ namespace Elearning.Forms
                 tbPath.Text = fileDialog.FileName;
             }
         }
+
+        private int priceToInt(string text)
+        {
+            if (text == "")
+            {
+                return 0;
+            }
+
+            // the price will be in the format xxx,xxx,xxx VND
+            // remove all commas
+            text = text.Replace(",", "");
+            return (int)Convert.ToDecimal(text);
+        }
+
+        private void tbPrice_TextChanged(object sender, EventArgs e)
+        {
+            // as the text in tbPrice changes, format it to the format xxx,xxx,xxx VND
+            if (tbPrice.Text != "")
+            {
+                tbPrice.Text = priceToInt(tbPrice.Text).ToString("N0");
+                tbPrice.SelectionStart = tbPrice.Text.Length;
+            }
+        }
     }
 }

@@ -31,7 +31,6 @@
             this.siticoneContainerControl1 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.siticoneContainerControl3 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.btnSave = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.pbThumbnailPreview = new Siticone.Desktop.UI.WinForms.SiticonePictureBox();
             this.siticoneContainerControl4 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.tbPath = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.btnChooseFile = new System.Windows.Forms.Button();
@@ -55,9 +54,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.siticoneContainerControl2 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.label1 = new System.Windows.Forms.Label();
+            this.pbThumbnailPreview = new Siticone.Desktop.UI.WinForms.SiticonePictureBox();
             this.siticoneContainerControl1.SuspendLayout();
             this.siticoneContainerControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbThumbnailPreview)).BeginInit();
             this.siticoneContainerControl4.SuspendLayout();
             this.siticoneContainerControl5.SuspendLayout();
             this.siticoneContainerControl9.SuspendLayout();
@@ -65,6 +64,7 @@
             this.siticoneContainerControl7.SuspendLayout();
             this.siticoneContainerControl6.SuspendLayout();
             this.siticoneContainerControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbThumbnailPreview)).BeginInit();
             this.SuspendLayout();
             // 
             // siticoneContainerControl1
@@ -190,7 +190,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(573, 27);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Choose course\'s image (if not chosen, the default image will be used)";
+            this.label5.Text = "Choose course\'s image";
             this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // tbDescription
@@ -324,6 +324,7 @@
             this.tbPrice.SelectedText = "";
             this.tbPrice.Size = new System.Drawing.Size(189, 47);
             this.tbPrice.TabIndex = 4;
+            this.tbPrice.TextChanged += new System.EventHandler(this.tbPrice_TextChanged);
             // 
             // siticoneContainerControl6
             // 
@@ -472,6 +473,16 @@
             this.label1.Text = "Add New Course";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pbThumbnailPreview
+            // 
+            this.pbThumbnailPreview.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pbThumbnailPreview.ImageRotate = 0F;
+            this.pbThumbnailPreview.Location = new System.Drawing.Point(20, 339);
+            this.pbThumbnailPreview.Name = "pbThumbnailPreview";
+            this.pbThumbnailPreview.Size = new System.Drawing.Size(431, 144);
+            this.pbThumbnailPreview.TabIndex = 8;
+            this.pbThumbnailPreview.TabStop = false;
+            // 
             // fAdminAddCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -486,7 +497,6 @@
             this.Text = "Add New Course";
             this.siticoneContainerControl1.ResumeLayout(false);
             this.siticoneContainerControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbThumbnailPreview)).EndInit();
             this.siticoneContainerControl4.ResumeLayout(false);
             this.siticoneContainerControl5.ResumeLayout(false);
             this.siticoneContainerControl9.ResumeLayout(false);
@@ -494,6 +504,7 @@
             this.siticoneContainerControl7.ResumeLayout(false);
             this.siticoneContainerControl6.ResumeLayout(false);
             this.siticoneContainerControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbThumbnailPreview)).EndInit();
             this.ResumeLayout(false);
 
         }

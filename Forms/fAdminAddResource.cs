@@ -82,12 +82,15 @@ namespace Elearning.Forms
             {
                 conChooseFile.Visible = true;
                 lbChooseFile.Visible = true;
+                conDisplayType.Visible = false;
                 lbOption.Text = "Allow download";
             }
             else
             {
                 conChooseFile.Visible = false;
                 lbChooseFile.Visible = false;
+                conDisplayType.Visible = true;
+                optDisplayAll.Checked = true;
                 lbOption.Text = "Mandatory";
             }
         }
@@ -147,6 +150,7 @@ namespace Elearning.Forms
                     // update the mandatory property of the test
                     var test = Program.provider.CourseTests.Where(t => t.resource_id == id).FirstOrDefault();
                     test.mandatory = Convert.ToInt32(optYes.Checked);
+                    test.display_type = optDisplayAll.Checked ? Program.TEST_DISPLAY_ALL : Program.TEST_DISPLAY_ONE_BY_ONE;
                     Program.provider.SaveChanges();
                     // show message box to ask if the user wants to add questions to the test
                     if (MessageBox.Show("New test added. Would you like to add questions to the test now?", "Add questions", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)

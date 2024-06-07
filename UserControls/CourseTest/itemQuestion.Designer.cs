@@ -33,13 +33,17 @@
             // 
             // btnQuestionOrdinal
             // 
+            this.btnQuestionOrdinal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnQuestionOrdinal.BorderRadius = 5;
+            this.btnQuestionOrdinal.BorderThickness = 1;
             this.btnQuestionOrdinal.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnQuestionOrdinal.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnQuestionOrdinal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnQuestionOrdinal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnQuestionOrdinal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnQuestionOrdinal.FillColor = System.Drawing.Color.White;
             this.btnQuestionOrdinal.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuestionOrdinal.ForeColor = System.Drawing.Color.White;
+            this.btnQuestionOrdinal.ForeColor = System.Drawing.Color.Black;
             this.btnQuestionOrdinal.Location = new System.Drawing.Point(5, 5);
             this.btnQuestionOrdinal.Name = "btnQuestionOrdinal";
             this.btnQuestionOrdinal.Size = new System.Drawing.Size(50, 50);

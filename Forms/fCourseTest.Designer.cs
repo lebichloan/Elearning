@@ -42,6 +42,8 @@
             this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel4 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.tbQuestion = new System.Windows.Forms.TableLayoutPanel();
+            this.btnStart = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.btnDone = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticonePanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.siticonePanel1.SuspendLayout();
@@ -52,6 +54,7 @@
             // 
             // siticonePanel2
             // 
+            this.siticonePanel2.Controls.Add(this.btnStart);
             this.siticonePanel2.Controls.Add(this.lblTimer);
             this.siticonePanel2.Controls.Add(this.label2);
             this.siticonePanel2.Controls.Add(this.lblName);
@@ -114,10 +117,12 @@
             // timerTest
             // 
             this.timerTest.Enabled = true;
+            this.timerTest.Interval = 1000;
             this.timerTest.Tick += new System.EventHandler(this.timerTest_Tick);
             // 
             // siticonePanel1
             // 
+            this.siticonePanel1.Controls.Add(this.btnDone);
             this.siticonePanel1.Controls.Add(this.panQuestion);
             this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.siticonePanel1.Location = new System.Drawing.Point(0, 95);
@@ -143,6 +148,7 @@
             this.tbAllQuestion.ColumnCount = 1;
             this.tbAllQuestion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbAllQuestion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbAllQuestion.Enabled = false;
             this.tbAllQuestion.Location = new System.Drawing.Point(15, 48);
             this.tbAllQuestion.Name = "tbAllQuestion";
             this.tbAllQuestion.RowCount = 1;
@@ -196,6 +202,38 @@
             this.tbQuestion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbQuestion.Size = new System.Drawing.Size(864, 544);
             this.tbQuestion.TabIndex = 2;
+            this.tbQuestion.Visible = false;
+            // 
+            // btnStart
+            // 
+            this.btnStart.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnStart.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnStart.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnStart.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnStart.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnStart.ForeColor = System.Drawing.Color.White;
+            this.btnStart.Location = new System.Drawing.Point(15, 24);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(150, 50);
+            this.btnStart.TabIndex = 18;
+            this.btnStart.Text = "Start";
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // btnDone
+            // 
+            this.btnDone.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDone.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDone.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDone.ForeColor = System.Drawing.Color.White;
+            this.btnDone.Location = new System.Drawing.Point(165, 476);
+            this.btnDone.Name = "btnDone";
+            this.btnDone.Size = new System.Drawing.Size(150, 50);
+            this.btnDone.TabIndex = 19;
+            this.btnDone.Text = "Finish";
+            this.btnDone.Visible = false;
+            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // fCourseTest
             // 
@@ -235,5 +273,7 @@
         private System.Windows.Forms.TableLayoutPanel tbAllQuestion;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel4;
         private System.Windows.Forms.TableLayoutPanel tbQuestion;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnStart;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnDone;
     }
 }

@@ -74,9 +74,9 @@
             this.btnUserProfile.ImageRotate = 0F;
             this.btnUserProfile.Location = new System.Drawing.Point(1128, 0);
             this.btnUserProfile.Name = "btnUserProfile";
-            this.btnUserProfile.Padding = new System.Windows.Forms.Padding(2);
             this.btnUserProfile.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
             this.btnUserProfile.Size = new System.Drawing.Size(50, 50);
+            this.btnUserProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnUserProfile.TabIndex = 6;
             this.btnUserProfile.TabStop = false;
             // 

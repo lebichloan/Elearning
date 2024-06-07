@@ -22,5 +22,18 @@ namespace Elearning.UserControls.CourseTest
             get { return btnQuestionOrdinal.Text; }
             set { btnQuestionOrdinal.Text = value; }
         }
+
+        public Color buttonColor
+        {
+            get { return btnQuestionOrdinal.FillColor; }
+            set { btnQuestionOrdinal.FillColor = value; }
+        }
+
+        public Color textColor
+        {
+            get { return btnQuestionOrdinal.ForeColor; }
+            set { btnQuestionOrdinal.ForeColor = value; }
+        }
+
     }
 }

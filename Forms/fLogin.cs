@@ -81,7 +81,7 @@ namespace Elearning.Forms
                     if (account.user_role == Program.ROLE_ADMIN)
                     {
                         // open admin form
-                        fAdminMain f = new fAdminMain();
+                        fAdminMain f = new fAdminMain(account);
                         f.FormClosed += CloseMainForm;
                         f.ShowDialog();
                         this.Hide();

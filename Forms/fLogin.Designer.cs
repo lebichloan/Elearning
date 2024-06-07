@@ -50,7 +50,7 @@
             this.tbUsername = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.siticoneContainerControl6 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.siticoneHtmlLabel1 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.siticoneContainerControl4 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
+            this.siticoneHtmlLabel4 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel(); this.siticoneContainerControl4 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.siticoneContainerControl12 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.siticoneContainerControl14 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.siticoneSeparator2 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
@@ -480,6 +480,7 @@
         private Siticone.Desktop.UI.WinForms.SiticoneContainerControl siticoneContainerControl5;
         private Siticone.Desktop.UI.WinForms.SiticoneContainerControl siticoneContainerControl6;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel1;
+        private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel4;
         private Siticone.Desktop.UI.WinForms.SiticoneContainerControl siticoneContainerControl4;
         private Siticone.Desktop.UI.WinForms.SiticoneContainerControl siticoneContainerControl7;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox tbPassword;

@@ -1,4 +1,5 @@
 ﻿using Elearning.Entities;
+using Elearning.Forms;
 using Elearning.UserControls;
 using System;
 using System.Collections.Generic;
@@ -18,10 +19,14 @@ namespace Elearning
         public fMain()
         {
             InitializeComponent();
+            currentAccount = fLogin.currentAccount;
         }
 
+        private Account currentAccount;
         private void fMain_Load(object sender, EventArgs e)
         {
+            lbUserFullname.Text = currentAccount.fullname;
+            btnUserProfile.Image = Image.FromFile(Program.AVARTAR_PATH + currentAccount.avatar);
             this.ucMain = new ucMain();
             this.ucMain.Dock = DockStyle.Fill;
             this.ucMain.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;

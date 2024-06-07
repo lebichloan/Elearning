@@ -46,6 +46,7 @@
             this.btnRegister = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnBackHome = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.panCourseInfo = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.siticonePanel7 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel6 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.layoutModule = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
@@ -283,6 +284,7 @@
             // 
             // panCourseInfo
             // 
+            this.panCourseInfo.Controls.Add(this.siticonePanel7);
             this.panCourseInfo.Controls.Add(this.siticonePanel6);
             this.panCourseInfo.Controls.Add(this.siticoneContainerControl5);
             this.panCourseInfo.Controls.Add(this.siticonePanel5);
@@ -292,6 +294,15 @@
             this.panCourseInfo.Name = "panCourseInfo";
             this.panCourseInfo.Size = new System.Drawing.Size(783, 667);
             this.panCourseInfo.TabIndex = 10;
+            // 
+            // siticonePanel7
+            // 
+            this.siticonePanel7.BackColor = System.Drawing.Color.Black;
+            this.siticonePanel7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.siticonePanel7.Location = new System.Drawing.Point(282, 231);
+            this.siticonePanel7.Name = "siticonePanel7";
+            this.siticonePanel7.Size = new System.Drawing.Size(1, 436);
+            this.siticonePanel7.TabIndex = 20;
             // 
             // siticonePanel6
             // 
@@ -526,7 +537,6 @@
         private System.Windows.Forms.Label lblTotalModule;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel2;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel3;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblStar;
         private System.Windows.Forms.Label lblPrice;
         private Siticone.Desktop.UI.WinForms.SiticoneContainerControl siticoneContainerControl2;
@@ -554,5 +564,7 @@
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel layoutModule;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel7;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

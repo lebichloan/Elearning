@@ -57,7 +57,6 @@
             this.Name = "ucMyElearning";
             this.Size = new System.Drawing.Size(1101, 667);
             this.Load += new System.EventHandler(this.ucMyElearning_Load);
-            this.Load += new System.EventHandler(this.ucMyElearning_Load);
             this.ResumeLayout(false);
 
         }

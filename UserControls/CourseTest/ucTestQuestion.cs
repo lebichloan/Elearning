@@ -17,11 +17,18 @@ namespace Elearning.UserControls.CourseTest
             InitializeComponent();
         }
 
+        private int questionOrdinal;
+        public int ordinnal
+        {
+            get { return questionOrdinal; }
+            set { questionOrdinal = value; }
+        }
+
         private int idQuestion;
         public int id
         {
-            get { return id; }
-            set { id = value; }
+            get { return idQuestion; }
+            set { idQuestion = value; }
         }
 
         private bool isTick = false;
@@ -52,6 +59,7 @@ namespace Elearning.UserControls.CourseTest
             else
             {
                 panAnswer.Visible = false;
+                panAnswer.Size = new Size(0, 0);
                 picTick.Visible = false;
                 lblTick.Enabled = true;
                 panContent.Enabled = true;
@@ -88,6 +96,12 @@ namespace Elearning.UserControls.CourseTest
             set { lblQuestion.Text = value; }
         }
 
+        public string questionScore
+        {
+            get { return lblQuestionScore.Text; }
+            set { lblQuestionScore.Text = value; }
+        }
+
         public string answerState
         {
             get { return lblStateAnswer.Text; }
@@ -100,13 +114,43 @@ namespace Elearning.UserControls.CourseTest
             set { lblTrueAnswer.Text = value; }
         }
 
-        public EventHandler ucTestQuestionLoadAnswer;
-
         public EventHandler ucTestQuestionTickClick;
 
-        private void ucTestQuestion_Load(object sender, EventArgs e)
+        public void ucTestQuestion_LoadAnswer(int type, string choice)
         {
-            ucTestQuestionLoadAnswer?.Invoke(this, e);
+            if (type == 0)
+            {
+                string[] answerArray = choice.Split('\n');
+                foreach (string answer in answerArray)
+                {
+                    if (answer != "")
+                    {
+                        RadioButton itemCheckBox = new RadioButton();
+                        itemCheckBox.Text = answer;
+                        itemCheckBox.Click += OneChoiceCheckBoxClick;
+                        itemCheckBox.Checked = false;
+                        //itemCheckBox.Padding = new Padding(0, 10, 0, 10);
+                        itemCheckBox.Dock = DockStyle.Top;
+                        panChooseAnswer.Controls.Add(itemCheckBox);
+                    }
+                }
+                done = 0;
+            }
+        }
+
+        private int done = 0;
+        public int isDone {
+            get { return done; }
+            set { done = value; }
+        }
+
+        public EventHandler ucTestQuestionChooseAnswerClick;
+        public void OneChoiceCheckBoxClick(object sender, EventArgs e)
+        {
+            done = 1;
+            lblState.Text = "Done";
+            lblState.Visible = true;
+            ucTestQuestionChooseAnswerClick?.Invoke(this, e);
         }
 
         private void lblTick_Click(object sender, EventArgs e)

@@ -16,5 +16,11 @@ namespace Elearning.Forms
         {
             InitializeComponent();
         }
+
+        public CourseTest(int resourceID)
+        {
+            InitializeComponent();
+
+        }
     }
 }

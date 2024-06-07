@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.panTop = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.btnViewDetail = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.siticonePanel4 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneContainerControl1 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
-            this.btnViewDetail = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.lblDone = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblLecturerName = new System.Windows.Forms.Label();
@@ -53,6 +54,8 @@
             // panTop
             // 
             this.panTop.BackColor = System.Drawing.SystemColors.Window;
+            this.panTop.Controls.Add(this.btnViewDetail);
+            this.panTop.Controls.Add(this.siticonePanel4);
             this.panTop.Controls.Add(this.siticonePanel3);
             this.panTop.Controls.Add(this.btnBackHome);
             this.panTop.Dock = System.Windows.Forms.DockStyle.Top;
@@ -60,6 +63,29 @@
             this.panTop.Name = "panTop";
             this.panTop.Size = new System.Drawing.Size(1100, 50);
             this.panTop.TabIndex = 0;
+            // 
+            // btnViewDetail
+            // 
+            this.btnViewDetail.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewDetail.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewDetail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnViewDetail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnViewDetail.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnViewDetail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnViewDetail.ForeColor = System.Drawing.Color.White;
+            this.btnViewDetail.Location = new System.Drawing.Point(768, 0);
+            this.btnViewDetail.Name = "btnViewDetail";
+            this.btnViewDetail.Size = new System.Drawing.Size(150, 50);
+            this.btnViewDetail.TabIndex = 17;
+            this.btnViewDetail.Text = "View detail";
+            // 
+            // siticonePanel4
+            // 
+            this.siticonePanel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.siticonePanel4.Location = new System.Drawing.Point(918, 0);
+            this.siticonePanel4.Name = "siticonePanel4";
+            this.siticonePanel4.Size = new System.Drawing.Size(32, 50);
+            this.siticonePanel4.TabIndex = 12;
             // 
             // siticonePanel3
             // 
@@ -74,7 +100,6 @@
             // 
             // siticoneContainerControl1
             // 
-            this.siticoneContainerControl1.Controls.Add(this.btnViewDetail);
             this.siticoneContainerControl1.Controls.Add(this.lblDone);
             this.siticoneContainerControl1.Controls.Add(this.panel2);
             this.siticoneContainerControl1.Controls.Add(this.lblLecturerName);
@@ -87,21 +112,6 @@
             this.siticoneContainerControl1.Size = new System.Drawing.Size(733, 40);
             this.siticoneContainerControl1.TabIndex = 4;
             this.siticoneContainerControl1.Text = "siticoneContainerControl1";
-            // 
-            // btnViewDetail
-            // 
-            this.btnViewDetail.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnViewDetail.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnViewDetail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnViewDetail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnViewDetail.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnViewDetail.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnViewDetail.ForeColor = System.Drawing.Color.White;
-            this.btnViewDetail.Location = new System.Drawing.Point(383, 10);
-            this.btnViewDetail.Name = "btnViewDetail";
-            this.btnViewDetail.Size = new System.Drawing.Size(150, 30);
-            this.btnViewDetail.TabIndex = 14;
-            this.btnViewDetail.Text = "View detail";
             // 
             // lblDone
             // 
@@ -172,16 +182,16 @@
             // 
             // btnBackHome
             // 
-            this.btnBackHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBackHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnBackHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBackHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnBackHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBackHome.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnBackHome.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBackHome.ForeColor = System.Drawing.Color.White;
             this.btnBackHome.Location = new System.Drawing.Point(950, 0);
             this.btnBackHome.Name = "btnBackHome";
-            this.btnBackHome.Size = new System.Drawing.Size(150, 45);
+            this.btnBackHome.Size = new System.Drawing.Size(150, 50);
             this.btnBackHome.TabIndex = 10;
             this.btnBackHome.Text = "Back";
             this.btnBackHome.Click += new System.EventHandler(this.btnBackHome_Click);
@@ -270,5 +280,6 @@
         private System.Windows.Forms.Label lblDone;
         private System.Windows.Forms.Panel panel2;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnViewDetail;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel4;
     }
 }

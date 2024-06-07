@@ -45,18 +45,21 @@
             this.siticonePanel7 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.lblName = new System.Windows.Forms.Label();
-            this.siticoneCirclePictureBox1 = new Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox();
+            this.picAvatar = new Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.siticonePanel15 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblStudying = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.siticonePanel14 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.lblPending = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.siticonePanel13 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblTotalCourse = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.siticonePanel16 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lblTotalCetiificate = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.siticonePanel12 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.panYourAccount = new Siticone.Desktop.UI.WinForms.SiticonePanel();
@@ -64,16 +67,16 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.siticonePanel11 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.label8 = new System.Windows.Forms.Label();
-            this.siticoneTextBox4 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.txtPassword = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.siticonePanel10 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.label7 = new System.Windows.Forms.Label();
-            this.siticoneTextBox3 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.txtUserName = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.siticonePanel9 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.label6 = new System.Windows.Forms.Label();
-            this.siticoneTextBox2 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.txtEmail = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.siticonePanel8 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.label5 = new System.Windows.Forms.Label();
-            this.siticoneTextBox1 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.txtFullName = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.siticonePanel1.SuspendLayout();
             this.siticonePanel4.SuspendLayout();
             this.btnYourCertificate.SuspendLayout();
@@ -83,10 +86,11 @@
             this.btnYourAccount.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.siticonePanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.siticoneCirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.siticonePanel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.siticonePanel15.SuspendLayout();
+            this.siticonePanel14.SuspendLayout();
             this.siticonePanel13.SuspendLayout();
             this.siticonePanel16.SuspendLayout();
             this.panYourAccount.SuspendLayout();
@@ -272,7 +276,7 @@
             // 
             this.siticonePanel3.BackColor = System.Drawing.Color.White;
             this.siticonePanel3.Controls.Add(this.lblName);
-            this.siticonePanel3.Controls.Add(this.siticoneCirclePictureBox1);
+            this.siticonePanel3.Controls.Add(this.picAvatar);
             this.siticonePanel3.Controls.Add(this.label1);
             this.siticonePanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticonePanel3.Location = new System.Drawing.Point(50, 50);
@@ -291,17 +295,18 @@
             this.lblName.TabIndex = 2;
             this.lblName.Text = "name";
             // 
-            // siticoneCirclePictureBox1
+            // picAvatar
             // 
-            this.siticoneCirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("siticoneCirclePictureBox1.Image")));
-            this.siticoneCirclePictureBox1.ImageRotate = 0F;
-            this.siticoneCirclePictureBox1.Location = new System.Drawing.Point(100, 75);
-            this.siticoneCirclePictureBox1.Name = "siticoneCirclePictureBox1";
-            this.siticoneCirclePictureBox1.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
-            this.siticoneCirclePictureBox1.Size = new System.Drawing.Size(200, 200);
-            this.siticoneCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.siticoneCirclePictureBox1.TabIndex = 1;
-            this.siticoneCirclePictureBox1.TabStop = false;
+            this.picAvatar.Image = ((System.Drawing.Image)(resources.GetObject("picAvatar.Image")));
+            this.picAvatar.ImageRotate = 0F;
+            this.picAvatar.Location = new System.Drawing.Point(100, 75);
+            this.picAvatar.Name = "picAvatar";
+            this.picAvatar.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
+            this.picAvatar.Size = new System.Drawing.Size(200, 200);
+            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picAvatar.TabIndex = 1;
+            this.picAvatar.TabStop = false;
+            this.picAvatar.Click += new System.EventHandler(this.picAvatar_Click);
             // 
             // label1
             // 
@@ -327,12 +332,12 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.siticonePanel15, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.siticonePanel13, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.siticonePanel14, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.siticonePanel13, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.siticonePanel16, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(50, 367);
@@ -340,30 +345,29 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(501, 330);
-            this.tableLayoutPanel2.TabIndex = 3;
+            this.tableLayoutPanel2.TabIndex = 0;
             // 
             // siticonePanel15
             // 
-            this.siticonePanel15.Controls.Add(this.label13);
+            this.siticonePanel15.Controls.Add(this.lblStudying);
             this.siticonePanel15.Controls.Add(this.label14);
             this.siticonePanel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticonePanel15.Location = new System.Drawing.Point(3, 168);
             this.siticonePanel15.Name = "siticonePanel15";
             this.siticonePanel15.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.siticonePanel15.Size = new System.Drawing.Size(244, 159);
-            this.siticonePanel15.TabIndex = 14;
+            this.siticonePanel15.TabIndex = 16;
             // 
-            // label13
+            // lblStudying
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(87, 64);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(56, 45);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "15";
+            this.lblStudying.AutoSize = true;
+            this.lblStudying.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStudying.Location = new System.Drawing.Point(87, 64);
+            this.lblStudying.Name = "lblStudying";
+            this.lblStudying.Size = new System.Drawing.Size(60, 45);
+            this.lblStudying.TabIndex = 3;
+            this.lblStudying.Text = "20";
             // 
             // label14
             // 
@@ -375,26 +379,57 @@
             this.label14.TabIndex = 2;
             this.label14.Text = "Studying";
             // 
+            // siticonePanel14
+            // 
+            this.siticonePanel14.Controls.Add(this.lblPending);
+            this.siticonePanel14.Controls.Add(this.label12);
+            this.siticonePanel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.siticonePanel14.Location = new System.Drawing.Point(253, 168);
+            this.siticonePanel14.Name = "siticonePanel14";
+            this.siticonePanel14.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.siticonePanel14.Size = new System.Drawing.Size(245, 159);
+            this.siticonePanel14.TabIndex = 15;
+            // 
+            // lblPending
+            // 
+            this.lblPending.AutoSize = true;
+            this.lblPending.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPending.Location = new System.Drawing.Point(87, 64);
+            this.lblPending.Name = "lblPending";
+            this.lblPending.Size = new System.Drawing.Size(60, 45);
+            this.lblPending.TabIndex = 3;
+            this.lblPending.Text = "20";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(29, 30);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(72, 23);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "Pending";
+            // 
             // siticonePanel13
             // 
-            this.siticonePanel13.Controls.Add(this.label9);
+            this.siticonePanel13.Controls.Add(this.lblTotalCourse);
             this.siticonePanel13.Controls.Add(this.label10);
             this.siticonePanel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.siticonePanel13.Location = new System.Drawing.Point(253, 168);
+            this.siticonePanel13.Location = new System.Drawing.Point(3, 3);
             this.siticonePanel13.Name = "siticonePanel13";
             this.siticonePanel13.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.siticonePanel13.Size = new System.Drawing.Size(245, 159);
-            this.siticonePanel13.TabIndex = 12;
+            this.siticonePanel13.Size = new System.Drawing.Size(244, 159);
+            this.siticonePanel13.TabIndex = 14;
             // 
-            // label9
+            // lblTotalCourse
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(87, 64);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 45);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "10";
+            this.lblTotalCourse.AutoSize = true;
+            this.lblTotalCourse.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalCourse.Location = new System.Drawing.Point(87, 64);
+            this.lblTotalCourse.Name = "lblTotalCourse";
+            this.lblTotalCourse.Size = new System.Drawing.Size(60, 45);
+            this.lblTotalCourse.TabIndex = 3;
+            this.lblTotalCourse.Text = "20";
             // 
             // label10
             // 
@@ -402,30 +437,30 @@
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(29, 30);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(51, 23);
+            this.label10.Size = new System.Drawing.Size(87, 23);
             this.label10.TabIndex = 2;
-            this.label10.Text = "Done";
+            this.label10.Text = "All Course";
             // 
             // siticonePanel16
             // 
-            this.siticonePanel16.Controls.Add(this.label15);
+            this.siticonePanel16.Controls.Add(this.lblTotalCetiificate);
             this.siticonePanel16.Controls.Add(this.label16);
             this.siticonePanel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.siticonePanel16.Location = new System.Drawing.Point(3, 3);
+            this.siticonePanel16.Location = new System.Drawing.Point(253, 3);
             this.siticonePanel16.Name = "siticonePanel16";
             this.siticonePanel16.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.siticonePanel16.Size = new System.Drawing.Size(244, 159);
-            this.siticonePanel16.TabIndex = 11;
+            this.siticonePanel16.Size = new System.Drawing.Size(245, 159);
+            this.siticonePanel16.TabIndex = 13;
             // 
-            // label15
+            // lblTotalCetiificate
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(87, 64);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(60, 45);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "20";
+            this.lblTotalCetiificate.AutoSize = true;
+            this.lblTotalCetiificate.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalCetiificate.Location = new System.Drawing.Point(87, 64);
+            this.lblTotalCetiificate.Name = "lblTotalCetiificate";
+            this.lblTotalCetiificate.Size = new System.Drawing.Size(60, 45);
+            this.lblTotalCetiificate.TabIndex = 3;
+            this.lblTotalCetiificate.Text = "20";
             // 
             // label16
             // 
@@ -433,9 +468,9 @@
             this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(29, 30);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(87, 23);
+            this.label16.Size = new System.Drawing.Size(120, 23);
             this.label16.TabIndex = 2;
-            this.label16.Text = "All Course";
+            this.label16.Text = "Total cetificate";
             // 
             // siticonePanel12
             // 
@@ -494,7 +529,7 @@
             // siticonePanel11
             // 
             this.siticonePanel11.Controls.Add(this.label8);
-            this.siticonePanel11.Controls.Add(this.siticoneTextBox4);
+            this.siticonePanel11.Controls.Add(this.txtPassword);
             this.siticonePanel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticonePanel11.Location = new System.Drawing.Point(243, 99);
             this.siticonePanel11.Name = "siticonePanel11";
@@ -512,31 +547,31 @@
             this.label8.TabIndex = 2;
             this.label8.Text = "Password";
             // 
-            // siticoneTextBox4
+            // txtPassword
             // 
-            this.siticoneTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.siticoneTextBox4.DefaultText = "";
-            this.siticoneTextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.siticoneTextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.siticoneTextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.siticoneTextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.siticoneTextBox4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.siticoneTextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.siticoneTextBox4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneTextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.siticoneTextBox4.Location = new System.Drawing.Point(10, 31);
-            this.siticoneTextBox4.Name = "siticoneTextBox4";
-            this.siticoneTextBox4.PasswordChar = '\0';
-            this.siticoneTextBox4.PlaceholderText = "";
-            this.siticoneTextBox4.ReadOnly = true;
-            this.siticoneTextBox4.SelectedText = "";
-            this.siticoneTextBox4.Size = new System.Drawing.Size(215, 50);
-            this.siticoneTextBox4.TabIndex = 4;
+            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassword.DefaultText = "";
+            this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.Location = new System.Drawing.Point(10, 31);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.PlaceholderText = "";
+            this.txtPassword.ReadOnly = true;
+            this.txtPassword.SelectedText = "";
+            this.txtPassword.Size = new System.Drawing.Size(215, 50);
+            this.txtPassword.TabIndex = 4;
             // 
             // siticonePanel10
             // 
             this.siticonePanel10.Controls.Add(this.label7);
-            this.siticonePanel10.Controls.Add(this.siticoneTextBox3);
+            this.siticonePanel10.Controls.Add(this.txtUserName);
             this.siticonePanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticonePanel10.Location = new System.Drawing.Point(243, 3);
             this.siticonePanel10.Name = "siticonePanel10";
@@ -554,30 +589,30 @@
             this.label7.TabIndex = 2;
             this.label7.Text = "User name";
             // 
-            // siticoneTextBox3
+            // txtUserName
             // 
-            this.siticoneTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.siticoneTextBox3.DefaultText = "";
-            this.siticoneTextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.siticoneTextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.siticoneTextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.siticoneTextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.siticoneTextBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.siticoneTextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.siticoneTextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneTextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.siticoneTextBox3.Location = new System.Drawing.Point(10, 30);
-            this.siticoneTextBox3.Name = "siticoneTextBox3";
-            this.siticoneTextBox3.PasswordChar = '\0';
-            this.siticoneTextBox3.PlaceholderText = "";
-            this.siticoneTextBox3.SelectedText = "";
-            this.siticoneTextBox3.Size = new System.Drawing.Size(215, 50);
-            this.siticoneTextBox3.TabIndex = 4;
+            this.txtUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUserName.DefaultText = "";
+            this.txtUserName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUserName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUserName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUserName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUserName.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtUserName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUserName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUserName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUserName.Location = new System.Drawing.Point(10, 30);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.PasswordChar = '\0';
+            this.txtUserName.PlaceholderText = "";
+            this.txtUserName.SelectedText = "";
+            this.txtUserName.Size = new System.Drawing.Size(215, 50);
+            this.txtUserName.TabIndex = 4;
             // 
             // siticonePanel9
             // 
             this.siticonePanel9.Controls.Add(this.label6);
-            this.siticonePanel9.Controls.Add(this.siticoneTextBox2);
+            this.siticonePanel9.Controls.Add(this.txtEmail);
             this.siticonePanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticonePanel9.Location = new System.Drawing.Point(3, 99);
             this.siticonePanel9.Name = "siticonePanel9";
@@ -595,30 +630,30 @@
             this.label6.TabIndex = 2;
             this.label6.Text = "Email";
             // 
-            // siticoneTextBox2
+            // txtEmail
             // 
-            this.siticoneTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.siticoneTextBox2.DefaultText = "";
-            this.siticoneTextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.siticoneTextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.siticoneTextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.siticoneTextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.siticoneTextBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.siticoneTextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.siticoneTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneTextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.siticoneTextBox2.Location = new System.Drawing.Point(10, 31);
-            this.siticoneTextBox2.Name = "siticoneTextBox2";
-            this.siticoneTextBox2.PasswordChar = '\0';
-            this.siticoneTextBox2.PlaceholderText = "";
-            this.siticoneTextBox2.SelectedText = "";
-            this.siticoneTextBox2.Size = new System.Drawing.Size(214, 50);
-            this.siticoneTextBox2.TabIndex = 4;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.DefaultText = "";
+            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.Location = new System.Drawing.Point(10, 31);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PasswordChar = '\0';
+            this.txtEmail.PlaceholderText = "";
+            this.txtEmail.SelectedText = "";
+            this.txtEmail.Size = new System.Drawing.Size(214, 50);
+            this.txtEmail.TabIndex = 4;
             // 
             // siticonePanel8
             // 
             this.siticonePanel8.Controls.Add(this.label5);
-            this.siticonePanel8.Controls.Add(this.siticoneTextBox1);
+            this.siticonePanel8.Controls.Add(this.txtFullName);
             this.siticonePanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticonePanel8.Location = new System.Drawing.Point(3, 3);
             this.siticonePanel8.Name = "siticonePanel8";
@@ -636,25 +671,25 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "Full name";
             // 
-            // siticoneTextBox1
+            // txtFullName
             // 
-            this.siticoneTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.siticoneTextBox1.DefaultText = "";
-            this.siticoneTextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.siticoneTextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.siticoneTextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.siticoneTextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.siticoneTextBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.siticoneTextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.siticoneTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneTextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.siticoneTextBox1.Location = new System.Drawing.Point(10, 30);
-            this.siticoneTextBox1.Name = "siticoneTextBox1";
-            this.siticoneTextBox1.PasswordChar = '\0';
-            this.siticoneTextBox1.PlaceholderText = "";
-            this.siticoneTextBox1.SelectedText = "";
-            this.siticoneTextBox1.Size = new System.Drawing.Size(214, 50);
-            this.siticoneTextBox1.TabIndex = 4;
+            this.txtFullName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFullName.DefaultText = "";
+            this.txtFullName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFullName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFullName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFullName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFullName.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtFullName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFullName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtFullName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFullName.Location = new System.Drawing.Point(10, 30);
+            this.txtFullName.Name = "txtFullName";
+            this.txtFullName.PasswordChar = '\0';
+            this.txtFullName.PlaceholderText = "";
+            this.txtFullName.SelectedText = "";
+            this.txtFullName.Size = new System.Drawing.Size(214, 50);
+            this.txtFullName.TabIndex = 4;
             // 
             // ucProfile
             // 
@@ -677,11 +712,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.siticonePanel3.ResumeLayout(false);
             this.siticonePanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.siticoneCirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.siticonePanel2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.siticonePanel15.ResumeLayout(false);
             this.siticonePanel15.PerformLayout();
+            this.siticonePanel14.ResumeLayout(false);
+            this.siticonePanel14.PerformLayout();
             this.siticonePanel13.ResumeLayout(false);
             this.siticonePanel13.PerformLayout();
             this.siticonePanel16.ResumeLayout(false);
@@ -705,7 +742,7 @@
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel3;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel2;
-        private Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox siticoneCirclePictureBox1;
+        private Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox picAvatar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblName;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel4;
@@ -725,27 +762,30 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel11;
         private System.Windows.Forms.Label label8;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox siticoneTextBox4;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtPassword;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel10;
         private System.Windows.Forms.Label label7;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox siticoneTextBox3;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtUserName;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel9;
         private System.Windows.Forms.Label label6;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox siticoneTextBox2;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtEmail;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel8;
         private System.Windows.Forms.Label label5;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox siticoneTextBox1;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtFullName;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel12;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnSave;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel15;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblStudying;
         private System.Windows.Forms.Label label14;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel14;
+        private System.Windows.Forms.Label lblPending;
+        private System.Windows.Forms.Label label12;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel13;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblTotalCourse;
         private System.Windows.Forms.Label label10;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel16;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblTotalCetiificate;
         private System.Windows.Forms.Label label16;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton btnSave;
     }
 }

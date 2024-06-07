@@ -37,10 +37,9 @@ namespace Elearning.Forms
                 if (account.user_role == Program.ROLE_ADMIN)
                 {
                     // open admin form
-                    fAdminMain f = new fAdminMain();
+                    fAdminMain f = new fAdminMain(account);
                     f.FormClosed += CloseMainForm;
                     f.ShowDialog();
-                    this.Hide();
                 }
                 else
                 {
@@ -48,8 +47,8 @@ namespace Elearning.Forms
                     fMain f = new fMain();
                     f.FormClosed += CloseMainForm;
                     f.ShowDialog();
-                    this.Hide();
                 }
+                this.Close();
             }
             else
             {

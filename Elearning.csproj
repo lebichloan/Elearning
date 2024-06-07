@@ -231,6 +231,18 @@
     <Compile Include="UserControls\ucAdminQstMC1.Designer.cs">
       <DependentUpon>ucAdminQstMC1.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucAdminQstMCM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucAdminQstMCM.Designer.cs">
+      <DependentUpon>ucAdminQstMCM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucAdminQstShortAns.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucAdminQstShortAns.Designer.cs">
+      <DependentUpon>ucAdminQstShortAns.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucAdminResource.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -418,6 +430,12 @@
     <EmbeddedResource Include="UserControls\ucAdminQstMC1.resx">
       <DependentUpon>ucAdminQstMC1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucAdminQstMCM.resx">
+      <DependentUpon>ucAdminQstMCM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucAdminQstShortAns.resx">
+      <DependentUpon>ucAdminQstShortAns.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucAdminSyllabus.resx">
       <DependentUpon>ucAdminSyllabus.cs</DependentUpon>
     </EmbeddedResource>
@@ -536,8 +554,10 @@
     </Content>
     <Content Include="images\icons\circle_filled_icon.png" />
     <Content Include="images\icons\circle_icon.png" />
+    <None Include="images\icons\clear.png" />
     <Content Include="images\icons\close.png" />
     <Content Include="images\icons\play.png" />
+    <None Include="images\icons\refresh.png" />
     <Content Include="images\icons\stop.png" />
   </ItemGroup>
   <ItemGroup>

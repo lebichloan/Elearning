@@ -99,17 +99,17 @@ namespace Elearning.UserControls
             return ret;
         }
 
-        public int GetCorrectChoice()
+        public string GetCorrectChoice()
         {
             for (int i = 0; i < flpChoices.Controls.Count; i++)
             {
                 var uc = (ucAdminChoice)flpChoices.Controls[i];
                 if (uc.IsChecked())
                 {
-                    return i;
+                    return i.ToString();
                 }
             }
-            return -1;
+            return "";
         }
 
         public string GetDescription()

@@ -27,6 +27,7 @@ namespace Elearning.UserControls
             InitializeComponent();
             this.module = module;
             this.lbModuleName.Text = module.module_name;
+            this.lbDescription.Text = module.description;
 
             this.flpItems.AutoScroll = true;
             this.flpItems.VerticalScroll.Visible = true;

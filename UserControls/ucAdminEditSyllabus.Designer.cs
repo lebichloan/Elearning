@@ -34,7 +34,10 @@
             this.btnAddModule = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnSaveAll = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.tbpModules = new System.Windows.Forms.TableLayoutPanel();
+            this.tbModuleDescription = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.siticoneContainerControl1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -44,22 +47,22 @@
             this.label2.Font = new System.Drawing.Font("UTM Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
             this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(940, 48);
+            this.label2.Size = new System.Drawing.Size(1478, 59);
             this.label2.TabIndex = 3;
             this.label2.Text = "Syllabus (Edit mode)";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // siticoneContainerControl1
             // 
-            this.siticoneContainerControl1.Controls.Add(this.tbModuleName);
-            this.siticoneContainerControl1.Controls.Add(this.btnAddModule);
+            this.siticoneContainerControl1.Controls.Add(this.flowLayoutPanel1);
             this.siticoneContainerControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticoneContainerControl1.Location = new System.Drawing.Point(0, 48);
-            this.siticoneContainerControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.siticoneContainerControl1.Location = new System.Drawing.Point(0, 59);
+            this.siticoneContainerControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneContainerControl1.Name = "siticoneContainerControl1";
-            this.siticoneContainerControl1.Padding = new System.Windows.Forms.Padding(114, 5, 272, 2);
-            this.siticoneContainerControl1.Size = new System.Drawing.Size(940, 42);
+            this.siticoneContainerControl1.Padding = new System.Windows.Forms.Padding(150, 0, 100, 0);
+            this.siticoneContainerControl1.Size = new System.Drawing.Size(1478, 52);
             this.siticoneContainerControl1.TabIndex = 4;
             this.siticoneContainerControl1.Text = "siticoneContainerControl1";
             // 
@@ -73,17 +76,16 @@
             this.tbModuleName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbModuleName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbModuleName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbModuleName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbModuleName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbModuleName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbModuleName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbModuleName.Location = new System.Drawing.Point(114, 5);
-            this.tbModuleName.Margin = new System.Windows.Forms.Padding(2);
+            this.tbModuleName.Location = new System.Drawing.Point(3, 2);
+            this.tbModuleName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbModuleName.Name = "tbModuleName";
             this.tbModuleName.PasswordChar = '\0';
             this.tbModuleName.PlaceholderText = "Enter new module\'s name";
             this.tbModuleName.SelectedText = "";
-            this.tbModuleName.Size = new System.Drawing.Size(422, 35);
+            this.tbModuleName.Size = new System.Drawing.Size(358, 43);
             this.tbModuleName.TabIndex = 0;
             // 
             // btnAddModule
@@ -97,10 +99,10 @@
             this.btnAddModule.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
             this.btnAddModule.Font = new System.Drawing.Font("Segoe UI Variable Display", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddModule.ForeColor = System.Drawing.Color.White;
-            this.btnAddModule.Location = new System.Drawing.Point(536, 5);
-            this.btnAddModule.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddModule.Location = new System.Drawing.Point(3, 49);
+            this.btnAddModule.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddModule.Name = "btnAddModule";
-            this.btnAddModule.Size = new System.Drawing.Size(132, 35);
+            this.btnAddModule.Size = new System.Drawing.Size(170, 0);
             this.btnAddModule.TabIndex = 1;
             this.btnAddModule.Text = "Add new module";
             this.btnAddModule.Click += new System.EventHandler(this.btnAddModule_Click);
@@ -116,10 +118,10 @@
             this.btnSaveAll.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
             this.btnSaveAll.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveAll.ForeColor = System.Drawing.Color.White;
-            this.btnSaveAll.Location = new System.Drawing.Point(827, 3);
-            this.btnSaveAll.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSaveAll.Location = new System.Drawing.Point(1328, 4);
+            this.btnSaveAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSaveAll.Name = "btnSaveAll";
-            this.btnSaveAll.Size = new System.Drawing.Size(105, 41);
+            this.btnSaveAll.Size = new System.Drawing.Size(140, 50);
             this.btnSaveAll.TabIndex = 1;
             this.btnSaveAll.Text = "Save";
             this.btnSaveAll.Click += new System.EventHandler(this.btnSaveAll_Click);
@@ -130,29 +132,64 @@
             this.tbpModules.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbpModules.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbpModules.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbpModules.Location = new System.Drawing.Point(0, 90);
-            this.tbpModules.Margin = new System.Windows.Forms.Padding(2);
+            this.tbpModules.Location = new System.Drawing.Point(0, 111);
+            this.tbpModules.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbpModules.Name = "tbpModules";
-            this.tbpModules.Padding = new System.Windows.Forms.Padding(110, 3, 250, 3);
+            this.tbpModules.Padding = new System.Windows.Forms.Padding(147, 4, 333, 4);
             this.tbpModules.RowCount = 2;
             this.tbpModules.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbpModules.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbpModules.Size = new System.Drawing.Size(940, 451);
+            this.tbpModules.Size = new System.Drawing.Size(1478, 555);
             this.tbpModules.TabIndex = 7;
+            // 
+            // tbModuleDescription
+            // 
+            this.tbModuleDescription.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbModuleDescription.BorderRadius = 8;
+            this.tbModuleDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbModuleDescription.DefaultText = "";
+            this.tbModuleDescription.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbModuleDescription.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbModuleDescription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbModuleDescription.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbModuleDescription.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tbModuleDescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbModuleDescription.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbModuleDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbModuleDescription.Location = new System.Drawing.Point(367, 2);
+            this.tbModuleDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbModuleDescription.Name = "tbModuleDescription";
+            this.tbModuleDescription.PasswordChar = '\0';
+            this.tbModuleDescription.PlaceholderText = "Enter new module\'s description";
+            this.tbModuleDescription.SelectedText = "";
+            this.tbModuleDescription.Size = new System.Drawing.Size(856, 43);
+            this.tbModuleDescription.TabIndex = 2;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.tbModuleName);
+            this.flowLayoutPanel1.Controls.Add(this.tbModuleDescription);
+            this.flowLayoutPanel1.Controls.Add(this.btnAddModule);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(150, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1228, 52);
+            this.flowLayoutPanel1.TabIndex = 3;
             // 
             // ucAdminEditSyllabus
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnSaveAll);
             this.Controls.Add(this.tbpModules);
             this.Controls.Add(this.siticoneContainerControl1);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ucAdminEditSyllabus";
-            this.Size = new System.Drawing.Size(940, 541);
+            this.Size = new System.Drawing.Size(1478, 666);
             this.siticoneContainerControl1.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -165,5 +202,7 @@
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox tbModuleName;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnSaveAll;
         private System.Windows.Forms.TableLayoutPanel tbpModules;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox tbModuleDescription;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

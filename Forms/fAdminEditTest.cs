@@ -39,6 +39,15 @@ namespace Elearning.Forms
                 this.optNo.Checked = true;
             }
 
+            if (test.display_type == Program.TEST_DISPLAY_ALL)
+            {
+                this.optDisplayAll.Checked = true;
+            }
+            else
+            {
+                this.optDisplayOne.Checked = true;
+            }
+
             // load types from Program.QUESTION_TYPE to combobox
             this.cbQstType.DataSource = Program.QUESTION_TYPE;
             this.cbQstType.SelectedIndex = 0;
@@ -98,6 +107,7 @@ namespace Elearning.Forms
         {
             test.CourseResource.resource_name = tbTestName.Text;
             test.mandatory = optYes.Checked ? 1 : 0;
+            test.display_type = optDisplayAll.Checked ? Program.TEST_DISPLAY_ALL : Program.TEST_DISPLAY_ONE_BY_ONE;
             test.test_maxtime = TimeSpan.Parse(tbTime.Text);
             test.score_to_pass = int.Parse(tbPointToPass.Text);
             test.total_score = 0;

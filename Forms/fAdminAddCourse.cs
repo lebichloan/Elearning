@@ -20,6 +20,15 @@ namespace Elearning.Forms
             InitializeComponent();
 
             LoadDataToComboBoxes();
+
+            // not allow to enter other characters than numbers in tbPrice
+            tbPrice.KeyPress += new KeyPressEventHandler((sender, e) =>
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+            });
         }
 
         private void LoadDataToComboBoxes()
@@ -48,6 +57,7 @@ namespace Elearning.Forms
             fileDialog.Filter = "Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png";
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {
+                pbThumbnailPreview.Image.Dispose();
                 pbThumbnailPreview.Image = Image.FromFile(fileDialog.FileName);
                 pbThumbnailPreview.SizeMode = PictureBoxSizeMode.Zoom;
                 tbPath.Text = fileDialog.FileName;
@@ -117,6 +127,29 @@ namespace Elearning.Forms
                     }
                 }
                 throw;
+            }
+        }
+
+        private int priceToInt(string text)
+        {
+            if (text == "")
+            {
+                return 0;
+            }
+            
+            // the price will be in the format xxx,xxx,xxx VND
+            // remove all commas
+            text = text.Replace(",", "");
+            return (int)Convert.ToDecimal(text);
+        }
+
+        private void tbPrice_TextChanged(object sender, EventArgs e)
+        {
+            // as the text in tbPrice changes, format it to the format xxx,xxx,xxx VND
+            if (tbPrice.Text != "")
+            {
+                tbPrice.Text = priceToInt(tbPrice.Text).ToString("N0");
+                tbPrice.SelectionStart = tbPrice.Text.Length;
             }
         }
     }

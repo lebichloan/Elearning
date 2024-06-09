@@ -18,6 +18,8 @@ namespace Elearning.UserControls
         public Course course;
         ucAdminDescription ucDescription;
         ucAdminSyllabus ucSyllabus;
+        ucAdminCoursePreview ucPreview;
+        ucAdminDiscount ucDiscount;
         public ucAdminCourseInfo()
         {
             InitializeComponent();
@@ -36,11 +38,10 @@ namespace Elearning.UserControls
 
         }
 
-        public ucAdminCourseInfo(Course course) : this()
+        public ucAdminCourseInfo(Course course, ucAdminCoursePreview ucPreview) : this()
         {
             this.course = course;
 
-            LoadInfo();
             ucDescription = new ucAdminDescription(course);
             ucDescription.Dock = DockStyle.Fill;
             conDescription.Controls.Add(ucDescription);
@@ -48,6 +49,12 @@ namespace Elearning.UserControls
             ucSyllabus = new ucAdminSyllabus(course);
             ucSyllabus.Dock = DockStyle.Fill;
             conSyllabus.Controls.Add(ucSyllabus);
+            this.ucPreview = ucPreview;
+
+            ucDiscount = new ucAdminDiscount(course);
+            ucDiscount.Dock = DockStyle.Fill;
+            conDiscount.Controls.Add(ucDiscount);
+            LoadInfo();
         }
 
         private void ucAdminCourseInfo_Load(object sender, EventArgs e)
@@ -63,6 +70,17 @@ namespace Elearning.UserControls
             this.lbDifficulty.Text = course.difficulty;
             this.pbCourseImage.Image = Image.FromFile(Program.COURSES_IMG_PATH + course.course_image);
             this.pbCourseImage.SizeMode = PictureBoxSizeMode.Zoom;
+
+            if (this.course.price == 0)
+            {
+                btnEditDiscount.Visible = false;
+            }
+            else
+            {
+                btnEditDiscount.Visible = true;
+            }
+
+            ucDiscount.Reload();
         }
 
         private void LoadSyllabus()
@@ -91,6 +109,12 @@ namespace Elearning.UserControls
         private void btnEditInfor_Click(object sender, EventArgs e)
         {
             fAdminEditCourse fEditCourse = new fAdminEditCourse(course);
+            fEditCourse.evtSetImageToNone += (s, ev) =>
+            {
+                pbCourseImage.Image.Dispose();
+                pbCourseImage.Image = null;
+                ucPreview.SetImageToNone();
+            };
             fEditCourse.evtReload += (s, ev) =>
             {
                 LoadInfo();
@@ -101,6 +125,13 @@ namespace Elearning.UserControls
         private void btnEditSyllabus_Click(object sender, EventArgs e)
         {
             LoadEditSyllabus();
+        }
+
+        private void btnEditDiscount_Click(object sender, EventArgs e)
+        {
+            fAdminEditDiscount fEditDiscount = new fAdminEditDiscount(course);  
+            fEditDiscount.ShowDialog();
+            ucDiscount.Reload();
         }
     }
 }

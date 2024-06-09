@@ -34,6 +34,9 @@ namespace Elearning
         public static int QUESTION_MULTIPLE_CHOICE_MULTIPLE_ANSWERS = 1;
         public static int QUESTION_SHORT_ANSWER = 2;
 
+        public static int TEST_DISPLAY_ALL = 0;
+        public static int TEST_DISPLAY_ONE_BY_ONE = 1;
+
         public static string[] COURSE_DIFFICULTIES = {"Beginner", "Intermediate", "Advanced" };
         public static string[] COURSE_CATEGORIES = { "Development", "Business", "IT & Software", "Office Productivity", "Personal Development", "Design", "Marketing", "Lifestyle", "Photography", "Health & Fitness", "Music", "Teaching & Academics" };
         public static string[] RESOURCE_TYPE = { "Video", "Document", "Test" };
@@ -64,6 +67,22 @@ namespace Elearning
             }
         }
 
+        private static void UpdateDiscount()
+        {
+            // Check if the discount is expired of all course.
+            // If the discount is expired, set the discount to 0
+            var courses = provider.Courses.ToList();
+            foreach (var course in courses)
+            {
+                if (course.discount != 0 && course.discount_end_date < DateTime.Now)
+                {
+                    course.discount = 0;
+                    course.discount_end_date = null;
+                }
+            }
+            provider.SaveChanges();
+        }
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -72,6 +91,7 @@ namespace Elearning
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            UpdateDiscount();
             Application.Run(new fLogin());
         }
     }

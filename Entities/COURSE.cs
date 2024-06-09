@@ -32,6 +32,8 @@ namespace Elearning.Entities
         public int price { get; set; }
         public string course_description { get; set; }
         public Nullable<decimal> stars { get; set; }
+        public Nullable<int> discount { get; set; }
+        public Nullable<System.DateTime> discount_end_date { get; set; }
     
         public virtual Account Account { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

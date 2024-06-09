@@ -17,6 +17,7 @@ namespace Elearning.Forms
     {
         public Course course;
         public EventHandler evtReload;
+        public EventHandler evtSetImageToNone;
         public fAdminEditCourse()
         {
             InitializeComponent();
@@ -74,16 +75,18 @@ namespace Elearning.Forms
                 course.difficulty = cbDifficulty.SelectedItem.ToString();
                 course.category = cbCategory.SelectedItem.ToString();
 
-                Program.provider.SaveChanges();
-
                 if (tbPath.Text != "")
                 {
-                    // Remove the old image file
                     // Copy the image to the courses image folder defined in Program.COURSES_IMG_PATH, the file name should be the course_id, and the extension should be the same as the original file.
+                    evtSetImageToNone?.Invoke(this, e);
+                    // delete the old image
+                    System.IO.File.Delete(Program.COURSES_IMG_PATH + course.course_image);
+
                     course.course_image = course.course_id + System.IO.Path.GetExtension(tbPath.Text);
-                    System.IO.File.Copy(tbPath.Text, course.course_image);
+                    System.IO.File.Copy(tbPath.Text, Program.COURSES_IMG_PATH + course.course_image);
                 }
                 Program.provider.SaveChanges();
+                evtReload?.Invoke(this, e);
                 MessageBox.Show("Edited course successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
@@ -102,7 +105,6 @@ namespace Elearning.Forms
                 throw;
             }
 
-            evtReload?.Invoke(this, e);
         }
 
         private void btnChooseFile_Click(object sender, EventArgs e)
@@ -111,9 +113,33 @@ namespace Elearning.Forms
             fileDialog.Filter = "Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png";
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {
+                pbThumbnailPreview.Image.Dispose();
                 pbThumbnailPreview.Image = Image.FromFile(fileDialog.FileName);
                 pbThumbnailPreview.SizeMode = PictureBoxSizeMode.Zoom;
                 tbPath.Text = fileDialog.FileName;
+            }
+        }
+
+        private int priceToInt(string text)
+        {
+            if (text == "")
+            {
+                return 0;
+            }
+
+            // the price will be in the format xxx,xxx,xxx VND
+            // remove all commas
+            text = text.Replace(",", "");
+            return (int)Convert.ToDecimal(text);
+        }
+
+        private void tbPrice_TextChanged(object sender, EventArgs e)
+        {
+            // as the text in tbPrice changes, format it to the format xxx,xxx,xxx VND
+            if (tbPrice.Text != "")
+            {
+                tbPrice.Text = priceToInt(tbPrice.Text).ToString("N0");
+                tbPrice.SelectionStart = tbPrice.Text.Length;
             }
         }
     }

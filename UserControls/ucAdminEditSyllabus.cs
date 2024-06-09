@@ -82,6 +82,7 @@ namespace Elearning.UserControls
             CourseModule module = new CourseModule()
             {
                 module_name = tbModuleName.Text,
+                description = tbModuleDescription.Text,
                 course_id = course.course_id
             };
 
@@ -90,6 +91,9 @@ namespace Elearning.UserControls
 
             ucAdminCourseModule ucModule = NewUcAdminCourseModule(module);
             tbpModules.Controls.Add(ucModule);
+
+            tbModuleName.Text = "";
+            tbModuleDescription.Text = "";
         }
 
         private void btnSaveAll_Click(object sender, EventArgs e)

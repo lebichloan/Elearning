@@ -109,7 +109,7 @@ namespace Elearning.UserControls
         {
             ucAdminCoursePreview ucCoursePreview = (ucAdminCoursePreview)sender;
             Course course = ucCoursePreview.course;
-            ucAdminCourseInfo courseInfo = new ucAdminCourseInfo(course);
+            ucAdminCourseInfo courseInfo = new ucAdminCourseInfo(course, ucCoursePreview);
             courseInfo.backClicked += ucInfo_backClicked;
             courseInfo.Dock = DockStyle.Fill;
             containerMain.Controls.Add(courseInfo);

@@ -133,6 +133,12 @@
     <Compile Include="Forms\fAdminEditCourse.Designer.cs">
       <DependentUpon>fAdminEditCourse.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\fAdminEditDiscount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fAdminEditDiscount.Designer.cs">
+      <DependentUpon>fAdminEditDiscount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\fAdminEditTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +218,12 @@
     </Compile>
     <Compile Include="UserControls\ucAdminDescription.Designer.cs">
       <DependentUpon>ucAdminDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucAdminDiscount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucAdminDiscount.Designer.cs">
+      <DependentUpon>ucAdminDiscount.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ucAdminEditSyllabus.cs">
       <SubType>UserControl</SubType>
@@ -378,6 +390,9 @@
     <EmbeddedResource Include="Forms\fAdminEditCourse.resx">
       <DependentUpon>fAdminEditCourse.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fAdminEditDiscount.resx">
+      <DependentUpon>fAdminEditDiscount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\fAdminEditTest.resx">
       <DependentUpon>fAdminEditTest.cs</DependentUpon>
     </EmbeddedResource>
@@ -409,6 +424,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\ucAdminDiscount.resx">
+      <DependentUpon>ucAdminDiscount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CourseTest\itemQuestion.resx">
       <DependentUpon>itemQuestion.cs</DependentUpon>
     </EmbeddedResource>
@@ -552,12 +570,14 @@
       <DependentUpon>ELearningModel.edmx</DependentUpon>
       <LastGenOutput>ELearningModel.cs</LastGenOutput>
     </Content>
+    <None Include="images\icons\add-white.png" />
     <Content Include="images\icons\circle_filled_icon.png" />
     <Content Include="images\icons\circle_icon.png" />
     <None Include="images\icons\clear.png" />
     <Content Include="images\icons\close.png" />
     <Content Include="images\icons\play.png" />
     <None Include="images\icons\refresh.png" />
+    <None Include="images\icons\search-white.png" />
     <Content Include="images\icons\stop.png" />
   </ItemGroup>
   <ItemGroup>

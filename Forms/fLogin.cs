@@ -1,4 +1,5 @@
 ﻿using Elearning.Entities;
+using OnlineChat;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -102,6 +103,19 @@ namespace Elearning.Forms
                     MessageBox.Show("Invalid username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Signup signup = new Signup();
+            signup.ShowDialog();
+            this.Close();
+        }
+
+        private void fLogin_Load(object sender, EventArgs e)
+        {
+            this.ActiveControl = tbUsername;
         }
     }
 }

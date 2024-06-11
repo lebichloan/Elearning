@@ -67,6 +67,8 @@ namespace Elearning.UserControls
             {
                 uc.Checked();
             }
+
+            tbChoice.Text = "";
         }
 
         private void ucChoice_Checked(object sender, EventArgs e)

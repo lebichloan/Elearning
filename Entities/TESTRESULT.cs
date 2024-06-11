@@ -21,6 +21,8 @@ namespace Elearning.Entities
         public int test_score { get; set; }
         public System.TimeSpan test_time { get; set; }
         public int is_passed { get; set; }
+        public Nullable<System.DateTime> time_start { get; set; }
+        public Nullable<System.DateTime> time_finish { get; set; }
     
         public virtual CourseTest CourseTest { get; set; }
         public virtual Register Register { get; set; }

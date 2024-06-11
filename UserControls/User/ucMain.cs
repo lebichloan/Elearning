@@ -58,5 +58,22 @@ namespace Elearning.UserControls
             coursePreview = ucMyElearning.courseViewClicked;
             viewMyCourseClicked?.Invoke(this, e);
         }
+
+        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ucHome ucHome = new ucHome();
+            ucHome.Dock = DockStyle.Fill;
+            ucHome.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
+            tabHome.Controls.Add(ucHome);
+
+            ucMyElearning ucMyElearning = new ucMyElearning();
+            ucMyElearning.Dock = DockStyle.Fill;
+            ucMyElearning.viewDetailsClicked += ucCoursePreview_viewMyCourse;
+            tabMyLearning.Controls.Add(ucMyElearning);
+
+            ucProfile ucProfile = new ucProfile();
+            ucProfile.Dock = DockStyle.Fill;
+            tabAccount.Controls.Add(ucProfile);
+        }
     }
 }

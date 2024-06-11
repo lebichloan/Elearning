@@ -31,9 +31,15 @@ namespace Elearning.UserControls.User
         }
 
         public EventHandler goToTest;
-        private void lblGoToTest_Click(object sender, EventArgs e)
+        private void GoToTest_Click(object sender, EventArgs e)
         {
             goToTest?.Invoke(this, e);
+        }
+
+        public EventHandler viewDetailTestResult;
+        private void lblViewDetail_Click(object sender, EventArgs e)
+        {
+            viewDetailTestResult?.Invoke(this, e);
         }
     }
 }

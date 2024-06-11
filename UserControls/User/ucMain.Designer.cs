@@ -66,6 +66,7 @@
             this.tabControl.TabButtonSize = new System.Drawing.Size(200, 60);
             this.tabControl.TabIndex = 0;
             this.tabControl.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
             // 
             // tabHome
             // 

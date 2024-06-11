@@ -60,7 +60,8 @@ namespace Elearning.Forms
 
         private void CloseMainForm(object sender, EventArgs e)
         {
-            this.Close();
+            //this.Close();
+            this.Show();
         }
 
         private void tbPassword_KeyPress(object sender, KeyPressEventArgs e)

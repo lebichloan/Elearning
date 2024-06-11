@@ -50,12 +50,13 @@
             this.tbUsername = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.siticoneContainerControl6 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.siticoneHtmlLabel1 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.siticoneHtmlLabel4 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel(); this.siticoneContainerControl4 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
+            this.siticoneContainerControl4 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.siticoneContainerControl12 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.siticoneContainerControl14 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.siticoneSeparator2 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
             this.siticoneHtmlLabel3 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.siticoneContainerControl13 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
+            this.siticoneHtmlLabel4 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.siticoneContainerControl1.SuspendLayout();
             this.siticoneContainerControl2.SuspendLayout();
             this.siticoneContainerControl3.SuspendLayout();
@@ -271,7 +272,7 @@
             // 
             this.tbPassword.BorderRadius = 10;
             this.tbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbPassword.DefaultText = "";
+            this.tbPassword.DefaultText = "123";
             this.tbPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -305,7 +306,7 @@
             // 
             this.tbUsername.BorderRadius = 10;
             this.tbUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbUsername.DefaultText = "";
+            this.tbUsername.DefaultText = "user";
             this.tbUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -379,19 +380,6 @@
             this.siticoneContainerControl12.TabIndex = 0;
             this.siticoneContainerControl12.Text = "siticoneContainerControl12";
             // 
-            // siticoneHtmlLabel4
-            // 
-            this.siticoneHtmlLabel4.AutoSize = false;
-            this.siticoneHtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneHtmlLabel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticoneHtmlLabel4.Location = new System.Drawing.Point(0, 248);
-            this.siticoneHtmlLabel4.Margin = new System.Windows.Forms.Padding(4);
-            this.siticoneHtmlLabel4.Name = "siticoneHtmlLabel4";
-            this.siticoneHtmlLabel4.Size = new System.Drawing.Size(347, 44);
-            this.siticoneHtmlLabel4.TabIndex = 3;
-            this.siticoneHtmlLabel4.Text = "by: thungan";
-            this.siticoneHtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // siticoneContainerControl14
             // 
             this.siticoneContainerControl14.Controls.Add(this.siticoneSeparator2);
@@ -443,6 +431,19 @@
             this.siticoneContainerControl13.Size = new System.Drawing.Size(347, 178);
             this.siticoneContainerControl13.TabIndex = 0;
             this.siticoneContainerControl13.Text = "siticoneContainerControl13";
+            // 
+            // siticoneHtmlLabel4
+            // 
+            this.siticoneHtmlLabel4.AutoSize = false;
+            this.siticoneHtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneHtmlLabel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.siticoneHtmlLabel4.Location = new System.Drawing.Point(0, 248);
+            this.siticoneHtmlLabel4.Margin = new System.Windows.Forms.Padding(4);
+            this.siticoneHtmlLabel4.Name = "siticoneHtmlLabel4";
+            this.siticoneHtmlLabel4.Size = new System.Drawing.Size(347, 44);
+            this.siticoneHtmlLabel4.TabIndex = 3;
+            this.siticoneHtmlLabel4.Text = "by: thungan";
+            this.siticoneHtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // fLogin
             // 

@@ -131,6 +131,10 @@ alter table Course add discount_end_date smalldatetime
 go
 
 alter table CourseModule add description nvarchar(256) -- mo ta module
+alter table CourseTest add max_attempt int -- so lan test toi da
+alter table TestResult add time_start datetime -- thoi gian bat dau
+alter table TestResult add time_finish datetime -- thoi gian ket thuc
+
 
 go
 

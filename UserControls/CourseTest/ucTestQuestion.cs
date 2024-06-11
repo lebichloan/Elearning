@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Elearning.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace Elearning.UserControls.CourseTest
         public ucTestQuestion()
         {
             InitializeComponent();
+        }
+
+        private TestQuestion thisTestQuestion;
+        public TestQuestion testQuestion
+        {
+            get { return thisTestQuestion; }
+            set { thisTestQuestion = value; }
         }
 
         private int questionOrdinal;
@@ -114,6 +122,8 @@ namespace Elearning.UserControls.CourseTest
             set { lblTrueAnswer.Text = value; }
         }
 
+        public double trueScore = 0;
+
         public EventHandler ucTestQuestionTickClick;
 
         public void ucTestQuestion_LoadAnswer(int type, string choice)
@@ -121,8 +131,9 @@ namespace Elearning.UserControls.CourseTest
             if (type == 0)
             {
                 string[] answerArray = choice.Split('\n');
-                foreach (string answer in answerArray)
+                for (int i=answerArray.Length-1; i >= 0; i--)
                 {
+                    string answer = answerArray[i];
                     if (answer != "")
                     {
                         RadioButton itemCheckBox = new RadioButton();
@@ -136,6 +147,99 @@ namespace Elearning.UserControls.CourseTest
                 }
                 done = 0;
             }
+            else if (type == 1)
+            {
+                string[] answerArray = choice.Split('\n');
+                for ( int i=answerArray.Length-1;i >= 0; i--)
+                {
+                    string answer = answerArray[i];
+                    if (answer != "")
+                    {
+                        CheckBox itemCheckBox = new CheckBox();
+                        itemCheckBox.Text = answer;
+                        itemCheckBox.Click += MutiChoiceCheckBoxClick;
+                        itemCheckBox.Checked = false;
+                        //itemCheckBox.Padding = new Padding(0, 10, 0, 10);
+                        itemCheckBox.Dock = DockStyle.Top;
+                        panChooseAnswer.Controls.Add(itemCheckBox);
+                    }
+                }
+                done = 0;
+            }
+            else if (type == 2)
+            {
+                TextBox textBox = new TextBox();
+                textBox.Dock = DockStyle.Fill;
+                textBox.LostFocus += ShortAnswerFill;
+                panChooseAnswer.Controls.Add(textBox);
+
+                done = 0;
+            }
+        }
+
+        public void ucTestQuestion_CheckAnswer()
+        {
+            if (testQuestion.question_type == 0)
+            {
+                int index = int.Parse(testQuestion.answer);
+                index = panChooseAnswer.Controls.Count - index - 1;
+                Control control = panChooseAnswer.Controls[index];
+                RadioButton item = control as RadioButton;
+                if (item.Checked == true)
+                {
+                    answerState = "True";
+                    trueScore = 100;
+                }
+            }
+            else if (testQuestion.question_type == 1)
+            {
+                int count = 0;
+                string[] answerArray = testQuestion.answer.Split(';');
+                int total = answerArray.Count() - 1;
+                foreach(string answer in answerArray)
+                {
+                    if (answer == "")
+                    {
+                        continue;
+                    }
+                    int index = int.Parse(answer);
+                    index = panChooseAnswer.Controls.Count - index - 1;
+                    Control control = panChooseAnswer.Controls[index];
+                    CheckBox item = control as CheckBox;
+                    if (item.Checked == true)
+                    {
+                        count++;
+                    }
+
+                }
+                if (count != 0) 
+                {
+                    answerState = "True";
+                    trueScore = (double)count / total * 100;
+                }
+            }
+            else if (testQuestion.question_type == 2)
+            {                
+                foreach (Control textBox in panChooseAnswer.Controls)
+                {
+                    TextBox item = textBox as TextBox;
+                    if (item == null)
+                    {
+                        continue;
+                    }
+                    if (textBox.Text == testQuestion.answer)
+                    {
+                        answerState = "True";
+                        trueScore = 100;
+                        break;
+                    }
+                }
+            }
+
+            if (trueScore == 0)
+            {
+                answerState = "False";
+            }
         }
 
         private int done = 0;
@@ -146,6 +250,22 @@ namespace Elearning.UserControls.CourseTest
 
         public EventHandler ucTestQuestionChooseAnswerClick;
         public void OneChoiceCheckBoxClick(object sender, EventArgs e)
+        {
+            done = 1;
+            lblState.Text = "Done";
+            lblState.Visible = true;
+            ucTestQuestionChooseAnswerClick?.Invoke(this, e);
+        }
+
+        public void MutiChoiceCheckBoxClick(object sender, EventArgs e)
+        {
+            done = 1;
+            lblState.Text = "Done";
+            lblState.Visible = true;
+            ucTestQuestionChooseAnswerClick?.Invoke(this, e);
+        }
+
+        public void ShortAnswerFill(object sender, EventArgs e)
         {
             done = 1;
             lblState.Text = "Done";

@@ -125,6 +125,7 @@ namespace Elearning.UserControls
                         itemtest.resourceId = resource.resource_id;
                         itemtest.testName = resource.resource_name;
                         itemtest.goToTest += GoToTest;
+                        itemtest.viewDetailTestResult += ViewDetailTestResult;
                         layoutResource.Controls.Add(itemtest);
                     }
                 }
@@ -134,8 +135,23 @@ namespace Elearning.UserControls
         private void GoToTest(object sender, EventArgs e)
         {
             itemTest itemtest = (itemTest)sender;
-            fCourseTest courseTest = new fCourseTest(itemtest.resourceId, false);
+            fCourseTest courseTest = new fCourseTest(itemtest.resourceId, false, course);
             courseTest.ShowDialog();
+        }
+
+        private void ViewDetailTestResult(object sender, EventArgs e)
+        {
+            itemTest item = (itemTest)sender;
+
+            Register currentRegister = (
+                from register in Program.provider.Registers
+                where register.learner_id == fLogin.currentAccount.acc_id
+                && register.course_id == course.course_id
+                select register
+            ).ToList().FirstOrDefault();
+
+            fDetailTestResult fDetailTest = new fDetailTestResult(currentRegister.register_id, item.resourceId);
+            fDetailTest.ShowDialog();
         }
 
         private void ucCourseModule_viewModuleClicked(object sender, EventArgs e)

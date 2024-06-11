@@ -39,13 +39,13 @@
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.panContent = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.panChooseAnswer = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.lblError = new System.Windows.Forms.Label();
             this.lblQuestion = new System.Windows.Forms.Label();
             this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.panAnswer = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.lblTrueAnswer = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblStateAnswer = new System.Windows.Forms.Label();
-            this.lblError = new System.Windows.Forms.Label();
             this.siticonePanel1.SuspendLayout();
             this.panQuestion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTick)).BeginInit();
@@ -177,6 +177,19 @@
             this.panChooseAnswer.Size = new System.Drawing.Size(922, 200);
             this.panChooseAnswer.TabIndex = 19;
             // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(0, 177);
+            this.lblError.Margin = new System.Windows.Forms.Padding(20, 10, 0, 0);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(200, 23);
+            this.lblError.TabIndex = 20;
+            this.lblError.Text = "Câu trả lời của bạn đúng";
+            this.lblError.Visible = false;
+            // 
             // lblQuestion
             // 
             this.lblQuestion.AutoSize = true;
@@ -244,19 +257,6 @@
             this.lblStateAnswer.Size = new System.Drawing.Size(200, 23);
             this.lblStateAnswer.TabIndex = 18;
             this.lblStateAnswer.Text = "Câu trả lời của bạn đúng";
-            // 
-            // lblError
-            // 
-            this.lblError.AutoSize = true;
-            this.lblError.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(0, 177);
-            this.lblError.Margin = new System.Windows.Forms.Padding(20, 10, 0, 0);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(200, 23);
-            this.lblError.TabIndex = 20;
-            this.lblError.Text = "Câu trả lời của bạn đúng";
-            this.lblError.Visible = false;
             // 
             // ucTestQuestion
             // 

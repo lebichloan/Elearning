@@ -76,6 +76,7 @@
           <Property Name="total_score" Type="int" Nullable="false" />
           <Property Name="score_to_pass" Type="int" Nullable="false" />
           <Property Name="display_type" Type="int" />
+          <Property Name="max_attempt" Type="int" />
         </EntityType>
         <EntityType Name="Register">
           <Key>
@@ -113,6 +114,8 @@
           <Property Name="test_score" Type="int" Nullable="false" />
           <Property Name="test_time" Type="time" Precision="7" Nullable="false" />
           <Property Name="is_passed" Type="int" Nullable="false" />
+          <Property Name="time_start" Type="datetime" />
+          <Property Name="time_finish" Type="datetime" />
         </EntityType>
         <Association Name="FK__Course__created___3C69FB99">
           <End Role="Account" Type="Self.Account" Multiplicity="1">
@@ -389,6 +392,7 @@
           <NavigationProperty Name="TestQuestions" Relationship="Self.FK__TestQuest__test___4AB81AF0" FromRole="CourseTest" ToRole="TestQuestion" />
           <NavigationProperty Name="TestResults" Relationship="Self.FK__TestResul__test___5629CD9C" FromRole="CourseTest" ToRole="TestResult" />
           <Property Name="display_type" Type="Int32" />
+          <Property Name="max_attempt" Type="Int32" />
         </EntityType>
         <EntityType Name="Register">
           <Key>
@@ -433,6 +437,8 @@
           <Property Name="is_passed" Type="Int32" Nullable="false" />
           <NavigationProperty Name="CourseTest" Relationship="Self.FK__TestResul__test___5629CD9C" FromRole="TestResult" ToRole="CourseTest" />
           <NavigationProperty Name="Register" Relationship="Self.FK__TestResul__regis__5535A963" FromRole="TestResult" ToRole="Register" />
+          <Property Name="time_start" Type="DateTime" Precision="3" />
+          <Property Name="time_finish" Type="DateTime" Precision="3" />
         </EntityType>
         <Association Name="FK__Course__created___3C69FB99">
           <End Role="Account" Type="Self.Account" Multiplicity="1">
@@ -695,6 +701,7 @@
           <EntitySetMapping Name="CourseTests">
             <EntityTypeMapping TypeName="ELearningDbModel.CourseTest">
               <MappingFragment StoreEntitySet="CourseTest">
+                <ScalarProperty Name="max_attempt" ColumnName="max_attempt" />
                 <ScalarProperty Name="display_type" ColumnName="display_type" />
                 <ScalarProperty Name="test_id" ColumnName="test_id" />
                 <ScalarProperty Name="resource_id" ColumnName="resource_id" />
@@ -735,6 +742,8 @@
           <EntitySetMapping Name="TestResults">
             <EntityTypeMapping TypeName="ELearningDbModel.TestResult">
               <MappingFragment StoreEntitySet="TestResult">
+                <ScalarProperty Name="time_finish" ColumnName="time_finish" />
+                <ScalarProperty Name="time_start" ColumnName="time_start" />
                 <ScalarProperty Name="result_id" ColumnName="result_id" />
                 <ScalarProperty Name="register_id" ColumnName="register_id" />
                 <ScalarProperty Name="test_id" ColumnName="test_id" />

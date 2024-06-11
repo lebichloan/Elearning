@@ -28,6 +28,7 @@ namespace Elearning.Entities
         public int total_score { get; set; }
         public int score_to_pass { get; set; }
         public Nullable<int> display_type { get; set; }
+        public Nullable<int> max_attempt { get; set; }
     
         public virtual CourseResource CourseResource { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

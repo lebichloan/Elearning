@@ -33,6 +33,10 @@
             this.siticoneContainerControl2 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.tbTestName = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.siticoneContainerControl10 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
+            this.optDisplayAll = new System.Windows.Forms.RadioButton();
+            this.optDisplayOne = new System.Windows.Forms.RadioButton();
+            this.label6 = new System.Windows.Forms.Label();
             this.siticoneContainerControl3 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.optNo = new System.Windows.Forms.RadioButton();
             this.optYes = new System.Windows.Forms.RadioButton();
@@ -58,12 +62,9 @@
             this.tbPointToPass = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.lbTotalScore = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.siticoneContainerControl10 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
-            this.optDisplayAll = new System.Windows.Forms.RadioButton();
-            this.optDisplayOne = new System.Windows.Forms.RadioButton();
-            this.label6 = new System.Windows.Forms.Label();
             this.siticoneContainerControl1.SuspendLayout();
             this.siticoneContainerControl2.SuspendLayout();
+            this.siticoneContainerControl10.SuspendLayout();
             this.siticoneContainerControl3.SuspendLayout();
             this.siticoneContainerControl4.SuspendLayout();
             this.siticoneContainerControl9.SuspendLayout();
@@ -74,7 +75,6 @@
             this.siticoneContainerControl6.SuspendLayout();
             this.siticoneContainerControl7.SuspendLayout();
             this.siticoneContainerControl8.SuspendLayout();
-            this.siticoneContainerControl10.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -152,6 +152,61 @@
             this.label2.Size = new System.Drawing.Size(84, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Test name";
+            // 
+            // siticoneContainerControl10
+            // 
+            this.siticoneContainerControl10.Controls.Add(this.optDisplayAll);
+            this.siticoneContainerControl10.Controls.Add(this.optDisplayOne);
+            this.siticoneContainerControl10.Controls.Add(this.label6);
+            this.siticoneContainerControl10.Dock = System.Windows.Forms.DockStyle.Right;
+            this.siticoneContainerControl10.FillColor = System.Drawing.Color.Transparent;
+            this.siticoneContainerControl10.Location = new System.Drawing.Point(710, 6);
+            this.siticoneContainerControl10.Margin = new System.Windows.Forms.Padding(4);
+            this.siticoneContainerControl10.Name = "siticoneContainerControl10";
+            this.siticoneContainerControl10.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.siticoneContainerControl10.Size = new System.Drawing.Size(285, 68);
+            this.siticoneContainerControl10.TabIndex = 2;
+            this.siticoneContainerControl10.Text = "siticoneContainerControl10";
+            // 
+            // optDisplayAll
+            // 
+            this.optDisplayAll.BackColor = System.Drawing.Color.White;
+            this.optDisplayAll.Dock = System.Windows.Forms.DockStyle.Left;
+            this.optDisplayAll.Location = new System.Drawing.Point(132, 22);
+            this.optDisplayAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.optDisplayAll.Name = "optDisplayAll";
+            this.optDisplayAll.Padding = new System.Windows.Forms.Padding(5, 0, 5, 5);
+            this.optDisplayAll.Size = new System.Drawing.Size(115, 46);
+            this.optDisplayAll.TabIndex = 3;
+            this.optDisplayAll.TabStop = true;
+            this.optDisplayAll.Text = "All in one";
+            this.optDisplayAll.UseVisualStyleBackColor = false;
+            // 
+            // optDisplayOne
+            // 
+            this.optDisplayOne.BackColor = System.Drawing.Color.Transparent;
+            this.optDisplayOne.Dock = System.Windows.Forms.DockStyle.Left;
+            this.optDisplayOne.Location = new System.Drawing.Point(13, 22);
+            this.optDisplayOne.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.optDisplayOne.Name = "optDisplayOne";
+            this.optDisplayOne.Padding = new System.Windows.Forms.Padding(5, 0, 5, 5);
+            this.optDisplayOne.Size = new System.Drawing.Size(119, 46);
+            this.optDisplayOne.TabIndex = 2;
+            this.optDisplayOne.TabStop = true;
+            this.optDisplayOne.Text = "One-by-one";
+            this.optDisplayOne.UseVisualStyleBackColor = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Variable Display", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(13, 0);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(103, 22);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Display type";
             // 
             // siticoneContainerControl3
             // 
@@ -510,61 +565,6 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Points to pass";
             // 
-            // siticoneContainerControl10
-            // 
-            this.siticoneContainerControl10.Controls.Add(this.optDisplayAll);
-            this.siticoneContainerControl10.Controls.Add(this.optDisplayOne);
-            this.siticoneContainerControl10.Controls.Add(this.label6);
-            this.siticoneContainerControl10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.siticoneContainerControl10.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneContainerControl10.Location = new System.Drawing.Point(710, 6);
-            this.siticoneContainerControl10.Margin = new System.Windows.Forms.Padding(4);
-            this.siticoneContainerControl10.Name = "siticoneContainerControl10";
-            this.siticoneContainerControl10.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.siticoneContainerControl10.Size = new System.Drawing.Size(285, 68);
-            this.siticoneContainerControl10.TabIndex = 2;
-            this.siticoneContainerControl10.Text = "siticoneContainerControl10";
-            // 
-            // optDisplayAll
-            // 
-            this.optDisplayAll.BackColor = System.Drawing.Color.White;
-            this.optDisplayAll.Dock = System.Windows.Forms.DockStyle.Left;
-            this.optDisplayAll.Location = new System.Drawing.Point(132, 22);
-            this.optDisplayAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.optDisplayAll.Name = "optDisplayAll";
-            this.optDisplayAll.Padding = new System.Windows.Forms.Padding(5, 0, 5, 5);
-            this.optDisplayAll.Size = new System.Drawing.Size(115, 46);
-            this.optDisplayAll.TabIndex = 3;
-            this.optDisplayAll.TabStop = true;
-            this.optDisplayAll.Text = "All in one";
-            this.optDisplayAll.UseVisualStyleBackColor = false;
-            // 
-            // optDisplayOne
-            // 
-            this.optDisplayOne.BackColor = System.Drawing.Color.Transparent;
-            this.optDisplayOne.Dock = System.Windows.Forms.DockStyle.Left;
-            this.optDisplayOne.Location = new System.Drawing.Point(13, 22);
-            this.optDisplayOne.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.optDisplayOne.Name = "optDisplayOne";
-            this.optDisplayOne.Padding = new System.Windows.Forms.Padding(5, 0, 5, 5);
-            this.optDisplayOne.Size = new System.Drawing.Size(119, 46);
-            this.optDisplayOne.TabIndex = 2;
-            this.optDisplayOne.TabStop = true;
-            this.optDisplayOne.Text = "One-by-one";
-            this.optDisplayOne.UseVisualStyleBackColor = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Variable Display", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(13, 0);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 22);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Display type";
-            // 
             // fAdminEditTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -584,6 +584,8 @@
             this.siticoneContainerControl1.ResumeLayout(false);
             this.siticoneContainerControl2.ResumeLayout(false);
             this.siticoneContainerControl2.PerformLayout();
+            this.siticoneContainerControl10.ResumeLayout(false);
+            this.siticoneContainerControl10.PerformLayout();
             this.siticoneContainerControl3.ResumeLayout(false);
             this.siticoneContainerControl3.PerformLayout();
             this.siticoneContainerControl4.ResumeLayout(false);
@@ -597,8 +599,6 @@
             this.siticoneContainerControl7.PerformLayout();
             this.siticoneContainerControl8.ResumeLayout(false);
             this.siticoneContainerControl8.PerformLayout();
-            this.siticoneContainerControl10.ResumeLayout(false);
-            this.siticoneContainerControl10.PerformLayout();
             this.ResumeLayout(false);
 
         }

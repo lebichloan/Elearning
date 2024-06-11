@@ -49,7 +49,7 @@
             this.panelTop.Controls.Add(this.siticoneContainerControl1);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
-            this.panelTop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelTop.Margin = new System.Windows.Forms.Padding(2);
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(904, 41);
             this.panelTop.TabIndex = 1;
@@ -75,9 +75,9 @@
             this.btnUserProfile.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnUserProfile.ImageRotate = 0F;
             this.btnUserProfile.Location = new System.Drawing.Point(828, 0);
-            this.btnUserProfile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUserProfile.Margin = new System.Windows.Forms.Padding(2);
             this.btnUserProfile.Name = "btnUserProfile";
-            this.btnUserProfile.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUserProfile.Padding = new System.Windows.Forms.Padding(2);
             this.btnUserProfile.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
             this.btnUserProfile.Size = new System.Drawing.Size(38, 41);
             this.btnUserProfile.TabIndex = 6;
@@ -104,9 +104,9 @@
             this.siticoneContainerControl1.Dock = System.Windows.Forms.DockStyle.Right;
             this.siticoneContainerControl1.FillColor = System.Drawing.Color.Transparent;
             this.siticoneContainerControl1.Location = new System.Drawing.Point(866, 0);
-            this.siticoneContainerControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneContainerControl1.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneContainerControl1.Name = "siticoneContainerControl1";
-            this.siticoneContainerControl1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.siticoneContainerControl1.Padding = new System.Windows.Forms.Padding(3);
             this.siticoneContainerControl1.Size = new System.Drawing.Size(38, 41);
             this.siticoneContainerControl1.TabIndex = 7;
             this.siticoneContainerControl1.Text = "siticoneContainerControl1";
@@ -135,7 +135,7 @@
             this.conMain.BackColor = System.Drawing.Color.White;
             this.conMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.conMain.Location = new System.Drawing.Point(0, 41);
-            this.conMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.conMain.Margin = new System.Windows.Forms.Padding(2);
             this.conMain.Name = "conMain";
             this.conMain.Size = new System.Drawing.Size(904, 504);
             this.conMain.TabIndex = 2;
@@ -149,13 +149,15 @@
             this.Controls.Add(this.conMain);
             this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "fAdminMain";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ELearning Admin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fAdminMain_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.fAdminMain_FormClosed);
             this.Load += new System.EventHandler(this.ucAdminMain_Load);
             this.panelTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnUserProfile)).EndInit();

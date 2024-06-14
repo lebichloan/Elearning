@@ -1,5 +1,6 @@
 ﻿using Elearning.Entities;
 using Elearning.UserControls.CourseTest;
+using Elearning.UserControls.User;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,8 @@ namespace Elearning.Forms
             InitializeComponent();
         }
 
+        private int resourceID;
+        private Course course;
         public fDetailTestResult(int registerID, int testID)
         {
             InitializeComponent();
@@ -28,7 +31,14 @@ namespace Elearning.Forms
                 where resource.resource_id == testID
                 select resource
                 ).ToList().FirstOrDefault();
+            resourceID = resourceTest.resource_id;
             lblFinishTest.Text = resourceTest.resource_name;
+
+            course = (
+                from registers in Program.provider.Registers
+                where registers.register_id == registerID
+                select registers
+                ).ToList().FirstOrDefault().Course;
 
             List<TestResult> allTestResult = (
                 from result in Program.provider.TestResults
@@ -37,7 +47,32 @@ namespace Elearning.Forms
                 select result
                 ).ToList();
 
-            InitUI(allTestResult);
+            if (allTestResult.Count() != 0)
+            {
+                InitUI(allTestResult);
+                int mandatory = (
+                    from test in Program.provider.CourseTests
+                    where test.resource_id == resourceID
+                    select test
+                    ).ToList().FirstOrDefault().mandatory;
+                if (allTestResult.Count() < mandatory)
+                {
+                    btnDoTest.Visible = true;
+                }
+                else
+                {
+                    btnDoTest.Visible = false;
+                    panButton.Size = new Size(0, 0);
+                }
+            }
+            else
+            {
+                lblLastState.Text = "Bạn chưa thực hiện bài test này";
+                lblLastState.ForeColor = Color.Red;
+                lblState.Text = "Trạng thái: Chưa đạt";
+                lblState.ForeColor = Color.Red;
+                btnDoTest.Visible = true;
+            }
         }
 
         private void InitUI(List<TestResult> allTestResult)
@@ -61,7 +96,7 @@ namespace Elearning.Forms
             foreach (TestResult result in allTestResult)
             {
                 itemTestResult itemResult = new itemTestResult(result);
-                itemResult.Dock = DockStyle.Top;
+                itemResult.Dock = DockStyle.Fill;
                 itemResult.viewDetailTest += ViewDetailTestResultWithOrdinal;
                 tbDetailTestResult.Controls.Add(itemResult);
 
@@ -75,11 +110,13 @@ namespace Elearning.Forms
             {
                 lblState.Text = "Trạng thái: Chưa đạt";
                 lblLastState.Text = "Chưa đạt";
+                lblLastState.ForeColor = Color.Red;
             }
             else
             {
                 lblState.Text = "Trạng thái: Đã hoàn thành";
                 lblLastState.Text = "Đã hoàn thành";
+                lblLastState.ForeColor = Color.FromArgb(94, 148, 255);
             }
 
             lblLastScore.Text = maxResult.test_score.ToString();
@@ -89,6 +126,12 @@ namespace Elearning.Forms
         private void ViewDetailTestResultWithOrdinal(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnDoTest_Click(object sender, EventArgs e)
+        {
+            fCourseTest courseTest = new fCourseTest(resourceID, false, course);
+            courseTest.ShowDialog();
         }
     }
 }

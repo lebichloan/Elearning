@@ -40,17 +40,17 @@
             // 
             this.siticonePanel1.BackColor = System.Drawing.Color.Black;
             this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.siticonePanel1.Location = new System.Drawing.Point(15, 69);
+            this.siticonePanel1.Location = new System.Drawing.Point(0, 59);
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.siticonePanel1.Size = new System.Drawing.Size(720, 1);
+            this.siticonePanel1.Size = new System.Drawing.Size(750, 1);
             this.siticonePanel1.TabIndex = 0;
             // 
             // lblViewDetail
             // 
             this.lblViewDetail.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblViewDetail.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblViewDetail.Location = new System.Drawing.Point(560, 10);
+            this.lblViewDetail.Location = new System.Drawing.Point(575, 0);
             this.lblViewDetail.Name = "lblViewDetail";
             this.lblViewDetail.Size = new System.Drawing.Size(175, 59);
             this.lblViewDetail.TabIndex = 12;
@@ -62,7 +62,7 @@
             // 
             this.lblTestOrdinal.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblTestOrdinal.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTestOrdinal.Location = new System.Drawing.Point(15, 10);
+            this.lblTestOrdinal.Location = new System.Drawing.Point(0, 0);
             this.lblTestOrdinal.Name = "lblTestOrdinal";
             this.lblTestOrdinal.Size = new System.Drawing.Size(75, 59);
             this.lblTestOrdinal.TabIndex = 13;
@@ -73,7 +73,7 @@
             // 
             this.lblTime.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblTime.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.Location = new System.Drawing.Point(90, 10);
+            this.lblTime.Location = new System.Drawing.Point(75, 0);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(150, 59);
             this.lblTime.TabIndex = 14;
@@ -84,7 +84,7 @@
             // 
             this.lblState.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblState.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblState.Location = new System.Drawing.Point(385, 10);
+            this.lblState.Location = new System.Drawing.Point(400, 0);
             this.lblState.Name = "lblState";
             this.lblState.Size = new System.Drawing.Size(175, 59);
             this.lblState.TabIndex = 16;
@@ -95,9 +95,9 @@
             // 
             this.lblScore.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblScore.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.Location = new System.Drawing.Point(240, 10);
+            this.lblScore.Location = new System.Drawing.Point(225, 0);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(145, 59);
+            this.lblScore.Size = new System.Drawing.Size(175, 59);
             this.lblScore.TabIndex = 17;
             this.lblScore.Text = "15";
             this.lblScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -112,10 +112,9 @@
             this.Controls.Add(this.lblTestOrdinal);
             this.Controls.Add(this.lblViewDetail);
             this.Controls.Add(this.siticonePanel1);
-            this.MaximumSize = new System.Drawing.Size(750, 75);
+            this.MaximumSize = new System.Drawing.Size(750, 60);
             this.Name = "itemTestResult";
-            this.Padding = new System.Windows.Forms.Padding(15, 10, 15, 5);
-            this.Size = new System.Drawing.Size(750, 75);
+            this.Size = new System.Drawing.Size(750, 60);
             this.ResumeLayout(false);
 
         }

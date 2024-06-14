@@ -78,5 +78,11 @@ namespace Elearning.Forms
             fResultTestClose?.Invoke(this, e);
             this.Close();
         }
+
+        public Color TextStateColor
+        {
+            get { return lblState.ForeColor; }
+            set { lblState.ForeColor = value; }
+        }
     }
 }

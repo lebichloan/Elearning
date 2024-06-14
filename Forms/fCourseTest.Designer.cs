@@ -307,6 +307,8 @@
             this.Name = "fCourseTest";
             this.ShowIcon = false;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fCourseTest_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.fCourseTest_FormClosed);
             this.siticonePanel2.ResumeLayout(false);
             this.siticonePanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();

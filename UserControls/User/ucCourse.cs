@@ -24,10 +24,18 @@ namespace Elearning.UserControls
             InitUI();
         }
 
+        private Register currentRegister;
         public ucCourse(Course course)
         {
             InitializeComponent();
             this.course = course;
+            currentRegister = (
+                from register in Program.provider.Registers
+                where register.learner_id == fLogin.currentAccount.acc_id
+                && register.course_id == course.course_id
+                select register
+            ).ToList().FirstOrDefault();
+
             InitUI();
             LoadAllModule(course);
         }
@@ -143,13 +151,6 @@ namespace Elearning.UserControls
         {
             itemTest item = (itemTest)sender;
 
-            Register currentRegister = (
-                from register in Program.provider.Registers
-                where register.learner_id == fLogin.currentAccount.acc_id
-                && register.course_id == course.course_id
-                select register
-            ).ToList().FirstOrDefault();
-
             fDetailTestResult fDetailTest = new fDetailTestResult(currentRegister.register_id, item.resourceId);
             fDetailTest.ShowDialog();
         }
@@ -163,6 +164,12 @@ namespace Elearning.UserControls
         private void btnBackHome_Click(object sender, EventArgs e)
         {
             backHomeClicked?.Invoke(this, e);
+        }
+
+        private void btnViewDetail_Click(object sender, EventArgs e)
+        {
+            fDetailCourseRegisted fDetail = new fDetailCourseRegisted(currentRegister);
+            fDetail.ShowDialog();
         }
     }
 }

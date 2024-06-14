@@ -50,6 +50,7 @@
             this.panContainer.Padding = new System.Windows.Forms.Padding(5);
             this.panContainer.Size = new System.Drawing.Size(580, 68);
             this.panContainer.TabIndex = 0;
+            this.panContainer.Click += new System.EventHandler(this.GoToTest_Click);
             // 
             // siticonePanel1
             // 
@@ -59,15 +60,16 @@
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Size = new System.Drawing.Size(300, 58);
             this.siticonePanel1.TabIndex = 10;
+            this.siticonePanel1.Click += new System.EventHandler(this.GoToTest_Click);
             // 
             // lblTestName
             // 
             this.lblTestName.AutoSize = true;
-            this.lblTestName.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTestName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTestName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.lblTestName.Location = new System.Drawing.Point(30, 20);
             this.lblTestName.Name = "lblTestName";
-            this.lblTestName.Size = new System.Drawing.Size(56, 23);
+            this.lblTestName.Size = new System.Drawing.Size(59, 23);
             this.lblTestName.TabIndex = 9;
             this.lblTestName.Text = "label1";
             this.lblTestName.Click += new System.EventHandler(this.GoToTest_Click);
@@ -80,6 +82,7 @@
             this.siticonePanel2.Name = "siticonePanel2";
             this.siticonePanel2.Size = new System.Drawing.Size(300, 58);
             this.siticonePanel2.TabIndex = 11;
+            this.siticonePanel2.Click += new System.EventHandler(this.GoToTest_Click);
             // 
             // lblViewDetail
             // 

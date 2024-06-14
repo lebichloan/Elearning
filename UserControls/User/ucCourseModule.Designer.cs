@@ -38,7 +38,7 @@
             this.lblModuleName.AutoSize = true;
             this.lblModuleName.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModuleName.Location = new System.Drawing.Point(50, 81);
+            this.lblModuleName.Location = new System.Drawing.Point(30, 79);
             this.lblModuleName.Name = "lblModuleName";
             this.lblModuleName.Size = new System.Drawing.Size(56, 23);
             this.lblModuleName.TabIndex = 10;
@@ -49,7 +49,7 @@
             // 
             this.lblModuleOrdinal.AutoSize = true;
             this.lblModuleOrdinal.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModuleOrdinal.Location = new System.Drawing.Point(50, 30);
+            this.lblModuleOrdinal.Location = new System.Drawing.Point(30, 28);
             this.lblModuleOrdinal.Name = "lblModuleOrdinal";
             this.lblModuleOrdinal.Size = new System.Drawing.Size(53, 23);
             this.lblModuleOrdinal.TabIndex = 9;
@@ -67,8 +67,8 @@
             // 
             // ucCourseModule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.siticonePanel1);
             this.Controls.Add(this.lblModuleName);
             this.Controls.Add(this.lblModuleOrdinal);

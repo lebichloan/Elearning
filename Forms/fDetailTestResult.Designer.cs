@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.panButton = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.btnDoTest = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.lblFinishTest = new System.Windows.Forms.Label();
             this.lblState = new System.Windows.Forms.Label();
@@ -42,23 +42,23 @@
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.lblLastState = new System.Windows.Forms.Label();
             this.lblOrdinalPass = new System.Windows.Forms.Label();
+            this.lblLastScore = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.siticonePanel4 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.lblLastScore = new System.Windows.Forms.Label();
             this.tbDetailTestResult = new System.Windows.Forms.TableLayoutPanel();
-            this.siticonePanel1.SuspendLayout();
+            this.panButton.SuspendLayout();
             this.panHeader.SuspendLayout();
             this.siticonePanel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // siticonePanel1
+            // panButton
             // 
-            this.siticonePanel1.Controls.Add(this.btnDoTest);
-            this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.siticonePanel1.Location = new System.Drawing.Point(50, 533);
-            this.siticonePanel1.Name = "siticonePanel1";
-            this.siticonePanel1.Size = new System.Drawing.Size(750, 70);
-            this.siticonePanel1.TabIndex = 9;
+            this.panButton.Controls.Add(this.btnDoTest);
+            this.panButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panButton.Location = new System.Drawing.Point(50, 533);
+            this.panButton.Name = "panButton";
+            this.panButton.Size = new System.Drawing.Size(750, 70);
+            this.panButton.TabIndex = 9;
             // 
             // btnDoTest
             // 
@@ -73,6 +73,8 @@
             this.btnDoTest.Size = new System.Drawing.Size(150, 50);
             this.btnDoTest.TabIndex = 20;
             this.btnDoTest.Text = "Làm bài test";
+            this.btnDoTest.Visible = false;
+            this.btnDoTest.Click += new System.EventHandler(this.btnDoTest_Click);
             // 
             // lblFinishTest
             // 
@@ -211,8 +213,17 @@
             this.lblOrdinalPass.Name = "lblOrdinalPass";
             this.lblOrdinalPass.Size = new System.Drawing.Size(175, 55);
             this.lblOrdinalPass.TabIndex = 22;
-            this.lblOrdinalPass.Text = "Lần 3";
             this.lblOrdinalPass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLastScore
+            // 
+            this.lblLastScore.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblLastScore.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastScore.Location = new System.Drawing.Point(154, 6);
+            this.lblLastScore.Name = "lblLastScore";
+            this.lblLastScore.Size = new System.Drawing.Size(150, 55);
+            this.lblLastScore.TabIndex = 21;
+            this.lblLastScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
@@ -233,17 +244,6 @@
             this.siticonePanel4.Name = "siticonePanel4";
             this.siticonePanel4.Size = new System.Drawing.Size(720, 1);
             this.siticonePanel4.TabIndex = 18;
-            // 
-            // lblLastScore
-            // 
-            this.lblLastScore.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblLastScore.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastScore.Location = new System.Drawing.Point(154, 6);
-            this.lblLastScore.Name = "lblLastScore";
-            this.lblLastScore.Size = new System.Drawing.Size(150, 55);
-            this.lblLastScore.TabIndex = 21;
-            this.lblLastScore.Text = "15";
-            this.lblLastScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tbDetailTestResult
             // 
@@ -268,14 +268,14 @@
             this.Controls.Add(this.siticonePanel2);
             this.Controls.Add(this.panHeader);
             this.Controls.Add(this.lblState);
-            this.Controls.Add(this.siticonePanel1);
+            this.Controls.Add(this.panButton);
             this.Controls.Add(this.lblFinishTest);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "fDetailTestResult";
             this.Padding = new System.Windows.Forms.Padding(50);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fTestResult";
-            this.siticonePanel1.ResumeLayout(false);
+            this.panButton.ResumeLayout(false);
             this.panHeader.ResumeLayout(false);
             this.siticonePanel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -283,7 +283,7 @@
         }
 
         #endregion
-        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel panButton;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnDoTest;
         private System.Windows.Forms.Label lblFinishTest;
         private System.Windows.Forms.Label lblState;

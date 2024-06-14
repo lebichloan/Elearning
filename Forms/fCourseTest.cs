@@ -297,10 +297,12 @@ namespace Elearning.Forms
             if (result.is_passed == 0)
             {
                 testResult.testState = "Chưa đạt";
+                testResult.TextStateColor = Color.Red;
             }
             else
             {
                 testResult.testState = "Hoàn thành";
+                testResult.TextStateColor = Color.FromArgb(94, 148, 255);
             }
             testResult.totalTime = result.test_time.ToString();
             testResult.source = result.test_score.ToString();
@@ -326,9 +328,31 @@ namespace Elearning.Forms
 
         private void btnDone_Click(object sender, EventArgs e)
         {
+            timerTest.Stop();
             finishTime = DateTime.Now;
             TestResult  testResult = SaveTestResult();
             ShowfTestResult(testResult);
+        }
+
+        private void fCourseTest_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Bạn chắc chắn muốn kết thúc bài kiểm tra ?", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information
+                );
+            if (result == DialogResult.OK)
+            {
+                timerTest.Stop();
+                finishTime = DateTime.Now;
+                TestResult testResult = SaveTestResult();
+                ShowfTestResult(testResult);
+                this.Close();
+            }
+
+        }
+
+        private void fCourseTest_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
     }
 }

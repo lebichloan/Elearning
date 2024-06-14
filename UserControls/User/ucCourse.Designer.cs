@@ -78,6 +78,7 @@
             this.btnViewDetail.Size = new System.Drawing.Size(150, 50);
             this.btnViewDetail.TabIndex = 17;
             this.btnViewDetail.Text = "View detail";
+            this.btnViewDetail.Click += new System.EventHandler(this.btnViewDetail_Click);
             // 
             // siticonePanel4
             // 

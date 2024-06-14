@@ -62,7 +62,7 @@
             this.siticonePanel1.Location = new System.Drawing.Point(15, 15);
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Padding = new System.Windows.Forms.Padding(10);
-            this.siticonePanel1.Size = new System.Drawing.Size(170, 408);
+            this.siticonePanel1.Size = new System.Drawing.Size(170, 418);
             this.siticonePanel1.TabIndex = 26;
             // 
             // panQuestion
@@ -142,6 +142,7 @@
             // 
             // siticonePanel2
             // 
+            this.siticonePanel2.AutoSize = true;
             this.siticonePanel2.Controls.Add(this.panContent);
             this.siticonePanel2.Controls.Add(this.siticonePanel3);
             this.siticonePanel2.Controls.Add(this.panAnswer);
@@ -149,7 +150,7 @@
             this.siticonePanel2.Location = new System.Drawing.Point(185, 15);
             this.siticonePanel2.Name = "siticonePanel2";
             this.siticonePanel2.Padding = new System.Windows.Forms.Padding(10);
-            this.siticonePanel2.Size = new System.Drawing.Size(982, 408);
+            this.siticonePanel2.Size = new System.Drawing.Size(982, 418);
             this.siticonePanel2.TabIndex = 27;
             // 
             // panContent
@@ -163,7 +164,7 @@
             this.panContent.Location = new System.Drawing.Point(10, 10);
             this.panContent.Name = "panContent";
             this.panContent.Padding = new System.Windows.Forms.Padding(20, 10, 20, 20);
-            this.panContent.Size = new System.Drawing.Size(962, 258);
+            this.panContent.Size = new System.Drawing.Size(962, 268);
             this.panContent.TabIndex = 30;
             // 
             // panChooseAnswer
@@ -174,7 +175,7 @@
             this.panChooseAnswer.Location = new System.Drawing.Point(20, 38);
             this.panChooseAnswer.Name = "panChooseAnswer";
             this.panChooseAnswer.Padding = new System.Windows.Forms.Padding(10);
-            this.panChooseAnswer.Size = new System.Drawing.Size(922, 200);
+            this.panChooseAnswer.Size = new System.Drawing.Size(922, 210);
             this.panChooseAnswer.TabIndex = 19;
             // 
             // lblError
@@ -206,7 +207,7 @@
             // siticonePanel3
             // 
             this.siticonePanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.siticonePanel3.Location = new System.Drawing.Point(10, 268);
+            this.siticonePanel3.Location = new System.Drawing.Point(10, 278);
             this.siticonePanel3.Name = "siticonePanel3";
             this.siticonePanel3.Size = new System.Drawing.Size(962, 10);
             this.siticonePanel3.TabIndex = 29;
@@ -219,7 +220,7 @@
             this.panAnswer.Controls.Add(this.label3);
             this.panAnswer.Controls.Add(this.lblStateAnswer);
             this.panAnswer.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panAnswer.Location = new System.Drawing.Point(10, 278);
+            this.panAnswer.Location = new System.Drawing.Point(10, 288);
             this.panAnswer.Name = "panAnswer";
             this.panAnswer.Size = new System.Drawing.Size(962, 120);
             this.panAnswer.TabIndex = 27;
@@ -262,13 +263,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.siticonePanel2);
             this.Controls.Add(this.siticonePanel1);
             this.Margin = new System.Windows.Forms.Padding(10);
             this.Name = "ucTestQuestion";
             this.Padding = new System.Windows.Forms.Padding(15);
-            this.Size = new System.Drawing.Size(1182, 438);
+            this.Size = new System.Drawing.Size(1182, 448);
             this.siticonePanel1.ResumeLayout(false);
             this.panQuestion.ResumeLayout(false);
             this.panQuestion.PerformLayout();
@@ -282,6 +284,7 @@
             this.panAnswer.ResumeLayout(false);
             this.panAnswer.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

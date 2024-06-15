@@ -187,6 +187,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\fRateCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fRateCourse.Designer.cs">
+      <DependentUpon>fRateCourse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\fTestResult.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -302,6 +308,12 @@
     </Compile>
     <Compile Include="UserControls\User\itemFile.Designer.cs">
       <DependentUpon>itemFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\User\itemReview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\User\itemReview.Designer.cs">
+      <DependentUpon>itemReview.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\User\itemTest.cs">
       <SubType>UserControl</SubType>
@@ -453,6 +465,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fRateCourse.resx">
+      <DependentUpon>fRateCourse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\fTestResult.resx">
       <DependentUpon>fTestResult.cs</DependentUpon>
     </EmbeddedResource>
@@ -486,6 +501,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\User\itemFile.resx">
       <DependentUpon>itemFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\User\itemReview.resx">
+      <DependentUpon>itemReview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\User\itemTest.resx">
       <DependentUpon>itemTest.cs</DependentUpon>
@@ -633,6 +651,8 @@
     <Content Include="images\icons\play.png" />
     <None Include="images\icons\refresh.png" />
     <None Include="images\icons\search-white.png" />
+    <Content Include="images\icons\star_fill.png" />
+    <Content Include="images\icons\star_solid.png" />
     <Content Include="images\icons\stop.png" />
   </ItemGroup>
   <ItemGroup>

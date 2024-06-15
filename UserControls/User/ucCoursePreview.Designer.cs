@@ -30,6 +30,8 @@
         {
             this.conInfo = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.btnViewDetails = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.btnRate = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.lbCourseName = new System.Windows.Forms.Label();
             this.lbLecturer = new System.Windows.Forms.Label();
             this.picImage = new Siticone.Desktop.UI.WinForms.SiticonePictureBox();
@@ -40,6 +42,8 @@
             // conInfo
             // 
             this.conInfo.Controls.Add(this.btnViewDetails);
+            this.conInfo.Controls.Add(this.siticonePanel1);
+            this.conInfo.Controls.Add(this.btnRate);
             this.conInfo.Controls.Add(this.lbCourseName);
             this.conInfo.Controls.Add(this.lbLecturer);
             this.conInfo.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -47,7 +51,7 @@
             this.conInfo.Location = new System.Drawing.Point(10, 127);
             this.conInfo.Name = "conInfo";
             this.conInfo.Padding = new System.Windows.Forms.Padding(4, 10, 4, 5);
-            this.conInfo.Size = new System.Drawing.Size(228, 111);
+            this.conInfo.Size = new System.Drawing.Size(228, 139);
             this.conInfo.TabIndex = 1;
             this.conInfo.Text = "siticoneContainerControl1";
             // 
@@ -61,12 +65,38 @@
             this.btnViewDetails.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
             this.btnViewDetails.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewDetails.ForeColor = System.Drawing.Color.White;
-            this.btnViewDetails.Location = new System.Drawing.Point(4, 71);
+            this.btnViewDetails.Location = new System.Drawing.Point(4, 59);
             this.btnViewDetails.Name = "btnViewDetails";
             this.btnViewDetails.Size = new System.Drawing.Size(220, 35);
-            this.btnViewDetails.TabIndex = 2;
+            this.btnViewDetails.TabIndex = 4;
             this.btnViewDetails.Text = "View details";
             this.btnViewDetails.Click += new System.EventHandler(this.btnViewDetails_Click);
+            // 
+            // siticonePanel1
+            // 
+            this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.siticonePanel1.Location = new System.Drawing.Point(4, 94);
+            this.siticonePanel1.Name = "siticonePanel1";
+            this.siticonePanel1.Size = new System.Drawing.Size(220, 5);
+            this.siticonePanel1.TabIndex = 3;
+            // 
+            // btnRate
+            // 
+            this.btnRate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.btnRate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRate.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnRate.FillColor = System.Drawing.Color.White;
+            this.btnRate.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.btnRate.Location = new System.Drawing.Point(4, 99);
+            this.btnRate.Name = "btnRate";
+            this.btnRate.Size = new System.Drawing.Size(220, 35);
+            this.btnRate.TabIndex = 2;
+            this.btnRate.Text = "Rate course";
+            this.btnRate.Click += new System.EventHandler(this.btnRate_Click);
             // 
             // lbCourseName
             // 
@@ -117,7 +147,7 @@
             this.MaximumSize = new System.Drawing.Size(399, 384);
             this.Name = "ucCoursePreview";
             this.Padding = new System.Windows.Forms.Padding(10);
-            this.Size = new System.Drawing.Size(248, 248);
+            this.Size = new System.Drawing.Size(248, 276);
             this.conInfo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
             this.ResumeLayout(false);
@@ -130,6 +160,8 @@
         private Siticone.Desktop.UI.WinForms.SiticoneContainerControl conInfo;
         private System.Windows.Forms.Label lbCourseName;
         private System.Windows.Forms.Label lbLecturer;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnRate;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnViewDetails;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
     }
 }

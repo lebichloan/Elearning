@@ -57,6 +57,7 @@ namespace Elearning.UserControls.User
                 ucCourse.courseLecturer = course.lecturer;
                 ucCourse.courseName = course.course_name;
                 ucCourse.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
+                ucCourse.btnRateClick += ucCoursePreview_btnRatingClick;
                 layoutMyCourses.Controls.Add(ucCourse);
             }
         }
@@ -75,5 +76,13 @@ namespace Elearning.UserControls.User
             viewDetailsClicked?.Invoke(this, e);
         }
 
+        private void ucCoursePreview_btnRatingClick(object sender, EventArgs e)
+        {
+            ucCoursePreview ucCourse = sender as ucCoursePreview;
+            courseView = ucCourse.coursePreviewClicked;
+            
+            fRateCourse rateCourse = new fRateCourse(courseView);
+            rateCourse.ShowDialog();
+        }
     }
 }

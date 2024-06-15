@@ -26,6 +26,7 @@ namespace Elearning.UserControls
             InitializeComponent();
         }
 
+        private List<CourseReview> listCourseReview;
         public ucCourseInfo(Course course)
         {
             InitializeComponent();
@@ -34,6 +35,16 @@ namespace Elearning.UserControls
                 x => x.course_id == course.course_id && x.learner_id == currentAccount.acc_id
                 );
             InitUI(course);
+
+            cmbRating.Items.Add("All");
+            for (int i = 5; i > 0; i--)
+            {
+                cmbRating.Items.Add(i.ToString());
+            }
+            cmbRating.SelectedIndex = 0;
+
+            listCourseReview = Program.provider.CourseReviews.ToList();
+            LoadAllReview(listCourseReview);
         }
 
         private void btnBackHome_Click(object sender, EventArgs e)
@@ -163,6 +174,48 @@ namespace Elearning.UserControls
         private void ucCourseModule_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void LoadAllReview(List<CourseReview> listReviews)
+        {
+            tbAllReview.Controls.Clear();
+            tbAllReview.AutoScroll = true;
+            tbAllReview.VerticalScroll.Visible = true;
+            tbAllReview.VerticalScroll.Enabled = true;
+            tbAllReview.HorizontalScroll.Visible = false;
+            tbAllReview.HorizontalScroll.Enabled = false;
+            tbAllReview.RowCount = 0;
+            tbAllReview.RowStyles.Clear();
+            tbAllReview.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+
+            foreach (CourseReview review in listReviews)
+            {
+                itemReview item = new itemReview();
+                item.avatarPath = Image.FromFile(Program.AVARTAR_PATH + currentAccount.avatar);
+                item.name = review.Register.Account.fullname;
+                item.review = review.content;
+                item.datetime = review.review_time.ToString();
+                item.SetRating(review.stars);
+
+                tbAllReview.Controls.Add(item);
+            }
+        }
+
+        private void cmbRating_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbRating.SelectedIndex == 0)
+            {
+                listCourseReview = Program.provider.CourseReviews.ToList();
+            }
+            else
+            {
+                listCourseReview = (
+                    from review in Program.provider.CourseReviews
+                    where review.stars == (6 - cmbRating.SelectedIndex)
+                    select review
+                    ).ToList();
+            }
+            LoadAllReview(listCourseReview);
         }
     }
 }

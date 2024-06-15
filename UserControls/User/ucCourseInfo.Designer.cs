@@ -53,8 +53,9 @@
             this.siticoneContainerControl5 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.tbAllReview = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.siticonePanel9 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.cmbRating = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.siticonePanel8 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.lblDescription = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -79,6 +80,7 @@
             this.siticonePanel6.SuspendLayout();
             this.siticoneContainerControl5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.siticonePanel9.SuspendLayout();
             this.panTop.SuspendLayout();
             this.siticoneContainerControl1.SuspendLayout();
             this.siticoneContainerControl6.SuspendLayout();
@@ -149,7 +151,7 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(48, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(70, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Padding = new System.Windows.Forms.Padding(5);
             this.pictureBox1.Size = new System.Drawing.Size(40, 40);
@@ -159,15 +161,15 @@
             // 
             // lblStar
             // 
-            this.lblStar.AutoSize = true;
             this.lblStar.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblStar.Font = new System.Drawing.Font("Segoe UI Variable Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStar.Location = new System.Drawing.Point(0, 0);
             this.lblStar.Name = "lblStar";
             this.lblStar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lblStar.Size = new System.Drawing.Size(48, 27);
+            this.lblStar.Size = new System.Drawing.Size(70, 40);
             this.lblStar.TabIndex = 13;
             this.lblStar.Text = "4.2";
+            this.lblStar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblPrice
             // 
@@ -305,7 +307,7 @@
             // 
             this.siticonePanel7.BackColor = System.Drawing.Color.Black;
             this.siticonePanel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.siticonePanel7.Location = new System.Drawing.Point(282, 231);
+            this.siticonePanel7.Location = new System.Drawing.Point(167, 231);
             this.siticonePanel7.Name = "siticonePanel7";
             this.siticonePanel7.Size = new System.Drawing.Size(1, 436);
             this.siticonePanel7.TabIndex = 20;
@@ -317,7 +319,7 @@
             this.siticonePanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticonePanel6.Location = new System.Drawing.Point(0, 231);
             this.siticonePanel6.Name = "siticonePanel6";
-            this.siticonePanel6.Size = new System.Drawing.Size(283, 436);
+            this.siticonePanel6.Size = new System.Drawing.Size(168, 436);
             this.siticonePanel6.TabIndex = 19;
             // 
             // layoutModule
@@ -330,7 +332,7 @@
             this.layoutModule.RowCount = 2;
             this.layoutModule.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.layoutModule.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.layoutModule.Size = new System.Drawing.Size(283, 384);
+            this.layoutModule.Size = new System.Drawing.Size(168, 384);
             this.layoutModule.TabIndex = 14;
             // 
             // label2
@@ -353,10 +355,10 @@
             this.siticoneContainerControl5.Controls.Add(this.lblDescription);
             this.siticoneContainerControl5.Controls.Add(this.label3);
             this.siticoneContainerControl5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.siticoneContainerControl5.Location = new System.Drawing.Point(283, 231);
+            this.siticoneContainerControl5.Location = new System.Drawing.Point(168, 231);
             this.siticoneContainerControl5.Name = "siticoneContainerControl5";
             this.siticoneContainerControl5.Padding = new System.Windows.Forms.Padding(10, 5, 5, 5);
-            this.siticoneContainerControl5.Size = new System.Drawing.Size(500, 436);
+            this.siticoneContainerControl5.Size = new System.Drawing.Size(615, 436);
             this.siticoneContainerControl5.TabIndex = 18;
             this.siticoneContainerControl5.Text = "siticoneContainerControl5";
             // 
@@ -370,36 +372,23 @@
             this.tbAllReview.RowCount = 2;
             this.tbAllReview.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbAllReview.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbAllReview.Size = new System.Drawing.Size(485, 280);
+            this.tbAllReview.Size = new System.Drawing.Size(600, 280);
             this.tbAllReview.TabIndex = 24;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.5F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.5F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.siticonePanel9, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 95);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(485, 56);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(600, 56);
             this.tableLayoutPanel1.TabIndex = 23;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Variable Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(424, 0);
-            this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.label4.Size = new System.Drawing.Size(58, 56);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "4.2";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -409,9 +398,35 @@
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(10);
-            this.label1.Size = new System.Drawing.Size(236, 52);
+            this.label1.Size = new System.Drawing.Size(231, 52);
             this.label1.TabIndex = 19;
             this.label1.Text = "All Review";
+            // 
+            // siticonePanel9
+            // 
+            this.siticonePanel9.Controls.Add(this.cmbRating);
+            this.siticonePanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.siticonePanel9.Location = new System.Drawing.Point(240, 3);
+            this.siticonePanel9.Name = "siticonePanel9";
+            this.siticonePanel9.Size = new System.Drawing.Size(357, 50);
+            this.siticonePanel9.TabIndex = 20;
+            // 
+            // cmbRating
+            // 
+            this.cmbRating.BackColor = System.Drawing.Color.White;
+            this.cmbRating.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.cmbRating.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbRating.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRating.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbRating.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbRating.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbRating.ForeColor = System.Drawing.Color.Black;
+            this.cmbRating.ItemHeight = 30;
+            this.cmbRating.Location = new System.Drawing.Point(174, 8);
+            this.cmbRating.Name = "cmbRating";
+            this.cmbRating.Size = new System.Drawing.Size(180, 36);
+            this.cmbRating.TabIndex = 23;
+            this.cmbRating.SelectedIndexChanged += new System.EventHandler(this.cmbRating_SelectedIndexChanged);
             // 
             // siticonePanel8
             // 
@@ -419,7 +434,7 @@
             this.siticonePanel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticonePanel8.Location = new System.Drawing.Point(10, 94);
             this.siticonePanel8.Name = "siticonePanel8";
-            this.siticonePanel8.Size = new System.Drawing.Size(485, 1);
+            this.siticonePanel8.Size = new System.Drawing.Size(600, 1);
             this.siticonePanel8.TabIndex = 16;
             // 
             // lblDescription
@@ -429,8 +444,8 @@
             this.lblDescription.Font = new System.Drawing.Font("Segoe UI Variable Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.Location = new System.Drawing.Point(10, 57);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.lblDescription.Size = new System.Drawing.Size(318, 37);
+            this.lblDescription.Padding = new System.Windows.Forms.Padding(10, 0, 0, 10);
+            this.lblDescription.Size = new System.Drawing.Size(328, 37);
             this.lblDescription.TabIndex = 15;
             this.lblDescription.Text = "This is the description of the course";
             // 
@@ -580,7 +595,6 @@
             this.siticonePanel2.ResumeLayout(false);
             this.siticonePanel2.PerformLayout();
             this.siticonePanel3.ResumeLayout(false);
-            this.siticonePanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.siticoneContainerControl2.ResumeLayout(false);
             this.siticoneContainerControl2.PerformLayout();
@@ -593,6 +607,7 @@
             this.siticoneContainerControl5.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.siticonePanel9.ResumeLayout(false);
             this.panTop.ResumeLayout(false);
             this.siticoneContainerControl1.ResumeLayout(false);
             this.siticoneContainerControl1.PerformLayout();
@@ -642,8 +657,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tbAllReview;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel9;
+        private Siticone.Desktop.UI.WinForms.SiticoneComboBox cmbRating;
     }
 }

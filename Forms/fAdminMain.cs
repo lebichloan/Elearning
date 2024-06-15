@@ -32,5 +32,18 @@ namespace Elearning.Forms
             ucHome.Dock = DockStyle.Fill;
             conMain.Controls.Add(ucHome);
         }
+
+        private void fAdminMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+            fLogin fLogin = new fLogin();
+            fLogin.ShowDialog();
+        }
+
+        private void fAdminMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //fLogin fLogin = new fLogin();
+            //fLogin.Show();
+        }
     }
 }

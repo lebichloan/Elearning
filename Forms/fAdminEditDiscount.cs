@@ -21,7 +21,9 @@ namespace Elearning.Forms
             this.course = course;
             lbCourseName.Text = course.course_name;
             tbDiscount.Text = course.discount.ToString();
-            dateEnd.MinDate = DateTime.Now;
+            // set the date picker to the yesterday date 
+            dateEnd.MinDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 0, 0);
+
             if (course.discount_end_date == null)
             {
                 dateEnd.Value = DateTime.Now;
@@ -63,11 +65,13 @@ namespace Elearning.Forms
                 }
 
                 int newPrice = (int)Math.Round(course.price - (course.price * discount / 100.0));
+                var newDateEnd = new DateTime(dateEnd.Value.Year, dateEnd.Value.Month, dateEnd.Value.Day, 23, 59, 59);
+                
 
-                if (MessageBox.Show("The new price will be " + newPrice.ToString("N0") + " VND. The discount will end on " + dateEnd.Value.ToString("dd/MM/yyyy") + ". Do you want to continue?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("The new price will be " + newPrice.ToString("N0") + " VND. The discount will end at " + newDateEnd.ToString() + ". Do you want to continue?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     course.discount = discount;
-                    course.discount_end_date = dateEnd.Value;
+                    course.discount_end_date = newDateEnd;
                     Program.provider.SaveChanges();
                     MessageBox.Show("Discount updated successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();

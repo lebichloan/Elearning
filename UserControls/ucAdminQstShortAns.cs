@@ -24,7 +24,7 @@ namespace Elearning.UserControls
             this.question = question;
             tbQuestion.Text = question.question_description;
             tbPoint.Text = question.score.ToString();
-            conTb.Text = question.answer;
+            tbAnswer.Text = question.answer;
         }
 
         public int GetScore()
@@ -41,7 +41,7 @@ namespace Elearning.UserControls
             question.question_description = tbQuestion.Text;
             question.score = GetScore();
             question.choices = "";
-            question.answer = conTb.Text;
+            question.answer = tbAnswer.Text;
         }
     }
 }

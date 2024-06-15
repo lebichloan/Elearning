@@ -48,5 +48,11 @@ namespace Elearning.UserControls
             get { return lbCourseName.Text; }
             set { lbCourseName.Text = value; }
         }
+
+        public EventHandler btnRateClick;
+        private void btnRate_Click(object sender, EventArgs e)
+        {
+            btnRateClick?.Invoke(this, e);
+        }
     }
 }

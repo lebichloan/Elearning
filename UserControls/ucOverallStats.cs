@@ -39,17 +39,17 @@ namespace Elearning.UserControls
                 
                 // find course that have biggest total earnings
                 var top_earn_course = Program.provider.Courses.Where(c => c.Registers.Count > 0).OrderByDescending(c => c.Registers.Sum(r => r.paid)).FirstOrDefault();
-                var top_earnings = top_earn_course.Registers.Sum(r => r.paid);
+                var top_earnings = top_earn_course == null ? 0 : top_earn_course.Registers.Sum(r => r.paid);
                 // find course that have biggest number of enrollments
                 var top_enroll_course = Program.provider.Courses.Where(c => c.Registers.Count > 0).OrderByDescending(c => c.Registers.Count).FirstOrDefault();
-                var top_enrollments = top_enroll_course.Registers.Count;
+                var top_enrollments = top_enroll_course == null ? 0 : top_enroll_course.Registers.Count;
 
                 lbNewLearners.Text = new_learner.ToString();
                 lbNewCourses.Text = new_course.ToString();
                 lbNewRegistrations.Text = new_enrollment.ToString();
                 lbTotalEarning.Text = total_earnings.ToString("N0") + "đ";
-                lbTopEarnCourse.Text = top_earn_course.course_name + " (" + top_earnings.ToString("N0") + "đ)";
-                lbMostRegisCourse.Text = top_enroll_course.course_name + " (" + top_enrollments + " registrations)";
+                lbTopEarnCourse.Text = top_earn_course == null ? "No data" : top_earn_course.course_name + " (" + top_earnings.ToString("N0") + "đ)";
+                lbMostRegisCourse.Text = top_enroll_course == null ? "No data" : top_enroll_course.course_name + " (" + top_enrollments + " registrations)";
             } 
             else
             {
@@ -63,17 +63,17 @@ namespace Elearning.UserControls
 
                 // find course that have biggest total earnings
                 var top_earn_course = Program.provider.Courses.Where(c => c.Registers.Count > 0 && ((DateTime)c.created_at).Year == year && ((DateTime)c.created_at).Month == month).OrderByDescending(c => c.Registers.Sum(r => r.paid)).FirstOrDefault();
-                var top_earnings = top_earn_course.Registers.Sum(r => r.paid);
+                var top_earnings = top_earn_course == null ? 0 : top_earn_course.Registers.Sum(r => r.paid);
                 // find course that have biggest number of enrollments
                 var top_enroll_course = Program.provider.Courses.Where(c => c.Registers.Count > 0 && ((DateTime)c.created_at).Year == year && ((DateTime)c.created_at).Month == month).OrderByDescending(c => c.Registers.Count).FirstOrDefault();
-                var top_enrollments = top_enroll_course.Registers.Count;
+                var top_enrollments = top_enroll_course == null ? 0 : top_enroll_course.Registers.Count;
 
                 lbNewLearners.Text = new_learner.ToString();
                 lbNewCourses.Text = new_course.ToString();
                 lbNewRegistrations.Text = new_enrollment.ToString();
                 lbTotalEarning.Text = total_earnings.ToString("N0") + "đ";
-                lbTopEarnCourse.Text = top_earn_course.course_name + " (" + top_earnings.ToString("N0") + "đ)";
-                lbMostRegisCourse.Text = top_enroll_course.course_name + " (" + top_enrollments + " registrations)";
+                lbTopEarnCourse.Text = top_earn_course == null ? "No data" : top_earn_course.course_name + " (" + top_earnings.ToString("N0") + "đ)";
+                lbMostRegisCourse.Text = top_enroll_course == null ? "No data" : top_enroll_course.course_name + " (" + top_enrollments + " registrations)";
             }   
         }
 

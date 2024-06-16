@@ -87,7 +87,7 @@ namespace Elearning.Forms
                 course.difficulty = cbDifficulty.SelectedItem.ToString();
                 course.category = cbCategory.SelectedItem.ToString();
                 course.created_at = DateTime.Now;
-                course.created_by = 1; // account id of an admin, hard-coded for now
+                course.created_by = fLogin.currentAccount.acc_id;
                 course.course_image = "";
                 // Add the course to the database and get the course_id
                 Program.provider.Courses.Add(course);

@@ -163,6 +163,16 @@ namespace Elearning.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap edit_syllabus {
+            get {
+                object obj = ResourceManager.GetObject("edit-syllabus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap light_notification {
             get {
                 object obj = ResourceManager.GetObject("light-notification", resourceCulture);
@@ -233,6 +243,36 @@ namespace Elearning.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap star_30 {
+            get {
+                object obj = ResourceManager.GetObject("star-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stats {
+            get {
+                object obj = ResourceManager.GetObject("stats", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap syllabus {
+            get {
+                object obj = ResourceManager.GetObject("syllabus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap testIcon {
             get {
                 object obj = ResourceManager.GetObject("testIcon", resourceCulture);
@@ -246,6 +286,16 @@ namespace Elearning.Properties {
         internal static System.Drawing.Bitmap videoIcon {
             get {
                 object obj = ResourceManager.GetObject("videoIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap view_reviews {
+            get {
+                object obj = ResourceManager.GetObject("view-reviews", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -237,6 +237,12 @@
     <Compile Include="UserControls\CourseTest\itemTestResult.Designer.cs">
       <DependentUpon>itemTestResult.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucAdminAccount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucAdminAccount.Designer.cs">
+      <DependentUpon>ucAdminAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucAdminChoice.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -308,6 +314,24 @@
     </Compile>
     <Compile Include="UserControls\ucAdminResource.Designer.cs">
       <DependentUpon>ucAdminResource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucAdminReview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucAdminReview.Designer.cs">
+      <DependentUpon>ucAdminReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucAdminReviews.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucAdminReviews.Designer.cs">
+      <DependentUpon>ucAdminReviews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucCourseStatistics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucCourseStatistics.Designer.cs">
+      <DependentUpon>ucCourseStatistics.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\User\itemFile.cs">
       <SubType>UserControl</SubType>
@@ -502,11 +526,23 @@
     <EmbeddedResource Include="UserControls\CourseTest\itemTestResult.resx">
       <DependentUpon>itemTestResult.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucAdminAccount.resx">
+      <DependentUpon>ucAdminAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucAdminDiscount.resx">
       <DependentUpon>ucAdminDiscount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CourseTest\itemQuestion.resx">
       <DependentUpon>itemQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucAdminReview.resx">
+      <DependentUpon>ucAdminReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucAdminReviews.resx">
+      <DependentUpon>ucAdminReviews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucCourseStatistics.resx">
+      <DependentUpon>ucCourseStatistics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\User\itemFile.resx">
       <DependentUpon>itemFile.cs</DependentUpon>
@@ -637,6 +673,8 @@
     <None Include="images\icons\pdfIcon.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="images\icons\syllabus.png" />
+    <None Include="images\icons\view-reviews.png" />
     <None Include="Resources\1622833_checkmark_done_exam_list_pencil_icon.png" />
     <None Include="images\icons\wrong.png" />
     <None Include="images\icons\correct.png" />
@@ -657,11 +695,14 @@
     <Content Include="images\icons\circle_icon.png" />
     <None Include="images\icons\clear.png" />
     <Content Include="images\icons\close.png" />
+    <None Include="images\icons\edit-syllabus.png" />
     <Content Include="images\icons\play.png" />
     <None Include="images\icons\refresh.png" />
     <None Include="images\icons\search-white.png" />
     <Content Include="images\icons\star_fill.png" />
     <Content Include="images\icons\star_solid.png" />
+    <None Include="images\icons\stats.png" />
+    <None Include="images\icons\star-30.png" />
     <Content Include="images\icons\stop.png" />
   </ItemGroup>
   <ItemGroup>

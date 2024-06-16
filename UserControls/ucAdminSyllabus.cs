@@ -14,6 +14,7 @@ namespace Elearning.UserControls
     public partial class ucAdminSyllabus : UserControl
     {
         Course course;
+        public EventHandler editClicked;
         public ucAdminSyllabus()
         {
             InitializeComponent();
@@ -54,6 +55,11 @@ namespace Elearning.UserControls
         {
             tlpModules.Controls.Clear();
             LoadModules();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            editClicked?.Invoke(this, e);
         }
     }
 }

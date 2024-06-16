@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media;
 
 namespace Elearning.Forms
 {
@@ -31,11 +32,25 @@ namespace Elearning.Forms
                 && currentUser.acc_id == registers.learner_id
                 select registers
                 ).ToList().FirstOrDefault();
+
+            btnEditReview.Visible = false;
+            btnAddReview.Visible = true;
+        }
+
+        public fRateCourse(CourseReview review)
+        {
+            InitializeComponent();
+            this.courseReview = review;
+            InitUI(review);
+
+            btnEditReview.Visible = true;
+            btnAddReview.Visible = false;
         }
 
         private int? rate = 5;
         private Register register;
         private Course currentCourse;
+        private CourseReview courseReview;
         private void btnStar1_Click(object sender, EventArgs e)
         {
             btnStar1.Image = Image.FromFile(Program.ICONS_PATH + "star_fill.png");
@@ -107,6 +122,68 @@ namespace Elearning.Forms
             rate = 5;
         }
 
+        private void InitUI(CourseReview review)
+        {
+            picCourseImage.Image = Image.FromFile(Program.COURSES_IMG_PATH + 
+                review.Register.Course.course_image);
+            lblCourseName.Text = review.Register.Course.course_name;
+            lblLecturerName.Text = review.Register.Course.lecturer;
+            lblDifficulty.Text = review.Register.Course.difficulty;
+            lblCategory.Text = review.Register.Course.category;
+
+            rate = review.stars;
+            if (rate == 1)
+            {
+                btnStar1.Image = Image.FromFile(Program.ICONS_PATH + "star_fill.png");
+                btnStar2.Image = Image.FromFile(Program.ICONS_PATH + "star_solid.png");
+                btnStar3.Image = Image.FromFile(Program.ICONS_PATH + "star_solid.png");
+                btnStar4.Image = Image.FromFile(Program.ICONS_PATH + "star_solid.png");
+                btnStar5.Image = Image.FromFile(Program.ICONS_PATH + "star_solid.png");
+            }
+            else if (rate == 2)
+            {
+                btnStar1.Image = Image.FromFile(Program.ICONS_PATH + "star_fill.png");
+                btnStar2.Image = Image.FromFile(Program.ICONS_PATH + "star_fill.png");
+                btnStar3.Image = Image.FromFile(Program.ICONS_PATH + "star_solid.png");
+                btnStar4.Image = Image.FromFile(Program.ICONS_PATH + "star_solid.png");
+                btnStar5.Image = Image.FromFile(Program.ICONS_PATH + "star_solid.png");
+            }
+            else if (rate == 3)
+            {
+                btnStar1.Image = Image.FromFile(Program.ICONS_PATH + "star_fill.png");
+                btnStar2.Image = Image.FromFile(Program.ICONS_PATH + "star_fill.png");
+                btnStar3.Image = Image.FromFile(Program.ICONS_PATH + "star_fill.png");
+                btnStar4.Image = Image.FromFile(Program.ICONS_PATH + "star_solid.png");
+                btnStar5.Image = Image.FromFile(Program.ICONS_PATH + "star_solid.png");
+            }
+            else if (rate == 4)
+            {
+                btnStar1.Image = Image.FromFile(Program.ICONS_PATH + "star_fill.png");
+                btnStar2.Image = Image.FromFile(Program.ICONS_PATH + "star_fill.png");
+                btnStar3.Image = Image.FromFile(Program.ICONS_PATH + "star_fill.png");
+                btnStar4.Image = Image.FromFile(Program.ICONS_PATH + "star_fill.png");
+                btnStar5.Image = Image.FromFile(Program.ICONS_PATH + "star_solid.png");
+            }
+            else if (rate == 5)
+            {
+                btnStar1.Image = Image.FromFile(Program.ICONS_PATH + "star_fill.png");
+                btnStar2.Image = Image.FromFile(Program.ICONS_PATH + "star_fill.png");
+                btnStar3.Image = Image.FromFile(Program.ICONS_PATH + "star_fill.png");
+                btnStar4.Image = Image.FromFile(Program.ICONS_PATH + "star_fill.png");
+                btnStar5.Image = Image.FromFile(Program.ICONS_PATH + "star_fill.png");
+            }
+            else
+            {
+                btnStar1.Image = Image.FromFile(Program.ICONS_PATH + "star_fill.png");
+                btnStar2.Image = Image.FromFile(Program.ICONS_PATH + "star_fill.png");
+                btnStar3.Image = Image.FromFile(Program.ICONS_PATH + "star_fill.png");
+                btnStar4.Image = Image.FromFile(Program.ICONS_PATH + "star_fill.png");
+                btnStar5.Image = Image.FromFile(Program.ICONS_PATH + "star_fill.png");
+            }
+
+            txtReview.Text = review.content;
+        }
+
         private void btnAddReview_Click(object sender, EventArgs e)
         {
             CourseReview review = new CourseReview();
@@ -121,7 +198,7 @@ namespace Elearning.Forms
             SetRateCourse(currentCourse);
 
             DialogResult result = MessageBox.Show(
-                "Thêm nhận xét thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information
+                "Add review sucessfull.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information
                 );
 
             if (result == DialogResult.OK)
@@ -158,5 +235,24 @@ namespace Elearning.Forms
             }
         }
 
+        private void btnEditReview_Click(object sender, EventArgs e)
+        {
+            courseReview.review_time = DateTime.Now;
+            courseReview.content = txtReview.Text.ToString();
+            courseReview.stars = rate;
+
+            Program.provider.SaveChanges();
+
+            SetRateCourse(currentCourse);
+
+            DialogResult result = MessageBox.Show(
+                "Save edit review sucessfull.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information
+                );
+
+            if (result == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
     }
 }

@@ -72,9 +72,9 @@
             this.siticoneContainerControl2.Controls.Add(this.label1);
             this.siticoneContainerControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneContainerControl2.Location = new System.Drawing.Point(7, 6);
-            this.siticoneContainerControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.siticoneContainerControl2.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneContainerControl2.Name = "siticoneContainerControl2";
-            this.siticoneContainerControl2.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.siticoneContainerControl2.Padding = new System.Windows.Forms.Padding(5);
             this.siticoneContainerControl2.Size = new System.Drawing.Size(627, 59);
             this.siticoneContainerControl2.TabIndex = 0;
             this.siticoneContainerControl2.Text = "siticoneContainerControl2";
@@ -107,7 +107,7 @@
             this.tbLecturerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbLecturerName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbLecturerName.Location = new System.Drawing.Point(27, 101);
-            this.tbLecturerName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbLecturerName.Margin = new System.Windows.Forms.Padding(4);
             this.tbLecturerName.Name = "tbLecturerName";
             this.tbLecturerName.PasswordChar = '\0';
             this.tbLecturerName.PlaceholderText = "";
@@ -142,7 +142,7 @@
             this.tbCourseName.ForeColor = System.Drawing.Color.Black;
             this.tbCourseName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCourseName.Location = new System.Drawing.Point(27, 27);
-            this.tbCourseName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCourseName.Margin = new System.Windows.Forms.Padding(4);
             this.tbCourseName.Name = "tbCourseName";
             this.tbCourseName.PasswordChar = '\0';
             this.tbCourseName.PlaceholderText = "";
@@ -216,7 +216,7 @@
             this.tbPrice.ForeColor = System.Drawing.Color.Black;
             this.tbPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbPrice.Location = new System.Drawing.Point(0, 1);
-            this.tbPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPrice.Margin = new System.Windows.Forms.Padding(4);
             this.tbPrice.Name = "tbPrice";
             this.tbPrice.PasswordChar = '\0';
             this.tbPrice.PlaceholderText = "0";
@@ -315,7 +315,7 @@
             this.tbDescription.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbDescription.Location = new System.Drawing.Point(27, 253);
-            this.tbDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbDescription.Margin = new System.Windows.Forms.Padding(4);
             this.tbDescription.Name = "tbDescription";
             this.tbDescription.Size = new System.Drawing.Size(573, 93);
             this.tbDescription.TabIndex = 5;
@@ -374,7 +374,7 @@
             this.tbPath.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbPath.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbPath.Location = new System.Drawing.Point(113, 0);
-            this.tbPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPath.Margin = new System.Windows.Forms.Padding(4);
             this.tbPath.Name = "tbPath";
             this.tbPath.PasswordChar = '\0';
             this.tbPath.PlaceholderText = "";
@@ -387,7 +387,7 @@
             this.btnChooseFile.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnChooseFile.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChooseFile.Location = new System.Drawing.Point(0, 0);
-            this.btnChooseFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChooseFile.Margin = new System.Windows.Forms.Padding(4);
             this.btnChooseFile.Name = "btnChooseFile";
             this.btnChooseFile.Size = new System.Drawing.Size(113, 44);
             this.btnChooseFile.TabIndex = 0;
@@ -406,7 +406,7 @@
             this.btnSave.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(27, 588);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(573, 55);
             this.btnSave.TabIndex = 9;
@@ -419,7 +419,7 @@
             this.siticoneContainerControl4.Controls.Add(this.btnChooseFile);
             this.siticoneContainerControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneContainerControl4.Location = new System.Drawing.Point(27, 373);
-            this.siticoneContainerControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.siticoneContainerControl4.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneContainerControl4.Name = "siticoneContainerControl4";
             this.siticoneContainerControl4.Size = new System.Drawing.Size(573, 44);
             this.siticoneContainerControl4.TabIndex = 7;
@@ -442,7 +442,7 @@
             this.siticoneContainerControl3.Controls.Add(this.label2);
             this.siticoneContainerControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticoneContainerControl3.Location = new System.Drawing.Point(7, 65);
-            this.siticoneContainerControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.siticoneContainerControl3.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneContainerControl3.Name = "siticoneContainerControl3";
             this.siticoneContainerControl3.Padding = new System.Windows.Forms.Padding(27, 6, 27, 18);
             this.siticoneContainerControl3.Size = new System.Drawing.Size(627, 661);
@@ -454,7 +454,7 @@
             this.pbThumbnailPreview.Dock = System.Windows.Forms.DockStyle.Top;
             this.pbThumbnailPreview.ImageRotate = 0F;
             this.pbThumbnailPreview.Location = new System.Drawing.Point(27, 417);
-            this.pbThumbnailPreview.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbThumbnailPreview.Margin = new System.Windows.Forms.Padding(4);
             this.pbThumbnailPreview.Name = "pbThumbnailPreview";
             this.pbThumbnailPreview.Size = new System.Drawing.Size(573, 177);
             this.pbThumbnailPreview.TabIndex = 8;
@@ -466,7 +466,7 @@
             this.siticoneContainerControl1.Controls.Add(this.siticoneContainerControl2);
             this.siticoneContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticoneContainerControl1.Location = new System.Drawing.Point(0, 0);
-            this.siticoneContainerControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.siticoneContainerControl1.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneContainerControl1.Name = "siticoneContainerControl1";
             this.siticoneContainerControl1.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.siticoneContainerControl1.Size = new System.Drawing.Size(641, 732);

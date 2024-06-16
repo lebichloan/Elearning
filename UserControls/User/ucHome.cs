@@ -171,6 +171,7 @@ namespace Elearning.UserControls
                     ucCourse.courseLecturer = course.lecturer;
                     ucCourse.courseName = course.course_name;
                     ucCourse.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
+                    ucCourse.SetUIRate(0);
                     layoutCourses.Controls.Add(ucCourse);
                 }
                 else
@@ -187,6 +188,7 @@ namespace Elearning.UserControls
                         ucCourse.courseLecturer = course.lecturer;
                         ucCourse.courseName = course.course_name;
                         ucCourse.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
+                        ucCourse.SetUIRate(0);
                         layoutCourses.Controls.Add(ucCourse);
                     }
 
@@ -223,6 +225,7 @@ namespace Elearning.UserControls
                     ucCourse.courseLecturer = course.lecturer;
                     ucCourse.courseName = course.course_name;
                     ucCourse.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
+                    ucCourse.SetUIRate(0);
                     layoutCourses.Controls.Add(ucCourse);
                 }
                 else if (filterDifficulty == course.difficulty && filterCategory == "All")
@@ -233,6 +236,7 @@ namespace Elearning.UserControls
                     ucCourse.courseLecturer = course.lecturer;
                     ucCourse.courseName = course.course_name;
                     ucCourse.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
+                    ucCourse.SetUIRate(0);
                     layoutCourses.Controls.Add(ucCourse);
                 }
                 else if (filterDifficulty == "All" && filterCategory == course.category)
@@ -243,6 +247,7 @@ namespace Elearning.UserControls
                     ucCourse.courseLecturer = course.lecturer;
                     ucCourse.courseName = course.course_name;
                     ucCourse.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
+                    ucCourse.SetUIRate(0);
                     layoutCourses.Controls.Add(ucCourse);
                 }
                 else
@@ -255,6 +260,7 @@ namespace Elearning.UserControls
                         ucCourse.courseLecturer = course.lecturer;
                         ucCourse.courseName = course.course_name;
                         ucCourse.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
+                        ucCourse.SetUIRate(0);
                         layoutCourses.Controls.Add(ucCourse);
                     }
                 }

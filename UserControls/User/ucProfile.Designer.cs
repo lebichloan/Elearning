@@ -31,17 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucProfile));
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel4 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.btnYourCertificate = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.siticonePanel6 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.btnCommunication = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.siticonePanel5 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.btnYourAccount = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.siticonePanel111 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.siticonePanel6 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel7 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.lblName = new System.Windows.Forms.Label();
@@ -77,14 +71,18 @@
             this.siticonePanel8 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.label5 = new System.Windows.Forms.Label();
             this.txtFullName = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnYourAccount = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.siticonePanel5 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.btnYourCertificate = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.siticonePanel222 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel1.SuspendLayout();
             this.siticonePanel4.SuspendLayout();
-            this.btnYourCertificate.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.btnCommunication.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.btnYourAccount.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.siticonePanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.siticonePanel2.SuspendLayout();
@@ -99,6 +97,10 @@
             this.siticonePanel10.SuspendLayout();
             this.siticonePanel9.SuspendLayout();
             this.siticonePanel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btnYourAccount.SuspendLayout();
+            this.btnYourCertificate.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // siticonePanel1
@@ -117,77 +119,31 @@
             // 
             this.siticonePanel4.BackColor = System.Drawing.Color.White;
             this.siticonePanel4.Controls.Add(this.btnYourCertificate);
-            this.siticonePanel4.Controls.Add(this.siticonePanel6);
-            this.siticonePanel4.Controls.Add(this.btnCommunication);
+            this.siticonePanel4.Controls.Add(this.siticonePanel222);
             this.siticonePanel4.Controls.Add(this.siticonePanel5);
+            this.siticonePanel4.Controls.Add(this.btnCommunication);
+            this.siticonePanel4.Controls.Add(this.siticonePanel111);
+            this.siticonePanel4.Controls.Add(this.siticonePanel6);
             this.siticonePanel4.Controls.Add(this.btnYourAccount);
             this.siticonePanel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticonePanel4.Location = new System.Drawing.Point(50, 480);
             this.siticonePanel4.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.siticonePanel4.Name = "siticonePanel4";
-            this.siticonePanel4.Padding = new System.Windows.Forms.Padding(10);
-            this.siticonePanel4.Size = new System.Drawing.Size(400, 170);
+            this.siticonePanel4.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.siticonePanel4.Size = new System.Drawing.Size(400, 230);
             this.siticonePanel4.TabIndex = 3;
-            // 
-            // btnYourCertificate
-            // 
-            this.btnYourCertificate.Controls.Add(this.label4);
-            this.btnYourCertificate.Controls.Add(this.pictureBox3);
-            this.btnYourCertificate.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnYourCertificate.Location = new System.Drawing.Point(10, 112);
-            this.btnYourCertificate.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
-            this.btnYourCertificate.Name = "btnYourCertificate";
-            this.btnYourCertificate.Padding = new System.Windows.Forms.Padding(5);
-            this.btnYourCertificate.Size = new System.Drawing.Size(380, 50);
-            this.btnYourCertificate.TabIndex = 6;
-            this.btnYourCertificate.Click += new System.EventHandler(this.btnYourCertificate_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(45, 14);
-            this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label4.Size = new System.Drawing.Size(181, 31);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Your certificate";
-            this.label4.Click += new System.EventHandler(this.btnYourCertificate_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(5, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Padding = new System.Windows.Forms.Padding(5);
-            this.pictureBox3.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.btnYourCertificate_Click);
-            // 
-            // siticonePanel6
-            // 
-            this.siticonePanel6.BackColor = System.Drawing.Color.Black;
-            this.siticonePanel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel6.Location = new System.Drawing.Point(10, 111);
-            this.siticonePanel6.Name = "siticonePanel6";
-            this.siticonePanel6.Size = new System.Drawing.Size(380, 1);
-            this.siticonePanel6.TabIndex = 5;
             // 
             // btnCommunication
             // 
             this.btnCommunication.Controls.Add(this.label3);
             this.btnCommunication.Controls.Add(this.pictureBox2);
             this.btnCommunication.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCommunication.Location = new System.Drawing.Point(10, 61);
+            this.btnCommunication.Location = new System.Drawing.Point(15, 86);
             this.btnCommunication.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
             this.btnCommunication.Name = "btnCommunication";
             this.btnCommunication.Padding = new System.Windows.Forms.Padding(5);
-            this.btnCommunication.Size = new System.Drawing.Size(380, 50);
-            this.btnCommunication.TabIndex = 4;
+            this.btnCommunication.Size = new System.Drawing.Size(370, 60);
+            this.btnCommunication.TabIndex = 7;
             this.btnCommunication.Click += new System.EventHandler(this.btnCommunication_Click);
             // 
             // label3
@@ -195,10 +151,10 @@
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(45, 14);
+            this.label3.Location = new System.Drawing.Point(55, 14);
             this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label3.Size = new System.Drawing.Size(206, 31);
+            this.label3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 10);
+            this.label3.Size = new System.Drawing.Size(206, 41);
             this.label3.TabIndex = 3;
             this.label3.Text = "Change Password";
             this.label3.Click += new System.EventHandler(this.btnCommunication_Click);
@@ -210,59 +166,28 @@
             this.pictureBox2.Location = new System.Drawing.Point(5, 5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Padding = new System.Windows.Forms.Padding(5);
-            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.btnCommunication_Click);
             // 
-            // siticonePanel5
+            // siticonePanel111
             // 
-            this.siticonePanel5.BackColor = System.Drawing.Color.Black;
-            this.siticonePanel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel5.Location = new System.Drawing.Point(10, 60);
-            this.siticonePanel5.Name = "siticonePanel5";
-            this.siticonePanel5.Size = new System.Drawing.Size(380, 1);
-            this.siticonePanel5.TabIndex = 3;
+            this.siticonePanel111.Dock = System.Windows.Forms.DockStyle.Top;
+            this.siticonePanel111.Location = new System.Drawing.Point(15, 71);
+            this.siticonePanel111.Name = "siticonePanel111";
+            this.siticonePanel111.Size = new System.Drawing.Size(370, 15);
+            this.siticonePanel111.TabIndex = 6;
             // 
-            // btnYourAccount
+            // siticonePanel6
             // 
-            this.btnYourAccount.Controls.Add(this.label2);
-            this.btnYourAccount.Controls.Add(this.pictureBox1);
-            this.btnYourAccount.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnYourAccount.Location = new System.Drawing.Point(10, 10);
-            this.btnYourAccount.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
-            this.btnYourAccount.Name = "btnYourAccount";
-            this.btnYourAccount.Padding = new System.Windows.Forms.Padding(5);
-            this.btnYourAccount.Size = new System.Drawing.Size(380, 50);
-            this.btnYourAccount.TabIndex = 0;
-            this.btnYourAccount.Click += new System.EventHandler(this.btnYourAccount_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(45, 14);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label2.Size = new System.Drawing.Size(159, 31);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Your account";
-            this.label2.Click += new System.EventHandler(this.btnYourAccount_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(5, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.btnYourAccount_Click);
+            this.siticonePanel6.BackColor = System.Drawing.Color.Black;
+            this.siticonePanel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.siticonePanel6.Location = new System.Drawing.Point(15, 70);
+            this.siticonePanel6.Name = "siticonePanel6";
+            this.siticonePanel6.Size = new System.Drawing.Size(370, 1);
+            this.siticonePanel6.TabIndex = 5;
             // 
             // siticonePanel7
             // 
@@ -507,6 +432,7 @@
             this.btnSave.Size = new System.Drawing.Size(220, 54);
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -605,6 +531,7 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.PasswordChar = '\0';
             this.txtUserName.PlaceholderText = "";
+            this.txtUserName.ReadOnly = true;
             this.txtUserName.SelectedText = "";
             this.txtUserName.Size = new System.Drawing.Size(215, 50);
             this.txtUserName.TabIndex = 4;
@@ -691,6 +618,101 @@
             this.txtFullName.Size = new System.Drawing.Size(214, 50);
             this.txtFullName.TabIndex = 4;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(5, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Padding = new System.Windows.Forms.Padding(5);
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.btnYourAccount_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(55, 14);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 10);
+            this.label2.Size = new System.Drawing.Size(159, 41);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Your account";
+            this.label2.Click += new System.EventHandler(this.btnYourAccount_Click);
+            // 
+            // btnYourAccount
+            // 
+            this.btnYourAccount.Controls.Add(this.label2);
+            this.btnYourAccount.Controls.Add(this.pictureBox1);
+            this.btnYourAccount.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnYourAccount.Location = new System.Drawing.Point(15, 10);
+            this.btnYourAccount.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
+            this.btnYourAccount.Name = "btnYourAccount";
+            this.btnYourAccount.Padding = new System.Windows.Forms.Padding(5);
+            this.btnYourAccount.Size = new System.Drawing.Size(370, 60);
+            this.btnYourAccount.TabIndex = 0;
+            this.btnYourAccount.Click += new System.EventHandler(this.btnYourAccount_Click);
+            // 
+            // siticonePanel5
+            // 
+            this.siticonePanel5.BackColor = System.Drawing.Color.Black;
+            this.siticonePanel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.siticonePanel5.Location = new System.Drawing.Point(15, 146);
+            this.siticonePanel5.Name = "siticonePanel5";
+            this.siticonePanel5.Size = new System.Drawing.Size(370, 1);
+            this.siticonePanel5.TabIndex = 8;
+            // 
+            // btnYourCertificate
+            // 
+            this.btnYourCertificate.Controls.Add(this.label4);
+            this.btnYourCertificate.Controls.Add(this.pictureBox3);
+            this.btnYourCertificate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnYourCertificate.Location = new System.Drawing.Point(15, 162);
+            this.btnYourCertificate.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
+            this.btnYourCertificate.Name = "btnYourCertificate";
+            this.btnYourCertificate.Padding = new System.Windows.Forms.Padding(5);
+            this.btnYourCertificate.Size = new System.Drawing.Size(370, 60);
+            this.btnYourCertificate.TabIndex = 11;
+            this.btnYourCertificate.Click += new System.EventHandler(this.btnYourCertificate_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(55, 14);
+            this.label4.Name = "label4";
+            this.label4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 10);
+            this.label4.Size = new System.Drawing.Size(181, 41);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Your certificate";
+            this.label4.Click += new System.EventHandler(this.btnYourCertificate_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(5, 5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Padding = new System.Windows.Forms.Padding(5);
+            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.btnYourCertificate_Click);
+            // 
+            // siticonePanel222
+            // 
+            this.siticonePanel222.Dock = System.Windows.Forms.DockStyle.Top;
+            this.siticonePanel222.Location = new System.Drawing.Point(15, 147);
+            this.siticonePanel222.Name = "siticonePanel222";
+            this.siticonePanel222.Size = new System.Drawing.Size(370, 15);
+            this.siticonePanel222.TabIndex = 10;
+            // 
             // ucProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -701,15 +723,9 @@
             this.Size = new System.Drawing.Size(1101, 747);
             this.siticonePanel1.ResumeLayout(false);
             this.siticonePanel4.ResumeLayout(false);
-            this.btnYourCertificate.ResumeLayout(false);
-            this.btnYourCertificate.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.btnCommunication.ResumeLayout(false);
             this.btnCommunication.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.btnYourAccount.ResumeLayout(false);
-            this.btnYourAccount.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.siticonePanel3.ResumeLayout(false);
             this.siticonePanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
@@ -733,6 +749,12 @@
             this.siticonePanel9.PerformLayout();
             this.siticonePanel8.ResumeLayout(false);
             this.siticonePanel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.btnYourAccount.ResumeLayout(false);
+            this.btnYourAccount.PerformLayout();
+            this.btnYourCertificate.ResumeLayout(false);
+            this.btnYourCertificate.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -746,17 +768,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblName;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel4;
-        private Siticone.Desktop.UI.WinForms.SiticonePanel btnYourCertificate;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel6;
-        private Siticone.Desktop.UI.WinForms.SiticonePanel btnCommunication;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel5;
-        private Siticone.Desktop.UI.WinForms.SiticonePanel btnYourAccount;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel7;
         private Siticone.Desktop.UI.WinForms.SiticonePanel panYourAccount;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
@@ -787,5 +799,17 @@
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel16;
         private System.Windows.Forms.Label lblTotalCetiificate;
         private System.Windows.Forms.Label label16;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel btnCommunication;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel111;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel btnYourCertificate;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel222;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel5;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel btnYourAccount;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

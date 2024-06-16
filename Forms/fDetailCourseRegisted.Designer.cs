@@ -120,6 +120,7 @@
             this.btnAddReview.Size = new System.Drawing.Size(150, 50);
             this.btnAddReview.TabIndex = 17;
             this.btnAddReview.Text = "View Review";
+            this.btnAddReview.Click += new System.EventHandler(this.btnAddReview_Click);
             // 
             // lblRegister
             // 
@@ -276,7 +277,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(230, 50);
             this.label2.TabIndex = 23;
-            this.label2.Text = "Tổng điểm";
+            this.label2.Text = "Score";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
@@ -287,7 +288,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(175, 50);
             this.label4.TabIndex = 22;
-            this.label4.Text = "Bắt buộc";
+            this.label4.Text = "Mandatory";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
@@ -298,7 +299,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(248, 50);
             this.label5.TabIndex = 21;
-            this.label5.Text = "Ngày hoàn thành";
+            this.label5.Text = "Finish Time";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTestOrdinal
@@ -320,7 +321,7 @@
             this.lblViewDetail.Name = "lblViewDetail";
             this.lblViewDetail.Size = new System.Drawing.Size(175, 50);
             this.lblViewDetail.TabIndex = 19;
-            this.lblViewDetail.Text = "Trạng thái";
+            this.lblViewDetail.Text = "State";
             this.lblViewDetail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // siticonePanel3
@@ -369,6 +370,7 @@
             // 
             // btnViewCertification
             // 
+            this.btnViewCertification.BorderRadius = 2;
             this.btnViewCertification.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnViewCertification.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnViewCertification.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -380,7 +382,7 @@
             this.btnViewCertification.Name = "btnViewCertification";
             this.btnViewCertification.Size = new System.Drawing.Size(150, 55);
             this.btnViewCertification.TabIndex = 25;
-            this.btnViewCertification.Text = "Xem chứng chỉ";
+            this.btnViewCertification.Text = "View certificate";
             // 
             // label7
             // 
@@ -391,7 +393,7 @@
             this.label7.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.label7.Size = new System.Drawing.Size(135, 55);
             this.label7.TabIndex = 20;
-            this.label7.Text = "Kết quả";
+            this.label7.Text = "Result";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // siticonePanel4

@@ -82,12 +82,12 @@ namespace Elearning.UserControls.CourseTest
 
             if (testResult.is_passed == 0)
             {
-                lblState.Text = "Chưa đạt";
+                lblState.Text = "Not met";
                 lblState.ForeColor = Color.Red;
             }
             else
             {
-                lblState.Text = "Hoàn thành";
+                lblState.Text = "Finish";
                 lblState.ForeColor = Color.FromArgb(94, 148, 255);
             }
         }

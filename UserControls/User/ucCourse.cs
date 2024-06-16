@@ -46,6 +46,17 @@ namespace Elearning.UserControls
             lblCourseName.Text = course.course_name;
             lblLecturerName.Text = course.lecturer;
 
+            if (currentRegister.register_status == 2)
+            {
+                lblDone.Text = "Finish";
+                lblDone.ForeColor = Color.FromArgb(94, 148, 255);
+            }
+            else
+            {
+                lblDone.Text = "Not met";
+                lblDone.ForeColor = Color.Red;
+            }
+
             layoutModule.AutoScroll = true;
             layoutModule.VerticalScroll.Visible = true;
             layoutModule.VerticalScroll.Enabled = true;
@@ -133,7 +144,26 @@ namespace Elearning.UserControls
                         itemtest.resourceId = resource.resource_id;
                         itemtest.testName = resource.resource_name;
                         itemtest.goToTest += GoToTest;
-                        itemtest.viewDetailTestResult += ViewDetailTestResult;
+
+                        List<TestResult> testResults = (
+                            from result in Program.provider.TestResults
+                            join test in Program.provider.CourseTests
+                            on result.test_id equals test.test_id
+                            where result.register_id == currentRegister.register_id
+                            && test.resource_id == resource.resource_id
+                            select result
+                            ).ToList();
+
+                        if (testResults.Count > 0)
+                        {
+                            itemtest.HideViewDetail(1);
+                            itemtest.viewDetailTestResult += ViewDetailTestResult;
+                        }
+                        else
+                        {
+                            itemtest.HideViewDetail(0);
+                        }
+
                         layoutResource.Controls.Add(itemtest);
                     }
                 }

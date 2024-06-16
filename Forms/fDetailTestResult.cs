@@ -67,9 +67,9 @@ namespace Elearning.Forms
             }
             else
             {
-                lblLastState.Text = "Bạn chưa thực hiện bài test này";
+                lblLastState.Text = "Not started";
                 lblLastState.ForeColor = Color.Red;
-                lblState.Text = "Trạng thái: Chưa đạt";
+                lblState.Text = "State: Not met";
                 lblState.ForeColor = Color.Red;
                 btnDoTest.Visible = true;
             }
@@ -108,19 +108,19 @@ namespace Elearning.Forms
 
             if (maxResult.is_passed == 0)
             {
-                lblState.Text = "Trạng thái: Chưa đạt";
-                lblLastState.Text = "Chưa đạt";
+                lblState.Text = "State: Not met";
+                lblLastState.Text = "Not met";
                 lblLastState.ForeColor = Color.Red;
             }
             else
             {
-                lblState.Text = "Trạng thái: Đã hoàn thành";
-                lblLastState.Text = "Đã hoàn thành";
+                lblState.Text = "State: Finish";
+                lblLastState.Text = "Finish";
                 lblLastState.ForeColor = Color.FromArgb(94, 148, 255);
             }
 
             lblLastScore.Text = maxResult.test_score.ToString();
-            lblOrdinalPass.Text = String.Format("Lần thi thứ {0}", maxResult.test_ordinal.ToString());
+            lblOrdinalPass.Text = String.Format("Test oridinal {0}", maxResult.test_ordinal.ToString());
         }
 
         private void ViewDetailTestResultWithOrdinal(object sender, EventArgs e)

@@ -96,7 +96,7 @@ namespace Elearning.UserControls.CourseTest
                         item.mandatory = "";
                     }
 
-                    item.state = "Chưa hoàn thành";
+                    item.state = "Not met";
                     item.SetColorState(0);
                     item.Dock = DockStyle.Fill;
 
@@ -107,12 +107,12 @@ namespace Elearning.UserControls.CourseTest
 
             if (total != done)
             {
-                lblModuleState.Text = "Chưa hoàn thành";
+                lblModuleState.Text = "Not met";
                 lblModuleState.ForeColor = Color.Red;
             }
             else
             {
-                lblModuleState.Text = "Hoàn thành";
+                lblModuleState.Text = "Finish";
                 lblModuleState.ForeColor = Color.FromArgb(94, 148, 255);
             }
         }

@@ -39,19 +39,19 @@ namespace Elearning.Forms
             lblLecturerName.Text = register.Course.lecturer;
             lblDifficulty.Text = register.Course.difficulty;
             lblCategory.Text = register.Course.category;
-            lblRegister.Text = String.Format("Ngày đăng ký: {0}", register.registered_date.ToString());
+            lblRegister.Text = String.Format("Date register: {0}", register.registered_date.ToString());
             if (register.register_status == 2)
             {
                 lblFinish.Visible = true;
-                lblFinish.Text = String.Format("Ngày hoàn thành {0}");
-                lblCompletionState.Text = "Hoàn thành";
+                lblFinish.Text = String.Format("Date finish: {0}");
+                lblCompletionState.Text = "Finish";
                 lblCompletionState.ForeColor = Color.FromArgb(94, 148, 255);
                 btnViewCertification.Visible = true;
             }
             else
             {
                 lblFinish.Visible = false;
-                lblCompletionState.Text = "Chưa hoàn thành";
+                lblCompletionState.Text = "Unfinished";
                 lblCompletionState.ForeColor = Color.Red;
                 btnViewCertification.Visible = false;
             }
@@ -85,6 +85,11 @@ namespace Elearning.Forms
                 tbAllModule.Controls.Add(item);
                 count++;
             }
+        }
+
+        private void btnAddReview_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

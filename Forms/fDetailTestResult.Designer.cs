@@ -72,7 +72,7 @@
             this.btnDoTest.Name = "btnDoTest";
             this.btnDoTest.Size = new System.Drawing.Size(150, 50);
             this.btnDoTest.TabIndex = 20;
-            this.btnDoTest.Text = "Làm bài test";
+            this.btnDoTest.Text = "Do the test";
             this.btnDoTest.Visible = false;
             this.btnDoTest.Click += new System.EventHandler(this.btnDoTest_Click);
             // 
@@ -123,7 +123,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(145, 50);
             this.label2.TabIndex = 23;
-            this.label2.Text = "Tổng điểm";
+            this.label2.Text = "Score";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -134,7 +134,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(175, 50);
             this.label3.TabIndex = 22;
-            this.label3.Text = "Trạng thái";
+            this.label3.Text = "State";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
@@ -145,7 +145,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(150, 50);
             this.label4.TabIndex = 21;
-            this.label4.Text = "Thời gian";
+            this.label4.Text = "Total time";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTestOrdinal
@@ -156,7 +156,7 @@
             this.lblTestOrdinal.Name = "lblTestOrdinal";
             this.lblTestOrdinal.Size = new System.Drawing.Size(75, 50);
             this.lblTestOrdinal.TabIndex = 20;
-            this.lblTestOrdinal.Text = "STT";
+            this.lblTestOrdinal.Text = "Oridinal";
             this.lblTestOrdinal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblViewDetail
@@ -167,7 +167,7 @@
             this.lblViewDetail.Name = "lblViewDetail";
             this.lblViewDetail.Size = new System.Drawing.Size(175, 50);
             this.lblViewDetail.TabIndex = 19;
-            this.lblViewDetail.Text = "Tùy chọn";
+            this.lblViewDetail.Text = "More Option";
             this.lblViewDetail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // siticonePanel3
@@ -231,10 +231,11 @@
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(15, 6);
             this.label7.Name = "label7";
+            this.label7.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.label7.Size = new System.Drawing.Size(139, 55);
             this.label7.TabIndex = 20;
-            this.label7.Text = "Kết quả";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label7.Text = "Result";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // siticonePanel4
             // 

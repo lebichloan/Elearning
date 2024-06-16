@@ -41,5 +41,17 @@ namespace Elearning.UserControls.User
         {
             viewDetailTestResult?.Invoke(this, e);
         }
+
+        public void HideViewDetail(int flag)
+        {
+            if (flag == 0)
+            {
+                lblViewDetail.Visible = false;
+            }
+            else
+            {
+                lblViewDetail.Visible = true;
+            }
+        }
     }
 }

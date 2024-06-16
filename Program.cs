@@ -83,6 +83,21 @@ namespace Elearning
             provider.SaveChanges();
         }
 
+        public static string FormatNumberWithSpaces(int number)
+        {
+            string numberString = number.ToString();
+            int len = numberString.Length;
+            int spacePosition = len % 3 == 0 ? 3 : len % 3;
+            var result = numberString.Substring(0, spacePosition);
+
+            for (int i = spacePosition; i < len; i += 3)
+            {
+                result += " " + numberString.Substring(i, 3);
+            }
+
+            return result;
+        }
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

@@ -49,7 +49,6 @@ namespace Elearning.Forms
                     f.FormClosed += CloseMainForm;
                     f.ShowDialog();
                 }
-                this.Close();
             }
             else
             {
@@ -116,6 +115,11 @@ namespace Elearning.Forms
         private void fLogin_Load(object sender, EventArgs e)
         {
             this.ActiveControl = tbUsername;
+        }
+
+        private void siticoneControlBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

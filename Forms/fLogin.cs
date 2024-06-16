@@ -121,5 +121,13 @@ namespace Elearning.Forms
         {
             this.Close();
         }
+
+        private void linkForgot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            ForgotPassword forgot = new ForgotPassword();
+            forgot.ShowDialog();
+            this.Close();
+        }
     }
 }

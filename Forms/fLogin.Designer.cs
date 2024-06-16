@@ -248,6 +248,7 @@
             this.linkForgot.TabStop = true;
             this.linkForgot.Text = "Forgot password?";
             this.linkForgot.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.linkForgot.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkForgot_LinkClicked);
             // 
             // siticoneContainerControl9
             // 

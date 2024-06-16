@@ -1,4 +1,5 @@
 ﻿using Elearning.Entities;
+using Elearning.Forms;
 using OnlineChat;
 using System;
 using System.Collections.Generic;
@@ -61,6 +62,12 @@ namespace Elearning.UserControls
         {
             Signup signup = new Signup(true);
             signup.ShowDialog();
+        }
+
+        private void btnChangePass_Click(object sender, EventArgs e)
+        {
+            fChangePassword f = new fChangePassword(account);
+            f.ShowDialog();
         }
     }
 }

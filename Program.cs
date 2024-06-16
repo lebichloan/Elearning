@@ -112,7 +112,7 @@ namespace Elearning
   
         }
       
-        private static void CalculateCoursesStatistics()
+        public static void LoadCoursesStatistics()
         {
             // Calculate the statistics of all courses
             var courses = provider.Courses.ToList();
@@ -122,7 +122,9 @@ namespace Elearning
                 stats.total_learners = provider.Registers.Where(e => e.course_id == course.course_id).Count();
                 stats.total_completed = provider.Registers.Where(e => e.course_id == course.course_id && e.completion_score != null && e.completion_score != 0).Count();
                 stats.completion_rate = stats.total_learners == 0 ? 0 : (float)stats.total_completed / stats.total_learners;
-                courseStats.Add(course.course_id, stats);
+                
+                if (!courseStats.ContainsKey(course.course_id)) courseStats.Add(course.course_id, stats);
+                else courseStats[course.course_id] = stats;
             }
 
             foreach (var course in courses)
@@ -145,7 +147,7 @@ namespace Elearning
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             UpdateDiscount();
-            CalculateCoursesStatistics();
+            LoadCoursesStatistics();
             Application.Run(new fLogin());
         }
     }

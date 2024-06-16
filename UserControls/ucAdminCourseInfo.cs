@@ -107,6 +107,7 @@ namespace Elearning.UserControls
                 btnEditDiscount.Visible = true;
             }
 
+            ucDescription.Reload();
             ucDiscount.Reload();
         }
 

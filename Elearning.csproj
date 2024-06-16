@@ -691,6 +691,8 @@
     <None Include="images\icons\pdfIcon.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\icons\mute_volume.png" />
+    <Content Include="images\icons\volume.png" />
     <None Include="images\icons\syllabus.png" />
     <None Include="images\icons\view-reviews.png" />
     <None Include="Resources\1622833_checkmark_done_exam_list_pencil_icon.png" />

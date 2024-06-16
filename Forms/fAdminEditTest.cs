@@ -65,6 +65,7 @@ namespace Elearning.Forms
             uc.Dock = DockStyle.Top;
             uc.evtClicked += ucQuestion_Click;
             uc.evtDelete += ucQuestion_Delete;
+            uc.pointChange += TotalPointChange;
             return uc;
         }
 
@@ -84,7 +85,8 @@ namespace Elearning.Forms
             var ucQuestion = (ucAdminQuestion)sender;
             var question = ucQuestion.question;
             // update the order of the questions
-            test.TestQuestions.Remove(question);
+            Program.provider.TestQuestions.Remove(question);
+
             this.flpQuestions.Controls.Remove(ucQuestion);
             for (int i = 0; i < this.flpQuestions.Controls.Count; i++)
             {
@@ -103,6 +105,15 @@ namespace Elearning.Forms
             }
         }
 
+        private void CalculateTotalScore()
+        {
+            test.total_score = 0;
+            foreach (var question in test.TestQuestions)
+            {
+                test.total_score += question.score;
+            }
+        }
+
         private void update()
         {
             test.CourseResource.resource_name = tbTestName.Text;
@@ -110,7 +121,6 @@ namespace Elearning.Forms
             test.display_type = optDisplayAll.Checked ? Program.TEST_DISPLAY_ALL : Program.TEST_DISPLAY_ONE_BY_ONE;
             test.test_maxtime = TimeSpan.Parse(tbTime.Text);
             test.score_to_pass = int.Parse(tbPointToPass.Text);
-            test.total_score = 0;
 
             for (int i = 0; i < this.flpQuestions.Controls.Count; i++)
             {
@@ -118,16 +128,18 @@ namespace Elearning.Forms
                 ucQuestion.UpdateQuestion();
             }
 
-            foreach (var question in test.TestQuestions)
-            {
-                System.Diagnostics.Debug.WriteLine(question.score);
-                test.total_score += question.score;
-            }
+            CalculateTotalScore();
         }
 
         private void btnSaveCont_Click(object sender, EventArgs e)
         {
             update();
+            if (test.total_score < test.score_to_pass)
+            {
+                MessageBox.Show("Total score must be greater than or equal to the score to pass", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             try
             {
                 Program.provider.SaveChanges();
@@ -153,6 +165,12 @@ namespace Elearning.Forms
         private void btnSaveExit_Click(object sender, EventArgs e)
         {
             update();
+            if (test.total_score < test.score_to_pass)
+            {
+                MessageBox.Show("Total score must be greater than or equal to the score to pass", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             Program.provider.SaveChanges();
             MessageBox.Show("Changes have been saved successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
@@ -179,7 +197,26 @@ namespace Elearning.Forms
             // add the question to the flow layout panel
             var ucQuestion = newUcAdminQuestion(question);
             this.flpQuestions.Controls.Add(ucQuestion);
+        }
 
+        private void TotalPointChange(object sender, EventArgs e)
+        {
+            update();
+            System.Diagnostics.Debug.WriteLine("Total point change");
+            this.lbTotalScore.Text = " / " + test.total_score.ToString() + " points";
+        }
+
+        private void tbPointToPass_Enter(object sender, EventArgs e)
+        {
+        }
+
+        // only allow numbers to be entered in the tbPointToPass
+        private void tbPointToPass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

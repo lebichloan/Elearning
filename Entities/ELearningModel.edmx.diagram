@@ -4,16 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="bbfd3e9a356145219dc128e48453acd2" Name="Diagram1">
-        <EntityTypeShape EntityType="ELearningDbModel.Account" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ELearningDbModel.Course" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ELearningDbModel.CourseModule" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ELearningDbModel.CourseResource" Width="1.5" PointX="7.5" PointY="5.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ELearningDbModel.CourseReview" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ELearningDbModel.CourseTest" Width="1.5" PointX="9.75" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ELearningDbModel.Register" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ELearningDbModel.TestQuestion" Width="1.5" PointX="12" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ELearningDbModel.TestResult" Width="1.5" PointX="15" PointY="5" IsExpanded="true" />
+      <Diagram DiagramId="505f6fb7bfa643d48ad7e93cfd65217d" Name="Diagram1">
+        <EntityTypeShape EntityType="ELearningDbModel.Account" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELearningDbModel.Course" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELearningDbModel.CourseModule" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELearningDbModel.CourseResource" Width="1.5" PointX="7.5" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELearningDbModel.CourseReview" Width="1.5" PointX="7.5" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELearningDbModel.CourseTest" Width="1.5" PointX="9.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELearningDbModel.Register" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELearningDbModel.TestQuestion" Width="1.5" PointX="12" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ELearningDbModel.TestResult" Width="1.5" PointX="15" PointY="5.125" IsExpanded="true" />
         <AssociationConnector Association="ELearningDbModel.FK__Course__created___3C69FB99" ManuallyRouted="false" />
         <AssociationConnector Association="ELearningDbModel.FK__Register__learne__4D94879B" ManuallyRouted="false" />
         <AssociationConnector Association="ELearningDbModel.FK__CourseMod__cours__412EB0B6" ManuallyRouted="false" />

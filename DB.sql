@@ -134,10 +134,38 @@ alter table CourseModule add description nvarchar(256) -- mo ta module
 alter table CourseTest add max_attempt int -- so lan test toi da
 alter table TestResult add time_start datetime -- thoi gian bat dau
 alter table TestResult add time_finish datetime -- thoi gian ket thuc
-
-
 go
 
 update Course set discount = 0 where discount is null
 update CourseTest set display_type = 0 where display_type is null
 update CourseModule set description = '' where description is null
+
+CREATE TRIGGER trg_UpdateCourseStars
+ON CourseReview
+AFTER INSERT, UPDATE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    -- Temporary table to hold the course IDs affected
+    DECLARE @courseId INT;
+
+    -- Get the course_id from the affected rows
+    SELECT @courseId = r.course_id
+    FROM Register AS r
+    INNER JOIN inserted AS i ON r.register_id = i.register_id;
+
+    -- Update the stars in the Course table
+    UPDATE Course
+    SET stars = (
+        SELECT AVG(CAST(cr.stars AS FLOAT))
+        FROM CourseReview AS cr
+        INNER JOIN Register AS r ON cr.register_id = r.register_id
+        WHERE r.course_id = @courseId
+    )
+    WHERE course_id = @courseId;
+END;
+GO
+
+alter table Account add created_at smalldatetime not null default GETDATE()
+alter table Register add paid money not null default 0

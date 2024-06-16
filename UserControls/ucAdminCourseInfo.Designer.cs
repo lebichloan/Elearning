@@ -34,22 +34,23 @@
             this.siticoneContainerControl2 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.siticoneContainerControl4 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.siticoneContainerControl5 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
+            this.btnEditInfor = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneContainerControl6 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.siticoneContainerControl7 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.lbCategory = new System.Windows.Forms.Label();
             this.lbDifficulty = new System.Windows.Forms.Label();
             this.siticoneContainerControl3 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.flpButtons = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnEditInfor = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.btnEditSyllabus = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.btnViewSyllabus = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnViewReviews = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.btnEditDiscount = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.btnStats = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.conDiscount = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
+            this.btnEditDiscount = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnBack = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.pbCourseImage = new Siticone.Desktop.UI.WinForms.SiticonePictureBox();
             this.conDescription = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.siticoneSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
-            this.conSyllabus = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
+            this.conMain = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.siticoneContainerControl1.SuspendLayout();
             this.siticoneContainerControl2.SuspendLayout();
             this.siticoneContainerControl4.SuspendLayout();
@@ -58,6 +59,7 @@
             this.siticoneContainerControl7.SuspendLayout();
             this.siticoneContainerControl3.SuspendLayout();
             this.flpButtons.SuspendLayout();
+            this.conDiscount.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCourseImage)).BeginInit();
             this.conDescription.SuspendLayout();
             this.SuspendLayout();
@@ -129,6 +131,7 @@
             // 
             // siticoneContainerControl5
             // 
+            this.siticoneContainerControl5.Controls.Add(this.btnEditInfor);
             this.siticoneContainerControl5.Controls.Add(this.siticoneContainerControl6);
             this.siticoneContainerControl5.Controls.Add(this.lbLecturerName);
             this.siticoneContainerControl5.Controls.Add(this.lbCourseName);
@@ -138,6 +141,26 @@
             this.siticoneContainerControl5.Size = new System.Drawing.Size(589, 109);
             this.siticoneContainerControl5.TabIndex = 0;
             this.siticoneContainerControl5.Text = "siticoneContainerControl5";
+            // 
+            // btnEditInfor
+            // 
+            this.btnEditInfor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditInfor.BorderRadius = 6;
+            this.btnEditInfor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditInfor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditInfor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEditInfor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEditInfor.FillColor = System.Drawing.Color.Transparent;
+            this.btnEditInfor.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btnEditInfor.ForeColor = System.Drawing.Color.White;
+            this.btnEditInfor.Image = global::Elearning.Properties.Resources.edit;
+            this.btnEditInfor.ImageSize = new System.Drawing.Size(38, 38);
+            this.btnEditInfor.Location = new System.Drawing.Point(541, 0);
+            this.btnEditInfor.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditInfor.Name = "btnEditInfor";
+            this.btnEditInfor.Size = new System.Drawing.Size(42, 42);
+            this.btnEditInfor.TabIndex = 8;
+            this.btnEditInfor.Click += new System.EventHandler(this.btnEditInfor_Click);
             // 
             // siticoneContainerControl6
             // 
@@ -208,51 +231,36 @@
             // 
             // flpButtons
             // 
-            this.flpButtons.Controls.Add(this.btnEditInfor);
-            this.flpButtons.Controls.Add(this.btnEditSyllabus);
+            this.flpButtons.Controls.Add(this.btnViewSyllabus);
             this.flpButtons.Controls.Add(this.btnViewReviews);
-            this.flpButtons.Controls.Add(this.btnEditDiscount);
+            this.flpButtons.Controls.Add(this.btnStats);
             this.flpButtons.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpButtons.Location = new System.Drawing.Point(8, 4);
             this.flpButtons.Name = "flpButtons";
             this.flpButtons.Size = new System.Drawing.Size(585, 53);
             this.flpButtons.TabIndex = 0;
             // 
-            // btnEditInfor
+            // btnViewSyllabus
             // 
-            this.btnEditInfor.BorderRadius = 6;
-            this.btnEditInfor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditInfor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditInfor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEditInfor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEditInfor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnEditInfor.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
-            this.btnEditInfor.ForeColor = System.Drawing.Color.White;
-            this.btnEditInfor.Location = new System.Drawing.Point(2, 2);
-            this.btnEditInfor.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditInfor.Name = "btnEditInfor";
-            this.btnEditInfor.Size = new System.Drawing.Size(136, 42);
-            this.btnEditInfor.TabIndex = 8;
-            this.btnEditInfor.Text = "Edit Course";
-            this.btnEditInfor.Click += new System.EventHandler(this.btnEditInfor_Click);
-            // 
-            // btnEditSyllabus
-            // 
-            this.btnEditSyllabus.BorderRadius = 6;
-            this.btnEditSyllabus.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditSyllabus.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditSyllabus.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEditSyllabus.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEditSyllabus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnEditSyllabus.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
-            this.btnEditSyllabus.ForeColor = System.Drawing.Color.White;
-            this.btnEditSyllabus.Location = new System.Drawing.Point(142, 2);
-            this.btnEditSyllabus.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditSyllabus.Name = "btnEditSyllabus";
-            this.btnEditSyllabus.Size = new System.Drawing.Size(136, 42);
-            this.btnEditSyllabus.TabIndex = 9;
-            this.btnEditSyllabus.Text = "Edit Syllabus";
-            this.btnEditSyllabus.Click += new System.EventHandler(this.btnEditSyllabus_Click);
+            this.btnViewSyllabus.BorderRadius = 6;
+            this.btnViewSyllabus.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewSyllabus.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewSyllabus.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnViewSyllabus.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnViewSyllabus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.btnViewSyllabus.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewSyllabus.ForeColor = System.Drawing.Color.White;
+            this.btnViewSyllabus.Image = global::Elearning.Properties.Resources.syllabus;
+            this.btnViewSyllabus.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnViewSyllabus.ImageSize = new System.Drawing.Size(22, 22);
+            this.btnViewSyllabus.Location = new System.Drawing.Point(2, 2);
+            this.btnViewSyllabus.Margin = new System.Windows.Forms.Padding(2);
+            this.btnViewSyllabus.Name = "btnViewSyllabus";
+            this.btnViewSyllabus.Size = new System.Drawing.Size(112, 42);
+            this.btnViewSyllabus.TabIndex = 9;
+            this.btnViewSyllabus.Text = "Syllabus";
+            this.btnViewSyllabus.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnViewSyllabus.Click += new System.EventHandler(this.btnViewSyllabus_Click);
             // 
             // btnViewReviews
             // 
@@ -262,38 +270,48 @@
             this.btnViewReviews.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnViewReviews.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnViewReviews.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnViewReviews.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btnViewReviews.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewReviews.ForeColor = System.Drawing.Color.White;
-            this.btnViewReviews.Location = new System.Drawing.Point(282, 2);
+            this.btnViewReviews.Image = global::Elearning.Properties.Resources.view_reviews;
+            this.btnViewReviews.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnViewReviews.ImageSize = new System.Drawing.Size(22, 22);
+            this.btnViewReviews.Location = new System.Drawing.Point(118, 2);
             this.btnViewReviews.Margin = new System.Windows.Forms.Padding(2);
             this.btnViewReviews.Name = "btnViewReviews";
-            this.btnViewReviews.Size = new System.Drawing.Size(136, 42);
+            this.btnViewReviews.Size = new System.Drawing.Size(110, 42);
             this.btnViewReviews.TabIndex = 10;
-            this.btnViewReviews.Text = "View Reviews";
+            this.btnViewReviews.Text = "Reviews";
+            this.btnViewReviews.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnViewReviews.Click += new System.EventHandler(this.btnViewReviews_Click);
             // 
-            // btnEditDiscount
+            // btnStats
             // 
-            this.btnEditDiscount.BorderRadius = 6;
-            this.btnEditDiscount.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditDiscount.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditDiscount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEditDiscount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEditDiscount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnEditDiscount.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
-            this.btnEditDiscount.ForeColor = System.Drawing.Color.White;
-            this.btnEditDiscount.Location = new System.Drawing.Point(422, 2);
-            this.btnEditDiscount.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditDiscount.Name = "btnEditDiscount";
-            this.btnEditDiscount.Size = new System.Drawing.Size(136, 42);
-            this.btnEditDiscount.TabIndex = 11;
-            this.btnEditDiscount.Text = "Edit Discount";
-            this.btnEditDiscount.Click += new System.EventHandler(this.btnEditDiscount_Click);
+            this.btnStats.BorderRadius = 6;
+            this.btnStats.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnStats.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnStats.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnStats.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnStats.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.btnStats.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStats.ForeColor = System.Drawing.Color.White;
+            this.btnStats.Image = global::Elearning.Properties.Resources.stats;
+            this.btnStats.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnStats.ImageSize = new System.Drawing.Size(22, 22);
+            this.btnStats.Location = new System.Drawing.Point(232, 2);
+            this.btnStats.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStats.Name = "btnStats";
+            this.btnStats.Size = new System.Drawing.Size(115, 42);
+            this.btnStats.TabIndex = 11;
+            this.btnStats.Text = "Statistics";
+            this.btnStats.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnStats.Click += new System.EventHandler(this.btnStats_Click);
             // 
             // conDiscount
             // 
             this.conDiscount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
             this.conDiscount.BorderRadius = 8;
             this.conDiscount.BorderThickness = 1;
+            this.conDiscount.Controls.Add(this.btnEditDiscount);
             this.conDiscount.Dock = System.Windows.Forms.DockStyle.Right;
             this.conDiscount.FillColor = System.Drawing.Color.Transparent;
             this.conDiscount.Location = new System.Drawing.Point(605, 41);
@@ -302,6 +320,27 @@
             this.conDiscount.Size = new System.Drawing.Size(387, 170);
             this.conDiscount.TabIndex = 1;
             this.conDiscount.Text = "siticoneContainerControl8";
+            // 
+            // btnEditDiscount
+            // 
+            this.btnEditDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditDiscount.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditDiscount.BorderRadius = 6;
+            this.btnEditDiscount.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditDiscount.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditDiscount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEditDiscount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEditDiscount.FillColor = System.Drawing.Color.Transparent;
+            this.btnEditDiscount.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btnEditDiscount.ForeColor = System.Drawing.Color.White;
+            this.btnEditDiscount.Image = global::Elearning.Properties.Resources.edit;
+            this.btnEditDiscount.ImageSize = new System.Drawing.Size(38, 38);
+            this.btnEditDiscount.Location = new System.Drawing.Point(337, 6);
+            this.btnEditDiscount.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditDiscount.Name = "btnEditDiscount";
+            this.btnEditDiscount.Size = new System.Drawing.Size(42, 42);
+            this.btnEditDiscount.TabIndex = 11;
+            this.btnEditDiscount.Click += new System.EventHandler(this.btnEditDiscount_Click);
             // 
             // btnBack
             // 
@@ -352,23 +391,23 @@
             this.siticoneSeparator1.Size = new System.Drawing.Size(1418, 10);
             this.siticoneSeparator1.TabIndex = 0;
             // 
-            // conSyllabus
+            // conMain
             // 
-            this.conSyllabus.AutoScroll = true;
-            this.conSyllabus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.conSyllabus.Location = new System.Drawing.Point(2, 325);
-            this.conSyllabus.Name = "conSyllabus";
-            this.conSyllabus.Padding = new System.Windows.Forms.Padding(8);
-            this.conSyllabus.Size = new System.Drawing.Size(1418, 364);
-            this.conSyllabus.TabIndex = 5;
-            this.conSyllabus.Text = "siticoneContainerControl8";
+            this.conMain.AutoScroll = true;
+            this.conMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.conMain.Location = new System.Drawing.Point(2, 325);
+            this.conMain.Name = "conMain";
+            this.conMain.Padding = new System.Windows.Forms.Padding(8);
+            this.conMain.Size = new System.Drawing.Size(1418, 364);
+            this.conMain.TabIndex = 5;
+            this.conMain.Text = "siticoneContainerControl8";
             // 
             // ucAdminCourseInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.conSyllabus);
+            this.Controls.Add(this.conMain);
             this.Controls.Add(this.conDescription);
             this.Controls.Add(this.siticoneContainerControl1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -387,6 +426,7 @@
             this.siticoneContainerControl7.PerformLayout();
             this.siticoneContainerControl3.ResumeLayout(false);
             this.flpButtons.ResumeLayout(false);
+            this.conDiscount.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbCourseImage)).EndInit();
             this.conDescription.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -407,15 +447,16 @@
         private System.Windows.Forms.Label lbCategory;
         private System.Windows.Forms.Label lbDifficulty;
         private Siticone.Desktop.UI.WinForms.SiticoneContainerControl conDescription;
-        private Siticone.Desktop.UI.WinForms.SiticoneContainerControl conSyllabus;
+        private Siticone.Desktop.UI.WinForms.SiticoneContainerControl conMain;
         private Siticone.Desktop.UI.WinForms.SiticoneSeparator siticoneSeparator1;
         private System.Windows.Forms.FlowLayoutPanel flpButtons;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnEditInfor;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton btnEditSyllabus;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnViewSyllabus;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnViewReviews;
         private Siticone.Desktop.UI.WinForms.SiticoneContainerControl siticoneContainerControl4;
         private Siticone.Desktop.UI.WinForms.SiticoneContainerControl siticoneContainerControl5;
         private Siticone.Desktop.UI.WinForms.SiticoneContainerControl conDiscount;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnEditDiscount;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnStats;
     }
 }

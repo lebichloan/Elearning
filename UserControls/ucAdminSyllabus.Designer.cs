@@ -30,6 +30,7 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.tlpModules = new System.Windows.Forms.TableLayoutPanel();
+            this.btnEdit = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.SuspendLayout();
             // 
             // label2
@@ -62,11 +63,32 @@
             this.tlpModules.Size = new System.Drawing.Size(1032, 452);
             this.tlpModules.TabIndex = 8;
             // 
+            // btnEdit
+            // 
+            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEdit.BorderRadius = 6;
+            this.btnEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEdit.FillColor = System.Drawing.Color.Transparent;
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Image = global::Elearning.Properties.Resources.edit;
+            this.btnEdit.ImageSize = new System.Drawing.Size(38, 38);
+            this.btnEdit.Location = new System.Drawing.Point(988, 2);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(42, 42);
+            this.btnEdit.TabIndex = 9;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
             // ucAdminSyllabus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.tlpModules);
             this.Controls.Add(this.label2);
             this.Name = "ucAdminSyllabus";
@@ -79,5 +101,6 @@
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tlpModules;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnEdit;
     }
 }

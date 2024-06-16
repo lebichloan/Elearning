@@ -16,15 +16,22 @@ namespace OnlineChat
 {
     public partial class Signup : Form
     {
-        public Signup()
+        bool createAdmin;
+        public Signup(bool createAdmin = false)
         {
             InitializeComponent();
+            this.createAdmin = createAdmin;
+
+            if (createAdmin)
+            {
+                lbTitle.Text = "Create Admin Account";
+                conLogin.Visible = false;
+            }
         }
 
         private void butLogin_Click(object sender, EventArgs e)
         {
             this.Close();
-
         }
 
         private void butSignup_Click(object sender, EventArgs e)
@@ -61,7 +68,7 @@ namespace OnlineChat
             account.email = email;
             account.username = username;
             account.user_password = password;
-            account.user_role = Program.ROLE_LEARNER;
+            account.user_role = this.createAdmin ? Program.ROLE_ADMIN : Program.ROLE_LEARNER;
 
             string source = tbPath.Text != "" ? tbPath.Text : Program.AVARTAR_PATH + "default.png";
 
@@ -75,7 +82,8 @@ namespace OnlineChat
             Program.provider.Accounts.Add(account);
             Program.provider.SaveChanges();
 
-            MessageBox.Show("Account created successfully! Please login using your new account!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            var message = createAdmin ? "New admin account created successfully!" : "Account created successfully! Please login using your new account!";
+            MessageBox.Show(message, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             this.Close();
         }
@@ -133,6 +141,11 @@ namespace OnlineChat
 
         private void Signup_FormClosed(object sender, FormClosedEventArgs e)
         {
+            if (createAdmin)
+            {
+                this.Close();
+                return;
+            }
             this.Hide();
             fLogin fLogin = new fLogin();
             fLogin.ShowDialog();

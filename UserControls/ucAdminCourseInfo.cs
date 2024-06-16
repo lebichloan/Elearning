@@ -18,8 +18,11 @@ namespace Elearning.UserControls
         public Course course;
         ucAdminDescription ucDescription;
         ucAdminSyllabus ucSyllabus;
+        ucAdminEditSyllabus ucEditSyllabus;
         ucAdminCoursePreview ucPreview;
         ucAdminDiscount ucDiscount;
+        ucAdminReviews ucReviews;
+        ucCourseStatistics ucStats;
         public ucAdminCourseInfo()
         {
             InitializeComponent();
@@ -31,11 +34,10 @@ namespace Elearning.UserControls
             conDescription.VerticalScroll.Enabled = true;
             conDescription.Height = height / 10;
 
-            conSyllabus.AutoScroll = true;
-            conSyllabus.VerticalScroll.Visible = true;
-            conSyllabus.VerticalScroll.Enabled = true; 
-            conSyllabus.Height = height / 10 * 5;
-
+            conMain.AutoScroll = true;
+            conMain.VerticalScroll.Visible = true;
+            conMain.VerticalScroll.Enabled = true; 
+            conMain.Height = height / 10 * 5;
         }
 
         public ucAdminCourseInfo(Course course, ucAdminCoursePreview ucPreview) : this()
@@ -48,8 +50,33 @@ namespace Elearning.UserControls
 
             ucSyllabus = new ucAdminSyllabus(course);
             ucSyllabus.Dock = DockStyle.Fill;
-            conSyllabus.Controls.Add(ucSyllabus);
+            ucSyllabus.editClicked += (s, ev) =>
+            {
+                System.Diagnostics.Debug.WriteLine("Edit clicked");
+                LoadEditSyllabus();
+            };
+            conMain.Controls.Add(ucSyllabus);
+
+            ucEditSyllabus = new ucAdminEditSyllabus(course);
+            ucEditSyllabus.evtExit += (s, ev) =>
+            {
+                ucSyllabus.Reload();
+                LoadSyllabus();
+            };
+            ucEditSyllabus.Dock = DockStyle.Fill;
+            conMain.Controls.Add(ucEditSyllabus);
+
             this.ucPreview = ucPreview;
+
+            ucReviews = new ucAdminReviews(course);
+            ucReviews.Dock = DockStyle.Fill;
+            conMain.Controls.Add(ucReviews);
+
+            ucStats = new ucCourseStatistics(course);
+            ucStats.Dock = DockStyle.Fill;
+            conMain.Controls.Add(ucStats);
+
+            ucSyllabus.BringToFront();
 
             ucDiscount = new ucAdminDiscount(course);
             ucDiscount.Dock = DockStyle.Fill;
@@ -85,20 +112,17 @@ namespace Elearning.UserControls
 
         private void LoadSyllabus()
         {
-            ucSyllabus.Reload();
+            ucSyllabus.BringToFront();
         }
 
         private void LoadEditSyllabus()
         {
-            ucAdminEditSyllabus ucEditSyllabus = new ucAdminEditSyllabus(course);
-            ucEditSyllabus.evtExit += (s, ev) =>
-            {
-                conSyllabus.Controls.Remove(ucEditSyllabus);
-                LoadSyllabus();
-            };
-            ucEditSyllabus.Dock = DockStyle.Fill;
-            conSyllabus.Controls.Add(ucEditSyllabus);
             ucEditSyllabus.BringToFront();
+        }
+
+        private void LoadStatstics()
+        {
+            ucStats.BringToFront();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -122,16 +146,26 @@ namespace Elearning.UserControls
             fEditCourse.ShowDialog();
         }
 
-        private void btnEditSyllabus_Click(object sender, EventArgs e)
-        {
-            LoadEditSyllabus();
-        }
-
         private void btnEditDiscount_Click(object sender, EventArgs e)
         {
             fAdminEditDiscount fEditDiscount = new fAdminEditDiscount(course);  
             fEditDiscount.ShowDialog();
             ucDiscount.Reload();
+        }
+
+        private void btnViewReviews_Click(object sender, EventArgs e)
+        {
+            ucReviews.BringToFront();
+        }
+
+        private void btnViewSyllabus_Click(object sender, EventArgs e)
+        {
+            LoadSyllabus();
+        }
+
+        private void btnStats_Click(object sender, EventArgs e)
+        {
+            LoadStatstics();
         }
     }
 }

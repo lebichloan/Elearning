@@ -49,9 +49,10 @@
             this.siticoneContainerControl1.Controls.Add(this.siticoneContainerControl2);
             this.siticoneContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticoneContainerControl1.Location = new System.Drawing.Point(0, 0);
+            this.siticoneContainerControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.siticoneContainerControl1.Name = "siticoneContainerControl1";
-            this.siticoneContainerControl1.Padding = new System.Windows.Forms.Padding(4);
-            this.siticoneContainerControl1.Size = new System.Drawing.Size(308, 54);
+            this.siticoneContainerControl1.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.siticoneContainerControl1.Size = new System.Drawing.Size(411, 66);
             this.siticoneContainerControl1.TabIndex = 0;
             this.siticoneContainerControl1.Text = "siticoneContainerControl1";
             this.siticoneContainerControl1.Click += new System.EventHandler(this.question_Click);
@@ -63,9 +64,10 @@
             this.siticoneContainerControl2.Controls.Add(this.siticoneContainerControl3);
             this.siticoneContainerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticoneContainerControl2.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneContainerControl2.Location = new System.Drawing.Point(4, 4);
+            this.siticoneContainerControl2.Location = new System.Drawing.Point(5, 5);
+            this.siticoneContainerControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.siticoneContainerControl2.Name = "siticoneContainerControl2";
-            this.siticoneContainerControl2.Size = new System.Drawing.Size(300, 46);
+            this.siticoneContainerControl2.Size = new System.Drawing.Size(401, 56);
             this.siticoneContainerControl2.TabIndex = 1;
             this.siticoneContainerControl2.Text = "siticoneContainerControl2";
             this.siticoneContainerControl2.Click += new System.EventHandler(this.question_Click);
@@ -75,9 +77,10 @@
             this.lbType.AutoSize = true;
             this.lbType.Dock = System.Windows.Forms.DockStyle.Top;
             this.lbType.Font = new System.Drawing.Font("Segoe UI Variable Display", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbType.Location = new System.Drawing.Point(0, 20);
+            this.lbType.Location = new System.Drawing.Point(0, 26);
+            this.lbType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbType.Name = "lbType";
-            this.lbType.Size = new System.Drawing.Size(83, 17);
+            this.lbType.Size = new System.Drawing.Size(106, 22);
             this.lbType.TabIndex = 1;
             this.lbType.Text = "Short answer";
             this.lbType.Click += new System.EventHandler(this.question_Click);
@@ -88,8 +91,9 @@
             this.lbName.Dock = System.Windows.Forms.DockStyle.Top;
             this.lbName.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.Location = new System.Drawing.Point(0, 0);
+            this.lbName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(90, 20);
+            this.lbName.Size = new System.Drawing.Size(113, 26);
             this.lbName.TabIndex = 0;
             this.lbName.Text = "Question 13";
             this.lbName.Click += new System.EventHandler(this.question_Click);
@@ -99,9 +103,10 @@
             this.siticoneContainerControl3.Controls.Add(this.siticoneContainerControl4);
             this.siticoneContainerControl3.Dock = System.Windows.Forms.DockStyle.Right;
             this.siticoneContainerControl3.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneContainerControl3.Location = new System.Drawing.Point(243, 0);
+            this.siticoneContainerControl3.Location = new System.Drawing.Point(325, 0);
+            this.siticoneContainerControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.siticoneContainerControl3.Name = "siticoneContainerControl3";
-            this.siticoneContainerControl3.Size = new System.Drawing.Size(57, 46);
+            this.siticoneContainerControl3.Size = new System.Drawing.Size(76, 56);
             this.siticoneContainerControl3.TabIndex = 3;
             this.siticoneContainerControl3.Text = "siticoneContainerControl3";
             // 
@@ -111,9 +116,10 @@
             this.siticoneContainerControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticoneContainerControl4.FillColor = System.Drawing.Color.Transparent;
             this.siticoneContainerControl4.Location = new System.Drawing.Point(0, 0);
+            this.siticoneContainerControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.siticoneContainerControl4.Name = "siticoneContainerControl4";
-            this.siticoneContainerControl4.Padding = new System.Windows.Forms.Padding(3, 3, 0, 3);
-            this.siticoneContainerControl4.Size = new System.Drawing.Size(57, 46);
+            this.siticoneContainerControl4.Padding = new System.Windows.Forms.Padding(4, 4, 0, 4);
+            this.siticoneContainerControl4.Size = new System.Drawing.Size(76, 56);
             this.siticoneContainerControl4.TabIndex = 1;
             this.siticoneContainerControl4.Text = "siticoneContainerControl4";
             // 
@@ -129,21 +135,22 @@
             this.btnDelete.FillColor = System.Drawing.Color.Transparent;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDelete.ForeColor = System.Drawing.Color.Transparent;
-            this.btnDelete.Location = new System.Drawing.Point(25, 3);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Location = new System.Drawing.Point(33, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(32, 40);
+            this.btnDelete.Size = new System.Drawing.Size(43, 48);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // ucAdminQuestion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.siticoneContainerControl1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ucAdminQuestion";
-            this.Size = new System.Drawing.Size(308, 54);
+            this.Size = new System.Drawing.Size(411, 66);
             this.siticoneContainerControl1.ResumeLayout(false);
             this.siticoneContainerControl2.ResumeLayout(false);
             this.siticoneContainerControl2.PerformLayout();

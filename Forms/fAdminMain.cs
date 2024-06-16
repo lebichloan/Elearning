@@ -17,6 +17,7 @@ namespace Elearning.Forms
         ucAdminHome ucHome;
         Account account;
         ucAdminAccount ucAccount;
+        ucOverallStats ucStats;
         public fAdminMain(Account account)
         {
             InitializeComponent();
@@ -32,11 +33,16 @@ namespace Elearning.Forms
             ucHome = new ucAdminHome(conMain);
             ucHome.Dock = DockStyle.Fill;
             conMain.Controls.Add(ucHome);
-            ucHome.BringToFront();
 
             ucAccount = new ucAdminAccount(account);
             ucAccount.Dock = DockStyle.Fill;
             conMain.Controls.Add(ucAccount);
+
+            ucStats = new ucOverallStats();
+            ucStats.Dock = DockStyle.Fill;
+            conMain.Controls.Add(ucStats);
+
+            ucHome.BringToFront();
         }
 
         private void fAdminMain_FormClosed(object sender, FormClosedEventArgs e)
@@ -66,6 +72,15 @@ namespace Elearning.Forms
             btnCourses.Enabled = true;
             btnStatistics.Enabled = true;
             btnAccount.Enabled = false;
+        }
+
+        private void btnStatistics_Click(object sender, EventArgs e)
+        {
+            ucStats.BringToFront();
+            btnStatistics.Enabled = false;
+            btnCourses.Enabled = true;
+            btnAccount.Enabled = true;
+
         }
     }
 }

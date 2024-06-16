@@ -16,6 +16,7 @@ namespace Elearning.UserControls
         public TestQuestion question;
         public EventHandler evtClicked;
         public EventHandler evtDelete;
+        public EventHandler pointChange;
         ContainerControl conDetails;
         UserControl ucDetails;
         public ucAdminQuestion()
@@ -30,15 +31,21 @@ namespace Elearning.UserControls
 
             if (question.question_type == Program.QUESTION_MULTIPLE_CHOICE_ONE_ANSWER)
             {
-                ucDetails = new ucAdminQstMC1(this.question);
+                var uc = new ucAdminQstMC1(this.question);
+                uc.pointChange += PointChange;
+                ucDetails = uc;
+               
             } else if (question.question_type == Program.QUESTION_MULTIPLE_CHOICE_MULTIPLE_ANSWERS)
             {
-                ucDetails = new ucAdminQstMCM(this.question);
+                var uc = new ucAdminQstMCM(this.question);
+                uc.pointChange += PointChange;
+                ucDetails = uc;
             } else if (question.question_type == Program.QUESTION_SHORT_ANSWER)
             {
-                ucDetails = new ucAdminQstShortAns(this.question);
+                var uc = new ucAdminQstShortAns(this.question);
+                uc.pointChange += PointChange;
+                ucDetails = uc;
             }
-            
             ucDetails.Dock = DockStyle.Fill;
             LoadQuestion();
         }
@@ -84,6 +91,7 @@ namespace Elearning.UserControls
         private void btnDelete_Click(object sender, EventArgs e)
         {
             evtDelete?.Invoke(this, e);
+            pointChange?.Invoke(this, e);
         }
 
         public void SetCheckedColor()
@@ -94,6 +102,11 @@ namespace Elearning.UserControls
         public void SetDefaultColor()
         {
             this.siticoneContainerControl1.FillColor = Color.White;
+        }
+
+        private void PointChange(object sender, EventArgs e)
+        {
+            pointChange?.Invoke(this, e);
         }
     }
 }

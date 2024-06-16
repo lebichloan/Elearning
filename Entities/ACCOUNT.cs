@@ -28,6 +28,7 @@ namespace Elearning.Entities
         public string avatar { get; set; }
         public string user_password { get; set; }
         public int user_role { get; set; }
+        public System.DateTime created_at { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Course> Courses { get; set; }

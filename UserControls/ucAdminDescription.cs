@@ -24,5 +24,10 @@ namespace Elearning.UserControls
             this.course = course;
             this.lbDescription.Text = course.course_description;
         }
+
+        public void Reload()
+        {
+            this.lbDescription.Text = course.course_description;
+        }
     }
 }

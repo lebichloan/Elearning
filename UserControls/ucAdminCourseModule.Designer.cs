@@ -31,13 +31,13 @@
             this.lbModuleName = new System.Windows.Forms.Label();
             this.flpItems = new System.Windows.Forms.FlowLayoutPanel();
             this.siticoneContainerControl1 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
+            this.lbDescription = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnDelete = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneContainerControl2 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.siticoneContainerControl3 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.siticoneSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
-            this.lbDescription = new System.Windows.Forms.Label();
             this.siticoneContainerControl1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.siticoneContainerControl2.SuspendLayout();
@@ -82,6 +82,18 @@
             this.siticoneContainerControl1.TabIndex = 2;
             this.siticoneContainerControl1.Text = "siticoneContainerControl1";
             // 
+            // lbDescription
+            // 
+            this.lbDescription.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbDescription.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDescription.Location = new System.Drawing.Point(0, 39);
+            this.lbDescription.Name = "lbDescription";
+            this.lbDescription.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lbDescription.Size = new System.Drawing.Size(665, 30);
+            this.lbDescription.TabIndex = 2;
+            this.lbDescription.Text = "Module description";
+            this.lbDescription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
@@ -94,7 +106,7 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(665, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(5);
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(119, 69);
@@ -148,7 +160,7 @@
             this.siticoneContainerControl2.Controls.Add(this.siticoneContainerControl1);
             this.siticoneContainerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticoneContainerControl2.Location = new System.Drawing.Point(0, 0);
-            this.siticoneContainerControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.siticoneContainerControl2.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneContainerControl2.Name = "siticoneContainerControl2";
             this.siticoneContainerControl2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneContainerControl2.Size = new System.Drawing.Size(797, 295);
@@ -160,7 +172,7 @@
             this.siticoneContainerControl3.Controls.Add(this.siticoneSeparator1);
             this.siticoneContainerControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneContainerControl3.Location = new System.Drawing.Point(3, 71);
-            this.siticoneContainerControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.siticoneContainerControl3.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneContainerControl3.Name = "siticoneContainerControl3";
             this.siticoneContainerControl3.Size = new System.Drawing.Size(791, 14);
             this.siticoneContainerControl3.TabIndex = 3;
@@ -170,22 +182,10 @@
             // 
             this.siticoneSeparator1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticoneSeparator1.Location = new System.Drawing.Point(0, 0);
-            this.siticoneSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.siticoneSeparator1.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneSeparator1.Name = "siticoneSeparator1";
             this.siticoneSeparator1.Size = new System.Drawing.Size(791, 14);
             this.siticoneSeparator1.TabIndex = 0;
-            // 
-            // lbDescription
-            // 
-            this.lbDescription.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbDescription.Font = new System.Drawing.Font("Segoe UI Variable Text", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDescription.Location = new System.Drawing.Point(0, 39);
-            this.lbDescription.Name = "lbDescription";
-            this.lbDescription.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.lbDescription.Size = new System.Drawing.Size(665, 30);
-            this.lbDescription.TabIndex = 2;
-            this.lbDescription.Text = "Module description";
-            this.lbDescription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ucAdminCourseModule
             // 

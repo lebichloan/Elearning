@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.siticoneContainerControl1 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
-            this.btnNoti = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.lbAppName = new System.Windows.Forms.Label();
             this.lbUserFullname = new System.Windows.Forms.Label();
             this.panelTop = new System.Windows.Forms.Panel();
@@ -40,44 +38,11 @@
             this.btnStatistics = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnAccount = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.conMain = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
-            this.siticoneContainerControl1.SuspendLayout();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnUserProfile)).BeginInit();
             this.conControl.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // siticoneContainerControl1
-            // 
-            this.siticoneContainerControl1.Controls.Add(this.btnNoti);
-            this.siticoneContainerControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.siticoneContainerControl1.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneContainerControl1.Location = new System.Drawing.Point(1154, 0);
-            this.siticoneContainerControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.siticoneContainerControl1.Name = "siticoneContainerControl1";
-            this.siticoneContainerControl1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.siticoneContainerControl1.Size = new System.Drawing.Size(51, 50);
-            this.siticoneContainerControl1.TabIndex = 7;
-            this.siticoneContainerControl1.Text = "siticoneContainerControl1";
-            // 
-            // btnNoti
-            // 
-            this.btnNoti.BackgroundImage = global::Elearning.Properties.Resources.light_notification;
-            this.btnNoti.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnNoti.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNoti.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNoti.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNoti.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNoti.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNoti.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnNoti.FillColor = System.Drawing.Color.Transparent;
-            this.btnNoti.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnNoti.ForeColor = System.Drawing.Color.White;
-            this.btnNoti.Location = new System.Drawing.Point(4, 4);
-            this.btnNoti.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnNoti.Name = "btnNoti";
-            this.btnNoti.Size = new System.Drawing.Size(43, 42);
-            this.btnNoti.TabIndex = 8;
             // 
             // lbAppName
             // 
@@ -85,10 +50,10 @@
             this.lbAppName.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbAppName.Font = new System.Drawing.Font("UTM Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAppName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.lbAppName.Location = new System.Drawing.Point(0, 0);
+            this.lbAppName.Location = new System.Drawing.Point(3, 3);
             this.lbAppName.Name = "lbAppName";
             this.lbAppName.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.lbAppName.Size = new System.Drawing.Size(176, 50);
+            this.lbAppName.Size = new System.Drawing.Size(176, 44);
             this.lbAppName.TabIndex = 3;
             this.lbAppName.Text = "E-Learning";
             this.lbAppName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -99,10 +64,10 @@
             this.lbUserFullname.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbUserFullname.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUserFullname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbUserFullname.Location = new System.Drawing.Point(900, 0);
+            this.lbUserFullname.Location = new System.Drawing.Point(955, 3);
             this.lbUserFullname.Name = "lbUserFullname";
             this.lbUserFullname.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.lbUserFullname.Size = new System.Drawing.Size(203, 50);
+            this.lbUserFullname.Size = new System.Drawing.Size(203, 44);
             this.lbUserFullname.TabIndex = 2;
             this.lbUserFullname.Text = "Nguyễn Văn A";
             this.lbUserFullname.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -113,11 +78,11 @@
             this.panelTop.Controls.Add(this.lbUserFullname);
             this.panelTop.Controls.Add(this.btnUserProfile);
             this.panelTop.Controls.Add(this.lbAppName);
-            this.panelTop.Controls.Add(this.siticoneContainerControl1);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelTop.Name = "panelTop";
+            this.panelTop.Padding = new System.Windows.Forms.Padding(3);
             this.panelTop.Size = new System.Drawing.Size(1205, 50);
             this.panelTop.TabIndex = 1;
             // 
@@ -126,12 +91,12 @@
             this.btnUserProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUserProfile.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnUserProfile.ImageRotate = 0F;
-            this.btnUserProfile.Location = new System.Drawing.Point(1103, 0);
+            this.btnUserProfile.Location = new System.Drawing.Point(1158, 3);
             this.btnUserProfile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUserProfile.Name = "btnUserProfile";
             this.btnUserProfile.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUserProfile.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
-            this.btnUserProfile.Size = new System.Drawing.Size(51, 50);
+            this.btnUserProfile.Size = new System.Drawing.Size(44, 44);
             this.btnUserProfile.TabIndex = 6;
             this.btnUserProfile.TabStop = false;
             // 
@@ -140,7 +105,7 @@
             this.conControl.Controls.Add(this.flowLayoutPanel1);
             this.conControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.conControl.Location = new System.Drawing.Point(0, 50);
-            this.conControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.conControl.Margin = new System.Windows.Forms.Padding(4);
             this.conControl.Name = "conControl";
             this.conControl.Size = new System.Drawing.Size(1205, 79);
             this.conControl.TabIndex = 2;
@@ -153,7 +118,7 @@
             this.flowLayoutPanel1.Controls.Add(this.btnAccount);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(20, 5, 5, 5);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1205, 79);
@@ -225,7 +190,7 @@
             // 
             this.conMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.conMain.Location = new System.Drawing.Point(0, 129);
-            this.conMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.conMain.Margin = new System.Windows.Forms.Padding(4);
             this.conMain.Name = "conMain";
             this.conMain.Size = new System.Drawing.Size(1205, 542);
             this.conMain.TabIndex = 3;
@@ -251,7 +216,6 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fAdminMain_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.fAdminMain_FormClosed);
             this.Load += new System.EventHandler(this.ucAdminMain_Load);
-            this.siticoneContainerControl1.ResumeLayout(false);
             this.panelTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnUserProfile)).EndInit();
             this.conControl.ResumeLayout(false);
@@ -261,9 +225,6 @@
         }
 
         #endregion
-
-        private Siticone.Desktop.UI.WinForms.SiticoneContainerControl siticoneContainerControl1;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton btnNoti;
         private System.Windows.Forms.Label lbAppName;
         private Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox btnUserProfile;
         private System.Windows.Forms.Label lbUserFullname;

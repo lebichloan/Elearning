@@ -51,6 +51,7 @@ namespace Elearning.UserControls
             {
 
                 lbNumReviews.Text = totalReviews.ToString() + " reviews";
+                lbAvgRating.Visible = true;
 
                 bar1star.Value = (int)((total[1] * 1.0 / totalReviews) * 100.0);
                 bar2stars.Value = (int)((total[2] * 1.0 / totalReviews) * 100.0);
@@ -68,6 +69,7 @@ namespace Elearning.UserControls
             else
             {
                 lbNumReviews.Text = "No review yet";
+                lbAvgRating.Visible = false;
                 bar1star.Value = 0;
                 bar2stars.Value = 0;
                 bar3stars.Value = 0;

@@ -30,12 +30,12 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.siticoneContainerControl1 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tbModuleName = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.tbModuleDescription = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.btnAddModule = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnSaveAll = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.tbpModules = new System.Windows.Forms.TableLayoutPanel();
-            this.tbModuleDescription = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.siticoneContainerControl1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +66,17 @@
             this.siticoneContainerControl1.TabIndex = 4;
             this.siticoneContainerControl1.Text = "siticoneContainerControl1";
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.tbModuleName);
+            this.flowLayoutPanel1.Controls.Add(this.tbModuleDescription);
+            this.flowLayoutPanel1.Controls.Add(this.btnAddModule);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(150, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1228, 52);
+            this.flowLayoutPanel1.TabIndex = 3;
+            // 
             // tbModuleName
             // 
             this.tbModuleName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -77,7 +88,8 @@
             this.tbModuleName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbModuleName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbModuleName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbModuleName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbModuleName.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbModuleName.ForeColor = System.Drawing.Color.Black;
             this.tbModuleName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbModuleName.Location = new System.Drawing.Point(3, 2);
             this.tbModuleName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -87,6 +99,30 @@
             this.tbModuleName.SelectedText = "";
             this.tbModuleName.Size = new System.Drawing.Size(358, 43);
             this.tbModuleName.TabIndex = 0;
+            // 
+            // tbModuleDescription
+            // 
+            this.tbModuleDescription.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbModuleDescription.BorderRadius = 8;
+            this.tbModuleDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbModuleDescription.DefaultText = "";
+            this.tbModuleDescription.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbModuleDescription.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbModuleDescription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbModuleDescription.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbModuleDescription.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tbModuleDescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbModuleDescription.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbModuleDescription.ForeColor = System.Drawing.Color.Black;
+            this.tbModuleDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbModuleDescription.Location = new System.Drawing.Point(367, 2);
+            this.tbModuleDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbModuleDescription.Name = "tbModuleDescription";
+            this.tbModuleDescription.PasswordChar = '\0';
+            this.tbModuleDescription.PlaceholderText = "Enter new module\'s description";
+            this.tbModuleDescription.SelectedText = "";
+            this.tbModuleDescription.Size = new System.Drawing.Size(856, 43);
+            this.tbModuleDescription.TabIndex = 2;
             // 
             // btnAddModule
             // 
@@ -141,40 +177,6 @@
             this.tbpModules.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbpModules.Size = new System.Drawing.Size(1478, 555);
             this.tbpModules.TabIndex = 7;
-            // 
-            // tbModuleDescription
-            // 
-            this.tbModuleDescription.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbModuleDescription.BorderRadius = 8;
-            this.tbModuleDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbModuleDescription.DefaultText = "";
-            this.tbModuleDescription.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbModuleDescription.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbModuleDescription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbModuleDescription.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbModuleDescription.Dock = System.Windows.Forms.DockStyle.Left;
-            this.tbModuleDescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbModuleDescription.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tbModuleDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbModuleDescription.Location = new System.Drawing.Point(367, 2);
-            this.tbModuleDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbModuleDescription.Name = "tbModuleDescription";
-            this.tbModuleDescription.PasswordChar = '\0';
-            this.tbModuleDescription.PlaceholderText = "Enter new module\'s description";
-            this.tbModuleDescription.SelectedText = "";
-            this.tbModuleDescription.Size = new System.Drawing.Size(856, 43);
-            this.tbModuleDescription.TabIndex = 2;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.tbModuleName);
-            this.flowLayoutPanel1.Controls.Add(this.tbModuleDescription);
-            this.flowLayoutPanel1.Controls.Add(this.btnAddModule);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(150, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1228, 52);
-            this.flowLayoutPanel1.TabIndex = 3;
             // 
             // ucAdminEditSyllabus
             // 

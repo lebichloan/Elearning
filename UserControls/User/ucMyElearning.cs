@@ -57,7 +57,16 @@ namespace Elearning.UserControls.User
                 ucCourse.courseLecturer = course.lecturer;
                 ucCourse.courseName = course.course_name;
                 ucCourse.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
-                ucCourse.btnRateClick += ucCoursePreview_btnRatingClick;
+                if (getCourseReview(course, currentAccount) == null)
+                {
+                    ucCourse.SetUIRate(1);
+                    ucCourse.btnRateClick += ucCoursePreview_btnRatingClick;
+                }
+                else
+                {
+                    ucCourse.SetUIRate(2);
+                    ucCourse.btnRateClick += ucCoursePreview_btnEditRatingClick;
+                }
                 layoutMyCourses.Controls.Add(ucCourse);
             }
         }
@@ -83,6 +92,32 @@ namespace Elearning.UserControls.User
             
             fRateCourse rateCourse = new fRateCourse(courseView);
             rateCourse.ShowDialog();
+        }
+
+        private void ucCoursePreview_btnEditRatingClick(object sender, EventArgs e)
+        {
+            ucCoursePreview ucCourse = sender as ucCoursePreview;
+            courseView = ucCourse.coursePreviewClicked;
+
+            CourseReview review = getCourseReview(courseView, fLogin.currentAccount);
+            fRateCourse rateCourse = new fRateCourse(review);
+            rateCourse.ShowDialog();
+        }
+
+        private CourseReview getCourseReview(Course course, Account account)
+        {
+            List<CourseReview> courseReviews = (
+                from review in Program.provider.CourseReviews
+                where review.Register.course_id == course.course_id
+                && review.Register.learner_id == account.acc_id
+                select review
+                ).ToList();
+
+            if (courseReviews.Count == 0)
+            {
+                return null;
+            }
+            return courseReviews.FirstOrDefault();
         }
     }
 }

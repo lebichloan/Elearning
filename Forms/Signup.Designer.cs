@@ -93,12 +93,12 @@ namespace OnlineChat
             this.centerContainer.Controls.Add(this.siticoneContainerControl1);
             this.centerContainer.CustomBorderThickness = new System.Windows.Forms.Padding(1);
             this.centerContainer.FillColor = System.Drawing.Color.Gainsboro;
-            this.centerContainer.Location = new System.Drawing.Point(86, 84);
-            this.centerContainer.Margin = new System.Windows.Forms.Padding(2);
+            this.centerContainer.Location = new System.Drawing.Point(115, 103);
+            this.centerContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.centerContainer.Name = "centerContainer";
             this.centerContainer.ShadowDecoration.Enabled = true;
             this.centerContainer.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4);
-            this.centerContainer.Size = new System.Drawing.Size(428, 487);
+            this.centerContainer.Size = new System.Drawing.Size(571, 599);
             this.centerContainer.TabIndex = 0;
             this.centerContainer.Text = "siticoneContainerControl1";
             // 
@@ -128,10 +128,10 @@ namespace OnlineChat
             this.butLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.butLogin.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold);
             this.butLogin.ForeColor = System.Drawing.Color.White;
-            this.butLogin.Location = new System.Drawing.Point(120, 24);
-            this.butLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.butLogin.Location = new System.Drawing.Point(160, 30);
+            this.butLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butLogin.Name = "butLogin";
-            this.butLogin.Size = new System.Drawing.Size(188, 34);
+            this.butLogin.Size = new System.Drawing.Size(251, 42);
             this.butLogin.TabIndex = 1;
             this.butLogin.Text = "Login";
             this.butLogin.Click += new System.EventHandler(this.butLogin_Click);
@@ -140,10 +140,9 @@ namespace OnlineChat
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
             this.label3.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F);
-            this.label3.Location = new System.Drawing.Point(120, 4);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(160, 5);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(188, 20);
+            this.label3.Size = new System.Drawing.Size(251, 25);
             this.label3.TabIndex = 0;
             this.label3.Text = "Already have an account?";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -167,11 +166,11 @@ namespace OnlineChat
             this.siticoneContainerControl2.Controls.Add(this.tbHoTen);
             this.siticoneContainerControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneContainerControl2.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneContainerControl2.Location = new System.Drawing.Point(0, 53);
-            this.siticoneContainerControl2.Margin = new System.Windows.Forms.Padding(2);
+            this.siticoneContainerControl2.Location = new System.Drawing.Point(0, 65);
+            this.siticoneContainerControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneContainerControl2.Name = "siticoneContainerControl2";
-            this.siticoneContainerControl2.Padding = new System.Windows.Forms.Padding(34, 17, 34, 0);
-            this.siticoneContainerControl2.Size = new System.Drawing.Size(428, 357);
+            this.siticoneContainerControl2.Padding = new System.Windows.Forms.Padding(45, 21, 45, 0);
+            this.siticoneContainerControl2.Size = new System.Drawing.Size(571, 439);
             this.siticoneContainerControl2.TabIndex = 3;
             this.siticoneContainerControl2.Text = "siticoneContainerControl2";
             // 
@@ -186,11 +185,11 @@ namespace OnlineChat
             this.butSignup.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
             this.butSignup.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 11.25F, System.Drawing.FontStyle.Bold);
             this.butSignup.ForeColor = System.Drawing.Color.White;
-            this.butSignup.Location = new System.Drawing.Point(34, 296);
-            this.butSignup.Margin = new System.Windows.Forms.Padding(2);
+            this.butSignup.Location = new System.Drawing.Point(45, 361);
+            this.butSignup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butSignup.Name = "butSignup";
             this.butSignup.ShadowDecoration.Color = System.Drawing.Color.Gray;
-            this.butSignup.Size = new System.Drawing.Size(360, 37);
+            this.butSignup.Size = new System.Drawing.Size(481, 46);
             this.butSignup.TabIndex = 10;
             this.butSignup.Text = "Create";
             this.butSignup.Click += new System.EventHandler(this.butSignup_Click);
@@ -199,10 +198,10 @@ namespace OnlineChat
             // 
             this.siticoneContainerControl10.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneContainerControl10.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneContainerControl10.Location = new System.Drawing.Point(34, 281);
-            this.siticoneContainerControl10.Margin = new System.Windows.Forms.Padding(2);
+            this.siticoneContainerControl10.Location = new System.Drawing.Point(45, 343);
+            this.siticoneContainerControl10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneContainerControl10.Name = "siticoneContainerControl10";
-            this.siticoneContainerControl10.Size = new System.Drawing.Size(360, 15);
+            this.siticoneContainerControl10.Size = new System.Drawing.Size(481, 18);
             this.siticoneContainerControl10.TabIndex = 12;
             this.siticoneContainerControl10.Text = "siticoneContainerControl10";
             // 
@@ -212,10 +211,10 @@ namespace OnlineChat
             this.siticoneContainerControl9.Controls.Add(this.picPreview);
             this.siticoneContainerControl9.Controls.Add(this.butLoadImage);
             this.siticoneContainerControl9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticoneContainerControl9.Location = new System.Drawing.Point(34, 247);
-            this.siticoneContainerControl9.Margin = new System.Windows.Forms.Padding(2);
+            this.siticoneContainerControl9.Location = new System.Drawing.Point(45, 301);
+            this.siticoneContainerControl9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneContainerControl9.Name = "siticoneContainerControl9";
-            this.siticoneContainerControl9.Size = new System.Drawing.Size(360, 34);
+            this.siticoneContainerControl9.Size = new System.Drawing.Size(481, 42);
             this.siticoneContainerControl9.TabIndex = 0;
             this.siticoneContainerControl9.Text = "siticoneContainerControl9";
             // 
@@ -232,22 +231,22 @@ namespace OnlineChat
             this.tbPath.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbPath.Font = new System.Drawing.Font("Segoe UI Variable Text", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPath.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPath.Location = new System.Drawing.Point(103, 0);
-            this.tbPath.Margin = new System.Windows.Forms.Padding(2);
+            this.tbPath.Location = new System.Drawing.Point(137, 0);
+            this.tbPath.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbPath.Name = "tbPath";
             this.tbPath.PasswordChar = '\0';
             this.tbPath.PlaceholderText = "";
             this.tbPath.SelectedText = "";
-            this.tbPath.Size = new System.Drawing.Size(216, 34);
+            this.tbPath.Size = new System.Drawing.Size(289, 42);
             this.tbPath.TabIndex = 16;
             // 
             // picPreview
             // 
             this.picPreview.Dock = System.Windows.Forms.DockStyle.Right;
-            this.picPreview.Location = new System.Drawing.Point(319, 0);
-            this.picPreview.Margin = new System.Windows.Forms.Padding(2);
+            this.picPreview.Location = new System.Drawing.Point(426, 0);
+            this.picPreview.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picPreview.Name = "picPreview";
-            this.picPreview.Size = new System.Drawing.Size(41, 34);
+            this.picPreview.Size = new System.Drawing.Size(55, 42);
             this.picPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picPreview.TabIndex = 15;
             this.picPreview.TabStop = false;
@@ -263,9 +262,9 @@ namespace OnlineChat
             this.butLoadImage.Font = new System.Drawing.Font("Segoe UI Variable Small", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butLoadImage.ForeColor = System.Drawing.Color.White;
             this.butLoadImage.Location = new System.Drawing.Point(0, 0);
-            this.butLoadImage.Margin = new System.Windows.Forms.Padding(2);
+            this.butLoadImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butLoadImage.Name = "butLoadImage";
-            this.butLoadImage.Size = new System.Drawing.Size(103, 34);
+            this.butLoadImage.Size = new System.Drawing.Size(137, 42);
             this.butLoadImage.TabIndex = 13;
             this.butLoadImage.Text = "Choose avatar";
             this.butLoadImage.Click += new System.EventHandler(this.butLoadImage_Click);
@@ -274,10 +273,9 @@ namespace OnlineChat
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(34, 337);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(45, 414);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(360, 20);
+            this.label2.Size = new System.Drawing.Size(481, 25);
             this.label2.TabIndex = 11;
             this.label2.Text = "___________________________________________________";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -286,10 +284,10 @@ namespace OnlineChat
             // 
             this.siticoneContainerControl7.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneContainerControl7.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneContainerControl7.Location = new System.Drawing.Point(34, 232);
-            this.siticoneContainerControl7.Margin = new System.Windows.Forms.Padding(2);
+            this.siticoneContainerControl7.Location = new System.Drawing.Point(45, 283);
+            this.siticoneContainerControl7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneContainerControl7.Name = "siticoneContainerControl7";
-            this.siticoneContainerControl7.Size = new System.Drawing.Size(360, 15);
+            this.siticoneContainerControl7.Size = new System.Drawing.Size(481, 18);
             this.siticoneContainerControl7.TabIndex = 9;
             this.siticoneContainerControl7.Text = "siticoneContainerControl7";
             // 
@@ -306,24 +304,24 @@ namespace OnlineChat
             this.tbXNMK.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbXNMK.ForeColor = System.Drawing.Color.Black;
             this.tbXNMK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbXNMK.Location = new System.Drawing.Point(34, 201);
-            this.tbXNMK.Margin = new System.Windows.Forms.Padding(2);
+            this.tbXNMK.Location = new System.Drawing.Point(45, 245);
+            this.tbXNMK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbXNMK.Name = "tbXNMK";
             this.tbXNMK.PasswordChar = '*';
             this.tbXNMK.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.tbXNMK.PlaceholderText = "Confirm password";
             this.tbXNMK.SelectedText = "";
-            this.tbXNMK.Size = new System.Drawing.Size(360, 31);
+            this.tbXNMK.Size = new System.Drawing.Size(481, 38);
             this.tbXNMK.TabIndex = 8;
             // 
             // siticoneContainerControl6
             // 
             this.siticoneContainerControl6.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneContainerControl6.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneContainerControl6.Location = new System.Drawing.Point(34, 186);
-            this.siticoneContainerControl6.Margin = new System.Windows.Forms.Padding(2);
+            this.siticoneContainerControl6.Location = new System.Drawing.Point(45, 227);
+            this.siticoneContainerControl6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneContainerControl6.Name = "siticoneContainerControl6";
-            this.siticoneContainerControl6.Size = new System.Drawing.Size(360, 15);
+            this.siticoneContainerControl6.Size = new System.Drawing.Size(481, 18);
             this.siticoneContainerControl6.TabIndex = 7;
             this.siticoneContainerControl6.Text = "siticoneContainerControl6";
             // 
@@ -340,15 +338,15 @@ namespace OnlineChat
             this.tbMatKhau.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbMatKhau.ForeColor = System.Drawing.Color.Black;
             this.tbMatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbMatKhau.Location = new System.Drawing.Point(34, 155);
-            this.tbMatKhau.Margin = new System.Windows.Forms.Padding(2);
+            this.tbMatKhau.Location = new System.Drawing.Point(45, 189);
+            this.tbMatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbMatKhau.MaxLength = 24;
             this.tbMatKhau.Name = "tbMatKhau";
             this.tbMatKhau.PasswordChar = '*';
             this.tbMatKhau.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.tbMatKhau.PlaceholderText = "Password";
             this.tbMatKhau.SelectedText = "";
-            this.tbMatKhau.Size = new System.Drawing.Size(360, 31);
+            this.tbMatKhau.Size = new System.Drawing.Size(481, 38);
             this.tbMatKhau.TabIndex = 6;
             // 
             // siticoneContainerControl5
@@ -356,10 +354,10 @@ namespace OnlineChat
             this.siticoneContainerControl5.Controls.Add(this.lbUsernameValid);
             this.siticoneContainerControl5.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneContainerControl5.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneContainerControl5.Location = new System.Drawing.Point(34, 140);
-            this.siticoneContainerControl5.Margin = new System.Windows.Forms.Padding(2);
+            this.siticoneContainerControl5.Location = new System.Drawing.Point(45, 171);
+            this.siticoneContainerControl5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneContainerControl5.Name = "siticoneContainerControl5";
-            this.siticoneContainerControl5.Size = new System.Drawing.Size(360, 15);
+            this.siticoneContainerControl5.Size = new System.Drawing.Size(481, 18);
             this.siticoneContainerControl5.TabIndex = 5;
             this.siticoneContainerControl5.Text = "siticoneContainerControl5";
             // 
@@ -367,9 +365,8 @@ namespace OnlineChat
             // 
             this.lbUsernameValid.AutoSize = true;
             this.lbUsernameValid.Location = new System.Drawing.Point(0, 0);
-            this.lbUsernameValid.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbUsernameValid.Name = "lbUsernameValid";
-            this.lbUsernameValid.Size = new System.Drawing.Size(0, 13);
+            this.lbUsernameValid.Size = new System.Drawing.Size(0, 16);
             this.lbUsernameValid.TabIndex = 1;
             // 
             // tbUsername
@@ -385,15 +382,15 @@ namespace OnlineChat
             this.tbUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbUsername.ForeColor = System.Drawing.Color.Black;
             this.tbUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbUsername.Location = new System.Drawing.Point(34, 109);
-            this.tbUsername.Margin = new System.Windows.Forms.Padding(2);
+            this.tbUsername.Location = new System.Drawing.Point(45, 133);
+            this.tbUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbUsername.MaxLength = 60;
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.PasswordChar = '\0';
             this.tbUsername.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.tbUsername.PlaceholderText = "Username";
             this.tbUsername.SelectedText = "";
-            this.tbUsername.Size = new System.Drawing.Size(360, 31);
+            this.tbUsername.Size = new System.Drawing.Size(481, 38);
             this.tbUsername.TabIndex = 4;
             this.tbUsername.Validating += new System.ComponentModel.CancelEventHandler(this.tbUsername_Validating);
             // 
@@ -402,10 +399,10 @@ namespace OnlineChat
             this.siticoneContainerControl4.Controls.Add(this.lbEmailValid);
             this.siticoneContainerControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneContainerControl4.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneContainerControl4.Location = new System.Drawing.Point(34, 94);
-            this.siticoneContainerControl4.Margin = new System.Windows.Forms.Padding(2);
+            this.siticoneContainerControl4.Location = new System.Drawing.Point(45, 115);
+            this.siticoneContainerControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneContainerControl4.Name = "siticoneContainerControl4";
-            this.siticoneContainerControl4.Size = new System.Drawing.Size(360, 15);
+            this.siticoneContainerControl4.Size = new System.Drawing.Size(481, 18);
             this.siticoneContainerControl4.TabIndex = 3;
             this.siticoneContainerControl4.Text = "siticoneContainerControl4";
             // 
@@ -414,9 +411,8 @@ namespace OnlineChat
             this.lbEmailValid.AutoSize = true;
             this.lbEmailValid.Dock = System.Windows.Forms.DockStyle.Top;
             this.lbEmailValid.Location = new System.Drawing.Point(0, 0);
-            this.lbEmailValid.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbEmailValid.Name = "lbEmailValid";
-            this.lbEmailValid.Size = new System.Drawing.Size(0, 13);
+            this.lbEmailValid.Size = new System.Drawing.Size(0, 16);
             this.lbEmailValid.TabIndex = 0;
             // 
             // tbEmail
@@ -432,15 +428,15 @@ namespace OnlineChat
             this.tbEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbEmail.ForeColor = System.Drawing.Color.Black;
             this.tbEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbEmail.Location = new System.Drawing.Point(34, 63);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.tbEmail.Location = new System.Drawing.Point(45, 77);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbEmail.MaxLength = 128;
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.PasswordChar = '\0';
             this.tbEmail.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.tbEmail.PlaceholderText = "Email";
             this.tbEmail.SelectedText = "";
-            this.tbEmail.Size = new System.Drawing.Size(360, 31);
+            this.tbEmail.Size = new System.Drawing.Size(481, 38);
             this.tbEmail.TabIndex = 2;
             // 
             // siticoneContainerControl3
@@ -448,10 +444,10 @@ namespace OnlineChat
             this.siticoneContainerControl3.Controls.Add(this.lbHoTenValid);
             this.siticoneContainerControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneContainerControl3.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneContainerControl3.Location = new System.Drawing.Point(34, 48);
-            this.siticoneContainerControl3.Margin = new System.Windows.Forms.Padding(2);
+            this.siticoneContainerControl3.Location = new System.Drawing.Point(45, 59);
+            this.siticoneContainerControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneContainerControl3.Name = "siticoneContainerControl3";
-            this.siticoneContainerControl3.Size = new System.Drawing.Size(360, 15);
+            this.siticoneContainerControl3.Size = new System.Drawing.Size(481, 18);
             this.siticoneContainerControl3.TabIndex = 1;
             this.siticoneContainerControl3.Text = "siticoneContainerControl3";
             // 
@@ -460,9 +456,8 @@ namespace OnlineChat
             this.lbHoTenValid.AutoSize = true;
             this.lbHoTenValid.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbHoTenValid.Location = new System.Drawing.Point(0, 0);
-            this.lbHoTenValid.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbHoTenValid.Name = "lbHoTenValid";
-            this.lbHoTenValid.Size = new System.Drawing.Size(0, 13);
+            this.lbHoTenValid.Size = new System.Drawing.Size(0, 16);
             this.lbHoTenValid.TabIndex = 13;
             // 
             // tbHoTen
@@ -479,15 +474,15 @@ namespace OnlineChat
             this.tbHoTen.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbHoTen.ForeColor = System.Drawing.Color.Black;
             this.tbHoTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbHoTen.Location = new System.Drawing.Point(34, 17);
-            this.tbHoTen.Margin = new System.Windows.Forms.Padding(2);
+            this.tbHoTen.Location = new System.Drawing.Point(45, 21);
+            this.tbHoTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbHoTen.MaxLength = 128;
             this.tbHoTen.Name = "tbHoTen";
             this.tbHoTen.PasswordChar = '\0';
             this.tbHoTen.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.tbHoTen.PlaceholderText = "Full name";
             this.tbHoTen.SelectedText = "";
-            this.tbHoTen.Size = new System.Drawing.Size(360, 31);
+            this.tbHoTen.Size = new System.Drawing.Size(481, 38);
             this.tbHoTen.TabIndex = 0;
             this.tbHoTen.Validating += new System.ComponentModel.CancelEventHandler(this.tbHoTen_Validating);
             // 
@@ -498,9 +493,9 @@ namespace OnlineChat
             this.siticoneContainerControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneContainerControl1.FillColor = System.Drawing.Color.Transparent;
             this.siticoneContainerControl1.Location = new System.Drawing.Point(0, 0);
-            this.siticoneContainerControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.siticoneContainerControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneContainerControl1.Name = "siticoneContainerControl1";
-            this.siticoneContainerControl1.Size = new System.Drawing.Size(428, 53);
+            this.siticoneContainerControl1.Size = new System.Drawing.Size(571, 65);
             this.siticoneContainerControl1.TabIndex = 2;
             this.siticoneContainerControl1.Text = "siticoneContainerControl1";
             // 
@@ -523,9 +518,9 @@ namespace OnlineChat
             this.topContainer.Dock = System.Windows.Forms.DockStyle.Top;
             this.topContainer.FillColor = System.Drawing.Color.Transparent;
             this.topContainer.Location = new System.Drawing.Point(0, 0);
-            this.topContainer.Margin = new System.Windows.Forms.Padding(2);
+            this.topContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.topContainer.Name = "topContainer";
-            this.topContainer.Size = new System.Drawing.Size(600, 30);
+            this.topContainer.Size = new System.Drawing.Size(800, 37);
             this.topContainer.TabIndex = 1;
             this.topContainer.Text = "siticoneContainerControl2";
             // 
@@ -534,10 +529,10 @@ namespace OnlineChat
             this.siticoneControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.siticoneControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.siticoneControlBox1.IconColor = System.Drawing.Color.DimGray;
-            this.siticoneControlBox1.Location = new System.Drawing.Point(562, 0);
-            this.siticoneControlBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.siticoneControlBox1.Location = new System.Drawing.Point(749, 0);
+            this.siticoneControlBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siticoneControlBox1.Name = "siticoneControlBox1";
-            this.siticoneControlBox1.Size = new System.Drawing.Size(38, 30);
+            this.siticoneControlBox1.Size = new System.Drawing.Size(51, 37);
             this.siticoneControlBox1.TabIndex = 0;
             // 
             // siticoneEmailValidatingTool1
@@ -557,14 +552,14 @@ namespace OnlineChat
             // 
             // Signup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 650);
+            this.ClientSize = new System.Drawing.Size(800, 800);
             this.Controls.Add(this.topContainer);
             this.Controls.Add(this.centerContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Signup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Signup";

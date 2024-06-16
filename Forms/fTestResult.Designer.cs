@@ -157,7 +157,7 @@
             this.label11.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.label11.Size = new System.Drawing.Size(344, 50);
             this.label11.TabIndex = 10;
-            this.label11.Text = "Lần thi";
+            this.label11.Text = "Test ordinal";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblSource
@@ -182,7 +182,7 @@
             this.label9.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.label9.Size = new System.Drawing.Size(344, 50);
             this.label9.TabIndex = 8;
-            this.label9.Text = "Điểm";
+            this.label9.Text = "Score";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblTotalTime
@@ -206,7 +206,7 @@
             this.label7.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.label7.Size = new System.Drawing.Size(344, 50);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Thời gian hoàn thành";
+            this.label7.Text = "Total time";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblFinish
@@ -230,7 +230,7 @@
             this.label5.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.label5.Size = new System.Drawing.Size(344, 50);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Kết thúc";
+            this.label5.Text = "Time finish";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblState
@@ -255,7 +255,7 @@
             this.label3.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.label3.Size = new System.Drawing.Size(344, 50);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Trạng thái";
+            this.label3.Text = "State";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblStart
@@ -279,7 +279,7 @@
             this.label1.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.label1.Size = new System.Drawing.Size(344, 50);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Bắt đầu";
+            this.label1.Text = "Time start";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblFinishTest

@@ -291,17 +291,17 @@ namespace Elearning.Forms
                 select resource
                 ).ToList().FirstOrDefault();
 
-            testResult.finishTestName = String.Format("Bạn đã hoàn thành {0}", resourceTest.resource_name);
+            testResult.finishTestName = String.Format("You have completed the {0}", resourceTest.resource_name);
             testResult.timeStart = result.time_start.ToString();
             testResult.timeFinish = result.time_finish.ToString();
             if (result.is_passed == 0)
             {
-                testResult.testState = "Chưa đạt";
+                testResult.testState = "Not met";
                 testResult.TextStateColor = Color.Red;
             }
             else
             {
-                testResult.testState = "Hoàn thành";
+                testResult.testState = "Finish";
                 testResult.TextStateColor = Color.FromArgb(94, 148, 255);
             }
             testResult.totalTime = result.test_time.ToString();
@@ -337,7 +337,7 @@ namespace Elearning.Forms
         private void fCourseTest_FormClosed(object sender, FormClosedEventArgs e)
         {
             DialogResult result = MessageBox.Show(
-                "Bạn chắc chắn muốn kết thúc bài kiểm tra ?", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information
+                "Are you sure you want to end the test?", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information
                 );
             if (result == DialogResult.OK)
             {

@@ -133,10 +133,19 @@ namespace Elearning.UserControls
             }
             else
             {
-                lblStar.Text = "No rating";
+                lblStar.Text = "";
             }
 
-            lblPrice.Text = String.Format("{0} VNĐ", course.price.ToString());
+            if (course.discount_end_date <= DateTime.Now)
+            {
+                int? priceAfterDiscount =
+                    course.price - course.price * course.discount;
+                lblPrice.Text = Program.FormatNumberWithSpaces((int)priceAfterDiscount);
+            }
+            else
+            {
+                lblPrice.Text = Program.FormatNumberWithSpaces(course.price);
+            }
 
             LoadModuleOfCourse(course);
         }
@@ -168,7 +177,7 @@ namespace Elearning.UserControls
                 }
             }
 
-            lblTotalModule.Text = String.Format("{0} moudules", count.ToString());
+            lblTotalModule.Text = String.Format("Total modules: {0} moudules", count.ToString());
         }
 
         private void ucCourseModule_Click(object sender, EventArgs e)

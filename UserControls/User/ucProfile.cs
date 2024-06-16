@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Input;
+using System.Windows.Shapes;
 
 namespace Elearning.UserControls.User
 {
@@ -27,7 +28,7 @@ namespace Elearning.UserControls.User
 
         private void btnYourAccount_Click(object sender, EventArgs e)
         {
-
+            panYourAccount.Visible = true;
         }
 
         private void btnCommunication_Click(object sender, EventArgs e)
@@ -80,6 +81,8 @@ namespace Elearning.UserControls.User
             lblTotalCetiificate.Text = countComplete.ToString();
             lblStudying.Text = countStudying.ToString();
             lblPending.Text = countPending.ToString();
+
+            panYourAccount.Visible = true;
         }
 
         private void picAvatar_Click(object sender, EventArgs e)
@@ -89,11 +92,35 @@ namespace Elearning.UserControls.User
             openFileDialog.Multiselect = false;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
+                picAvatar.Image.Dispose();
                 string selectedFilePath = openFileDialog.FileName;
-                string newFilePath = Program.AVARTAR_PATH + currentAccount.avatar;
-                //Khong ghi de duoc. nho sua doan nay
-                File.Copy(selectedFilePath, newFilePath, true);
                 picAvatar.Image = Image.FromFile(selectedFilePath);
+                string newFilePath = Program.AVARTAR_PATH + currentAccount.avatar;
+
+                System.IO.File.Delete(Program.COURSES_IMG_PATH + currentAccount.avatar);
+                currentAccount.avatar = currentAccount.acc_id + System.IO.Path.GetExtension(selectedFilePath);
+                System.IO.File.Copy(selectedFilePath, Program.AVARTAR_PATH + currentAccount.avatar);
+                Program.provider.SaveChanges();
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (txtFullName.Text == "")
+            {
+                MessageBox.Show("Full name must be fill.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (txtEmail.Text == "")
+            {
+                MessageBox.Show("Email must be fill.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                currentAccount.fullname = txtFullName.Text;
+                currentAccount.email = txtEmail.Text;
+                Program.provider.SaveChanges();
+
+                MessageBox.Show("Update your profile sucessfull.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

@@ -54,5 +54,32 @@ namespace Elearning.UserControls
         {
             btnRateClick?.Invoke(this, e);
         }
+
+        public void SetUIRate(int flag)
+        {
+            if (flag == 0)
+            {
+                btnRate.Visible = false;
+                btnRate.Size = new Size(0, 0);
+                
+                btnViewDetails.Size = new Size(220, 50);
+            }
+            else if (flag == 1)
+            {
+                btnRate.Visible = true;
+                btnRate.Size = new Size(220, 45);
+                btnRate.Text = "Rate course";
+
+                btnViewDetails.Size = new Size(220, 45);
+            }
+            else if (flag == 2)
+            {
+                btnRate.Visible = true;
+                btnRate.Size = new Size(220, 45);
+                btnRate.Text = "Edit rate";
+
+                btnViewDetails.Size = new Size(220, 45);
+            }
+        }
     }
 }

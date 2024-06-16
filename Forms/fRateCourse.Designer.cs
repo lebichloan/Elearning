@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fRateCourse));
             this.panTop = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneContainerControl1 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.siticoneContainerControl6 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.siticoneContainerControl7 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
@@ -50,7 +51,7 @@
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.txtReview = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.btnAddReview = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.btnEditReview = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.panTop.SuspendLayout();
             this.siticoneContainerControl1.SuspendLayout();
             this.siticoneContainerControl6.SuspendLayout();
@@ -77,6 +78,15 @@
             this.panTop.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.panTop.Size = new System.Drawing.Size(782, 230);
             this.panTop.TabIndex = 5;
+            // 
+            // siticonePanel2
+            // 
+            this.siticonePanel2.BackColor = System.Drawing.Color.Black;
+            this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.siticonePanel2.Location = new System.Drawing.Point(220, 219);
+            this.siticonePanel2.Name = "siticonePanel2";
+            this.siticonePanel2.Size = new System.Drawing.Size(562, 1);
+            this.siticonePanel2.TabIndex = 8;
             // 
             // siticoneContainerControl1
             // 
@@ -338,14 +348,22 @@
             this.btnAddReview.Text = "Submit";
             this.btnAddReview.Click += new System.EventHandler(this.btnAddReview_Click);
             // 
-            // siticonePanel2
+            // btnEditReview
             // 
-            this.siticonePanel2.BackColor = System.Drawing.Color.Black;
-            this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.siticonePanel2.Location = new System.Drawing.Point(220, 219);
-            this.siticonePanel2.Name = "siticonePanel2";
-            this.siticonePanel2.Size = new System.Drawing.Size(562, 1);
-            this.siticonePanel2.TabIndex = 8;
+            this.btnEditReview.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditReview.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditReview.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEditReview.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEditReview.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.btnEditReview.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditReview.ForeColor = System.Drawing.Color.White;
+            this.btnEditReview.Location = new System.Drawing.Point(306, 462);
+            this.btnEditReview.Name = "btnEditReview";
+            this.btnEditReview.Size = new System.Drawing.Size(200, 50);
+            this.btnEditReview.TabIndex = 23;
+            this.btnEditReview.Text = "Submit";
+            this.btnEditReview.Visible = false;
+            this.btnEditReview.Click += new System.EventHandler(this.btnEditReview_Click);
             // 
             // fRateCourse
             // 
@@ -353,6 +371,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(812, 524);
+            this.Controls.Add(this.btnEditReview);
             this.Controls.Add(this.btnAddReview);
             this.Controls.Add(this.siticonePanel1);
             this.Controls.Add(this.label1);
@@ -409,5 +428,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtReview;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnAddReview;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel2;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnEditReview;
     }
 }

@@ -186,9 +186,8 @@
             this.lblError.Location = new System.Drawing.Point(0, 177);
             this.lblError.Margin = new System.Windows.Forms.Padding(20, 10, 0, 0);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(200, 23);
+            this.lblError.Size = new System.Drawing.Size(0, 23);
             this.lblError.TabIndex = 20;
-            this.lblError.Text = "Câu trả lời của bạn đúng";
             this.lblError.Visible = false;
             // 
             // lblQuestion

@@ -48,10 +48,10 @@
             this.conInfo.Controls.Add(this.lbLecturer);
             this.conInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.conInfo.FillColor = System.Drawing.Color.Transparent;
-            this.conInfo.Location = new System.Drawing.Point(10, 127);
+            this.conInfo.Location = new System.Drawing.Point(15, 215);
             this.conInfo.Name = "conInfo";
             this.conInfo.Padding = new System.Windows.Forms.Padding(4, 10, 4, 5);
-            this.conInfo.Size = new System.Drawing.Size(228, 139);
+            this.conInfo.Size = new System.Drawing.Size(293, 195);
             this.conInfo.TabIndex = 1;
             this.conInfo.Text = "siticoneContainerControl1";
             // 
@@ -65,9 +65,9 @@
             this.btnViewDetails.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
             this.btnViewDetails.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewDetails.ForeColor = System.Drawing.Color.White;
-            this.btnViewDetails.Location = new System.Drawing.Point(4, 59);
+            this.btnViewDetails.Location = new System.Drawing.Point(4, 95);
             this.btnViewDetails.Name = "btnViewDetails";
-            this.btnViewDetails.Size = new System.Drawing.Size(220, 35);
+            this.btnViewDetails.Size = new System.Drawing.Size(285, 45);
             this.btnViewDetails.TabIndex = 4;
             this.btnViewDetails.Text = "View details";
             this.btnViewDetails.Click += new System.EventHandler(this.btnViewDetails_Click);
@@ -75,9 +75,9 @@
             // siticonePanel1
             // 
             this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.siticonePanel1.Location = new System.Drawing.Point(4, 94);
+            this.siticonePanel1.Location = new System.Drawing.Point(4, 140);
             this.siticonePanel1.Name = "siticonePanel1";
-            this.siticonePanel1.Size = new System.Drawing.Size(220, 5);
+            this.siticonePanel1.Size = new System.Drawing.Size(285, 5);
             this.siticonePanel1.TabIndex = 3;
             // 
             // btnRate
@@ -91,9 +91,9 @@
             this.btnRate.FillColor = System.Drawing.Color.White;
             this.btnRate.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnRate.Location = new System.Drawing.Point(4, 99);
+            this.btnRate.Location = new System.Drawing.Point(4, 145);
             this.btnRate.Name = "btnRate";
-            this.btnRate.Size = new System.Drawing.Size(220, 35);
+            this.btnRate.Size = new System.Drawing.Size(285, 45);
             this.btnRate.TabIndex = 2;
             this.btnRate.Text = "Rate course";
             this.btnRate.Click += new System.EventHandler(this.btnRate_Click);
@@ -103,9 +103,9 @@
             this.lbCourseName.BackColor = System.Drawing.Color.Transparent;
             this.lbCourseName.Dock = System.Windows.Forms.DockStyle.Top;
             this.lbCourseName.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCourseName.Location = new System.Drawing.Point(4, 20);
+            this.lbCourseName.Location = new System.Drawing.Point(4, 35);
             this.lbCourseName.Name = "lbCourseName";
-            this.lbCourseName.Size = new System.Drawing.Size(220, 50);
+            this.lbCourseName.Size = new System.Drawing.Size(285, 50);
             this.lbCourseName.TabIndex = 1;
             this.lbCourseName.Text = "Introduction to Programming with C++: Basic mini course I";
             this.lbCourseName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -117,7 +117,7 @@
             this.lbLecturer.Font = new System.Drawing.Font("Segoe UI Symbol", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLecturer.Location = new System.Drawing.Point(4, 10);
             this.lbLecturer.Name = "lbLecturer";
-            this.lbLecturer.Size = new System.Drawing.Size(220, 10);
+            this.lbLecturer.Size = new System.Drawing.Size(285, 25);
             this.lbLecturer.TabIndex = 0;
             this.lbLecturer.Text = "Prof. Nguyen Tran Dang Vo";
             this.lbLecturer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -128,26 +128,26 @@
             this.picImage.BorderRadius = 6;
             this.picImage.Dock = System.Windows.Forms.DockStyle.Top;
             this.picImage.ImageRotate = 0F;
-            this.picImage.Location = new System.Drawing.Point(10, 10);
+            this.picImage.Location = new System.Drawing.Point(15, 15);
             this.picImage.Name = "picImage";
-            this.picImage.Size = new System.Drawing.Size(228, 117);
+            this.picImage.Size = new System.Drawing.Size(293, 200);
             this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picImage.TabIndex = 0;
             this.picImage.TabStop = false;
             // 
             // ucCoursePreview
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.conInfo);
             this.Controls.Add(this.picImage);
             this.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
-            this.MaximumSize = new System.Drawing.Size(399, 384);
+            this.MaximumSize = new System.Drawing.Size(325, 450);
             this.Name = "ucCoursePreview";
-            this.Padding = new System.Windows.Forms.Padding(10);
-            this.Size = new System.Drawing.Size(248, 276);
+            this.Padding = new System.Windows.Forms.Padding(15);
+            this.Size = new System.Drawing.Size(323, 425);
             this.conInfo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
             this.ResumeLayout(false);

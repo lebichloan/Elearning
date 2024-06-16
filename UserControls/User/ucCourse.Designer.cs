@@ -66,6 +66,7 @@
             // 
             // btnViewDetail
             // 
+            this.btnViewDetail.BorderRadius = 2;
             this.btnViewDetail.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnViewDetail.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnViewDetail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -183,6 +184,7 @@
             // 
             // btnBackHome
             // 
+            this.btnBackHome.BorderRadius = 2;
             this.btnBackHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnBackHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBackHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));

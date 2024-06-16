@@ -140,7 +140,17 @@ namespace Elearning.Forms
             else
             {
                 panPayment.Visible = false;
-                lblTotalCash.Text = String.Format("{0} VNĐ", course.price.ToString());
+
+                if (course.discount_end_date <= DateTime.Now)
+                {
+                    int? priceAfterDiscount =
+                        course.price - course.price * course.discount;
+                }
+                else
+                {
+                    lblTotalCash.Text = Program.FormatNumberWithSpaces(course.price);
+                }
+
                 btnBack.Visible = true;
                 panQRCode.Visible = true;
                 CreateQRCode();

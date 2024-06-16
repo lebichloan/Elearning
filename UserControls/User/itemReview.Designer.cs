@@ -91,6 +91,7 @@
             this.siticonePanel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.siticonePanel3.Location = new System.Drawing.Point(78, 0);
             this.siticonePanel3.Name = "siticonePanel3";
+            this.siticonePanel3.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.siticonePanel3.Size = new System.Drawing.Size(492, 138);
             this.siticonePanel3.TabIndex = 32;
             // 
@@ -99,7 +100,7 @@
             this.lblDateTime.AutoSize = true;
             this.lblDateTime.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblDateTime.Font = new System.Drawing.Font("Segoe UI Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateTime.Location = new System.Drawing.Point(0, 121);
+            this.lblDateTime.Location = new System.Drawing.Point(20, 121);
             this.lblDateTime.Margin = new System.Windows.Forms.Padding(20, 20, 0, 0);
             this.lblDateTime.Name = "lblDateTime";
             this.lblDateTime.Size = new System.Drawing.Size(72, 17);
@@ -111,7 +112,7 @@
             this.lblReview.AutoSize = true;
             this.lblReview.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblReview.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReview.Location = new System.Drawing.Point(0, 63);
+            this.lblReview.Location = new System.Drawing.Point(20, 63);
             this.lblReview.Margin = new System.Windows.Forms.Padding(20, 20, 0, 0);
             this.lblReview.Name = "lblReview";
             this.lblReview.Size = new System.Drawing.Size(56, 23);
@@ -126,9 +127,9 @@
             this.panStar.Controls.Add(this.btnStar2);
             this.panStar.Controls.Add(this.btnStar1);
             this.panStar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panStar.Location = new System.Drawing.Point(0, 23);
+            this.panStar.Location = new System.Drawing.Point(20, 23);
             this.panStar.Name = "panStar";
-            this.panStar.Size = new System.Drawing.Size(492, 40);
+            this.panStar.Size = new System.Drawing.Size(472, 40);
             this.panStar.TabIndex = 26;
             // 
             // btnStar5
@@ -196,7 +197,7 @@
             this.lblName.AutoSize = true;
             this.lblName.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(0, 0);
+            this.lblName.Location = new System.Drawing.Point(20, 0);
             this.lblName.Margin = new System.Windows.Forms.Padding(20, 20, 0, 0);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(60, 23);
@@ -205,8 +206,8 @@
             // 
             // itemReview
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.siticonePanel1);
             this.Controls.Add(this.siticonePanel2);
             this.Name = "itemReview";

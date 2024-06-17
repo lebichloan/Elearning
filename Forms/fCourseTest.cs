@@ -1,9 +1,11 @@
 ﻿using Elearning.Entities;
 using Elearning.UserControls.CourseTest;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.Common.CommandTrees;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -25,6 +27,12 @@ namespace Elearning.Forms
             InitializeComponent();
             this.currentCourse = course;
             currentAccount = fLogin.currentAccount;
+            currentRegister = (
+                from register in Program.provider.Registers
+                where register.learner_id == currentAccount.acc_id
+                && register.course_id == currentCourse.course_id
+                select register
+            ).ToList().FirstOrDefault();
             var currentTest = Program.provider.CourseTests.FirstOrDefault(x => x.resource_id == resourceID);
             currentTestID = currentTest.test_id;
             testTime = currentTest.test_maxtime;
@@ -221,10 +229,11 @@ namespace Elearning.Forms
             }
         }
 
+        private Register currentRegister;
         private TestResult SaveTestResult()
         {
             // get register_id
-            Register currentRegister = (
+            currentRegister = (
                 from register in Program.provider.Registers
                 where register.learner_id == currentAccount.acc_id 
                 && register.course_id == currentCourse.course_id
@@ -287,7 +296,8 @@ namespace Elearning.Forms
             fTestResult testResult = new fTestResult();
             CourseResource resourceTest = (
                 from resource in Program.provider.CourseResources
-                where resource.resource_id == currentTestID
+                join rtest in Program.provider.CourseTests
+                on resource.resource_id equals(rtest.resource_id)
                 select resource
                 ).ToList().FirstOrDefault();
 
@@ -314,7 +324,66 @@ namespace Elearning.Forms
 
         private void CloseCurrentTest(object sender, EventArgs e)
         {
+            if (CheckFinishCourse(currentCourse, currentAccount) == 1)
+            {
+                //  get all test mandatory of course
+                List<CourseTest> listCourseTest = (
+                    from test in Program.provider.CourseTests
+                    join resource in Program.provider.CourseResources
+                    on test.resource_id equals resource.resource_id
+                    join module in Program.provider.CourseModules
+                    on resource.module_id equals module.module_id
+                    join course in Program.provider.Courses
+                    on module.course_id equals course.course_id
+                    where test.mandatory == 1
+                    select test
+                    ).ToList();
+
+                double? total = 0;
+                foreach(CourseTest test in listCourseTest)
+                {
+                    List<TestResult> results = (
+                        from testResult in Program.provider.TestResults
+                        where testResult.test_id == test.test_id
+                        && testResult.register_id == currentRegister.register_id
+                        select testResult
+                        ).ToList();
+
+                    if (results.Count != 0)
+                    {
+                        TestResult maxResult = getMaxResult(results);
+                        total += maxResult.test_score;
+                    }
+                }
+
+                double? completeScore = total / listCourseTest.Count();
+
+
+                // luu thong tin
+                currentRegister.completion_score = completeScore;
+                currentRegister.register_status = 2;
+                currentRegister.time_finish = DateTime.Now;
+                Program.provider.SaveChanges();
+
+                // da hoan thanh khoa hoc
+                fFinishCourse finishCourse = new fFinishCourse(currentRegister);
+                finishCourse.ShowDialog();
+            }
+
             this.Close();
+        }
+
+        private TestResult getMaxResult(List<TestResult> allTestResult)
+        {
+            TestResult maxResult = allTestResult.FirstOrDefault();
+            foreach (TestResult result in allTestResult)
+            {
+                if (result.test_score > maxResult.test_score)
+                {
+                    maxResult = result;
+                }
+            }
+            return maxResult;
         }
 
         private void btnStart_Click(object sender, EventArgs e)
@@ -330,7 +399,7 @@ namespace Elearning.Forms
         {
             timerTest.Stop();
             finishTime = DateTime.Now;
-            TestResult  testResult = SaveTestResult();
+            TestResult testResult = SaveTestResult();
             ShowfTestResult(testResult);
         }
 
@@ -360,6 +429,7 @@ namespace Elearning.Forms
             List<CourseTest> listTestOfCourse = (
                 from test in Program.provider.CourseTests
                 where test.CourseResource.CourseModule.course_id == course.course_id
+                && test.mandatory == 1
                 select test
                 ).ToList();
 

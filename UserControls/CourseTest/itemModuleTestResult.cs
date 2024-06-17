@@ -68,7 +68,7 @@ namespace Elearning.UserControls.CourseTest
             {
                 List<TestResult> results = (
                     from testResult in Program.provider.TestResults
-                    where testResult.test_id == courseResource.resource_id
+                    where testResult.CourseTest.resource_id == courseResource.resource_id
                     && testResult.register_id == register.register_id
                     select testResult
                     ).ToList();

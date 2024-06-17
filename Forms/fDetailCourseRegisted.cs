@@ -25,6 +25,11 @@ namespace Elearning.Forms
         {
             InitializeComponent();
             this.register = register;
+            listCourseReviews = (
+                from review in Program.provider.CourseReviews
+                where review.register_id == register.register_id
+                select review
+                ).ToList();
             SetUI();
             GetDataForTable();
         }
@@ -44,7 +49,8 @@ namespace Elearning.Forms
             if (register.register_status == 2)
             {
                 lblFinish.Visible = true;
-                lblFinish.Text = String.Format("Date finish: {0}");
+                lblCompletionScore.Text = register.completion_score.ToString();
+                lblFinish.Text = String.Format("Date finish: {0}", register.time_finish.ToString());
                 lblCompletionState.Text = "Finish";
                 lblCompletionState.ForeColor = Color.FromArgb(94, 148, 255);
                 btnViewCertification.Visible = true;
@@ -55,6 +61,15 @@ namespace Elearning.Forms
                 lblCompletionState.Text = "Unfinished";
                 lblCompletionState.ForeColor = Color.Red;
                 btnViewCertification.Visible = false;
+            }
+
+            if (listCourseReviews.Count == 0)
+            {
+                btnAddReview.Text = "Add Review";
+            }
+            else
+            {
+                btnAddReview.Text = "Edit review";
             }
         }
 
@@ -88,9 +103,20 @@ namespace Elearning.Forms
             }
         }
 
+        private List<CourseReview> listCourseReviews;
+
         private void btnAddReview_Click(object sender, EventArgs e)
         {
-
+            if (listCourseReviews.Count == 0)
+            {
+                fRateCourse rateCourse = new fRateCourse(register.Course);
+                rateCourse.ShowDialog();
+            }
+            else
+            {
+                fRateCourse rateCourse = new fRateCourse(listCourseReviews.FirstOrDefault());
+                rateCourse.ShowDialog();
+            }
         }
 
         private void btnViewCertification_Click(object sender, EventArgs e)
@@ -100,7 +126,8 @@ namespace Elearning.Forms
             certification.courseName = register.Course.course_name;
             if (register.time_finish != null)
             {
-                certification.timeFinish = register.time_finish.Value.ToString("dd/MM/yy", CultureInfo.InvariantCulture);
+                certification.timeFinish = String.Format("Date: {0}",
+                    register.time_finish.Value.ToString("dd/MM/yy", CultureInfo.InvariantCulture));
             }
             certification.lecturer = register.Course.lecturer;
             certification.ShowDialog();

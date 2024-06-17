@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.lblTimeFinish = new System.Windows.Forms.Label();
             this.lblCourseName = new System.Windows.Forms.Label();
             this.picCourseImage = new Siticone.Desktop.UI.WinForms.SiticonePictureBox();
-            this.lblTimeFinish = new System.Windows.Forms.Label();
-            this.btnViewDetails = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.siticonePanel4 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.btnViewCertificate = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.siticonePanel4 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.btnViewDetails = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticonePanel1.SuspendLayout();
-            this.siticonePanel3.SuspendLayout();
             this.siticonePanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCourseImage)).BeginInit();
+            this.siticonePanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // siticonePanel1
@@ -56,18 +56,6 @@
             this.siticonePanel1.Size = new System.Drawing.Size(730, 140);
             this.siticonePanel1.TabIndex = 0;
             // 
-            // siticonePanel3
-            // 
-            this.siticonePanel3.Controls.Add(this.btnViewCertificate);
-            this.siticonePanel3.Controls.Add(this.siticonePanel4);
-            this.siticonePanel3.Controls.Add(this.btnViewDetails);
-            this.siticonePanel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.siticonePanel3.Location = new System.Drawing.Point(520, 10);
-            this.siticonePanel3.Name = "siticonePanel3";
-            this.siticonePanel3.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.siticonePanel3.Size = new System.Drawing.Size(200, 120);
-            this.siticonePanel3.TabIndex = 1;
-            // 
             // siticonePanel2
             // 
             this.siticonePanel2.Controls.Add(this.lblTimeFinish);
@@ -78,6 +66,18 @@
             this.siticonePanel2.Name = "siticonePanel2";
             this.siticonePanel2.Size = new System.Drawing.Size(510, 120);
             this.siticonePanel2.TabIndex = 2;
+            // 
+            // lblTimeFinish
+            // 
+            this.lblTimeFinish.AutoSize = true;
+            this.lblTimeFinish.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTimeFinish.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimeFinish.Location = new System.Drawing.Point(120, 57);
+            this.lblTimeFinish.Name = "lblTimeFinish";
+            this.lblTimeFinish.Padding = new System.Windows.Forms.Padding(10, 5, 0, 0);
+            this.lblTimeFinish.Size = new System.Drawing.Size(130, 28);
+            this.lblTimeFinish.TabIndex = 6;
+            this.lblTimeFinish.Text = "Lecturer name";
             // 
             // lblCourseName
             // 
@@ -102,42 +102,17 @@
             this.picCourseImage.TabIndex = 4;
             this.picCourseImage.TabStop = false;
             // 
-            // lblTimeFinish
+            // siticonePanel3
             // 
-            this.lblTimeFinish.AutoSize = true;
-            this.lblTimeFinish.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTimeFinish.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimeFinish.Location = new System.Drawing.Point(120, 57);
-            this.lblTimeFinish.Name = "lblTimeFinish";
-            this.lblTimeFinish.Padding = new System.Windows.Forms.Padding(10, 5, 0, 0);
-            this.lblTimeFinish.Size = new System.Drawing.Size(130, 28);
-            this.lblTimeFinish.TabIndex = 6;
-            this.lblTimeFinish.Text = "Lecturer name";
-            // 
-            // btnViewDetails
-            // 
-            this.btnViewDetails.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnViewDetails.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnViewDetails.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnViewDetails.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnViewDetails.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnViewDetails.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnViewDetails.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewDetails.ForeColor = System.Drawing.Color.White;
-            this.btnViewDetails.Location = new System.Drawing.Point(0, 12);
-            this.btnViewDetails.Name = "btnViewDetails";
-            this.btnViewDetails.Size = new System.Drawing.Size(200, 45);
-            this.btnViewDetails.TabIndex = 7;
-            this.btnViewDetails.Text = "View details";
-            this.btnViewDetails.Click += new System.EventHandler(this.btnViewDetails_Click);
-            // 
-            // siticonePanel4
-            // 
-            this.siticonePanel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel4.Location = new System.Drawing.Point(0, 57);
-            this.siticonePanel4.Name = "siticonePanel4";
-            this.siticonePanel4.Size = new System.Drawing.Size(200, 5);
-            this.siticonePanel4.TabIndex = 8;
+            this.siticonePanel3.Controls.Add(this.btnViewCertificate);
+            this.siticonePanel3.Controls.Add(this.siticonePanel4);
+            this.siticonePanel3.Controls.Add(this.btnViewDetails);
+            this.siticonePanel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.siticonePanel3.Location = new System.Drawing.Point(520, 10);
+            this.siticonePanel3.Name = "siticonePanel3";
+            this.siticonePanel3.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.siticonePanel3.Size = new System.Drawing.Size(200, 120);
+            this.siticonePanel3.TabIndex = 1;
             // 
             // btnViewCertificate
             // 
@@ -157,6 +132,31 @@
             this.btnViewCertificate.Text = "View certificate";
             this.btnViewCertificate.Click += new System.EventHandler(this.btnViewCertificate_Click);
             // 
+            // siticonePanel4
+            // 
+            this.siticonePanel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.siticonePanel4.Location = new System.Drawing.Point(0, 57);
+            this.siticonePanel4.Name = "siticonePanel4";
+            this.siticonePanel4.Size = new System.Drawing.Size(200, 5);
+            this.siticonePanel4.TabIndex = 8;
+            // 
+            // btnViewDetails
+            // 
+            this.btnViewDetails.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewDetails.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewDetails.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnViewDetails.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnViewDetails.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnViewDetails.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.btnViewDetails.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewDetails.ForeColor = System.Drawing.Color.White;
+            this.btnViewDetails.Location = new System.Drawing.Point(0, 12);
+            this.btnViewDetails.Name = "btnViewDetails";
+            this.btnViewDetails.Size = new System.Drawing.Size(200, 45);
+            this.btnViewDetails.TabIndex = 7;
+            this.btnViewDetails.Text = "View details";
+            this.btnViewDetails.Click += new System.EventHandler(this.btnViewDetails_Click);
+            // 
             // ucCertificate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -166,10 +166,10 @@
             this.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.Size = new System.Drawing.Size(750, 150);
             this.siticonePanel1.ResumeLayout(false);
-            this.siticonePanel3.ResumeLayout(false);
             this.siticonePanel2.ResumeLayout(false);
             this.siticonePanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCourseImage)).EndInit();
+            this.siticonePanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

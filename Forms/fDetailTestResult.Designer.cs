@@ -37,7 +37,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblTestOrdinal = new System.Windows.Forms.Label();
-            this.lblViewDetail = new System.Windows.Forms.Label();
             this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.lblLastState = new System.Windows.Forms.Label();
@@ -106,7 +105,6 @@
             this.panHeader.Controls.Add(this.label3);
             this.panHeader.Controls.Add(this.label4);
             this.panHeader.Controls.Add(this.lblTestOrdinal);
-            this.panHeader.Controls.Add(this.lblViewDetail);
             this.panHeader.Controls.Add(this.siticonePanel3);
             this.panHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panHeader.Location = new System.Drawing.Point(50, 150);
@@ -119,9 +117,9 @@
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(240, 10);
+            this.label2.Location = new System.Drawing.Point(315, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 50);
+            this.label2.Size = new System.Drawing.Size(220, 50);
             this.label2.TabIndex = 23;
             this.label2.Text = "Score";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -130,9 +128,9 @@
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Right;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(385, 10);
+            this.label3.Location = new System.Drawing.Point(535, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(175, 50);
+            this.label3.Size = new System.Drawing.Size(200, 50);
             this.label3.TabIndex = 22;
             this.label3.Text = "State";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -141,9 +139,9 @@
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Left;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(90, 10);
+            this.label4.Location = new System.Drawing.Point(115, 10);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(150, 50);
+            this.label4.Size = new System.Drawing.Size(200, 50);
             this.label4.TabIndex = 21;
             this.label4.Text = "Total time";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -154,21 +152,10 @@
             this.lblTestOrdinal.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTestOrdinal.Location = new System.Drawing.Point(15, 10);
             this.lblTestOrdinal.Name = "lblTestOrdinal";
-            this.lblTestOrdinal.Size = new System.Drawing.Size(75, 50);
+            this.lblTestOrdinal.Size = new System.Drawing.Size(100, 50);
             this.lblTestOrdinal.TabIndex = 20;
-            this.lblTestOrdinal.Text = "Oridinal";
+            this.lblTestOrdinal.Text = "Ordinal";
             this.lblTestOrdinal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblViewDetail
-            // 
-            this.lblViewDetail.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblViewDetail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblViewDetail.Location = new System.Drawing.Point(560, 10);
-            this.lblViewDetail.Name = "lblViewDetail";
-            this.lblViewDetail.Size = new System.Drawing.Size(175, 50);
-            this.lblViewDetail.TabIndex = 19;
-            this.lblViewDetail.Text = "More Option";
-            this.lblViewDetail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // siticonePanel3
             // 
@@ -293,7 +280,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblTestOrdinal;
-        private System.Windows.Forms.Label lblViewDetail;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel3;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel2;
         private System.Windows.Forms.Label lblLastState;

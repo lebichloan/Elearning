@@ -28,17 +28,26 @@ namespace Elearning.UserControls.User
 
         private void btnYourAccount_Click(object sender, EventArgs e)
         {
-            panYourAccount.Visible = true;
+            panAccount.Controls.Clear();
+
+            ucYourAccount yourAccount = new ucYourAccount();
+            yourAccount.Dock = DockStyle.Fill;
+            panAccount.Controls.Add(yourAccount);
         }
 
         private void btnCommunication_Click(object sender, EventArgs e)
         {
-
+            fChangePassword changePassword = new fChangePassword(currentAccount);
+            changePassword.ShowDialog();
         }
 
         private void btnYourCertificate_Click(object sender, EventArgs e)
         {
+            panAccount.Controls.Clear();
 
+            ucYourCertificate yourCertificate = new ucYourCertificate();
+            yourCertificate.Dock = DockStyle.Fill;
+            panAccount.Controls.Add(yourCertificate);
         }
 
         private void InitUI()
@@ -46,43 +55,49 @@ namespace Elearning.UserControls.User
             picAvatar.Image = Image.FromFile(Program.AVARTAR_PATH + currentAccount.avatar);
             lblName.Text = currentAccount.fullname;
 
-            txtFullName.Text = currentAccount.fullname;
-            txtUserName.Text = currentAccount.username;
-            txtEmail.Text = currentAccount.email;
-            txtPassword.Text = currentAccount.user_password;
+            panAccount.Controls.Clear();
 
-            List<Register> allCoursesRegister = (
-                from course in Program.provider.Courses
-                join register in Program.provider.Registers on course.course_id equals register.course_id
-                join account in Program.provider.Accounts on register.learner_id equals account.acc_id
-                select register
-            ).ToList();
+            ucYourAccount yourAccount = new ucYourAccount();
+            yourAccount.Dock = DockStyle.Fill;
+            panAccount.Controls.Add(yourAccount);
 
-            lblTotalCourse.Text = allCoursesRegister.Count().ToString();
+            //txtFullName.Text = currentAccount.fullname;
+            //txtUserName.Text = currentAccount.username;
+            //txtEmail.Text = currentAccount.email;
+            //txtPassword.Text = currentAccount.user_password;
 
-            int countComplete = 0;
-            int countStudying = 0;
-            int countPending = 0;
-            foreach( Register register in allCoursesRegister)
-            {
-                if (register.register_status == 0)
-                {
-                    countPending++;
-                }
-                else if (register.register_status == 1)
-                {
-                    countStudying++;
-                }
-                else if (register.register_status == 2)
-                {
-                    countComplete++;
-                }
-            }
-            lblTotalCetiificate.Text = countComplete.ToString();
-            lblStudying.Text = countStudying.ToString();
-            lblPending.Text = countPending.ToString();
+            //List<Register> allCoursesRegister = (
+            //    from course in Program.provider.Courses
+            //    join register in Program.provider.Registers on course.course_id equals register.course_id
+            //    join account in Program.provider.Accounts on register.learner_id equals account.acc_id
+            //    select register
+            //).ToList();
 
-            panYourAccount.Visible = true;
+            //lblTotalCourse.Text = allCoursesRegister.Count().ToString();
+
+            //int countComplete = 0;
+            //int countStudying = 0;
+            //int countPending = 0;
+            //foreach( Register register in allCoursesRegister)
+            //{
+            //    if (register.register_status == 0)
+            //    {
+            //        countPending++;
+            //    }
+            //    else if (register.register_status == 1)
+            //    {
+            //        countStudying++;
+            //    }
+            //    else if (register.register_status == 2)
+            //    {
+            //        countComplete++;
+            //    }
+            //}
+            //lblTotalCetiificate.Text = countComplete.ToString();
+            //lblStudying.Text = countStudying.ToString();
+            //lblPending.Text = countPending.ToString();
+
+            //panYourAccount.Visible = true;
         }
 
         private void picAvatar_Click(object sender, EventArgs e)

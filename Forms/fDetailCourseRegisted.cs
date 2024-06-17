@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -90,6 +91,19 @@ namespace Elearning.Forms
         private void btnAddReview_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnViewCertification_Click(object sender, EventArgs e)
+        {
+            fCertification certification = new fCertification();
+            certification.fullName = register.Account.fullname;
+            certification.courseName = register.Course.course_name;
+            if (register.time_finish != null)
+            {
+                certification.timeFinish = register.time_finish.Value.ToString("dd/MM/yy", CultureInfo.InvariantCulture);
+            }
+            certification.lecturer = register.Course.lecturer;
+            certification.ShowDialog();
         }
     }
 }

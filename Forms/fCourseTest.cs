@@ -354,5 +354,32 @@ namespace Elearning.Forms
         {
 
         }
+
+        private int CheckFinishCourse(Course course, Account account)
+        {
+            List<CourseTest> listTestOfCourse = (
+                from test in Program.provider.CourseTests
+                where test.CourseResource.CourseModule.course_id == course.course_id
+                select test
+                ).ToList();
+
+            foreach (CourseTest test in listTestOfCourse)
+            {
+                // get test result
+                List<TestResult> listTestResult = (
+                    from result in Program.provider.TestResults
+                    where result.test_id == test.test_id
+                    && result.Register.learner_id == account.acc_id
+                    && result.is_passed == 1
+                    select result
+                    ).ToList();
+
+                if (listTestResult.Count == 0)
+                {
+                    return 0;
+                }
+            }
+            return 1;
+        }
     }
 }

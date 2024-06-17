@@ -109,12 +109,6 @@
     <Compile Include="Entities\TestResult.cs">
       <DependentUpon>ELearningModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CourseTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\CourseTest.Designer.cs">
-      <DependentUpon>CourseTest.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\fAdminAddCourse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +144,12 @@
     </Compile>
     <Compile Include="Forms\fAdminMain.Designer.cs">
       <DependentUpon>fAdminMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fCertification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fCertification.Designer.cs">
+      <DependentUpon>fCertification.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\fChangePassword.cs">
       <SubType>Form</SubType>
@@ -369,6 +369,12 @@
     <Compile Include="UserControls\User\itemVideo.Designer.cs">
       <DependentUpon>itemVideo.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\User\ucCertificate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\User\ucCertificate.Designer.cs">
+      <DependentUpon>ucCertificate.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\User\ucCourseModule.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -468,9 +474,18 @@
     <Compile Include="UserControls\User\ucProfile.Designer.cs">
       <DependentUpon>ucProfile.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\CourseTest.resx">
-      <DependentUpon>CourseTest.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="UserControls\User\ucYourAccount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\User\ucYourAccount.Designer.cs">
+      <DependentUpon>ucYourAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\User\ucYourCertificate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\User\ucYourCertificate.Designer.cs">
+      <DependentUpon>ucYourCertificate.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\fAdminAddCourse.resx">
       <DependentUpon>fAdminAddCourse.cs</DependentUpon>
     </EmbeddedResource>
@@ -488,6 +503,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\fAdminMain.resx">
       <DependentUpon>fAdminMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fCertification.resx">
+      <DependentUpon>fCertification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\fChangePassword.resx">
       <DependentUpon>fChangePassword.cs</DependentUpon>
@@ -607,6 +625,9 @@
     <EmbeddedResource Include="UserControls\CourseTest\ucTotal.resx">
       <DependentUpon>ucTotal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\User\ucCertificate.resx">
+      <DependentUpon>ucCertificate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\User\ucCourse.resx">
       <DependentUpon>ucCourse.cs</DependentUpon>
     </EmbeddedResource>
@@ -651,6 +672,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\User\ucProfile.resx">
       <DependentUpon>ucProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\User\ucYourAccount.resx">
+      <DependentUpon>ucYourAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\User\ucYourCertificate.resx">
+      <DependentUpon>ucYourCertificate.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Entities\ELearningModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

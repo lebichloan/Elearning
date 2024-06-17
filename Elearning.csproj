@@ -163,6 +163,12 @@
     <Compile Include="Forms\fCourseTest.Designer.cs">
       <DependentUpon>fCourseTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\fCourseTestOnlyQuestionInView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fCourseTestOnlyQuestionInView.Designer.cs">
+      <DependentUpon>fCourseTestOnlyQuestionInView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\fDetailCourseRegisted.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -524,6 +530,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\fCourseTest.resx">
       <DependentUpon>fCourseTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fCourseTestOnlyQuestionInView.resx">
+      <DependentUpon>fCourseTestOnlyQuestionInView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\fDetailCourseRegisted.resx">
       <DependentUpon>fDetailCourseRegisted.cs</DependentUpon>

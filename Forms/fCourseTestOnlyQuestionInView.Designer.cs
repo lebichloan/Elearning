@@ -1,6 +1,6 @@
 ﻿namespace Elearning.Forms
 {
-    partial class fCourseTest
+    partial class fCourseTestOnlyQuestionInView
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fCourseTest));
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.btnStart = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.lblTimer = new System.Windows.Forms.Label();
@@ -43,19 +42,19 @@
             this.tbAllQuestion = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.siticonePanel4 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.panPaging = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.btnPre = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticonePanel5 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.btnNext = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.siticonePanel4 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.tbQuestion = new System.Windows.Forms.TableLayoutPanel();
             this.siticonePanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.siticonePanel1.SuspendLayout();
             this.panQuestion.SuspendLayout();
             this.siticonePanel3.SuspendLayout();
-            this.panPaging.SuspendLayout();
             this.siticonePanel4.SuspendLayout();
+            this.panPaging.SuspendLayout();
             this.SuspendLayout();
             // 
             // siticonePanel2
@@ -84,7 +83,6 @@
             this.btnStart.Size = new System.Drawing.Size(150, 50);
             this.btnStart.TabIndex = 18;
             this.btnStart.Text = "Start";
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // lblTimer
             // 
@@ -137,8 +135,8 @@
             // 
             // timerTest
             // 
+            this.timerTest.Enabled = true;
             this.timerTest.Interval = 1000;
-            this.timerTest.Tick += new System.EventHandler(this.timerTest_Tick);
             // 
             // siticonePanel1
             // 
@@ -164,7 +162,6 @@
             this.btnDone.TabIndex = 19;
             this.btnDone.Text = "Finish";
             this.btnDone.Visible = false;
-            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // panQuestion
             // 
@@ -208,7 +205,6 @@
             // siticonePanel3
             // 
             this.siticonePanel3.Controls.Add(this.siticonePanel4);
-            this.siticonePanel3.Controls.Add(this.panPaging);
             this.siticonePanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticonePanel3.Location = new System.Drawing.Point(324, 95);
             this.siticonePanel3.Name = "siticonePanel3";
@@ -216,17 +212,30 @@
             this.siticonePanel3.Size = new System.Drawing.Size(904, 584);
             this.siticonePanel3.TabIndex = 5;
             // 
+            // siticonePanel4
+            // 
+            this.siticonePanel4.BorderColor = System.Drawing.Color.Black;
+            this.siticonePanel4.BorderThickness = 1;
+            this.siticonePanel4.Controls.Add(this.panPaging);
+            this.siticonePanel4.Controls.Add(this.tbQuestion);
+            this.siticonePanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.siticonePanel4.Location = new System.Drawing.Point(15, 15);
+            this.siticonePanel4.Name = "siticonePanel4";
+            this.siticonePanel4.Padding = new System.Windows.Forms.Padding(5);
+            this.siticonePanel4.Size = new System.Drawing.Size(874, 554);
+            this.siticonePanel4.TabIndex = 0;
+            // 
             // panPaging
             // 
             this.panPaging.Controls.Add(this.btnPre);
             this.panPaging.Controls.Add(this.siticonePanel5);
             this.panPaging.Controls.Add(this.btnNext);
             this.panPaging.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panPaging.Location = new System.Drawing.Point(15, 519);
+            this.panPaging.Location = new System.Drawing.Point(5, 499);
             this.panPaging.Name = "panPaging";
             this.panPaging.Padding = new System.Windows.Forms.Padding(5, 5, 10, 5);
-            this.panPaging.Size = new System.Drawing.Size(874, 50);
-            this.panPaging.TabIndex = 4;
+            this.panPaging.Size = new System.Drawing.Size(864, 50);
+            this.panPaging.TabIndex = 3;
             this.panPaging.Visible = false;
             // 
             // btnPre
@@ -238,18 +247,17 @@
             this.btnPre.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnPre.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnPre.ForeColor = System.Drawing.Color.White;
-            this.btnPre.Image = ((System.Drawing.Image)(resources.GetObject("btnPre.Image")));
-            this.btnPre.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnPre.Location = new System.Drawing.Point(774, 5);
+            this.btnPre.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnPre.Location = new System.Drawing.Point(764, 5);
             this.btnPre.Name = "btnPre";
             this.btnPre.Size = new System.Drawing.Size(40, 40);
             this.btnPre.TabIndex = 23;
-            this.btnPre.Click += new System.EventHandler(this.btnPre_Click);
+            this.btnPre.Visible = false;
             // 
             // siticonePanel5
             // 
             this.siticonePanel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.siticonePanel5.Location = new System.Drawing.Point(814, 5);
+            this.siticonePanel5.Location = new System.Drawing.Point(804, 5);
             this.siticonePanel5.Name = "siticonePanel5";
             this.siticonePanel5.Size = new System.Drawing.Size(10, 40);
             this.siticonePanel5.TabIndex = 22;
@@ -263,25 +271,12 @@
             this.btnNext.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnNext.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
-            this.btnNext.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnNext.Location = new System.Drawing.Point(824, 5);
+            this.btnNext.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnNext.Location = new System.Drawing.Point(814, 5);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(40, 40);
             this.btnNext.TabIndex = 20;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // siticonePanel4
-            // 
-            this.siticonePanel4.BorderColor = System.Drawing.Color.Black;
-            this.siticonePanel4.BorderThickness = 1;
-            this.siticonePanel4.Controls.Add(this.tbQuestion);
-            this.siticonePanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.siticonePanel4.Location = new System.Drawing.Point(15, 15);
-            this.siticonePanel4.Name = "siticonePanel4";
-            this.siticonePanel4.Padding = new System.Windows.Forms.Padding(5);
-            this.siticonePanel4.Size = new System.Drawing.Size(874, 504);
-            this.siticonePanel4.TabIndex = 5;
+            this.btnNext.Visible = false;
             // 
             // tbQuestion
             // 
@@ -292,11 +287,11 @@
             this.tbQuestion.Name = "tbQuestion";
             this.tbQuestion.RowCount = 1;
             this.tbQuestion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbQuestion.Size = new System.Drawing.Size(864, 494);
-            this.tbQuestion.TabIndex = 4;
+            this.tbQuestion.Size = new System.Drawing.Size(864, 544);
+            this.tbQuestion.TabIndex = 2;
             this.tbQuestion.Visible = false;
             // 
-            // fCourseTest
+            // fCourseTestOnlyQuestionInView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -306,12 +301,10 @@
             this.Controls.Add(this.siticonePanel1);
             this.Controls.Add(this.siticonePanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "fCourseTest";
+            this.Name = "fCourseTestOnlyQuestionInView";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fCourseTest_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.fCourseTest_FormClosed);
             this.siticonePanel2.ResumeLayout(false);
             this.siticonePanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
@@ -319,8 +312,8 @@
             this.panQuestion.ResumeLayout(false);
             this.panQuestion.PerformLayout();
             this.siticonePanel3.ResumeLayout(false);
-            this.panPaging.ResumeLayout(false);
             this.siticonePanel4.ResumeLayout(false);
+            this.panPaging.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -337,13 +330,13 @@
         private System.Windows.Forms.Label label4;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel3;
         private System.Windows.Forms.TableLayoutPanel tbAllQuestion;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton btnStart;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton btnDone;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel4;
         private System.Windows.Forms.TableLayoutPanel tbQuestion;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnStart;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnDone;
         private Siticone.Desktop.UI.WinForms.SiticonePanel panPaging;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnNext;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnPre;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel5;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton btnNext;
     }
 }

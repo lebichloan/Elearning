@@ -49,6 +49,7 @@
             this.btnQuestionOrdinal.Size = new System.Drawing.Size(50, 50);
             this.btnQuestionOrdinal.TabIndex = 17;
             this.btnQuestionOrdinal.Text = "1";
+            this.btnQuestionOrdinal.Click += new System.EventHandler(this.btnQuestionOrdinal_Click);
             // 
             // itemQuestion
             // 
@@ -59,6 +60,7 @@
             this.Name = "itemQuestion";
             this.Padding = new System.Windows.Forms.Padding(5);
             this.Size = new System.Drawing.Size(60, 60);
+            this.Click += new System.EventHandler(this.btnQuestionOrdinal_Click);
             this.ResumeLayout(false);
 
         }

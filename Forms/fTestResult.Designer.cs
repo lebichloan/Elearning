@@ -30,6 +30,7 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.btnExit = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblTestOrdinal = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@
             this.lblStart = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblFinishTest = new System.Windows.Forms.Label();
-            this.btnExit = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.siticonePanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -68,6 +68,25 @@
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Size = new System.Drawing.Size(700, 100);
             this.siticonePanel1.TabIndex = 9;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BorderColor = System.Drawing.Color.Red;
+            this.btnExit.BorderThickness = 1;
+            this.btnExit.CustomBorderColor = System.Drawing.Color.Red;
+            this.btnExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnExit.FillColor = System.Drawing.Color.White;
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnExit.ForeColor = System.Drawing.Color.Red;
+            this.btnExit.Location = new System.Drawing.Point(275, 25);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(150, 50);
+            this.btnExit.TabIndex = 22;
+            this.btnExit.Text = "Exit";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -256,24 +275,6 @@
             this.lblFinishTest.TabIndex = 7;
             this.lblFinishTest.Text = "Bạn đã hoàn thành";
             this.lblFinishTest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BorderColor = System.Drawing.Color.Red;
-            this.btnExit.BorderThickness = 1;
-            this.btnExit.CustomBorderColor = System.Drawing.Color.Red;
-            this.btnExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnExit.FillColor = System.Drawing.Color.White;
-            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnExit.ForeColor = System.Drawing.Color.Red;
-            this.btnExit.Location = new System.Drawing.Point(275, 25);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(150, 50);
-            this.btnExit.TabIndex = 22;
-            this.btnExit.Text = "Exit";
             // 
             // fTestResult
             // 

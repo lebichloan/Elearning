@@ -54,7 +54,102 @@ namespace Elearning.Forms
             }
             else
             {
+                panPaging.Visible = true;
+                panPaging.Size = new Size(874, 50);
+                LoadAllControl();
+                LoadQuestionWithIndex(index);
+            }
+        }
 
+        private int index = 0;
+        private void goToQuestionOneInPage(object sender, EventArgs e)
+        {
+            itemQuestion item = sender as itemQuestion;
+            if (item != null)
+            {
+                int.TryParse(item.questionOrdinal, out index);
+                index = index - 1;
+                LoadQuestionWithIndex(index);
+            }
+        }
+
+        private void LoadQuestionWithIndex(int questionIndex)
+        {
+            tbQuestion.Controls.Clear();
+            tbQuestion.AutoScroll = true;
+            tbQuestion.VerticalScroll.Visible = true;
+            tbQuestion.VerticalScroll.Enabled = true;
+            tbQuestion.HorizontalScroll.Visible = false;
+            tbQuestion.HorizontalScroll.Enabled = false;
+            tbQuestion.RowCount = 0;
+            tbQuestion.RowStyles.Clear();
+            tbQuestion.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+
+            tbQuestion.Controls.Add(listUCTestQuestion[questionIndex]);
+            if (questionIndex == 0)
+            {
+                btnNext.Enabled = true;
+                btnPre.Enabled = false;
+            }
+            if (questionIndex == listUCTestQuestion.Count - 1)
+            {
+                btnNext.Enabled = false;
+                btnPre.Enabled = true;
+            }
+            if (questionIndex >0 && questionIndex < listUCTestQuestion.Count - 1)
+            {
+                btnNext.Enabled = true;
+                btnPre.Enabled = true;
+            }
+        }
+
+        private List<ucTestQuestion> listUCTestQuestion = new List<ucTestQuestion>();
+        private void LoadAllControl()
+        {
+            LoadtbAllQuestion();
+
+            int count = 1;
+            foreach (TestQuestion question in allQuestions)
+            {
+                ucTestQuestion ucTest = new ucTestQuestion();
+                ucTest.testQuestion = question;
+                ucTest.ordinnal = count;
+                ucTest.id = question.test_id;
+                ucTest.isTickQuestion = false;
+                ucTest.isViewOnly = isView;
+                ucTest.SetUI();
+                ucTest.questionNumber = String.Format("Question {0}:", count);
+                ucTest.questionState = "";
+                ucTest.questionContent = question.question_description;
+                ucTest.answerState = "False";
+                ucTest.trueAnswer = question.answer;
+                ucTest.ucTestQuestion_LoadAnswer(question.question_type, question.choices);
+                ucTest.ucTestQuestionChooseAnswerClick += chooseAnswerClick;
+                ucTest.ucTestQuestionTickClick += tickQuestionClick;
+                ucTest.Dock = DockStyle.Top;
+                listUCTestQuestion.Add(ucTest);
+                count++;
+            }
+        }
+
+        private void LoadtbAllQuestion()
+        {
+            itemQuestion item = new itemQuestion();
+            int columns = (tbAllQuestion.Width - 5) / item.MaximumSize.Width;
+            tbAllQuestion.ColumnCount = columns;
+            tbAllQuestion.ColumnStyles.Clear();
+            for (int i = 0; i < columns; ++i)
+            {
+                tbAllQuestion.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, tbAllQuestion.Width / columns));
+            }
+
+            for (int i = 1; i <= allQuestions.Count(); i++)
+            {
+                itemQuestion itemquestion = new itemQuestion();
+                itemquestion.questionOrdinal = i.ToString();
+                itemquestion.goToQuestionClick += goToQuestionOneInPage;
+                itemquestion.Dock = DockStyle.Fill;
+                tbAllQuestion.Controls.Add(itemquestion);
             }
         }
 
@@ -96,6 +191,10 @@ namespace Elearning.Forms
             tbQuestion.RowStyles.Add(new RowStyle(SizeType.AutoSize));
         }
 
+        private void GoToQuestionAll(object sender, EventArgs e)
+        {
+
+        }
         private void LoadAllQuestion()
         {
             panPaging.Visible = false;
@@ -114,6 +213,7 @@ namespace Elearning.Forms
             {
                 itemQuestion itemquestion = new itemQuestion();
                 itemquestion.questionOrdinal = i.ToString();
+                itemquestion.goToQuestionClick += GoToQuestionAll;
                 itemquestion.Dock = DockStyle.Fill;
                 tbAllQuestion.Controls.Add(itemquestion);
             }
@@ -226,6 +326,7 @@ namespace Elearning.Forms
                 finishTime = DateTime.Now;
                 TestResult testResult = SaveTestResult();
                 ShowfTestResult(testResult);
+                isStarted = 0;
             }
         }
 
@@ -252,13 +353,28 @@ namespace Elearning.Forms
 
             // get test score
             int totalScore = 0;
-            foreach (Control control in tbQuestion.Controls)
+            
+            if (displayType == 0)
             {
-                ucTestQuestion item = control as ucTestQuestion;
-                if (item.trueScore != 0)
+                foreach (Control control in tbQuestion.Controls)
                 {
-                    int score = (int)(item.trueScore * item.testQuestion.score / 100);
-                    totalScore += score;
+                    ucTestQuestion item = control as ucTestQuestion;
+                    if (item.trueScore != 0)
+                    {
+                        int score = (int)(item.trueScore * item.testQuestion.score / 100);
+                        totalScore += score;
+                    }
+                }
+            }
+            else
+            {
+                foreach (ucTestQuestion item in listUCTestQuestion)
+                {
+                    if (item.trueScore != 0)
+                    {
+                        int score = (int)(item.trueScore * item.testQuestion.score / 100);
+                        totalScore += score;
+                    }
                 }
             }
 
@@ -324,6 +440,7 @@ namespace Elearning.Forms
 
         private void CloseCurrentTest(object sender, EventArgs e)
         {
+            this.Hide();
             if (CheckFinishCourse(currentCourse, currentAccount) == 1)
             {
                 //  get all test mandatory of course
@@ -386,13 +503,16 @@ namespace Elearning.Forms
             return maxResult;
         }
 
+        private int isStarted = 0;
         private void btnStart_Click(object sender, EventArgs e)
         {
             btnStart.Visible = false;
             tbQuestion.Visible = true;
             tbAllQuestion.Enabled = true;
+            timerTest.Enabled = true;
             timerTest.Start();
             startTime = DateTime.Now;
+            isStarted = 1;
         }
 
         private void btnDone_Click(object sender, EventArgs e)
@@ -401,22 +521,25 @@ namespace Elearning.Forms
             finishTime = DateTime.Now;
             TestResult testResult = SaveTestResult();
             ShowfTestResult(testResult);
+            isStarted = 0;
         }
 
         private void fCourseTest_FormClosed(object sender, FormClosedEventArgs e)
         {
-            DialogResult result = MessageBox.Show(
-                "Are you sure you want to end the test?", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information
-                );
-            if (result == DialogResult.OK)
+            if (isStarted == 1)
             {
-                timerTest.Stop();
-                finishTime = DateTime.Now;
-                TestResult testResult = SaveTestResult();
-                ShowfTestResult(testResult);
-                this.Close();
+                DialogResult result = MessageBox.Show(
+                    "Are you sure you want to end the test?", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information
+                    );
+                if (result == DialogResult.OK)
+                {
+                    timerTest.Stop();
+                    finishTime = DateTime.Now;
+                    TestResult testResult = SaveTestResult();
+                    ShowfTestResult(testResult);
+                    this.Close();
+                }
             }
-
         }
 
         private void fCourseTest_FormClosing(object sender, FormClosingEventArgs e)
@@ -450,6 +573,24 @@ namespace Elearning.Forms
                 }
             }
             return 1;
+        }
+
+        private void btnPre_Click(object sender, EventArgs e)
+        {
+            if (index >= 1)
+            {
+                index--;
+                LoadQuestionWithIndex(index - 1);
+            }
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (index <= listUCTestQuestion.Count() - 1)
+            {
+                index++;
+                LoadQuestionWithIndex(index - 1);
+            }
         }
     }
 }

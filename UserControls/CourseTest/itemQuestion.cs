@@ -35,5 +35,10 @@ namespace Elearning.UserControls.CourseTest
             set { btnQuestionOrdinal.ForeColor = value; }
         }
 
+        public EventHandler goToQuestionClick;
+        private void btnQuestionOrdinal_Click(object sender, EventArgs e)
+        {
+            goToQuestionClick?.Invoke(this, e);
+        }
     }
 }

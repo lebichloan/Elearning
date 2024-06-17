@@ -14,6 +14,7 @@ namespace Elearning.UserControls
     public partial class ucAdminQstShortAns : UserControl
     {
         TestQuestion question;
+        public EventHandler pointChange;
         public ucAdminQstShortAns()
         {
             InitializeComponent();
@@ -42,6 +43,11 @@ namespace Elearning.UserControls
             question.score = GetScore();
             question.choices = "";
             question.answer = tbAnswer.Text;
+        }
+
+        private void tbPoint_TextChanged(object sender, EventArgs e)
+        {
+            pointChange?.Invoke(this, e);
         }
     }
 }

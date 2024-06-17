@@ -27,6 +27,11 @@ namespace Elearning.UserControls
             tableLayoutPanel1.ColumnStyles[2].SizeType = SizeType.Percent;
             tableLayoutPanel1.ColumnStyles[2].Width = 33.33f;
 
+            if (!Program.courseStats.ContainsKey(course.course_id))
+            {
+                // if the course has not been loaded yet, reload all the courses' statistics
+                Program.LoadCoursesStatistics();
+            }
             Program.CourseStats stat = Program.courseStats[course.course_id];
             lbNumRegister.Text = stat.total_learners.ToString();
             lbNumComplete.Text = stat.total_completed.ToString();

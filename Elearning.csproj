@@ -345,6 +345,12 @@
     <Compile Include="UserControls\ucCourseStatistics.Designer.cs">
       <DependentUpon>ucCourseStatistics.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucOverallStats.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucOverallStats.Designer.cs">
+      <DependentUpon>ucOverallStats.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\User\itemFile.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -580,6 +586,9 @@
     <EmbeddedResource Include="UserControls\ucCourseStatistics.resx">
       <DependentUpon>ucCourseStatistics.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucOverallStats.resx">
+      <DependentUpon>ucOverallStats.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\User\itemFile.resx">
       <DependentUpon>itemFile.cs</DependentUpon>
     </EmbeddedResource>
@@ -727,6 +736,7 @@
     <None Include="images\icons\correct.png" />
     <None Include="images\icons\edit.png" />
     <None Include="images\icons\back.png" />
+    <None Include="images\icons\add-white.png" />
     <Content Include="Entities\ELearningModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ELearningModel.edmx</DependentUpon>
@@ -737,7 +747,6 @@
       <DependentUpon>ELearningModel.edmx</DependentUpon>
       <LastGenOutput>ELearningModel.cs</LastGenOutput>
     </Content>
-    <None Include="images\icons\add-white.png" />
     <Content Include="images\icons\circle_filled_icon.png" />
     <Content Include="images\icons\circle_icon.png" />
     <None Include="images\icons\clear.png" />

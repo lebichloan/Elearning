@@ -28,6 +28,7 @@ namespace Elearning.Entities
         public int register_status { get; set; }
         public Nullable<double> completion_score { get; set; }
         public string course_certificate { get; set; }
+        public Nullable<System.DateTime> time_finish { get; set; }
         public decimal paid { get; set; }
     
         public virtual Account Account { get; set; }

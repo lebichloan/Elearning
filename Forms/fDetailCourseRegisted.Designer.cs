@@ -383,6 +383,7 @@
             this.btnViewCertification.Size = new System.Drawing.Size(150, 55);
             this.btnViewCertification.TabIndex = 25;
             this.btnViewCertification.Text = "View certificate";
+            this.btnViewCertification.Click += new System.EventHandler(this.btnViewCertification_Click);
             // 
             // label7
             // 

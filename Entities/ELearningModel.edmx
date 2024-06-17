@@ -90,6 +90,7 @@
           <Property Name="register_status" Type="int" Nullable="false" />
           <Property Name="completion_score" Type="float" />
           <Property Name="course_certificate" Type="nvarchar(max)" />
+          <Property Name="time_finish" Type="datetime" />
           <Property Name="paid" Type="money" Nullable="false" />
         </EntityType>
         <EntityType Name="TestQuestion">
@@ -414,6 +415,7 @@
           <NavigationProperty Name="Course" Relationship="Self.FK__Register__course__4E88ABD4" FromRole="Register" ToRole="Course" />
           <NavigationProperty Name="CourseReviews" Relationship="Self.FK__CourseRev__regis__5165187F" FromRole="Register" ToRole="CourseReview" />
           <NavigationProperty Name="TestResults" Relationship="Self.FK__TestResul__regis__5535A963" FromRole="Register" ToRole="TestResult" />
+          <Property Name="time_finish" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="TestQuestion">
           <Key>
@@ -721,6 +723,7 @@
           <EntitySetMapping Name="Registers">
             <EntityTypeMapping TypeName="ELearningDbModel.Register">
               <MappingFragment StoreEntitySet="Register">
+                <ScalarProperty Name="time_finish" ColumnName="time_finish" />
                 <ScalarProperty Name="register_id" ColumnName="register_id" />
                 <ScalarProperty Name="learner_id" ColumnName="learner_id" />
                 <ScalarProperty Name="course_id" ColumnName="course_id" />

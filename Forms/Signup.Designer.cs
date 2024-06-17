@@ -109,11 +109,11 @@ namespace OnlineChat
             this.conLogin.Controls.Add(this.label3);
             this.conLogin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.conLogin.FillColor = System.Drawing.Color.Transparent;
-            this.conLogin.Location = new System.Drawing.Point(0, 410);
+            this.conLogin.Location = new System.Drawing.Point(0, 504);
             this.conLogin.Margin = new System.Windows.Forms.Padding(2);
             this.conLogin.Name = "conLogin";
             this.conLogin.Padding = new System.Windows.Forms.Padding(120, 4, 120, 9);
-            this.conLogin.Size = new System.Drawing.Size(428, 77);
+            this.conLogin.Size = new System.Drawing.Size(571, 95);
             this.conLogin.TabIndex = 4;
             this.conLogin.Text = "siticoneContainerControl8";
             // 
@@ -128,10 +128,10 @@ namespace OnlineChat
             this.butLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.butLogin.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold);
             this.butLogin.ForeColor = System.Drawing.Color.White;
-            this.butLogin.Location = new System.Drawing.Point(160, 30);
+            this.butLogin.Location = new System.Drawing.Point(120, 29);
             this.butLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butLogin.Name = "butLogin";
-            this.butLogin.Size = new System.Drawing.Size(251, 42);
+            this.butLogin.Size = new System.Drawing.Size(331, 42);
             this.butLogin.TabIndex = 1;
             this.butLogin.Text = "Login";
             this.butLogin.Click += new System.EventHandler(this.butLogin_Click);
@@ -140,9 +140,9 @@ namespace OnlineChat
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
             this.label3.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F);
-            this.label3.Location = new System.Drawing.Point(160, 5);
+            this.label3.Location = new System.Drawing.Point(120, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(251, 25);
+            this.label3.Size = new System.Drawing.Size(331, 25);
             this.label3.TabIndex = 0;
             this.label3.Text = "Already have an account?";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -507,7 +507,7 @@ namespace OnlineChat
             this.lbTitle.Location = new System.Drawing.Point(0, 0);
             this.lbTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(428, 53);
+            this.lbTitle.Size = new System.Drawing.Size(571, 65);
             this.lbTitle.TabIndex = 0;
             this.lbTitle.Text = "Create new account";
             this.lbTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

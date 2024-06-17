@@ -28,7 +28,9 @@ namespace Elearning.Forms
 
             CourseResource resourceTest = (
                 from resource in Program.provider.CourseResources
-                where resource.resource_id == testID
+                join test in Program.provider.CourseTests
+                on resource.resource_id equals (test.resource_id)
+                where test.test_id == testID
                 select resource
                 ).ToList().FirstOrDefault();
             resourceID = resourceTest.resource_id;

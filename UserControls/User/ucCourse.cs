@@ -181,7 +181,14 @@ namespace Elearning.UserControls
         {
             itemTest item = (itemTest)sender;
 
-            fDetailTestResult fDetailTest = new fDetailTestResult(currentRegister.register_id, item.resourceId);
+            // get test id
+            int testID = (
+                from test in Program.provider.CourseTests
+                where test.resource_id == item.resourceId
+                select test
+                ).ToList().FirstOrDefault().test_id;
+
+            fDetailTestResult fDetailTest = new fDetailTestResult(currentRegister.register_id, testID);
             fDetailTest.ShowDialog();
         }
 

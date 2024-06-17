@@ -66,6 +66,16 @@ namespace Elearning.UserControls
             lblTimePlay.Text = String.Format("{0} / {1}",
                 medVideo.Ctlcontrols.currentPositionString,
                 medVideo.Ctlcontrols.currentItem.durationString.ToString());
+
+            if (medVideo.Ctlcontrols.currentPositionString 
+                == medVideo.Ctlcontrols.currentItem.durationString.ToString())
+            {
+                medVideo.Ctlcontrols.stop();
+                isPlay = 0;
+                btnPlay.Image = Image.FromFile(Program.ICONS_PATH + "play.png");
+                timerVideo.Stop();
+                progressBar.Value = (int)medVideo.Ctlcontrols.currentPosition;
+            }
         }
 
         private void trackBarVolume_Scroll(object sender, ScrollEventArgs e)

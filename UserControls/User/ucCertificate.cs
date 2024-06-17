@@ -30,7 +30,7 @@ namespace Elearning.UserControls.User
                 Program.COURSES_IMG_PATH
                 + register.Course.course_image);
             lblCourseName.Text = register.Course.course_name;
-            lblTimeFinish.Text = String.Format("Time finish: ",
+            lblTimeFinish.Text = String.Format("Time finish: {0}",
                 register.time_finish.Value.ToString("dd/MM/yy")
                 );
         }
@@ -48,7 +48,8 @@ namespace Elearning.UserControls.User
             certification.courseName = currentRegister.Course.course_name;
             if (currentRegister.time_finish != null)
             {
-                certification.timeFinish = currentRegister.time_finish.Value.ToString("dd/MM/yy", CultureInfo.InvariantCulture);
+                certification.timeFinish = String.Format("Date: {0}",
+                    currentRegister.time_finish.Value.ToString("dd/MM/yy", CultureInfo.InvariantCulture));
             }
             certification.lecturer = currentRegister.Course.lecturer;
             certification.ShowDialog();

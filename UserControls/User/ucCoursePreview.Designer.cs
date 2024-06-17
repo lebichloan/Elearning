@@ -51,7 +51,7 @@
             this.conInfo.Location = new System.Drawing.Point(15, 215);
             this.conInfo.Name = "conInfo";
             this.conInfo.Padding = new System.Windows.Forms.Padding(4, 10, 4, 5);
-            this.conInfo.Size = new System.Drawing.Size(293, 195);
+            this.conInfo.Size = new System.Drawing.Size(293, 210);
             this.conInfo.TabIndex = 1;
             this.conInfo.Text = "siticoneContainerControl1";
             // 
@@ -65,7 +65,7 @@
             this.btnViewDetails.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
             this.btnViewDetails.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewDetails.ForeColor = System.Drawing.Color.White;
-            this.btnViewDetails.Location = new System.Drawing.Point(4, 95);
+            this.btnViewDetails.Location = new System.Drawing.Point(4, 110);
             this.btnViewDetails.Name = "btnViewDetails";
             this.btnViewDetails.Size = new System.Drawing.Size(285, 45);
             this.btnViewDetails.TabIndex = 4;
@@ -75,7 +75,7 @@
             // siticonePanel1
             // 
             this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.siticonePanel1.Location = new System.Drawing.Point(4, 140);
+            this.siticonePanel1.Location = new System.Drawing.Point(4, 155);
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Size = new System.Drawing.Size(285, 5);
             this.siticonePanel1.TabIndex = 3;
@@ -91,7 +91,7 @@
             this.btnRate.FillColor = System.Drawing.Color.White;
             this.btnRate.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnRate.Location = new System.Drawing.Point(4, 145);
+            this.btnRate.Location = new System.Drawing.Point(4, 160);
             this.btnRate.Name = "btnRate";
             this.btnRate.Size = new System.Drawing.Size(285, 45);
             this.btnRate.TabIndex = 2;
@@ -147,7 +147,7 @@
             this.MaximumSize = new System.Drawing.Size(325, 450);
             this.Name = "ucCoursePreview";
             this.Padding = new System.Windows.Forms.Padding(15);
-            this.Size = new System.Drawing.Size(323, 425);
+            this.Size = new System.Drawing.Size(325, 440);
             this.conInfo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
             this.ResumeLayout(false);

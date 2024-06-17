@@ -175,6 +175,12 @@
     <Compile Include="Forms\fDetailTestResult.Designer.cs">
       <DependentUpon>fDetailTestResult.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\fFinishCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fFinishCourse.Designer.cs">
+      <DependentUpon>fFinishCourse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -524,6 +530,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\fDetailTestResult.resx">
       <DependentUpon>fDetailTestResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fFinishCourse.resx">
+      <DependentUpon>fFinishCourse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>

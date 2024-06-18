@@ -290,7 +290,6 @@
             this.Name = "fTestResult";
             this.Padding = new System.Windows.Forms.Padding(50);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fTestResult";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.fTestResult_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.siticonePanel1.ResumeLayout(false);

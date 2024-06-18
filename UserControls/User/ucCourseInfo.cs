@@ -70,7 +70,6 @@ namespace Elearning.UserControls
                     newRegister.register_status = 1;
                     newRegister.completion_score = 0;
                     newRegister.course_certificate = null;
-                    newRegister.paid = (int)Math.Round((double)(course.price - (course.price * course.discount / 100.0)));
                     Program.provider.Registers.Add(newRegister);
                     Program.provider.SaveChanges();
 

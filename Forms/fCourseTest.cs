@@ -8,6 +8,8 @@ using System.Data;
 using System.Data.Entity.Core.Common.CommandTrees;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -451,6 +453,7 @@ namespace Elearning.Forms
         private void CloseCurrentTest(object sender, EventArgs e)
         {
             this.Hide();
+
             if (CheckFinishCourse(currentCourse, currentAccount) == 1)
             {
                 //  get all test mandatory of course
@@ -497,9 +500,33 @@ namespace Elearning.Forms
                 // da hoan thanh khoa hoc
                 fFinishCourse finishCourse = new fFinishCourse(currentRegister);
                 finishCourse.ShowDialog();
+                SendEmail();
             }
 
             this.Close();
+        }
+
+        private void SendEmail()
+        {
+            MailMessage mail = new MailMessage();
+            mail.From = new System.Net.Mail.MailAddress("21521083@gm.uit.edu.vn");
+            SmtpClient smtp = new SmtpClient();
+            smtp.Port = 587;
+            smtp.EnableSsl = true;
+            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+            smtp.UseDefaultCredentials = false;
+            smtp.Credentials = new NetworkCredential(mail.From.Address, "csefackbesizemig");
+            smtp.Host = "smtp.gmail.com";
+
+            //recipient
+            mail.To.Add(new MailAddress(currentAccount.email));
+            mail.IsBodyHtml = true;
+            mail.Subject = "[Elearning] Finish the course" + currentRegister.Course.course_name;
+            mail.Body = "You are finish the course "
+                + currentRegister.Course.course_name
+                + ". Please sign in to view certificate.";
+
+            smtp.Send(mail);
         }
 
         private TestResult getMaxResult(List<TestResult> allTestResult)

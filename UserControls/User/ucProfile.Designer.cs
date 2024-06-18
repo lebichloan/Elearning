@@ -46,6 +46,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.siticonePanel7 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.lblName = new System.Windows.Forms.Label();
+            this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.picAvatar = new Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panAccount = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -77,9 +80,6 @@
             this.siticonePanel8 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.label5 = new System.Windows.Forms.Label();
             this.txtFullName = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.lblName = new System.Windows.Forms.Label();
-            this.picAvatar = new Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox();
             this.siticonePanel1.SuspendLayout();
             this.siticonePanel4.SuspendLayout();
             this.btnYourCertificate.SuspendLayout();
@@ -89,6 +89,8 @@
             this.btnYourAccount.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.siticonePanel3.SuspendLayout();
+            this.siticonePanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.panAccount.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.siticonePanel15.SuspendLayout();
@@ -101,8 +103,6 @@
             this.siticonePanel10.SuspendLayout();
             this.siticonePanel9.SuspendLayout();
             this.siticonePanel8.SuspendLayout();
-            this.siticonePanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // siticonePanel1
@@ -306,6 +306,38 @@
             this.siticonePanel3.Name = "siticonePanel3";
             this.siticonePanel3.Size = new System.Drawing.Size(400, 400);
             this.siticonePanel3.TabIndex = 0;
+            // 
+            // lblName
+            // 
+            this.lblName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblName.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(0, 312);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(400, 59);
+            this.lblName.TabIndex = 4;
+            this.lblName.Text = "name";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // siticonePanel2
+            // 
+            this.siticonePanel2.Controls.Add(this.picAvatar);
+            this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.siticonePanel2.Location = new System.Drawing.Point(0, 72);
+            this.siticonePanel2.Name = "siticonePanel2";
+            this.siticonePanel2.Size = new System.Drawing.Size(400, 240);
+            this.siticonePanel2.TabIndex = 3;
+            // 
+            // picAvatar
+            // 
+            this.picAvatar.Image = ((System.Drawing.Image)(resources.GetObject("picAvatar.Image")));
+            this.picAvatar.ImageRotate = 0F;
+            this.picAvatar.Location = new System.Drawing.Point(100, 20);
+            this.picAvatar.Name = "picAvatar";
+            this.picAvatar.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
+            this.picAvatar.Size = new System.Drawing.Size(200, 200);
+            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picAvatar.TabIndex = 2;
+            this.picAvatar.TabStop = false;
             // 
             // label1
             // 
@@ -720,38 +752,6 @@
             this.txtFullName.Size = new System.Drawing.Size(214, 50);
             this.txtFullName.TabIndex = 4;
             // 
-            // siticonePanel2
-            // 
-            this.siticonePanel2.Controls.Add(this.picAvatar);
-            this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel2.Location = new System.Drawing.Point(0, 72);
-            this.siticonePanel2.Name = "siticonePanel2";
-            this.siticonePanel2.Size = new System.Drawing.Size(400, 240);
-            this.siticonePanel2.TabIndex = 3;
-            // 
-            // lblName
-            // 
-            this.lblName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblName.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(0, 312);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(400, 59);
-            this.lblName.TabIndex = 4;
-            this.lblName.Text = "name";
-            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // picAvatar
-            // 
-            this.picAvatar.Image = ((System.Drawing.Image)(resources.GetObject("picAvatar.Image")));
-            this.picAvatar.ImageRotate = 0F;
-            this.picAvatar.Location = new System.Drawing.Point(100, 20);
-            this.picAvatar.Name = "picAvatar";
-            this.picAvatar.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
-            this.picAvatar.Size = new System.Drawing.Size(200, 200);
-            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picAvatar.TabIndex = 2;
-            this.picAvatar.TabStop = false;
-            // 
             // ucProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -772,6 +772,8 @@
             this.btnYourAccount.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.siticonePanel3.ResumeLayout(false);
+            this.siticonePanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.panAccount.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.siticonePanel15.ResumeLayout(false);
@@ -788,8 +790,6 @@
             this.siticonePanel9.PerformLayout();
             this.siticonePanel8.ResumeLayout(false);
             this.siticonePanel8.PerformLayout();
-            this.siticonePanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }

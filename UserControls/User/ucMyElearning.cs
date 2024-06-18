@@ -5,10 +5,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Input;
 
 namespace Elearning.UserControls.User
 {
@@ -19,6 +21,8 @@ namespace Elearning.UserControls.User
         public ucMyElearning()
         {
             InitializeComponent();
+            layoutMyCourses.Controls.Clear();
+
             layoutMyCourses.AutoScroll = true;
             layoutMyCourses.VerticalScroll.Visible = true;
             layoutMyCourses.VerticalScroll.Enabled = true;
@@ -27,6 +31,33 @@ namespace Elearning.UserControls.User
             layoutMyCourses.RowCount = 0;
             layoutMyCourses.RowStyles.Clear();
             layoutMyCourses.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+        }
+
+        private void ucCoursePreview_ViewCertificateClick(object sender, EventArgs e)
+        {
+            ucCoursePreview item = sender as ucCoursePreview;
+            courseView = item.coursePreviewClicked;
+            Register register = (
+                from regis in Program.provider.Registers
+                where regis.course_id == courseView.course_id
+                && regis.learner_id == fLogin.currentAccount.acc_id
+                select regis
+                ).ToList().FirstOrDefault();
+            ShowCertificate(register);
+        }
+
+        private void ShowCertificate(Register register)
+        {
+            fCertification certification = new fCertification();
+            certification.fullName = register.Account.fullname;
+            certification.courseName = register.Course.course_name;
+            if (register.time_finish != null)
+            {
+                certification.timeFinish = String.Format("Date: {0}",
+                    register.time_finish.Value.ToString("dd/MM/yy", CultureInfo.InvariantCulture));
+            }
+            certification.lecturer = register.Course.lecturer;
+            certification.ShowDialog();
         }
 
         private void ucMyElearning_Load(object sender, EventArgs e)
@@ -56,18 +87,40 @@ namespace Elearning.UserControls.User
                 ucCourse.courseImage = Image.FromFile(Program.COURSES_IMG_PATH + course.course_image);
                 ucCourse.courseLecturer = course.lecturer;
                 ucCourse.courseName = course.course_name;
+                ucCourse.btnViewDetailText = "Go to course";
                 ucCourse.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
+                ucCourse.btnViewCertificateClick += ucCoursePreview_ViewCertificateClick;
                 if (getCourseReview(course, currentAccount) == null)
                 {
-                    ucCourse.SetUIRate(1);
+                    ucCourse.SetUIRate(1, CheckComplete(course));
                     ucCourse.btnRateClick += ucCoursePreview_btnRatingClick;
                 }
                 else
                 {
-                    ucCourse.SetUIRate(2);
+                    ucCourse.SetUIRate(2, CheckComplete(course));
                     ucCourse.btnRateClick += ucCoursePreview_btnEditRatingClick;
                 }
                 layoutMyCourses.Controls.Add(ucCourse);
+            }
+        }
+
+        private int CheckComplete(Course course)
+        {
+            List<Register> listRegis = (
+                from register in Program.provider.Registers
+                where register.Course.course_id == course.course_id
+                && register.learner_id == fLogin.currentAccount.acc_id
+                && register.register_status == 2
+                select register
+            ).ToList();
+
+            if (listRegis.Count == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return 1;
             }
         }
 
@@ -91,7 +144,25 @@ namespace Elearning.UserControls.User
             courseView = ucCourse.coursePreviewClicked;
             
             fRateCourse rateCourse = new fRateCourse(courseView);
+            rateCourse.FormClosed += fRateCourse_ClosedForm;
             rateCourse.ShowDialog();
+        }
+
+        private void fRateCourse_ClosedForm(object sender, EventArgs e)
+        {
+            foreach(Control control in layoutMyCourses.Controls)
+            {
+                ucCoursePreview item = control as ucCoursePreview;
+                if (item.coursePreviewClicked == courseView)
+                {
+                    if (getCourseReview(courseView, fLogin.currentAccount) != null)
+                    {
+                        item.SetUIRate(2, CheckComplete(courseView));
+                        item.btnRateClick -= ucCoursePreview_btnRatingClick;
+                        item.btnRateClick += ucCoursePreview_btnEditRatingClick;
+                    }
+                }
+            }
         }
 
         private void ucCoursePreview_btnEditRatingClick(object sender, EventArgs e)
@@ -101,6 +172,7 @@ namespace Elearning.UserControls.User
 
             CourseReview review = getCourseReview(courseView, fLogin.currentAccount);
             fRateCourse rateCourse = new fRateCourse(review);
+            rateCourse.FormClosed += fRateCourse_ClosedForm;
             rateCourse.ShowDialog();
         }
 
@@ -118,6 +190,149 @@ namespace Elearning.UserControls.User
                 return null;
             }
             return courseReviews.FirstOrDefault();
+        }
+
+        private void btnAll_Click(object sender, EventArgs e)
+        {
+            SetUIFilter(0);
+
+            Account currentAccount = fLogin.currentAccount;
+
+            List<Course> allCourses = (
+                from course in Program.provider.Courses
+                join register in Program.provider.Registers on course.course_id equals register.course_id
+                join account in Program.provider.Accounts on register.learner_id equals account.acc_id
+                select course
+            ).ToList();
+
+            LoadData(allCourses, currentAccount);
+        }
+
+        private void btnComplete_Click(object sender, EventArgs e)
+        {
+            SetUIFilter(1);
+
+            Account currentAccount = fLogin.currentAccount;
+
+            List<Course> allCourses = (
+                from course in Program.provider.Courses
+                join register in Program.provider.Registers on course.course_id equals register.course_id
+                join account in Program.provider.Accounts on register.learner_id equals account.acc_id
+                where register.register_status == 2
+                select course
+            ).ToList();
+
+            LoadData(allCourses, currentAccount);
+        }
+
+        private void btnNotYet_Click(object sender, EventArgs e)
+        {
+            SetUIFilter(2);
+
+            Account currentAccount = fLogin.currentAccount;
+
+            List<Course> allCourses = (
+                from course in Program.provider.Courses
+                join register in Program.provider.Registers on course.course_id equals register.course_id
+                join account in Program.provider.Accounts on register.learner_id equals account.acc_id
+                where register.register_status == 1
+                select course
+            ).ToList();
+
+            LoadData(allCourses, currentAccount);
+        }
+
+        private void SetUIFilter (int type)
+        {
+            if (type == 0)
+            {
+                btnAll.FillColor = Color.FromArgb(29, 36, 202);
+                btnAll.BorderColor = Color.FromArgb(29, 36, 202);
+                btnAll.ForeColor = Color.White;
+
+                btnComplete.FillColor = Color.White;
+                btnComplete.BorderColor = Color.FromArgb(29, 36, 202);
+                btnComplete.ForeColor = Color.FromArgb(29, 36, 202);
+
+                btnNotYet.FillColor = Color.White;
+                btnNotYet.BorderColor = Color.FromArgb(29, 36, 202);
+                btnNotYet.ForeColor = Color.FromArgb(29, 36, 202);
+            }
+            else if (type == 1)
+            {
+                btnComplete.FillColor = Color.FromArgb(29, 36, 202);
+                btnComplete.BorderColor = Color.FromArgb(29, 36, 202);
+                btnComplete.ForeColor = Color.White;
+
+                btnAll.FillColor = Color.White;
+                btnAll.BorderColor = Color.FromArgb(29, 36, 202);
+                btnAll.ForeColor = Color.FromArgb(29, 36, 202);
+
+                btnNotYet.FillColor = Color.White;
+                btnNotYet.BorderColor = Color.FromArgb(29, 36, 202);
+                btnNotYet.ForeColor = Color.FromArgb(29, 36, 202);
+            }
+            else
+            {
+                btnNotYet.FillColor = Color.FromArgb(29, 36, 202);
+                btnNotYet.BorderColor = Color.FromArgb(29, 36, 202);
+                btnNotYet.ForeColor = Color.White;
+
+                btnComplete.FillColor = Color.White;
+                btnComplete.BorderColor = Color.FromArgb(29, 36, 202);
+                btnComplete.ForeColor = Color.FromArgb(29, 36, 202);
+
+                btnAll.FillColor = Color.White;
+                btnAll.BorderColor = Color.FromArgb(29, 36, 202);
+                btnAll.ForeColor = Color.FromArgb(29, 36, 202);
+            }
+        }
+
+        private void LoadData(List<Course> allCourses, Account currentAccount)
+        {
+            layoutMyCourses.Controls.Clear();
+
+            layoutMyCourses.AutoScroll = true;
+            layoutMyCourses.VerticalScroll.Visible = true;
+            layoutMyCourses.VerticalScroll.Enabled = true;
+            layoutMyCourses.HorizontalScroll.Visible = false;
+            layoutMyCourses.HorizontalScroll.Enabled = false;
+            layoutMyCourses.RowCount = 0;
+            layoutMyCourses.RowStyles.Clear();
+            layoutMyCourses.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+
+            ucCoursePreview ucCoursePreview = new ucCoursePreview();
+            int columns = (Screen.PrimaryScreen.WorkingArea.Width - 5) / ucCoursePreview.MaximumSize.Width;
+            layoutMyCourses.ColumnCount = columns;
+            layoutMyCourses.ColumnStyles.Clear();
+            for (int i = 0; i < columns; ++i)
+            {
+                layoutMyCourses.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100 / columns));
+            }
+
+            foreach (Course course in allCourses)
+            {
+                ucCoursePreview ucCourse = new ucCoursePreview();
+                ucCourse.coursePreviewClicked = course;
+                ucCourse.courseImage = Image.FromFile(Program.COURSES_IMG_PATH + course.course_image);
+                ucCourse.courseLecturer = course.lecturer;
+                ucCourse.courseName = course.course_name;
+                ucCourse.btnViewDetailText = "Go to course";
+                ucCourse.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
+                ucCourse.btnViewCertificateClick += ucCoursePreview_ViewCertificateClick;
+                if (getCourseReview(course, currentAccount) == null)
+                {
+                    ucCourse.SetUIRate(1, CheckComplete(course));
+                    ucCourse.btnRateClick += ucCoursePreview_btnRatingClick;
+                }
+                else
+                {
+                    ucCourse.SetUIRate(2, CheckComplete(course));
+                    ucCourse.btnRateClick += ucCoursePreview_btnEditRatingClick;
+                }
+                layoutMyCourses.Controls.Add(ucCourse);
+            }
+
         }
     }
 }

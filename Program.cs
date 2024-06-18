@@ -105,7 +105,7 @@ namespace Elearning
 
             for (int i = spacePosition; i < len; i += 3)
             {
-                result += " " + numberString.Substring(i, 3);
+                result += "," + numberString.Substring(i, 3);
             }
 
             return result;

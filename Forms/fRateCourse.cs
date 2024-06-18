@@ -41,6 +41,7 @@ namespace Elearning.Forms
         {
             InitializeComponent();
             this.courseReview = review;
+            this.currentCourse = review.Register.Course;
             InitUI(review);
 
             btnEditReview.Visible = true;

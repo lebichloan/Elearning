@@ -381,7 +381,6 @@
             this.Name = "fRateCourse";
             this.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fRateCourse";
             this.panTop.ResumeLayout(false);
             this.siticoneContainerControl1.ResumeLayout(false);
             this.siticoneContainerControl1.PerformLayout();

@@ -43,7 +43,11 @@ namespace Elearning.UserControls
             }
             cmbRating.SelectedIndex = 0;
 
-            listCourseReview = Program.provider.CourseReviews.ToList();
+            listCourseReview = (
+                from review in Program.provider.CourseReviews
+                where review.Register.Course.course_id == course.course_id
+                select review
+                ).ToList();
             LoadAllReview(listCourseReview);
         }
 
@@ -52,6 +56,7 @@ namespace Elearning.UserControls
             backHomeClicked?.Invoke(this, e);
         }
 
+        public EventHandler reLoadMyElearning;
         private void btnRegister_Click(object sender, EventArgs e)
         {
             if (course.price == 0)
@@ -200,6 +205,7 @@ namespace Elearning.UserControls
             foreach (CourseReview review in listReviews)
             {
                 itemReview item = new itemReview();
+                item.Dock = DockStyle.Fill;
                 item.avatarPath = Image.FromFile(Program.AVARTAR_PATH + currentAccount.avatar);
                 item.name = review.Register.Account.fullname;
                 item.review = review.content;
@@ -214,13 +220,18 @@ namespace Elearning.UserControls
         {
             if (cmbRating.SelectedIndex == 0)
             {
-                listCourseReview = Program.provider.CourseReviews.ToList();
+                listCourseReview = (
+                    from review in Program.provider.CourseReviews
+                    where review.Register.Course.course_id == course.course_id
+                    select review
+                    ).ToList();
             }
             else
             {
                 listCourseReview = (
                     from review in Program.provider.CourseReviews
                     where review.stars == (6 - cmbRating.SelectedIndex)
+                    && review.Register.Course.course_id == course.course_id
                     select review
                     ).ToList();
             }

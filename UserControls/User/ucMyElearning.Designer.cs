@@ -28,8 +28,105 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panTop = new System.Windows.Forms.Panel();
+            this.btnNotYet = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.btnComplete = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.btnAll = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.layoutMyCourses = new System.Windows.Forms.TableLayoutPanel();
+            this.panTop.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panTop
+            // 
+            this.panTop.Controls.Add(this.btnNotYet);
+            this.panTop.Controls.Add(this.siticonePanel2);
+            this.panTop.Controls.Add(this.btnComplete);
+            this.panTop.Controls.Add(this.siticonePanel1);
+            this.panTop.Controls.Add(this.btnAll);
+            this.panTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panTop.Location = new System.Drawing.Point(0, 0);
+            this.panTop.Name = "panTop";
+            this.panTop.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.panTop.Size = new System.Drawing.Size(1101, 65);
+            this.panTop.TabIndex = 4;
+            // 
+            // btnNotYet
+            // 
+            this.btnNotYet.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.btnNotYet.BorderRadius = 2;
+            this.btnNotYet.BorderThickness = 1;
+            this.btnNotYet.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNotYet.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNotYet.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNotYet.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNotYet.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnNotYet.FillColor = System.Drawing.Color.White;
+            this.btnNotYet.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNotYet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.btnNotYet.Location = new System.Drawing.Point(275, 10);
+            this.btnNotYet.Name = "btnNotYet";
+            this.btnNotYet.Size = new System.Drawing.Size(120, 45);
+            this.btnNotYet.TabIndex = 7;
+            this.btnNotYet.Text = "Studying";
+            this.btnNotYet.Click += new System.EventHandler(this.btnNotYet_Click);
+            // 
+            // siticonePanel2
+            // 
+            this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.siticonePanel2.Location = new System.Drawing.Point(265, 10);
+            this.siticonePanel2.Name = "siticonePanel2";
+            this.siticonePanel2.Size = new System.Drawing.Size(10, 45);
+            this.siticonePanel2.TabIndex = 6;
+            // 
+            // btnComplete
+            // 
+            this.btnComplete.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.btnComplete.BorderRadius = 2;
+            this.btnComplete.BorderThickness = 1;
+            this.btnComplete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnComplete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnComplete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnComplete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnComplete.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnComplete.FillColor = System.Drawing.Color.White;
+            this.btnComplete.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnComplete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.btnComplete.Location = new System.Drawing.Point(145, 10);
+            this.btnComplete.Name = "btnComplete";
+            this.btnComplete.Size = new System.Drawing.Size(120, 45);
+            this.btnComplete.TabIndex = 5;
+            this.btnComplete.Text = "Complete";
+            this.btnComplete.Click += new System.EventHandler(this.btnComplete_Click);
+            // 
+            // siticonePanel1
+            // 
+            this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.siticonePanel1.Location = new System.Drawing.Point(135, 10);
+            this.siticonePanel1.Name = "siticonePanel1";
+            this.siticonePanel1.Size = new System.Drawing.Size(10, 45);
+            this.siticonePanel1.TabIndex = 4;
+            // 
+            // btnAll
+            // 
+            this.btnAll.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.btnAll.BorderRadius = 2;
+            this.btnAll.BorderThickness = 1;
+            this.btnAll.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAll.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAll.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAll.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAll.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnAll.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.btnAll.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAll.ForeColor = System.Drawing.Color.White;
+            this.btnAll.Location = new System.Drawing.Point(15, 10);
+            this.btnAll.Name = "btnAll";
+            this.btnAll.Size = new System.Drawing.Size(120, 45);
+            this.btnAll.TabIndex = 3;
+            this.btnAll.Text = "All";
+            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
             // 
             // layoutMyCourses
             // 
@@ -39,30 +136,38 @@
             this.layoutMyCourses.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.layoutMyCourses.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.layoutMyCourses.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutMyCourses.Location = new System.Drawing.Point(0, 0);
+            this.layoutMyCourses.Location = new System.Drawing.Point(0, 65);
             this.layoutMyCourses.Margin = new System.Windows.Forms.Padding(4);
             this.layoutMyCourses.Name = "layoutMyCourses";
             this.layoutMyCourses.Padding = new System.Windows.Forms.Padding(4);
             this.layoutMyCourses.RowCount = 2;
             this.layoutMyCourses.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.layoutMyCourses.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.layoutMyCourses.Size = new System.Drawing.Size(1101, 667);
-            this.layoutMyCourses.TabIndex = 3;
+            this.layoutMyCourses.Size = new System.Drawing.Size(1101, 602);
+            this.layoutMyCourses.TabIndex = 5;
             // 
             // ucMyElearning
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.layoutMyCourses);
+            this.Controls.Add(this.panTop);
             this.Name = "ucMyElearning";
             this.Size = new System.Drawing.Size(1101, 667);
             this.Load += new System.EventHandler(this.ucMyElearning_Load);
+            this.panTop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel panTop;
         private System.Windows.Forms.TableLayoutPanel layoutMyCourses;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnAll;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnNotYet;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel2;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnComplete;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
     }
 }

@@ -121,7 +121,7 @@ namespace Elearning
                 CourseStats stats = new CourseStats();
                 stats.total_learners = provider.Registers.Where(e => e.course_id == course.course_id).Count();
                 stats.total_completed = provider.Registers.Where(e => e.course_id == course.course_id && e.completion_score != null && e.completion_score != 0).Count();
-                stats.completion_rate = stats.total_learners == 0 ? 0 : (float)stats.total_completed / stats.total_learners;
+                stats.completion_rate = stats.total_learners == 0 ? 0 : (float)Math.Round(stats.total_completed / stats.total_learners * 100.0f, 2);
                 
                 if (!courseStats.ContainsKey(course.course_id)) courseStats.Add(course.course_id, stats);
                 else courseStats[course.course_id] = stats;

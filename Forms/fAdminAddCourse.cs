@@ -89,6 +89,7 @@ namespace Elearning.Forms
                 course.created_at = DateTime.Now;
                 course.created_by = fLogin.currentAccount.acc_id;
                 course.course_image = "";
+                course.discount = 0;
                 // Add the course to the database and get the course_id
                 Program.provider.Courses.Add(course);
                 Program.provider.SaveChanges();

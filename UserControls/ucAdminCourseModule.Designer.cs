@@ -47,11 +47,12 @@
             // lbModuleName
             // 
             this.lbModuleName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbModuleName.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbModuleName.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbModuleName.Location = new System.Drawing.Point(0, 0);
+            this.lbModuleName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbModuleName.Name = "lbModuleName";
-            this.lbModuleName.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.lbModuleName.Size = new System.Drawing.Size(665, 39);
+            this.lbModuleName.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.lbModuleName.Size = new System.Drawing.Size(500, 32);
             this.lbModuleName.TabIndex = 0;
             this.lbModuleName.Text = "Module name";
             this.lbModuleName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -60,11 +61,11 @@
             // 
             this.flpItems.AutoSize = true;
             this.flpItems.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpItems.Location = new System.Drawing.Point(3, 85);
-            this.flpItems.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.flpItems.MaximumSize = new System.Drawing.Size(0, 300);
+            this.flpItems.Location = new System.Drawing.Point(2, 69);
+            this.flpItems.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flpItems.MaximumSize = new System.Drawing.Size(0, 244);
             this.flpItems.Name = "flpItems";
-            this.flpItems.Size = new System.Drawing.Size(791, 208);
+            this.flpItems.Size = new System.Drawing.Size(594, 169);
             this.flpItems.TabIndex = 1;
             // 
             // siticoneContainerControl1
@@ -74,22 +75,23 @@
             this.siticoneContainerControl1.Controls.Add(this.tableLayoutPanel1);
             this.siticoneContainerControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneContainerControl1.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneContainerControl1.Location = new System.Drawing.Point(3, 2);
-            this.siticoneContainerControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticoneContainerControl1.Location = new System.Drawing.Point(2, 2);
+            this.siticoneContainerControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.siticoneContainerControl1.Name = "siticoneContainerControl1";
-            this.siticoneContainerControl1.Padding = new System.Windows.Forms.Padding(0, 0, 7, 0);
-            this.siticoneContainerControl1.Size = new System.Drawing.Size(791, 69);
+            this.siticoneContainerControl1.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.siticoneContainerControl1.Size = new System.Drawing.Size(594, 56);
             this.siticoneContainerControl1.TabIndex = 2;
             this.siticoneContainerControl1.Text = "siticoneContainerControl1";
             // 
             // lbDescription
             // 
             this.lbDescription.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbDescription.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDescription.Location = new System.Drawing.Point(0, 39);
+            this.lbDescription.Font = new System.Drawing.Font("Segoe UI Variable Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDescription.Location = new System.Drawing.Point(0, 32);
+            this.lbDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbDescription.Name = "lbDescription";
-            this.lbDescription.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.lbDescription.Size = new System.Drawing.Size(665, 30);
+            this.lbDescription.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.lbDescription.Size = new System.Drawing.Size(500, 24);
             this.lbDescription.TabIndex = 2;
             this.lbDescription.Text = "Module description";
             this.lbDescription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -99,17 +101,17 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tableLayoutPanel1.Controls.Add(this.btnDelete, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnAdd, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(665, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(500, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(5);
+            this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(119, 69);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(89, 56);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // btnDelete
@@ -124,10 +126,10 @@
             this.btnDelete.FillColor = System.Drawing.Color.Transparent;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDelete.ForeColor = System.Drawing.Color.Transparent;
-            this.btnDelete.Location = new System.Drawing.Point(62, 7);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Location = new System.Drawing.Point(46, 6);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(49, 55);
+            this.btnDelete.Size = new System.Drawing.Size(37, 44);
             this.btnDelete.TabIndex = 0;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -143,10 +145,10 @@
             this.btnAdd.FillColor = System.Drawing.Color.Transparent;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(8, 7);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdd.Location = new System.Drawing.Point(6, 6);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(48, 55);
+            this.btnAdd.Size = new System.Drawing.Size(36, 44);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -160,10 +162,9 @@
             this.siticoneContainerControl2.Controls.Add(this.siticoneContainerControl1);
             this.siticoneContainerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticoneContainerControl2.Location = new System.Drawing.Point(0, 0);
-            this.siticoneContainerControl2.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneContainerControl2.Name = "siticoneContainerControl2";
-            this.siticoneContainerControl2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.siticoneContainerControl2.Size = new System.Drawing.Size(797, 295);
+            this.siticoneContainerControl2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneContainerControl2.Size = new System.Drawing.Size(598, 240);
             this.siticoneContainerControl2.TabIndex = 0;
             this.siticoneContainerControl2.Text = "siticoneContainerControl2";
             // 
@@ -171,10 +172,9 @@
             // 
             this.siticoneContainerControl3.Controls.Add(this.siticoneSeparator1);
             this.siticoneContainerControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticoneContainerControl3.Location = new System.Drawing.Point(3, 71);
-            this.siticoneContainerControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.siticoneContainerControl3.Location = new System.Drawing.Point(2, 58);
             this.siticoneContainerControl3.Name = "siticoneContainerControl3";
-            this.siticoneContainerControl3.Size = new System.Drawing.Size(791, 14);
+            this.siticoneContainerControl3.Size = new System.Drawing.Size(594, 11);
             this.siticoneContainerControl3.TabIndex = 3;
             this.siticoneContainerControl3.Text = "siticoneContainerControl3";
             // 
@@ -182,21 +182,20 @@
             // 
             this.siticoneSeparator1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticoneSeparator1.Location = new System.Drawing.Point(0, 0);
-            this.siticoneSeparator1.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneSeparator1.Name = "siticoneSeparator1";
-            this.siticoneSeparator1.Size = new System.Drawing.Size(791, 14);
+            this.siticoneSeparator1.Size = new System.Drawing.Size(594, 11);
             this.siticoneSeparator1.TabIndex = 0;
             // 
             // ucAdminCourseModule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.siticoneContainerControl2);
-            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.MinimumSize = new System.Drawing.Size(600, 111);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(450, 90);
             this.Name = "ucAdminCourseModule";
-            this.Size = new System.Drawing.Size(797, 295);
+            this.Size = new System.Drawing.Size(598, 240);
             this.siticoneContainerControl1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.siticoneContainerControl2.ResumeLayout(false);

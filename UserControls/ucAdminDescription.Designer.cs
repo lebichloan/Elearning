@@ -40,9 +40,9 @@
             this.conInfo.Controls.Add(this.label1);
             this.conInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.conInfo.Location = new System.Drawing.Point(0, 0);
-            this.conInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.conInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.conInfo.Name = "conInfo";
-            this.conInfo.Size = new System.Drawing.Size(1179, 103);
+            this.conInfo.Size = new System.Drawing.Size(884, 84);
             this.conInfo.TabIndex = 5;
             this.conInfo.Text = "siticoneContainerControl5";
             // 
@@ -51,10 +51,11 @@
             this.lbDescription.AutoSize = true;
             this.lbDescription.Dock = System.Windows.Forms.DockStyle.Top;
             this.lbDescription.Font = new System.Drawing.Font("Segoe UI Variable Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDescription.Location = new System.Drawing.Point(0, 41);
+            this.lbDescription.Location = new System.Drawing.Point(0, 32);
+            this.lbDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbDescription.Name = "lbDescription";
-            this.lbDescription.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.lbDescription.Size = new System.Drawing.Size(329, 27);
+            this.lbDescription.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.lbDescription.Size = new System.Drawing.Size(262, 21);
             this.lbDescription.TabIndex = 3;
             this.lbDescription.Text = "This is the description of the course";
             // 
@@ -65,23 +66,23 @@
             this.label1.Font = new System.Drawing.Font("UTM Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.label1.Size = new System.Drawing.Size(197, 41);
+            this.label1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.label1.Size = new System.Drawing.Size(155, 32);
             this.label1.TabIndex = 2;
             this.label1.Text = "Description";
             // 
             // ucAdminDescription
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.conInfo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MinimumSize = new System.Drawing.Size(1067, 98);
+            this.MinimumSize = new System.Drawing.Size(800, 80);
             this.Name = "ucAdminDescription";
-            this.Size = new System.Drawing.Size(1179, 103);
+            this.Size = new System.Drawing.Size(884, 84);
             this.conInfo.ResumeLayout(false);
             this.conInfo.PerformLayout();
             this.ResumeLayout(false);

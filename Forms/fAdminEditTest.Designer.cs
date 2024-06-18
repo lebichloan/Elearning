@@ -99,7 +99,7 @@
             this.siticoneContainerControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneContainerControl1.Location = new System.Drawing.Point(5, 52);
             this.siticoneContainerControl1.Name = "siticoneContainerControl1";
-            this.siticoneContainerControl1.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.siticoneContainerControl1.Padding = new System.Windows.Forms.Padding(5);
             this.siticoneContainerControl1.Size = new System.Drawing.Size(966, 65);
             this.siticoneContainerControl1.TabIndex = 2;
             this.siticoneContainerControl1.Text = "siticoneContainerControl1";
@@ -129,7 +129,7 @@
             this.tbTestName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbTestName.ForeColor = System.Drawing.Color.Black;
             this.tbTestName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbTestName.Location = new System.Drawing.Point(0, 22);
+            this.tbTestName.Location = new System.Drawing.Point(0, 17);
             this.tbTestName.Name = "tbTestName";
             this.tbTestName.PasswordChar = '\0';
             this.tbTestName.PlaceholderText = "";
@@ -144,7 +144,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI Variable Display", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 22);
+            this.label2.Size = new System.Drawing.Size(66, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Test name";
             // 
@@ -166,11 +166,11 @@
             // 
             this.optDisplayAll.BackColor = System.Drawing.Color.White;
             this.optDisplayAll.Dock = System.Windows.Forms.DockStyle.Left;
-            this.optDisplayAll.Location = new System.Drawing.Point(99, 22);
-            this.optDisplayAll.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.optDisplayAll.Location = new System.Drawing.Point(99, 17);
+            this.optDisplayAll.Margin = new System.Windows.Forms.Padding(2);
             this.optDisplayAll.Name = "optDisplayAll";
             this.optDisplayAll.Padding = new System.Windows.Forms.Padding(4, 0, 4, 4);
-            this.optDisplayAll.Size = new System.Drawing.Size(86, 33);
+            this.optDisplayAll.Size = new System.Drawing.Size(86, 38);
             this.optDisplayAll.TabIndex = 3;
             this.optDisplayAll.TabStop = true;
             this.optDisplayAll.Text = "All in one";
@@ -180,11 +180,11 @@
             // 
             this.optDisplayOne.BackColor = System.Drawing.Color.Transparent;
             this.optDisplayOne.Dock = System.Windows.Forms.DockStyle.Left;
-            this.optDisplayOne.Location = new System.Drawing.Point(10, 22);
-            this.optDisplayOne.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.optDisplayOne.Location = new System.Drawing.Point(10, 17);
+            this.optDisplayOne.Margin = new System.Windows.Forms.Padding(2);
             this.optDisplayOne.Name = "optDisplayOne";
             this.optDisplayOne.Padding = new System.Windows.Forms.Padding(4, 0, 4, 4);
-            this.optDisplayOne.Size = new System.Drawing.Size(89, 33);
+            this.optDisplayOne.Size = new System.Drawing.Size(89, 38);
             this.optDisplayOne.TabIndex = 2;
             this.optDisplayOne.TabStop = true;
             this.optDisplayOne.Text = "One-by-one";
@@ -197,7 +197,7 @@
             this.label6.Font = new System.Drawing.Font("Segoe UI Variable Display", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(10, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 22);
+            this.label6.Size = new System.Drawing.Size(80, 17);
             this.label6.TabIndex = 0;
             this.label6.Text = "Display type";
             // 
@@ -219,11 +219,11 @@
             // 
             this.optNo.BackColor = System.Drawing.Color.White;
             this.optNo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.optNo.Location = new System.Drawing.Point(99, 22);
-            this.optNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.optNo.Location = new System.Drawing.Point(99, 17);
+            this.optNo.Margin = new System.Windows.Forms.Padding(2);
             this.optNo.Name = "optNo";
             this.optNo.Padding = new System.Windows.Forms.Padding(4, 0, 4, 4);
-            this.optNo.Size = new System.Drawing.Size(86, 33);
+            this.optNo.Size = new System.Drawing.Size(86, 38);
             this.optNo.TabIndex = 3;
             this.optNo.TabStop = true;
             this.optNo.Text = "No";
@@ -233,11 +233,11 @@
             // 
             this.optYes.BackColor = System.Drawing.Color.Transparent;
             this.optYes.Dock = System.Windows.Forms.DockStyle.Left;
-            this.optYes.Location = new System.Drawing.Point(10, 22);
-            this.optYes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.optYes.Location = new System.Drawing.Point(10, 17);
+            this.optYes.Margin = new System.Windows.Forms.Padding(2);
             this.optYes.Name = "optYes";
             this.optYes.Padding = new System.Windows.Forms.Padding(4, 0, 4, 4);
-            this.optYes.Size = new System.Drawing.Size(89, 33);
+            this.optYes.Size = new System.Drawing.Size(89, 38);
             this.optYes.TabIndex = 2;
             this.optYes.TabStop = true;
             this.optYes.Text = "Yes";
@@ -250,7 +250,7 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI Variable Display", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(10, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 22);
+            this.label3.Size = new System.Drawing.Size(89, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Is mandatory?";
             // 
@@ -269,9 +269,9 @@
             // 
             this.conDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.conDetails.Location = new System.Drawing.Point(331, 0);
-            this.conDetails.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.conDetails.Margin = new System.Windows.Forms.Padding(2);
             this.conDetails.Name = "conDetails";
-            this.conDetails.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.conDetails.Padding = new System.Windows.Forms.Padding(5);
             this.conDetails.Size = new System.Drawing.Size(635, 414);
             this.conDetails.TabIndex = 1;
             this.conDetails.Text = "siticoneContainerControl10";
@@ -282,9 +282,9 @@
             this.siticoneContainerControl9.Controls.Add(this.siticoneContainerControl11);
             this.siticoneContainerControl9.Dock = System.Windows.Forms.DockStyle.Left;
             this.siticoneContainerControl9.Location = new System.Drawing.Point(0, 0);
-            this.siticoneContainerControl9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneContainerControl9.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneContainerControl9.Name = "siticoneContainerControl9";
-            this.siticoneContainerControl9.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.siticoneContainerControl9.Padding = new System.Windows.Forms.Padding(5);
             this.siticoneContainerControl9.Size = new System.Drawing.Size(331, 414);
             this.siticoneContainerControl9.TabIndex = 0;
             this.siticoneContainerControl9.Text = "siticoneContainerControl9";
@@ -303,7 +303,7 @@
             this.siticoneContainerControl11.Controls.Add(this.btnAddQst);
             this.siticoneContainerControl11.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticoneContainerControl11.Location = new System.Drawing.Point(5, 5);
-            this.siticoneContainerControl11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneContainerControl11.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneContainerControl11.Name = "siticoneContainerControl11";
             this.siticoneContainerControl11.Size = new System.Drawing.Size(321, 40);
             this.siticoneContainerControl11.TabIndex = 1;
@@ -314,7 +314,7 @@
             this.siticoneContainerControl12.Controls.Add(this.cbQstType);
             this.siticoneContainerControl12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticoneContainerControl12.Location = new System.Drawing.Point(0, 0);
-            this.siticoneContainerControl12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneContainerControl12.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneContainerControl12.Name = "siticoneContainerControl12";
             this.siticoneContainerControl12.Padding = new System.Windows.Forms.Padding(0, 0, 4, 0);
             this.siticoneContainerControl12.Size = new System.Drawing.Size(220, 40);
@@ -333,7 +333,7 @@
             this.cbQstType.ForeColor = System.Drawing.Color.Black;
             this.cbQstType.ItemHeight = 30;
             this.cbQstType.Location = new System.Drawing.Point(0, 0);
-            this.cbQstType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbQstType.Margin = new System.Windows.Forms.Padding(2);
             this.cbQstType.Name = "cbQstType";
             this.cbQstType.Size = new System.Drawing.Size(216, 36);
             this.cbQstType.TabIndex = 0;
@@ -349,7 +349,7 @@
             this.btnAddQst.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAddQst.ForeColor = System.Drawing.Color.White;
             this.btnAddQst.Location = new System.Drawing.Point(220, 0);
-            this.btnAddQst.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddQst.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddQst.Name = "btnAddQst";
             this.btnAddQst.Size = new System.Drawing.Size(101, 40);
             this.btnAddQst.TabIndex = 1;
@@ -376,7 +376,7 @@
             this.tableLayoutPanel1.Controls.Add(this.btnSaveCont, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(300, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -424,7 +424,7 @@
             this.siticoneContainerControl6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.siticoneContainerControl6.Location = new System.Drawing.Point(5, 531);
             this.siticoneContainerControl6.Name = "siticoneContainerControl6";
-            this.siticoneContainerControl6.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.siticoneContainerControl6.Padding = new System.Windows.Forms.Padding(5);
             this.siticoneContainerControl6.Size = new System.Drawing.Size(966, 52);
             this.siticoneContainerControl6.TabIndex = 5;
             this.siticoneContainerControl6.Text = "siticoneContainerControl6";
@@ -455,21 +455,22 @@
             this.tbTime.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTime.ForeColor = System.Drawing.Color.Black;
             this.tbTime.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbTime.Location = new System.Drawing.Point(0, 22);
+            this.tbTime.Location = new System.Drawing.Point(0, 17);
+            this.tbTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbTime.Name = "tbTime";
             this.tbTime.PasswordChar = '\0';
             this.tbTime.PlaceholderText = "";
             this.tbTime.SelectedText = "";
-            this.tbTime.Size = new System.Drawing.Size(417, 20);
+            this.tbTime.Size = new System.Drawing.Size(417, 25);
             this.tbTime.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.Dock = System.Windows.Forms.DockStyle.Right;
             this.label5.Font = new System.Drawing.Font("Segoe UI Variable Display", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(417, 22);
+            this.label5.Location = new System.Drawing.Point(417, 17);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 20);
+            this.label5.Size = new System.Drawing.Size(64, 25);
             this.label5.TabIndex = 2;
             this.label5.Text = "(minutes)";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -481,7 +482,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI Variable Display", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 22);
+            this.label4.Size = new System.Drawing.Size(64, 17);
             this.label4.TabIndex = 0;
             this.label4.Text = "Time limit";
             // 
@@ -512,12 +513,13 @@
             this.tbPointToPass.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPointToPass.ForeColor = System.Drawing.Color.Black;
             this.tbPointToPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPointToPass.Location = new System.Drawing.Point(10, 22);
+            this.tbPointToPass.Location = new System.Drawing.Point(10, 17);
+            this.tbPointToPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbPointToPass.Name = "tbPointToPass";
             this.tbPointToPass.PasswordChar = '\0';
             this.tbPointToPass.PlaceholderText = "";
             this.tbPointToPass.SelectedText = "";
-            this.tbPointToPass.Size = new System.Drawing.Size(383, 20);
+            this.tbPointToPass.Size = new System.Drawing.Size(383, 25);
             this.tbPointToPass.TabIndex = 1;
             this.tbPointToPass.Enter += new System.EventHandler(this.tbPointToPass_Enter);
             this.tbPointToPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPointToPass_KeyPress);
@@ -526,9 +528,9 @@
             // 
             this.lbTotalScore.Dock = System.Windows.Forms.DockStyle.Right;
             this.lbTotalScore.Font = new System.Drawing.Font("Segoe UI Variable Display", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotalScore.Location = new System.Drawing.Point(393, 22);
+            this.lbTotalScore.Location = new System.Drawing.Point(393, 17);
             this.lbTotalScore.Name = "lbTotalScore";
-            this.lbTotalScore.Size = new System.Drawing.Size(82, 20);
+            this.lbTotalScore.Size = new System.Drawing.Size(82, 25);
             this.lbTotalScore.TabIndex = 2;
             this.lbTotalScore.Text = "/ ... points";
             this.lbTotalScore.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -540,7 +542,7 @@
             this.label7.Font = new System.Drawing.Font("Segoe UI Variable Display", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(10, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(113, 22);
+            this.label7.Size = new System.Drawing.Size(89, 17);
             this.label7.TabIndex = 0;
             this.label7.Text = "Points to pass";
             // 
@@ -556,7 +558,7 @@
             this.Controls.Add(this.siticoneContainerControl1);
             this.Controls.Add(this.label1);
             this.Name = "fAdminEditTest";
-            this.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Padding = new System.Windows.Forms.Padding(5);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fAdminEditTest";
             this.siticoneContainerControl1.ResumeLayout(false);

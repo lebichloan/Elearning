@@ -71,9 +71,10 @@
             this.lbCourseName.Font = new System.Drawing.Font("UTM Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCourseName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
             this.lbCourseName.Location = new System.Drawing.Point(0, 0);
+            this.lbCourseName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCourseName.Name = "lbCourseName";
-            this.lbCourseName.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.lbCourseName.Size = new System.Drawing.Size(232, 44);
+            this.lbCourseName.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.lbCourseName.Size = new System.Drawing.Size(185, 36);
             this.lbCourseName.TabIndex = 1;
             this.lbCourseName.Text = "Course Name";
             // 
@@ -82,10 +83,11 @@
             this.lbLecturerName.AutoSize = true;
             this.lbLecturerName.Dock = System.Windows.Forms.DockStyle.Top;
             this.lbLecturerName.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLecturerName.Location = new System.Drawing.Point(0, 44);
+            this.lbLecturerName.Location = new System.Drawing.Point(0, 36);
+            this.lbLecturerName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbLecturerName.Name = "lbLecturerName";
-            this.lbLecturerName.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.lbLecturerName.Size = new System.Drawing.Size(199, 36);
+            this.lbLecturerName.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.lbLecturerName.Size = new System.Drawing.Size(156, 28);
             this.lbLecturerName.TabIndex = 2;
             this.lbLecturerName.Text = "Lecturer name";
             // 
@@ -94,10 +96,10 @@
             this.siticoneContainerControl1.Controls.Add(this.siticoneContainerControl2);
             this.siticoneContainerControl1.Controls.Add(this.pbCourseImage);
             this.siticoneContainerControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticoneContainerControl1.Location = new System.Drawing.Point(3, 2);
-            this.siticoneContainerControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticoneContainerControl1.Location = new System.Drawing.Point(2, 2);
+            this.siticoneContainerControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.siticoneContainerControl1.Name = "siticoneContainerControl1";
-            this.siticoneContainerControl1.Size = new System.Drawing.Size(1890, 260);
+            this.siticoneContainerControl1.Size = new System.Drawing.Size(1418, 211);
             this.siticoneContainerControl1.TabIndex = 3;
             this.siticoneContainerControl1.Text = "siticoneContainerControl1";
             // 
@@ -108,11 +110,11 @@
             this.siticoneContainerControl2.Controls.Add(this.conDiscount);
             this.siticoneContainerControl2.Controls.Add(this.btnBack);
             this.siticoneContainerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.siticoneContainerControl2.Location = new System.Drawing.Point(555, 0);
-            this.siticoneContainerControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticoneContainerControl2.Location = new System.Drawing.Point(416, 0);
+            this.siticoneContainerControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.siticoneContainerControl2.Name = "siticoneContainerControl2";
-            this.siticoneContainerControl2.Padding = new System.Windows.Forms.Padding(11, 50, 13, 0);
-            this.siticoneContainerControl2.Size = new System.Drawing.Size(1335, 260);
+            this.siticoneContainerControl2.Padding = new System.Windows.Forms.Padding(8, 41, 10, 0);
+            this.siticoneContainerControl2.Size = new System.Drawing.Size(1002, 211);
             this.siticoneContainerControl2.TabIndex = 3;
             this.siticoneContainerControl2.Text = "siticoneContainerControl2";
             // 
@@ -120,11 +122,10 @@
             // 
             this.siticoneContainerControl4.Controls.Add(this.siticoneContainerControl5);
             this.siticoneContainerControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.siticoneContainerControl4.Location = new System.Drawing.Point(11, 50);
-            this.siticoneContainerControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.siticoneContainerControl4.Location = new System.Drawing.Point(8, 41);
             this.siticoneContainerControl4.Name = "siticoneContainerControl4";
-            this.siticoneContainerControl4.Padding = new System.Windows.Forms.Padding(0, 0, 11, 0);
-            this.siticoneContainerControl4.Size = new System.Drawing.Size(795, 135);
+            this.siticoneContainerControl4.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
+            this.siticoneContainerControl4.Size = new System.Drawing.Size(597, 109);
             this.siticoneContainerControl4.TabIndex = 6;
             this.siticoneContainerControl4.Text = "siticoneContainerControl4";
             // 
@@ -136,9 +137,8 @@
             this.siticoneContainerControl5.Controls.Add(this.lbCourseName);
             this.siticoneContainerControl5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticoneContainerControl5.Location = new System.Drawing.Point(0, 0);
-            this.siticoneContainerControl5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.siticoneContainerControl5.Name = "siticoneContainerControl5";
-            this.siticoneContainerControl5.Size = new System.Drawing.Size(784, 135);
+            this.siticoneContainerControl5.Size = new System.Drawing.Size(589, 109);
             this.siticoneContainerControl5.TabIndex = 0;
             this.siticoneContainerControl5.Text = "siticoneContainerControl5";
             // 
@@ -155,10 +155,10 @@
             this.btnEditInfor.ForeColor = System.Drawing.Color.White;
             this.btnEditInfor.Image = global::Elearning.Properties.Resources.edit;
             this.btnEditInfor.ImageSize = new System.Drawing.Size(38, 38);
-            this.btnEditInfor.Location = new System.Drawing.Point(720, 0);
-            this.btnEditInfor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEditInfor.Location = new System.Drawing.Point(541, 0);
+            this.btnEditInfor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEditInfor.Name = "btnEditInfor";
-            this.btnEditInfor.Size = new System.Drawing.Size(56, 52);
+            this.btnEditInfor.Size = new System.Drawing.Size(42, 42);
             this.btnEditInfor.TabIndex = 8;
             this.btnEditInfor.Click += new System.EventHandler(this.btnEditInfor_Click);
             // 
@@ -167,11 +167,11 @@
             this.siticoneContainerControl6.Controls.Add(this.siticoneContainerControl7);
             this.siticoneContainerControl6.Controls.Add(this.lbDifficulty);
             this.siticoneContainerControl6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticoneContainerControl6.Location = new System.Drawing.Point(0, 80);
-            this.siticoneContainerControl6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticoneContainerControl6.Location = new System.Drawing.Point(0, 64);
+            this.siticoneContainerControl6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.siticoneContainerControl6.Name = "siticoneContainerControl6";
-            this.siticoneContainerControl6.Padding = new System.Windows.Forms.Padding(13, 10, 11, 10);
-            this.siticoneContainerControl6.Size = new System.Drawing.Size(784, 50);
+            this.siticoneContainerControl6.Padding = new System.Windows.Forms.Padding(10, 8, 8, 8);
+            this.siticoneContainerControl6.Size = new System.Drawing.Size(589, 41);
             this.siticoneContainerControl6.TabIndex = 6;
             this.siticoneContainerControl6.Text = "siticoneContainerControl6";
             // 
@@ -179,11 +179,11 @@
             // 
             this.siticoneContainerControl7.Controls.Add(this.lbCategory);
             this.siticoneContainerControl7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.siticoneContainerControl7.Location = new System.Drawing.Point(104, 10);
-            this.siticoneContainerControl7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticoneContainerControl7.Location = new System.Drawing.Point(84, 8);
+            this.siticoneContainerControl7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.siticoneContainerControl7.Name = "siticoneContainerControl7";
-            this.siticoneContainerControl7.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.siticoneContainerControl7.Size = new System.Drawing.Size(240, 30);
+            this.siticoneContainerControl7.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.siticoneContainerControl7.Size = new System.Drawing.Size(180, 25);
             this.siticoneContainerControl7.TabIndex = 4;
             this.siticoneContainerControl7.Text = "siticoneContainerControl7";
             // 
@@ -194,10 +194,11 @@
             this.lbCategory.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbCategory.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCategory.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbCategory.Location = new System.Drawing.Point(4, 0);
+            this.lbCategory.Location = new System.Drawing.Point(3, 0);
+            this.lbCategory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCategory.Name = "lbCategory";
             this.lbCategory.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
-            this.lbCategory.Size = new System.Drawing.Size(94, 29);
+            this.lbCategory.Size = new System.Drawing.Size(75, 23);
             this.lbCategory.TabIndex = 4;
             this.lbCategory.Text = "Category";
             // 
@@ -208,10 +209,11 @@
             this.lbDifficulty.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbDifficulty.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDifficulty.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbDifficulty.Location = new System.Drawing.Point(13, 10);
+            this.lbDifficulty.Location = new System.Drawing.Point(10, 8);
+            this.lbDifficulty.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbDifficulty.Name = "lbDifficulty";
             this.lbDifficulty.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
-            this.lbDifficulty.Size = new System.Drawing.Size(91, 29);
+            this.lbDifficulty.Size = new System.Drawing.Size(74, 23);
             this.lbDifficulty.TabIndex = 3;
             this.lbDifficulty.Text = "Difficulty";
             // 
@@ -219,11 +221,11 @@
             // 
             this.siticoneContainerControl3.Controls.Add(this.flpButtons);
             this.siticoneContainerControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.siticoneContainerControl3.Location = new System.Drawing.Point(11, 185);
-            this.siticoneContainerControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticoneContainerControl3.Location = new System.Drawing.Point(8, 150);
+            this.siticoneContainerControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.siticoneContainerControl3.Name = "siticoneContainerControl3";
-            this.siticoneContainerControl3.Padding = new System.Windows.Forms.Padding(11, 5, 5, 5);
-            this.siticoneContainerControl3.Size = new System.Drawing.Size(795, 75);
+            this.siticoneContainerControl3.Padding = new System.Windows.Forms.Padding(8, 4, 4, 4);
+            this.siticoneContainerControl3.Size = new System.Drawing.Size(597, 61);
             this.siticoneContainerControl3.TabIndex = 4;
             this.siticoneContainerControl3.Text = "siticoneContainerControl3";
             // 
@@ -233,10 +235,9 @@
             this.flpButtons.Controls.Add(this.btnViewReviews);
             this.flpButtons.Controls.Add(this.btnStats);
             this.flpButtons.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpButtons.Location = new System.Drawing.Point(11, 5);
-            this.flpButtons.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flpButtons.Location = new System.Drawing.Point(8, 4);
             this.flpButtons.Name = "flpButtons";
-            this.flpButtons.Size = new System.Drawing.Size(779, 65);
+            this.flpButtons.Size = new System.Drawing.Size(585, 53);
             this.flpButtons.TabIndex = 0;
             // 
             // btnViewSyllabus
@@ -252,10 +253,10 @@
             this.btnViewSyllabus.Image = global::Elearning.Properties.Resources.syllabus;
             this.btnViewSyllabus.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnViewSyllabus.ImageSize = new System.Drawing.Size(22, 22);
-            this.btnViewSyllabus.Location = new System.Drawing.Point(3, 2);
-            this.btnViewSyllabus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnViewSyllabus.Location = new System.Drawing.Point(2, 2);
+            this.btnViewSyllabus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnViewSyllabus.Name = "btnViewSyllabus";
-            this.btnViewSyllabus.Size = new System.Drawing.Size(149, 52);
+            this.btnViewSyllabus.Size = new System.Drawing.Size(112, 42);
             this.btnViewSyllabus.TabIndex = 9;
             this.btnViewSyllabus.Text = "Syllabus";
             this.btnViewSyllabus.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -274,10 +275,10 @@
             this.btnViewReviews.Image = global::Elearning.Properties.Resources.view_reviews;
             this.btnViewReviews.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnViewReviews.ImageSize = new System.Drawing.Size(22, 22);
-            this.btnViewReviews.Location = new System.Drawing.Point(158, 2);
-            this.btnViewReviews.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnViewReviews.Location = new System.Drawing.Point(118, 2);
+            this.btnViewReviews.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnViewReviews.Name = "btnViewReviews";
-            this.btnViewReviews.Size = new System.Drawing.Size(147, 52);
+            this.btnViewReviews.Size = new System.Drawing.Size(110, 42);
             this.btnViewReviews.TabIndex = 10;
             this.btnViewReviews.Text = "Reviews";
             this.btnViewReviews.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -296,10 +297,10 @@
             this.btnStats.Image = global::Elearning.Properties.Resources.stats;
             this.btnStats.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnStats.ImageSize = new System.Drawing.Size(22, 22);
-            this.btnStats.Location = new System.Drawing.Point(311, 2);
-            this.btnStats.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnStats.Location = new System.Drawing.Point(232, 2);
+            this.btnStats.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnStats.Name = "btnStats";
-            this.btnStats.Size = new System.Drawing.Size(153, 52);
+            this.btnStats.Size = new System.Drawing.Size(115, 42);
             this.btnStats.TabIndex = 11;
             this.btnStats.Text = "Statistics";
             this.btnStats.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -313,11 +314,10 @@
             this.conDiscount.Controls.Add(this.btnEditDiscount);
             this.conDiscount.Dock = System.Windows.Forms.DockStyle.Right;
             this.conDiscount.FillColor = System.Drawing.Color.Transparent;
-            this.conDiscount.Location = new System.Drawing.Point(806, 50);
-            this.conDiscount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.conDiscount.Location = new System.Drawing.Point(605, 41);
             this.conDiscount.Name = "conDiscount";
-            this.conDiscount.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.conDiscount.Size = new System.Drawing.Size(516, 210);
+            this.conDiscount.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.conDiscount.Size = new System.Drawing.Size(387, 170);
             this.conDiscount.TabIndex = 1;
             this.conDiscount.Text = "siticoneContainerControl8";
             // 
@@ -335,10 +335,10 @@
             this.btnEditDiscount.ForeColor = System.Drawing.Color.White;
             this.btnEditDiscount.Image = global::Elearning.Properties.Resources.edit;
             this.btnEditDiscount.ImageSize = new System.Drawing.Size(38, 38);
-            this.btnEditDiscount.Location = new System.Drawing.Point(449, 7);
-            this.btnEditDiscount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEditDiscount.Location = new System.Drawing.Point(337, 6);
+            this.btnEditDiscount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEditDiscount.Name = "btnEditDiscount";
-            this.btnEditDiscount.Size = new System.Drawing.Size(56, 52);
+            this.btnEditDiscount.Size = new System.Drawing.Size(42, 42);
             this.btnEditDiscount.TabIndex = 11;
             this.btnEditDiscount.Click += new System.EventHandler(this.btnEditDiscount_Click);
             // 
@@ -354,10 +354,10 @@
             this.btnBack.FillColor = System.Drawing.Color.Transparent;
             this.btnBack.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(1278, -2);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBack.Location = new System.Drawing.Point(959, -2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(60, 55);
+            this.btnBack.Size = new System.Drawing.Size(45, 45);
             this.btnBack.TabIndex = 5;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
@@ -366,9 +366,9 @@
             this.pbCourseImage.Dock = System.Windows.Forms.DockStyle.Left;
             this.pbCourseImage.ImageRotate = 0F;
             this.pbCourseImage.Location = new System.Drawing.Point(0, 0);
-            this.pbCourseImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbCourseImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbCourseImage.Name = "pbCourseImage";
-            this.pbCourseImage.Size = new System.Drawing.Size(555, 260);
+            this.pbCourseImage.Size = new System.Drawing.Size(416, 211);
             this.pbCourseImage.TabIndex = 0;
             this.pbCourseImage.TabStop = false;
             // 
@@ -377,46 +377,43 @@
             this.conDescription.AutoScroll = true;
             this.conDescription.Controls.Add(this.siticoneSeparator1);
             this.conDescription.Dock = System.Windows.Forms.DockStyle.Top;
-            this.conDescription.Location = new System.Drawing.Point(3, 262);
-            this.conDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.conDescription.Location = new System.Drawing.Point(2, 213);
             this.conDescription.Name = "conDescription";
-            this.conDescription.Size = new System.Drawing.Size(1890, 138);
+            this.conDescription.Size = new System.Drawing.Size(1418, 112);
             this.conDescription.TabIndex = 4;
             this.conDescription.Text = "siticoneContainerControl5";
             // 
             // siticoneSeparator1
             // 
             this.siticoneSeparator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.siticoneSeparator1.Location = new System.Drawing.Point(0, 126);
-            this.siticoneSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.siticoneSeparator1.Location = new System.Drawing.Point(0, 102);
             this.siticoneSeparator1.Name = "siticoneSeparator1";
-            this.siticoneSeparator1.Size = new System.Drawing.Size(1890, 12);
+            this.siticoneSeparator1.Size = new System.Drawing.Size(1418, 10);
             this.siticoneSeparator1.TabIndex = 0;
             // 
             // conMain
             // 
             this.conMain.AutoScroll = true;
             this.conMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.conMain.Location = new System.Drawing.Point(3, 400);
-            this.conMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.conMain.Location = new System.Drawing.Point(2, 325);
             this.conMain.Name = "conMain";
-            this.conMain.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
-            this.conMain.Size = new System.Drawing.Size(1890, 448);
+            this.conMain.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.conMain.Size = new System.Drawing.Size(1418, 364);
             this.conMain.TabIndex = 5;
             this.conMain.Text = "siticoneContainerControl8";
             // 
             // ucAdminCourseInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.conMain);
             this.Controls.Add(this.conDescription);
             this.Controls.Add(this.siticoneContainerControl1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ucAdminCourseInfo";
-            this.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Size = new System.Drawing.Size(1896, 850);
+            this.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Size = new System.Drawing.Size(1422, 691);
             this.Load += new System.EventHandler(this.ucAdminCourseInfo_Load);
             this.siticoneContainerControl1.ResumeLayout(false);
             this.siticoneContainerControl2.ResumeLayout(false);

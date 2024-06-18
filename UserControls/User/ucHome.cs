@@ -95,7 +95,7 @@ namespace Elearning.UserControls
         {
             if (txtSearch.Text.ToString() != "")
             {
-                keySearch = txtSearch.Text.ToString();
+                keySearch = txtSearch.Text.ToString().ToLower();
                 LoadDataSearch(keySearch);
                 btnClear.Visible = true;
             }
@@ -176,10 +176,10 @@ namespace Elearning.UserControls
                 }
                 else
                 {
-                    if (course.course_name.Contains(keySearch)
-                        || course.lecturer.Contains(keySearch)
-                        || course.difficulty.Contains(keySearch)
-                        || course.category.Contains(keySearch)
+                    if (course.course_name.ToLower().Contains(keySearch)
+                        || course.lecturer.ToLower().Contains(keySearch)
+                        || course.difficulty.ToLower().Contains(keySearch)
+                        || course.category.ToLower().Contains(keySearch)
                         )
                     {
                         ucCoursePreview ucCourse = new ucCoursePreview();

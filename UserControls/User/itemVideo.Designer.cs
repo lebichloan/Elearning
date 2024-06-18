@@ -60,10 +60,11 @@
             this.panContainer.Controls.Add(this.siticonePanel1);
             this.panContainer.Controls.Add(this.siticoneCustomGradientPanel1);
             this.panContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panContainer.Location = new System.Drawing.Point(10, 10);
+            this.panContainer.Location = new System.Drawing.Point(8, 8);
+            this.panContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panContainer.Name = "panContainer";
-            this.panContainer.Padding = new System.Windows.Forms.Padding(5);
-            this.panContainer.Size = new System.Drawing.Size(480, 480);
+            this.panContainer.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panContainer.Size = new System.Drawing.Size(387, 387);
             this.panContainer.TabIndex = 0;
             // 
             // siticonePanel1
@@ -72,30 +73,33 @@
             this.siticonePanel1.Controls.Add(this.medVideo);
             this.siticonePanel1.Controls.Add(this.siticonePanel2);
             this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.siticonePanel1.Location = new System.Drawing.Point(5, 53);
+            this.siticonePanel1.Location = new System.Drawing.Point(4, 42);
+            this.siticonePanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.siticonePanel1.Name = "siticonePanel1";
-            this.siticonePanel1.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.siticonePanel1.Size = new System.Drawing.Size(470, 422);
+            this.siticonePanel1.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.siticonePanel1.Size = new System.Drawing.Size(379, 341);
             this.siticonePanel1.TabIndex = 6;
             // 
             // siticonePanel3
             // 
             this.siticonePanel3.Controls.Add(this.progressBar);
             this.siticonePanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.siticonePanel3.Location = new System.Drawing.Point(15, 357);
+            this.siticonePanel3.Location = new System.Drawing.Point(12, 289);
+            this.siticonePanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.siticonePanel3.Name = "siticonePanel3";
-            this.siticonePanel3.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.siticonePanel3.Size = new System.Drawing.Size(440, 15);
+            this.siticonePanel3.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            this.siticonePanel3.Size = new System.Drawing.Size(355, 12);
             this.siticonePanel3.TabIndex = 6;
             // 
             // progressBar
             // 
             this.progressBar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.progressBar.Location = new System.Drawing.Point(0, 5);
+            this.progressBar.Location = new System.Drawing.Point(0, 4);
+            this.progressBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.progressBar.Name = "progressBar";
             this.progressBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.progressBar.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.progressBar.Size = new System.Drawing.Size(440, 5);
+            this.progressBar.Size = new System.Drawing.Size(355, 4);
             this.progressBar.TabIndex = 7;
             this.progressBar.Text = "siticoneProgressBar2";
             this.progressBar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
@@ -104,10 +108,11 @@
             // 
             this.medVideo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.medVideo.Enabled = true;
-            this.medVideo.Location = new System.Drawing.Point(15, 0);
+            this.medVideo.Location = new System.Drawing.Point(12, 0);
+            this.medVideo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.medVideo.Name = "medVideo";
             this.medVideo.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("medVideo.OcxState")));
-            this.medVideo.Size = new System.Drawing.Size(440, 372);
+            this.medVideo.Size = new System.Drawing.Size(355, 301);
             this.medVideo.TabIndex = 5;
             // 
             // siticonePanel2
@@ -117,30 +122,32 @@
             this.siticonePanel2.Controls.Add(this.trackBarVolume);
             this.siticonePanel2.Controls.Add(this.btnPlay);
             this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.siticonePanel2.Location = new System.Drawing.Point(15, 372);
+            this.siticonePanel2.Location = new System.Drawing.Point(12, 301);
+            this.siticonePanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.siticonePanel2.Name = "siticonePanel2";
-            this.siticonePanel2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.siticonePanel2.Size = new System.Drawing.Size(440, 50);
+            this.siticonePanel2.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.siticonePanel2.Size = new System.Drawing.Size(355, 40);
             this.siticonePanel2.TabIndex = 4;
             // 
             // lblTimePlay
             // 
             this.lblTimePlay.AutoSize = true;
             this.lblTimePlay.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimePlay.Location = new System.Drawing.Point(251, 14);
+            this.lblTimePlay.Location = new System.Drawing.Point(201, 11);
+            this.lblTimePlay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTimePlay.Name = "lblTimePlay";
-            this.lblTimePlay.Size = new System.Drawing.Size(55, 23);
+            this.lblTimePlay.Size = new System.Drawing.Size(45, 19);
             this.lblTimePlay.TabIndex = 3;
             this.lblTimePlay.Text = "label1";
             // 
             // btnVolume
             // 
             this.btnVolume.Image = ((System.Drawing.Image)(resources.GetObject("btnVolume.Image")));
-            this.btnVolume.Location = new System.Drawing.Point(53, 5);
-            this.btnVolume.Margin = new System.Windows.Forms.Padding(5, 5, 3, 3);
+            this.btnVolume.Location = new System.Drawing.Point(42, 4);
+            this.btnVolume.Margin = new System.Windows.Forms.Padding(4, 4, 2, 2);
             this.btnVolume.Name = "btnVolume";
-            this.btnVolume.Padding = new System.Windows.Forms.Padding(5);
-            this.btnVolume.Size = new System.Drawing.Size(40, 40);
+            this.btnVolume.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVolume.Size = new System.Drawing.Size(32, 32);
             this.btnVolume.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnVolume.TabIndex = 2;
             this.btnVolume.TabStop = false;
@@ -148,9 +155,10 @@
             // 
             // trackBarVolume
             // 
-            this.trackBarVolume.Location = new System.Drawing.Point(99, 14);
+            this.trackBarVolume.Location = new System.Drawing.Point(79, 11);
+            this.trackBarVolume.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.trackBarVolume.Name = "trackBarVolume";
-            this.trackBarVolume.Size = new System.Drawing.Size(135, 24);
+            this.trackBarVolume.Size = new System.Drawing.Size(108, 19);
             this.trackBarVolume.TabIndex = 1;
             this.trackBarVolume.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
             this.trackBarVolume.Value = 100;
@@ -159,11 +167,11 @@
             // btnPlay
             // 
             this.btnPlay.Image = ((System.Drawing.Image)(resources.GetObject("btnPlay.Image")));
-            this.btnPlay.Location = new System.Drawing.Point(5, 5);
-            this.btnPlay.Margin = new System.Windows.Forms.Padding(5, 5, 3, 3);
+            this.btnPlay.Location = new System.Drawing.Point(4, 4);
+            this.btnPlay.Margin = new System.Windows.Forms.Padding(4, 4, 2, 2);
             this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Padding = new System.Windows.Forms.Padding(5);
-            this.btnPlay.Size = new System.Drawing.Size(40, 40);
+            this.btnPlay.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPlay.Size = new System.Drawing.Size(32, 32);
             this.btnPlay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnPlay.TabIndex = 0;
             this.btnPlay.TabStop = false;
@@ -173,20 +181,24 @@
             // 
             this.siticoneCustomGradientPanel1.Controls.Add(this.lblResourceName);
             this.siticoneCustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticoneCustomGradientPanel1.Location = new System.Drawing.Point(5, 5);
+            this.siticoneCustomGradientPanel1.Location = new System.Drawing.Point(4, 4);
+            this.siticoneCustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.siticoneCustomGradientPanel1.Name = "siticoneCustomGradientPanel1";
-            this.siticoneCustomGradientPanel1.Size = new System.Drawing.Size(470, 48);
+            this.siticoneCustomGradientPanel1.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.siticoneCustomGradientPanel1.Size = new System.Drawing.Size(379, 38);
             this.siticoneCustomGradientPanel1.TabIndex = 5;
             // 
             // lblResourceName
             // 
-            this.lblResourceName.AutoSize = true;
-            this.lblResourceName.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResourceName.Location = new System.Drawing.Point(30, 15);
+            this.lblResourceName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblResourceName.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResourceName.Location = new System.Drawing.Point(12, 0);
+            this.lblResourceName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblResourceName.Name = "lblResourceName";
-            this.lblResourceName.Size = new System.Drawing.Size(53, 23);
+            this.lblResourceName.Size = new System.Drawing.Size(367, 38);
             this.lblResourceName.TabIndex = 2;
             this.lblResourceName.Text = "label1";
+            this.lblResourceName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // timerVideo
             // 
@@ -195,12 +207,13 @@
             // 
             // itemVideo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panContainer);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "itemVideo";
-            this.Padding = new System.Windows.Forms.Padding(10);
+            this.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.Size = new System.Drawing.Size(500, 500);
             this.panContainer.ResumeLayout(false);
             this.siticonePanel1.ResumeLayout(false);
@@ -211,7 +224,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnVolume)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).EndInit();
             this.siticoneCustomGradientPanel1.ResumeLayout(false);
-            this.siticoneCustomGradientPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -92,6 +92,7 @@ namespace Elearning.UserControls
                     uc.moduleID = module.module_id;
                     uc.moduleOrdinal = string.Format("Module {0}:", count);
                     uc.moduleName = module.module_name;
+                    uc.moduleDescription = module.description;
                     uc.courseModuleClick += ucCourseModule_viewModuleClicked;
                     if (count == 1)
                     {

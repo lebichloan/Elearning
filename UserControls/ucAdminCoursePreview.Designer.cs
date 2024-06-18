@@ -52,6 +52,7 @@
             // 
             // btnViewDetails
             // 
+            this.btnViewDetails.BorderRadius = 5;
             this.btnViewDetails.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnViewDetails.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnViewDetails.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));

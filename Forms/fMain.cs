@@ -83,13 +83,13 @@ namespace Elearning
             panelMain.Controls.Add(ucCourse);
         }
 
-        private void fMain_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Hide();
-            fLogin fLogin = new fLogin();
-            fLogin.ShowDialog();
-            this.Close();
-        }
+        //private void fMain_FormClosed(object sender, FormClosedEventArgs e)
+        //{
+        //    //this.Hide();
+        //    //fLogin fLogin = new fLogin();
+        //    //fLogin.ShowDialog();
+        //    //this.Close();
+        //}
 
         private void btnSignOut_Click(object sender, EventArgs e)
         {

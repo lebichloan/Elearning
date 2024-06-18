@@ -45,11 +45,11 @@
             this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel4 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.tbQuestion = new System.Windows.Forms.TableLayoutPanel();
-            this.lblScoreToPass = new System.Windows.Forms.Label();
             this.panPaging = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.btnPre = new System.Windows.Forms.PictureBox();
             this.siticonePanel5 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.btnNext = new System.Windows.Forms.PictureBox();
+            this.lblScoreToPass = new System.Windows.Forms.Label();
             this.siticonePanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.siticonePanel1.SuspendLayout();
@@ -63,11 +63,12 @@
             // 
             // siticonePanel2
             // 
-            this.siticonePanel2.Controls.Add(this.btnStart);
+            this.siticonePanel2.Controls.Add(this.lblScoreToPass);
             this.siticonePanel2.Controls.Add(this.lblTimer);
             this.siticonePanel2.Controls.Add(this.label2);
             this.siticonePanel2.Controls.Add(this.lblName);
             this.siticonePanel2.Controls.Add(this.picAvatar);
+            this.siticonePanel2.Controls.Add(this.btnStart);
             this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticonePanel2.Location = new System.Drawing.Point(0, 0);
             this.siticonePanel2.Name = "siticonePanel2";
@@ -224,7 +225,6 @@
             this.siticonePanel4.BorderColor = System.Drawing.Color.Black;
             this.siticonePanel4.BorderThickness = 1;
             this.siticonePanel4.Controls.Add(this.tbQuestion);
-            this.siticonePanel4.Controls.Add(this.lblScoreToPass);
             this.siticonePanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticonePanel4.Location = new System.Drawing.Point(15, 20);
             this.siticonePanel4.Name = "siticonePanel4";
@@ -237,26 +237,13 @@
             this.tbQuestion.ColumnCount = 1;
             this.tbQuestion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbQuestion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbQuestion.Location = new System.Drawing.Point(5, 38);
+            this.tbQuestion.Location = new System.Drawing.Point(5, 5);
             this.tbQuestion.Name = "tbQuestion";
             this.tbQuestion.RowCount = 1;
             this.tbQuestion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbQuestion.Size = new System.Drawing.Size(864, 451);
+            this.tbQuestion.Size = new System.Drawing.Size(864, 484);
             this.tbQuestion.TabIndex = 6;
             this.tbQuestion.Visible = false;
-            // 
-            // lblScoreToPass
-            // 
-            this.lblScoreToPass.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblScoreToPass.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScoreToPass.Location = new System.Drawing.Point(5, 5);
-            this.lblScoreToPass.Margin = new System.Windows.Forms.Padding(20, 20, 0, 0);
-            this.lblScoreToPass.Name = "lblScoreToPass";
-            this.lblScoreToPass.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
-            this.lblScoreToPass.Size = new System.Drawing.Size(864, 33);
-            this.lblScoreToPass.TabIndex = 5;
-            this.lblScoreToPass.Text = "All Question";
-            this.lblScoreToPass.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // panPaging
             // 
@@ -306,6 +293,19 @@
             this.btnNext.TabIndex = 24;
             this.btnNext.TabStop = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // lblScoreToPass
+            // 
+            this.lblScoreToPass.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.lblScoreToPass.Location = new System.Drawing.Point(188, 43);
+            this.lblScoreToPass.Margin = new System.Windows.Forms.Padding(20, 20, 0, 0);
+            this.lblScoreToPass.Name = "lblScoreToPass";
+            this.lblScoreToPass.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
+            this.lblScoreToPass.Size = new System.Drawing.Size(422, 33);
+            this.lblScoreToPass.TabIndex = 19;
+            this.lblScoreToPass.Text = "All Question";
+            this.lblScoreToPass.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblScoreToPass.Visible = false;
             // 
             // fCourseTest
             // 
@@ -357,7 +357,7 @@
         private System.Windows.Forms.PictureBox btnNext;
         private System.Windows.Forms.PictureBox btnPre;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel5;
-        private System.Windows.Forms.Label lblScoreToPass;
         private System.Windows.Forms.TableLayoutPanel tbQuestion;
+        private System.Windows.Forms.Label lblScoreToPass;
     }
 }

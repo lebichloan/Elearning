@@ -442,6 +442,7 @@ namespace Elearning.Forms
             testResult.totalTime = result.test_time.ToString();
             testResult.source = result.test_score.ToString();
             testResult.testOrdinal = result.test_ordinal.ToString();
+
             testResult.fResultTestClose += CloseCurrentTest;
 
             testResult.ShowDialog();
@@ -525,6 +526,7 @@ namespace Elearning.Forms
             startTime = DateTime.Now;
             isStarted = 1;
             btnDone.Visible = true;
+            lblScoreToPass.Visible = true;
         }
 
         private void btnDone_Click(object sender, EventArgs e)

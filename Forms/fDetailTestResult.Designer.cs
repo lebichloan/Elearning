@@ -262,7 +262,6 @@
             this.Name = "fDetailTestResult";
             this.Padding = new System.Windows.Forms.Padding(50);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fTestResult";
             this.panButton.ResumeLayout(false);
             this.panHeader.ResumeLayout(false);
             this.siticonePanel2.ResumeLayout(false);

@@ -22,6 +22,25 @@ namespace Elearning.UserControls.User
             InitializeComponent();
             currentAccount = fLogin.currentAccount;
             InitUI();
+
+            txtFullName.LostFocus += TxtFullName_LostFocus;
+            txtEmail.LostFocus += TxtEmail_LostFocus;
+        }
+
+        private void TxtFullName_LostFocus(object sender, EventArgs e)
+        {
+            if (txtFullName.Text != currentAccount.fullname)
+            {
+                btnSave.Visible = true;
+            }
+        }
+
+        private void TxtEmail_LostFocus(object sender, EventArgs e)
+        {
+            if (txtEmail.Text != currentAccount.email)
+            {
+                btnSave.Visible = true;
+            }
         }
 
         private Account currentAccount;
@@ -33,6 +52,10 @@ namespace Elearning.UserControls.User
             ucYourAccount yourAccount = new ucYourAccount();
             yourAccount.Dock = DockStyle.Fill;
             panAccount.Controls.Add(yourAccount);
+
+            btnYourAccount.BackColor = Color.FromArgb(228, 230, 233);
+            btnCommunication.BackColor = Color.White;
+            btnYourCertificate.BackColor = Color.White;
         }
 
         private void btnCommunication_Click(object sender, EventArgs e)
@@ -48,10 +71,15 @@ namespace Elearning.UserControls.User
             ucYourCertificate yourCertificate = new ucYourCertificate();
             yourCertificate.Dock = DockStyle.Fill;
             panAccount.Controls.Add(yourCertificate);
+
+            btnYourCertificate.BackColor = Color.FromArgb(228, 230, 233);
+            btnCommunication.BackColor = Color.White;
+            btnYourAccount.BackColor = Color.White;
         }
 
         private void InitUI()
         {
+            btnSave.Visible = false;
             picAvatar.Image = Image.FromFile(Program.AVARTAR_PATH + currentAccount.avatar);
             lblName.Text = currentAccount.fullname;
 
@@ -60,6 +88,10 @@ namespace Elearning.UserControls.User
             ucYourAccount yourAccount = new ucYourAccount();
             yourAccount.Dock = DockStyle.Fill;
             panAccount.Controls.Add(yourAccount);
+
+            btnYourAccount.BackColor = Color.FromArgb(228, 230, 233);
+            btnCommunication.BackColor = Color.White;
+            btnYourCertificate.BackColor = Color.White;
 
             //txtFullName.Text = currentAccount.fullname;
             //txtUserName.Text = currentAccount.username;

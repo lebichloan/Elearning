@@ -130,7 +130,7 @@ namespace Elearning.UserControls
             lblCategory.Text = course.category;
             lblCategory1.Text = course.category;
 
-            lblDescription.Text = course.course_description;
+            lblDescriptionAuto.Text = course.course_description;
 
             if (course.stars != null)
             {
@@ -183,6 +183,20 @@ namespace Elearning.UserControls
             }
 
             lblTotalModule.Text = String.Format("Total modules: {0} moudules", count.ToString());
+
+            int countMandatoryTest = (
+                from test in Program.provider.CourseTests
+                where test.CourseResource.CourseModule.course_id == course.course_id
+                && test.mandatory == 1
+                select test
+                ).ToList().Count();
+
+            lblDescriptionAuto.Text = String.Format(
+                "There are total {0} modules in this course. \n" +
+                "You need to pass {1} mandatory tests to obtain certificate for completing this course",
+                count.ToString(),
+                countMandatoryTest.ToString());
+
         }
 
         private void ucCourseModule_Click(object sender, EventArgs e)

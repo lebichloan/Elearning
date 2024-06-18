@@ -71,7 +71,7 @@ namespace Elearning.UserControls.CourseTest
                 picTick.Visible = false;
                 lblTick.Enabled = true;
                 panContent.Enabled = true;
-                lblQuestionScore.Visible = false;
+                lblQuestionScore.Visible = true;
             }
             
             if (isTick == true)

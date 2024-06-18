@@ -54,7 +54,7 @@
             this.siticoneContainerControl1.Location = new System.Drawing.Point(0, 0);
             this.siticoneContainerControl1.Name = "siticoneContainerControl1";
             this.siticoneContainerControl1.Padding = new System.Windows.Forms.Padding(10, 22, 10, 22);
-            this.siticoneContainerControl1.Size = new System.Drawing.Size(192, 89);
+            this.siticoneContainerControl1.Size = new System.Drawing.Size(139, 89);
             this.siticoneContainerControl1.TabIndex = 0;
             this.siticoneContainerControl1.Text = "siticoneContainerControl1";
             // 
@@ -65,7 +65,7 @@
             this.lbName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbName.Location = new System.Drawing.Point(57, 22);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(125, 45);
+            this.lbName.Size = new System.Drawing.Size(72, 45);
             this.lbName.TabIndex = 1;
             this.lbName.Text = "Name";
             this.lbName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -87,9 +87,9 @@
             this.siticoneContainerControl2.Controls.Add(this.siticoneContainerControl4);
             this.siticoneContainerControl2.Controls.Add(this.siticoneContainerControl3);
             this.siticoneContainerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.siticoneContainerControl2.Location = new System.Drawing.Point(192, 0);
+            this.siticoneContainerControl2.Location = new System.Drawing.Point(139, 0);
             this.siticoneContainerControl2.Name = "siticoneContainerControl2";
-            this.siticoneContainerControl2.Size = new System.Drawing.Size(546, 89);
+            this.siticoneContainerControl2.Size = new System.Drawing.Size(599, 89);
             this.siticoneContainerControl2.TabIndex = 1;
             this.siticoneContainerControl2.Text = "siticoneContainerControl2";
             // 
@@ -100,7 +100,7 @@
             this.siticoneContainerControl4.Location = new System.Drawing.Point(0, 30);
             this.siticoneContainerControl4.Name = "siticoneContainerControl4";
             this.siticoneContainerControl4.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.siticoneContainerControl4.Size = new System.Drawing.Size(546, 59);
+            this.siticoneContainerControl4.Size = new System.Drawing.Size(599, 59);
             this.siticoneContainerControl4.TabIndex = 1;
             this.siticoneContainerControl4.Text = "siticoneContainerControl4";
             // 
@@ -111,7 +111,7 @@
             this.tbContent.Font = new System.Drawing.Font("Segoe UI Variable Text", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbContent.Location = new System.Drawing.Point(0, 0);
             this.tbContent.Name = "tbContent";
-            this.tbContent.Size = new System.Drawing.Size(526, 59);
+            this.tbContent.Size = new System.Drawing.Size(579, 59);
             this.tbContent.TabIndex = 0;
             this.tbContent.Text = "This course is simple and easy to understand. It provides the base for upcoming c" +
     "ourses and tracks for the Data Analytics world. Concept understanding was amazin" +
@@ -126,7 +126,7 @@
             this.siticoneContainerControl3.Location = new System.Drawing.Point(0, 0);
             this.siticoneContainerControl3.Name = "siticoneContainerControl3";
             this.siticoneContainerControl3.Padding = new System.Windows.Forms.Padding(0, 5, 20, 0);
-            this.siticoneContainerControl3.Size = new System.Drawing.Size(546, 30);
+            this.siticoneContainerControl3.Size = new System.Drawing.Size(599, 30);
             this.siticoneContainerControl3.TabIndex = 0;
             this.siticoneContainerControl3.Text = "siticoneContainerControl3";
             // 
@@ -138,7 +138,7 @@
             this.lbDate.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDate.Location = new System.Drawing.Point(39, 5);
             this.lbDate.Name = "lbDate";
-            this.lbDate.Size = new System.Drawing.Size(487, 25);
+            this.lbDate.Size = new System.Drawing.Size(540, 25);
             this.lbDate.TabIndex = 2;
             this.lbDate.Text = "- Reviewed on Nov 1, 2024";
             this.lbDate.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;

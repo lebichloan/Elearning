@@ -52,9 +52,10 @@
             this.siticoneControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.siticoneControlBox1.FillColor = System.Drawing.Color.White;
             this.siticoneControlBox1.IconColor = System.Drawing.Color.DimGray;
-            this.siticoneControlBox1.Location = new System.Drawing.Point(535, 0);
+            this.siticoneControlBox1.Location = new System.Drawing.Point(401, 0);
+            this.siticoneControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.siticoneControlBox1.Name = "siticoneControlBox1";
-            this.siticoneControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.siticoneControlBox1.Size = new System.Drawing.Size(34, 24);
             this.siticoneControlBox1.TabIndex = 0;
             // 
             // label1
@@ -62,8 +63,9 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(580, 81);
+            this.label1.Size = new System.Drawing.Size(435, 66);
             this.label1.TabIndex = 1;
             this.label1.Text = "Change password";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -75,14 +77,17 @@
             this.flowLayoutPanel1.Controls.Add(this.tbConfirm);
             this.flowLayoutPanel1.Controls.Add(this.btnSave);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 81);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 66);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(40, 10, 40, 5);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(580, 273);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(30, 8, 30, 4);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(435, 222);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // tbOldPassword
             // 
+            this.tbOldPassword.BorderColor = System.Drawing.Color.Gray;
+            this.tbOldPassword.BorderRadius = 5;
             this.tbOldPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbOldPassword.DefaultText = "";
             this.tbOldPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -93,17 +98,19 @@
             this.tbOldPassword.Font = new System.Drawing.Font("Segoe UI Variable Text", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbOldPassword.ForeColor = System.Drawing.Color.Black;
             this.tbOldPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbOldPassword.Location = new System.Drawing.Point(50, 20);
-            this.tbOldPassword.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.tbOldPassword.Location = new System.Drawing.Point(38, 16);
+            this.tbOldPassword.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.tbOldPassword.Name = "tbOldPassword";
             this.tbOldPassword.PasswordChar = '*';
             this.tbOldPassword.PlaceholderText = "Enter old password";
             this.tbOldPassword.SelectedText = "";
-            this.tbOldPassword.Size = new System.Drawing.Size(480, 43);
+            this.tbOldPassword.Size = new System.Drawing.Size(360, 35);
             this.tbOldPassword.TabIndex = 0;
             // 
             // tbNewPassword
             // 
+            this.tbNewPassword.BorderColor = System.Drawing.Color.Gray;
+            this.tbNewPassword.BorderRadius = 5;
             this.tbNewPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNewPassword.DefaultText = "";
             this.tbNewPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -114,17 +121,19 @@
             this.tbNewPassword.Font = new System.Drawing.Font("Segoe UI Variable Text", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNewPassword.ForeColor = System.Drawing.Color.Black;
             this.tbNewPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbNewPassword.Location = new System.Drawing.Point(50, 83);
-            this.tbNewPassword.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.tbNewPassword.Location = new System.Drawing.Point(38, 67);
+            this.tbNewPassword.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.tbNewPassword.Name = "tbNewPassword";
             this.tbNewPassword.PasswordChar = '*';
             this.tbNewPassword.PlaceholderText = "Enter new password";
             this.tbNewPassword.SelectedText = "";
-            this.tbNewPassword.Size = new System.Drawing.Size(480, 43);
+            this.tbNewPassword.Size = new System.Drawing.Size(360, 35);
             this.tbNewPassword.TabIndex = 1;
             // 
             // tbConfirm
             // 
+            this.tbConfirm.BorderColor = System.Drawing.Color.Gray;
+            this.tbConfirm.BorderRadius = 5;
             this.tbConfirm.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbConfirm.DefaultText = "";
             this.tbConfirm.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -135,17 +144,18 @@
             this.tbConfirm.Font = new System.Drawing.Font("Segoe UI Variable Text", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbConfirm.ForeColor = System.Drawing.Color.Black;
             this.tbConfirm.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbConfirm.Location = new System.Drawing.Point(50, 146);
-            this.tbConfirm.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.tbConfirm.Location = new System.Drawing.Point(38, 118);
+            this.tbConfirm.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.tbConfirm.Name = "tbConfirm";
             this.tbConfirm.PasswordChar = '*';
             this.tbConfirm.PlaceholderText = "Confirm new password";
             this.tbConfirm.SelectedText = "";
-            this.tbConfirm.Size = new System.Drawing.Size(480, 43);
+            this.tbConfirm.Size = new System.Drawing.Size(360, 35);
             this.tbConfirm.TabIndex = 2;
             // 
             // btnSave
             // 
+            this.btnSave.BorderRadius = 5;
             this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -153,9 +163,10 @@
             this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
             this.btnSave.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(43, 202);
+            this.btnSave.Location = new System.Drawing.Point(32, 163);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(487, 45);
+            this.btnSave.Size = new System.Drawing.Size(365, 37);
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -168,14 +179,15 @@
             // 
             // fChangePassword
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(580, 354);
+            this.ClientSize = new System.Drawing.Size(435, 288);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.siticoneControlBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "fChangePassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fChangePassword";

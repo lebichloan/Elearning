@@ -37,18 +37,20 @@
             this.tbAllCertificate.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbAllCertificate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbAllCertificate.Location = new System.Drawing.Point(0, 0);
+            this.tbAllCertificate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbAllCertificate.Name = "tbAllCertificate";
             this.tbAllCertificate.RowCount = 2;
             this.tbAllCertificate.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbAllCertificate.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbAllCertificate.Size = new System.Drawing.Size(601, 747);
+            this.tbAllCertificate.Size = new System.Drawing.Size(481, 598);
             this.tbAllCertificate.TabIndex = 0;
             // 
             // ucYourCertificate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.tbAllCertificate);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ucYourCertificate";
             this.Size = new System.Drawing.Size(601, 747);
             this.ResumeLayout(false);

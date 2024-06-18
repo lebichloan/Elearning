@@ -47,28 +47,31 @@
             this.panContainer.Controls.Add(this.lblLinkFile);
             this.panContainer.Controls.Add(this.lblResourceName);
             this.panContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panContainer.Location = new System.Drawing.Point(10, 10);
+            this.panContainer.Location = new System.Drawing.Point(8, 8);
+            this.panContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panContainer.Name = "panContainer";
-            this.panContainer.Padding = new System.Windows.Forms.Padding(5);
-            this.panContainer.Size = new System.Drawing.Size(580, 130);
+            this.panContainer.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panContainer.Size = new System.Drawing.Size(464, 104);
             this.panContainer.TabIndex = 0;
             // 
             // siticonePanel2
             // 
             this.siticonePanel2.Controls.Add(this.btnDownload);
             this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.siticonePanel2.Location = new System.Drawing.Point(515, 5);
+            this.siticonePanel2.Location = new System.Drawing.Point(412, 4);
+            this.siticonePanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.siticonePanel2.Name = "siticonePanel2";
-            this.siticonePanel2.Size = new System.Drawing.Size(60, 120);
+            this.siticonePanel2.Size = new System.Drawing.Size(48, 96);
             this.siticonePanel2.TabIndex = 6;
             // 
             // btnDownload
             // 
             this.btnDownload.Image = ((System.Drawing.Image)(resources.GetObject("btnDownload.Image")));
-            this.btnDownload.Location = new System.Drawing.Point(10, 40);
+            this.btnDownload.Location = new System.Drawing.Point(8, 32);
+            this.btnDownload.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDownload.Name = "btnDownload";
-            this.btnDownload.Padding = new System.Windows.Forms.Padding(10);
-            this.btnDownload.Size = new System.Drawing.Size(40, 40);
+            this.btnDownload.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.btnDownload.Size = new System.Drawing.Size(32, 32);
             this.btnDownload.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnDownload.TabIndex = 3;
             this.btnDownload.TabStop = false;
@@ -79,31 +82,34 @@
             this.lblLinkFile.AutoSize = true;
             this.lblLinkFile.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLinkFile.Location = new System.Drawing.Point(30, 75);
+            this.lblLinkFile.Location = new System.Drawing.Point(24, 60);
+            this.lblLinkFile.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLinkFile.Name = "lblLinkFile";
-            this.lblLinkFile.Size = new System.Drawing.Size(56, 23);
+            this.lblLinkFile.Size = new System.Drawing.Size(46, 19);
             this.lblLinkFile.TabIndex = 8;
             this.lblLinkFile.Text = "label1";
             // 
             // lblResourceName
             // 
             this.lblResourceName.AutoSize = true;
-            this.lblResourceName.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResourceName.Location = new System.Drawing.Point(30, 25);
+            this.lblResourceName.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResourceName.Location = new System.Drawing.Point(24, 20);
+            this.lblResourceName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblResourceName.Name = "lblResourceName";
-            this.lblResourceName.Size = new System.Drawing.Size(53, 23);
+            this.lblResourceName.Size = new System.Drawing.Size(51, 21);
             this.lblResourceName.TabIndex = 7;
             this.lblResourceName.Text = "label1";
             // 
             // itemFile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panContainer);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "itemFile";
-            this.Padding = new System.Windows.Forms.Padding(10);
-            this.Size = new System.Drawing.Size(600, 150);
+            this.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.Size = new System.Drawing.Size(480, 120);
             this.panContainer.ResumeLayout(false);
             this.panContainer.PerformLayout();
             this.siticonePanel2.ResumeLayout(false);

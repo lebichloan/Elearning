@@ -49,6 +49,12 @@ namespace Elearning.UserControls.User
             set { lblModuleName.Text = value; }
         }
 
+        public string moduleDescription
+        {
+            get { return lbModuleDescription.Text; }
+            set { lbModuleDescription.Text = value; }
+        }
+
         private void ucCourseModule_Click(object sender, EventArgs e)
         {
             courseModuleClick.Invoke(this, e);

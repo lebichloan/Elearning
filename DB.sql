@@ -172,3 +172,7 @@ GO
 
 alter table Account add created_at smalldatetime not null default GETDATE()
 alter table Register add paid money not null default 0
+go
+
+alter table CourseTest add shuffle int not null default 0
+go

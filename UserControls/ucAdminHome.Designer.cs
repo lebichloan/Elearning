@@ -109,22 +109,26 @@
             // cbFilterCategory
             // 
             this.cbFilterCategory.BackColor = System.Drawing.Color.Transparent;
+            this.cbFilterCategory.BorderColor = System.Drawing.Color.Gray;
+            this.cbFilterCategory.BorderRadius = 6;
             this.cbFilterCategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbFilterCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFilterCategory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbFilterCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbFilterCategory.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFilterCategory.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFilterCategory.ForeColor = System.Drawing.Color.Black;
             this.cbFilterCategory.ItemHeight = 30;
-            this.cbFilterCategory.Location = new System.Drawing.Point(673, 7);
+            this.cbFilterCategory.Location = new System.Drawing.Point(619, 7);
             this.cbFilterCategory.Name = "cbFilterCategory";
-            this.cbFilterCategory.Size = new System.Drawing.Size(170, 36);
+            this.cbFilterCategory.Size = new System.Drawing.Size(224, 36);
             this.cbFilterCategory.TabIndex = 4;
             this.cbFilterCategory.SelectedIndexChanged += new System.EventHandler(this.cbFilterCategory_SelectedIndexChanged);
             // 
             // cbFilterDiff
             // 
             this.cbFilterDiff.BackColor = System.Drawing.Color.Transparent;
+            this.cbFilterDiff.BorderColor = System.Drawing.Color.Gray;
+            this.cbFilterDiff.BorderRadius = 6;
             this.cbFilterDiff.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbFilterDiff.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFilterDiff.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -132,7 +136,7 @@
             this.cbFilterDiff.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFilterDiff.ForeColor = System.Drawing.Color.Black;
             this.cbFilterDiff.ItemHeight = 30;
-            this.cbFilterDiff.Location = new System.Drawing.Point(495, 7);
+            this.cbFilterDiff.Location = new System.Drawing.Point(441, 7);
             this.cbFilterDiff.Name = "cbFilterDiff";
             this.cbFilterDiff.Size = new System.Drawing.Size(172, 36);
             this.cbFilterDiff.TabIndex = 5;
@@ -150,7 +154,7 @@
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Image = global::Elearning.Properties.Resources.search_white;
             this.btnSearch.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSearch.Location = new System.Drawing.Point(367, 6);
+            this.btnSearch.Location = new System.Drawing.Point(313, 6);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -162,6 +166,7 @@
             // 
             // tbSearch
             // 
+            this.tbSearch.BorderColor = System.Drawing.Color.Gray;
             this.tbSearch.BorderRadius = 10;
             this.tbSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbSearch.DefaultText = "";
@@ -173,7 +178,7 @@
             this.tbSearch.Font = new System.Drawing.Font("Segoe UI Variable Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbSearch.ForeColor = System.Drawing.Color.Black;
             this.tbSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbSearch.Location = new System.Drawing.Point(98, 6);
+            this.tbSearch.Location = new System.Drawing.Point(44, 6);
             this.tbSearch.Margin = new System.Windows.Forms.Padding(2);
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.PasswordChar = '\0';
@@ -194,7 +199,7 @@
             this.btnRefresh.FillColor = System.Drawing.Color.Transparent;
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(57, 7);
+            this.btnRefresh.Location = new System.Drawing.Point(3, 7);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(36, 36);
             this.btnRefresh.TabIndex = 0;

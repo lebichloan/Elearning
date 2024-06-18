@@ -133,6 +133,7 @@ namespace Elearning.Forms
 
         private void btnSaveCont_Click(object sender, EventArgs e)
         {
+
             update();
             if (test.total_score < test.score_to_pass)
             {
@@ -213,6 +214,15 @@ namespace Elearning.Forms
         // only allow numbers to be entered in the tbPointToPass
         private void tbPointToPass_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbMaxAttempt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // only allow numbers to be entered in the tbMaxAttempt
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;

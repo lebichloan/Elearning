@@ -69,6 +69,7 @@ namespace OnlineChat
             account.username = username;
             account.user_password = password;
             account.user_role = this.createAdmin ? Program.ROLE_ADMIN : Program.ROLE_LEARNER;
+            account.created_at = DateTime.Now;
 
             string source = tbPath.Text != "" ? tbPath.Text : Program.AVARTAR_PATH + "default.png";
 

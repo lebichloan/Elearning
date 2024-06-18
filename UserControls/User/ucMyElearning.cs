@@ -76,7 +76,7 @@ namespace Elearning.UserControls.User
             List<Course> allCourses = (
                 from course in Program.provider.Courses
                 join register in Program.provider.Registers on course.course_id equals register.course_id
-                join account in Program.provider.Accounts on register.learner_id equals account.acc_id
+                where register.register_status != 0 && register.learner_id == currentAccount.acc_id
                 select course
             ).ToList();
 
@@ -197,11 +197,13 @@ namespace Elearning.UserControls.User
             SetUIFilter(0);
 
             Account currentAccount = fLogin.currentAccount;
+            System.Diagnostics.Debug.WriteLine(currentAccount.username);
 
+            // Get all courses that the current account has registered
             List<Course> allCourses = (
                 from course in Program.provider.Courses
                 join register in Program.provider.Registers on course.course_id equals register.course_id
-                join account in Program.provider.Accounts on register.learner_id equals account.acc_id
+                where register.register_status != 0 && register.learner_id == currentAccount.acc_id
                 select course
             ).ToList();
 
@@ -217,8 +219,7 @@ namespace Elearning.UserControls.User
             List<Course> allCourses = (
                 from course in Program.provider.Courses
                 join register in Program.provider.Registers on course.course_id equals register.course_id
-                join account in Program.provider.Accounts on register.learner_id equals account.acc_id
-                where register.register_status == 2
+                where register.register_status == 2 && register.learner_id == currentAccount.acc_id
                 select course
             ).ToList();
 
@@ -234,8 +235,7 @@ namespace Elearning.UserControls.User
             List<Course> allCourses = (
                 from course in Program.provider.Courses
                 join register in Program.provider.Registers on course.course_id equals register.course_id
-                join account in Program.provider.Accounts on register.learner_id equals account.acc_id
-                where register.register_status == 1
+                where register.register_status == 1 && register.learner_id == currentAccount.acc_id
                 select course
             ).ToList();
 

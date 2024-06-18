@@ -144,8 +144,7 @@ namespace Elearning.UserControls
 
             if (course.discount_end_date >= DateTime.Now)
             {
-                int? priceAfterDiscount =
-                    course.price - course.price * course.discount;
+                int? priceAfterDiscount = (int)Math.Round(course.price - (course.price * (int)course.discount / 100.0));
                 lblPrice.Text = Program.FormatNumberWithSpaces((int)priceAfterDiscount);
             }
             else
@@ -196,6 +195,7 @@ namespace Elearning.UserControls
                     uc.Dock = DockStyle.Top;
                     uc.moduleOrdinal = string.Format("Module {0}:", count);
                     uc.moduleName = module.module_name;
+                    uc.moduleDescription = module.description;
                     uc.courseModuleClick += ucCourseModule_Click;
                     layoutModule.Controls.Add(uc);
                 }
@@ -237,13 +237,15 @@ namespace Elearning.UserControls
 
             foreach (CourseReview review in listReviews)
             {
-                itemReview item = new itemReview();
-                item.Dock = DockStyle.Fill;
-                item.avatarPath = Image.FromFile(Program.AVARTAR_PATH + currentAccount.avatar);
-                item.name = review.Register.Account.fullname;
-                item.review = review.content;
-                item.datetime = review.review_time.ToString();
-                item.SetRating(review.stars);
+                //itemReview item = new itemReview();
+                //item.Dock = DockStyle.Fill;
+                //item.avatarPath = Image.FromFile(Program.AVARTAR_PATH + currentAccount.avatar);
+                //item.name = review.Register.Account.fullname;
+                //item.review = review.content;
+                //item.datetime = review.review_time.ToString();
+                //item.SetRating(review.stars);
+
+                ucAdminReview item = new ucAdminReview(review);
 
                 tbAllReview.Controls.Add(item);
             }

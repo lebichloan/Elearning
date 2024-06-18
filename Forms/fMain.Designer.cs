@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
             this.panelTop = new System.Windows.Forms.Panel();
-            this.lbAppName = new System.Windows.Forms.Label();
-            this.panelMain = new System.Windows.Forms.Panel();
-            this.btnSignOut = new Siticone.Desktop.UI.WinForms.SiticonePictureBox();
             this.lbUserFullname = new System.Windows.Forms.Label();
             this.btnUserProfile = new Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox();
+            this.btnSignOut = new Siticone.Desktop.UI.WinForms.SiticonePictureBox();
+            this.lbAppName = new System.Windows.Forms.Label();
+            this.panelMain = new System.Windows.Forms.Panel();
             this.panelTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSignOut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUserProfile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSignOut)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTop
@@ -51,47 +51,9 @@
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Margin = new System.Windows.Forms.Padding(2);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1228, 50);
+            this.panelTop.Padding = new System.Windows.Forms.Padding(2, 2, 8, 2);
+            this.panelTop.Size = new System.Drawing.Size(982, 40);
             this.panelTop.TabIndex = 0;
-            // 
-            // lbAppName
-            // 
-            this.lbAppName.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbAppName.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbAppName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAppName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.lbAppName.Location = new System.Drawing.Point(0, 0);
-            this.lbAppName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbAppName.Name = "lbAppName";
-            this.lbAppName.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.lbAppName.Size = new System.Drawing.Size(176, 50);
-            this.lbAppName.TabIndex = 3;
-            this.lbAppName.Text = "E-Learning";
-            this.lbAppName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbAppName.Click += new System.EventHandler(this.lbAppName_Click);
-            // 
-            // panelMain
-            // 
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 50);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(2);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1228, 629);
-            this.panelMain.TabIndex = 1;
-            // 
-            // btnSignOut
-            // 
-            this.btnSignOut.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSignOut.Image = ((System.Drawing.Image)(resources.GetObject("btnSignOut.Image")));
-            this.btnSignOut.ImageRotate = 0F;
-            this.btnSignOut.Location = new System.Drawing.Point(1178, 0);
-            this.btnSignOut.Name = "btnSignOut";
-            this.btnSignOut.Padding = new System.Windows.Forms.Padding(10);
-            this.btnSignOut.Size = new System.Drawing.Size(50, 50);
-            this.btnSignOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnSignOut.TabIndex = 7;
-            this.btnSignOut.TabStop = false;
-            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
             // 
             // lbUserFullname
             // 
@@ -99,11 +61,11 @@
             this.lbUserFullname.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbUserFullname.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUserFullname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbUserFullname.Location = new System.Drawing.Point(926, 0);
+            this.lbUserFullname.Location = new System.Drawing.Point(732, 2);
             this.lbUserFullname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbUserFullname.Name = "lbUserFullname";
-            this.lbUserFullname.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.lbUserFullname.Size = new System.Drawing.Size(202, 50);
+            this.lbUserFullname.Padding = new System.Windows.Forms.Padding(0, 0, 4, 0);
+            this.lbUserFullname.Size = new System.Drawing.Size(162, 36);
             this.lbUserFullname.TabIndex = 8;
             this.lbUserFullname.Text = "Nguyễn Văn A";
             this.lbUserFullname.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -113,31 +75,70 @@
             this.btnUserProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUserProfile.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnUserProfile.ImageRotate = 0F;
-            this.btnUserProfile.Location = new System.Drawing.Point(1128, 0);
+            this.btnUserProfile.Location = new System.Drawing.Point(894, 2);
             this.btnUserProfile.Margin = new System.Windows.Forms.Padding(2);
             this.btnUserProfile.Name = "btnUserProfile";
             this.btnUserProfile.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
-            this.btnUserProfile.Size = new System.Drawing.Size(50, 50);
+            this.btnUserProfile.Size = new System.Drawing.Size(40, 36);
             this.btnUserProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnUserProfile.TabIndex = 9;
             this.btnUserProfile.TabStop = false;
             // 
+            // btnSignOut
+            // 
+            this.btnSignOut.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSignOut.Image = ((System.Drawing.Image)(resources.GetObject("btnSignOut.Image")));
+            this.btnSignOut.ImageRotate = 0F;
+            this.btnSignOut.Location = new System.Drawing.Point(934, 2);
+            this.btnSignOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.btnSignOut.Size = new System.Drawing.Size(40, 36);
+            this.btnSignOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnSignOut.TabIndex = 7;
+            this.btnSignOut.TabStop = false;
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
+            // 
+            // lbAppName
+            // 
+            this.lbAppName.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbAppName.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lbAppName.Font = new System.Drawing.Font("UTM Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAppName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.lbAppName.Location = new System.Drawing.Point(2, 2);
+            this.lbAppName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbAppName.Name = "lbAppName";
+            this.lbAppName.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.lbAppName.Size = new System.Drawing.Size(141, 36);
+            this.lbAppName.TabIndex = 3;
+            this.lbAppName.Text = "E-Learning";
+            this.lbAppName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbAppName.Click += new System.EventHandler(this.lbAppName_Click);
+            // 
+            // panelMain
+            // 
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(0, 40);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(2);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(982, 503);
+            this.panelMain.TabIndex = 1;
+            // 
             // fMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1228, 679);
+            this.ClientSize = new System.Drawing.Size(982, 543);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelTop);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "fMain";
             this.ShowIcon = false;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            //this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.fMain_FormClosed);
             this.Load += new System.EventHandler(this.fMain_Load);
             this.panelTop.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnSignOut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUserProfile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSignOut)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -37,11 +37,11 @@
             // 
             // lbChoice
             // 
-            this.lbChoice.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbChoice.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbChoice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbChoice.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbChoice.Location = new System.Drawing.Point(5, 5);
             this.lbChoice.Name = "lbChoice";
-            this.lbChoice.Size = new System.Drawing.Size(248, 41);
+            this.lbChoice.Size = new System.Drawing.Size(393, 41);
             this.lbChoice.TabIndex = 0;
             this.lbChoice.Text = "A. Choice 1";
             this.lbChoice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -104,8 +104,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.lbChoice);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "ucAdminChoice";
             this.Padding = new System.Windows.Forms.Padding(5);
             this.Size = new System.Drawing.Size(469, 51);

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(itemReview));
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.siticonePanel4 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.picAvatar = new Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox();
             this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.lblDateTime = new System.Windows.Forms.Label();
@@ -43,6 +44,7 @@
             this.btnStar1 = new System.Windows.Forms.PictureBox();
             this.lblName = new System.Windows.Forms.Label();
             this.siticonePanel2.SuspendLayout();
+            this.siticonePanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.siticonePanel3.SuspendLayout();
             this.panStar.SuspendLayout();
@@ -64,7 +66,7 @@
             // 
             // siticonePanel2
             // 
-            this.siticonePanel2.Controls.Add(this.picAvatar);
+            this.siticonePanel2.Controls.Add(this.siticonePanel4);
             this.siticonePanel2.Controls.Add(this.siticonePanel3);
             this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticonePanel2.Location = new System.Drawing.Point(10, 5);
@@ -72,14 +74,24 @@
             this.siticonePanel2.Size = new System.Drawing.Size(570, 138);
             this.siticonePanel2.TabIndex = 29;
             // 
+            // siticonePanel4
+            // 
+            this.siticonePanel4.Controls.Add(this.picAvatar);
+            this.siticonePanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.siticonePanel4.Location = new System.Drawing.Point(0, 0);
+            this.siticonePanel4.Name = "siticonePanel4";
+            this.siticonePanel4.Size = new System.Drawing.Size(114, 138);
+            this.siticonePanel4.TabIndex = 34;
+            // 
             // picAvatar
             // 
             this.picAvatar.ImageRotate = 0F;
-            this.picAvatar.Location = new System.Drawing.Point(0, 0);
+            this.picAvatar.Location = new System.Drawing.Point(3, 3);
             this.picAvatar.Name = "picAvatar";
             this.picAvatar.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
             this.picAvatar.Size = new System.Drawing.Size(60, 60);
-            this.picAvatar.TabIndex = 33;
+            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picAvatar.TabIndex = 34;
             this.picAvatar.TabStop = false;
             // 
             // siticonePanel3
@@ -89,10 +101,10 @@
             this.siticonePanel3.Controls.Add(this.panStar);
             this.siticonePanel3.Controls.Add(this.lblName);
             this.siticonePanel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.siticonePanel3.Location = new System.Drawing.Point(78, 0);
+            this.siticonePanel3.Location = new System.Drawing.Point(114, 0);
             this.siticonePanel3.Name = "siticonePanel3";
             this.siticonePanel3.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.siticonePanel3.Size = new System.Drawing.Size(492, 138);
+            this.siticonePanel3.Size = new System.Drawing.Size(456, 138);
             this.siticonePanel3.TabIndex = 32;
             // 
             // lblDateTime
@@ -129,7 +141,7 @@
             this.panStar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panStar.Location = new System.Drawing.Point(20, 23);
             this.panStar.Name = "panStar";
-            this.panStar.Size = new System.Drawing.Size(472, 40);
+            this.panStar.Size = new System.Drawing.Size(436, 40);
             this.panStar.TabIndex = 26;
             // 
             // btnStar5
@@ -214,6 +226,7 @@
             this.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.Size = new System.Drawing.Size(590, 155);
             this.siticonePanel2.ResumeLayout(false);
+            this.siticonePanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.siticonePanel3.ResumeLayout(false);
             this.siticonePanel3.PerformLayout();
@@ -230,7 +243,6 @@
         #endregion
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel2;
-        private Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox picAvatar;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel3;
         private System.Windows.Forms.Label lblDateTime;
         private System.Windows.Forms.Label lblReview;
@@ -241,5 +253,7 @@
         private System.Windows.Forms.PictureBox btnStar2;
         private System.Windows.Forms.PictureBox btnStar1;
         private System.Windows.Forms.Label lblName;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel4;
+        private Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox picAvatar;
     }
 }

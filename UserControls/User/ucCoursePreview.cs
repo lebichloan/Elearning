@@ -55,31 +55,76 @@ namespace Elearning.UserControls
             btnRateClick?.Invoke(this, e);
         }
 
-        public void SetUIRate(int flag)
+        public void SetUIRate(int flag, int isComplete)
         {
             if (flag == 0)
             {
-                btnRate.Visible = false;
-                btnRate.Size = new Size(0, 0);
-                
-                btnViewDetails.Size = new Size(220, 50);
+                panMoreOption.Visible = false;
+                panMoreOption.Size = new Size(0, 0);
+
+                btnViewDetails.Size = new Size(285, 50);
+
+                //btnRate.Visible = false;
+                //btnRate.Size = new Size(0, 0);
             }
             else if (flag == 1)
             {
+                panMoreOption.Visible = true;
+                panMoreOption.Size = new Size(285, 45);
+
                 btnRate.Visible = true;
-                btnRate.Size = new Size(220, 45);
                 btnRate.Text = "Rate course";
 
                 btnViewDetails.Size = new Size(220, 45);
+
+                if (isComplete == 0)
+                {
+                    btnRate.Size = new Size(220, 45);
+                    panMargin.Size = new Size(0, 0);
+                    btnViewCertificate.Size = new Size(0, 0);
+                }
+                else
+                {
+                    btnRate.Size = new Size(105, 45);
+                    panMargin.Size = new Size(5, 45);
+                    btnViewCertificate.Size = new Size(140, 45);
+                }
             }
             else if (flag == 2)
             {
+                panMoreOption.Visible = true;
+                panMoreOption.Size = new Size(285, 45);
+
                 btnRate.Visible = true;
-                btnRate.Size = new Size(220, 45);
                 btnRate.Text = "Edit rate";
 
                 btnViewDetails.Size = new Size(220, 45);
+
+                if (isComplete == 0)
+                {
+                    btnRate.Size = new Size(220, 45);
+                    panMargin.Size = new Size(0, 0);
+                    btnViewCertificate.Size = new Size(0, 0);
+                }
+                else
+                {
+                    btnRate.Size = new Size(105, 45);
+                    panMargin.Size = new Size(5, 45);
+                    btnViewCertificate.Size = new Size(105, 45);
+                }
             }
+        }
+
+        public string btnViewDetailText
+        {
+            get { return btnViewDetails.Text; }
+            set { btnViewDetails.Text = value; }
+        }
+
+        public EventHandler btnViewCertificateClick;
+        private void btnViewCertificate_Click(object sender, EventArgs e)
+        {
+            btnViewCertificateClick?.Invoke(this, e);
         }
     }
 }

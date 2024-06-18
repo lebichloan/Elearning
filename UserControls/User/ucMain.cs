@@ -21,19 +21,22 @@ namespace Elearning.UserControls
             InitializeComponent();
         }
 
+        private ucHome ucHome;
+        private ucMyElearning ucMyElearning;
+        private ucProfile ucProfile;
         private void ucMain_Load(object sender, EventArgs e)
         {
-            ucHome ucHome = new ucHome();
+            this.ucHome = new ucHome();
             ucHome.Dock = DockStyle.Fill;
             ucHome.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
             tabHome.Controls.Add(ucHome);
 
-            ucMyElearning ucMyElearning = new ucMyElearning();
+            this.ucMyElearning = new ucMyElearning();
             ucMyElearning.Dock = DockStyle.Fill;
             ucMyElearning.viewDetailsClicked += ucCoursePreview_viewMyCourse;
             tabMyLearning.Controls.Add(ucMyElearning);
 
-            ucProfile ucProfile = new ucProfile();
+            this.ucProfile = new ucProfile();
             ucProfile.Dock = DockStyle.Fill;
             tabAccount.Controls.Add(ucProfile);
         }
@@ -61,19 +64,27 @@ namespace Elearning.UserControls
 
         private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ucHome ucHome = new ucHome();
-            ucHome.Dock = DockStyle.Fill;
-            ucHome.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
-            tabHome.Controls.Add(ucHome);
-
-            ucMyElearning ucMyElearning = new ucMyElearning();
-            ucMyElearning.Dock = DockStyle.Fill;
-            ucMyElearning.viewDetailsClicked += ucCoursePreview_viewMyCourse;
-            tabMyLearning.Controls.Add(ucMyElearning);
-
-            ucProfile ucProfile = new ucProfile();
-            ucProfile.Dock = DockStyle.Fill;
-            tabAccount.Controls.Add(ucProfile);
+            //if (tabControl.SelectedIndex == 0)
+            //{
+            //    //ucHome ucHome = new ucHome();
+            //    //ucHome.Dock = DockStyle.Fill;
+            //    //ucHome.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
+            //    //tabHome.Controls.Add(ucHome);
+            //    tabHome.Controls.Add(ucHome);
+            //}
+            //else if (tabControl.SelectedIndex == 1)
+            //{
+            //    //ucMyElearning ucMyElearning = new ucMyElearning();
+            //    //ucMyElearning.Dock = DockStyle.Fill;
+            //    //ucMyElearning.viewDetailsClicked += ucCoursePreview_viewMyCourse;
+            //    //tabMyLearning.Controls.Add(ucMyElearning);
+            //}
+            //else if (tabControl.SelectedIndex == 2)
+            //{
+            //    //ucProfile ucProfile = new ucProfile();
+            //    //ucProfile.Dock = DockStyle.Fill;
+            //    //tabAccount.Controls.Add(ucProfile);
+            //}
         }
     }
 }

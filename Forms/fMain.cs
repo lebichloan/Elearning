@@ -47,13 +47,23 @@ namespace Elearning
         private void lbAppName_Click(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
-            panelMain.Controls.Add(this.ucMain);
+            //panelMain.Controls.Add(this.ucMain);
+            this.ucMain = new ucMain();
+            this.ucMain.Dock = DockStyle.Fill;
+            this.ucMain.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
+            this.ucMain.viewMyCourseClicked += ucMyElearning_viewMyCourseClicked;
+            panelMain.Controls.Add(ucMain);
         }
 
         private void ucCourseInfo_backHomeClicked(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
-            panelMain.Controls.Add(this.ucMain);
+            //panelMain.Controls.Add(this.ucMain);
+            this.ucMain = new ucMain();
+            this.ucMain.Dock = DockStyle.Fill;
+            this.ucMain.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
+            this.ucMain.viewMyCourseClicked += ucMyElearning_viewMyCourseClicked;
+            panelMain.Controls.Add(ucMain);
         }
 
         private void ucMyElearning_viewMyCourseClicked(object sender, EventArgs e)
@@ -72,6 +82,11 @@ namespace Elearning
             this.Hide();
             fLogin fLogin = new fLogin();
             fLogin.ShowDialog();
+            this.Close();
+        }
+
+        private void btnSignOut_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

@@ -155,7 +155,6 @@
             // 
             // panContent
             // 
-            this.panContent.AutoSize = true;
             this.panContent.BorderColor = System.Drawing.Color.Black;
             this.panContent.BorderThickness = 1;
             this.panContent.Controls.Add(this.panChooseAnswer);
@@ -169,7 +168,6 @@
             // 
             // panChooseAnswer
             // 
-            this.panChooseAnswer.AutoSize = true;
             this.panChooseAnswer.Controls.Add(this.lblError);
             this.panChooseAnswer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panChooseAnswer.Location = new System.Drawing.Point(20, 38);
@@ -262,7 +260,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.siticonePanel2);
             this.Controls.Add(this.siticonePanel1);
@@ -275,7 +272,6 @@
             this.panQuestion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTick)).EndInit();
             this.siticonePanel2.ResumeLayout(false);
-            this.siticonePanel2.PerformLayout();
             this.panContent.ResumeLayout(false);
             this.panContent.PerformLayout();
             this.panChooseAnswer.ResumeLayout(false);

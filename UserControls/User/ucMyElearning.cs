@@ -60,7 +60,7 @@ namespace Elearning.UserControls.User
             certification.ShowDialog();
         }
 
-        private void ucMyElearning_Load(object sender, EventArgs e)
+        public void ucMyElearning_Load(object sender, EventArgs e)
         {
             ucCoursePreview ucCoursePreview = new ucCoursePreview();
             int columns = (Screen.PrimaryScreen.WorkingArea.Width - 5) / ucCoursePreview.MaximumSize.Width;

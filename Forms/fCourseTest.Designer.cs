@@ -31,11 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fCourseTest));
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.btnStart = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.lblScoreToPass = new System.Windows.Forms.Label();
             this.lblTimer = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.picAvatar = new Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox();
+            this.btnStart = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.timerTest = new System.Windows.Forms.Timer(this.components);
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.btnDone = new Siticone.Desktop.UI.WinForms.SiticoneButton();
@@ -49,7 +50,6 @@
             this.btnPre = new System.Windows.Forms.PictureBox();
             this.siticonePanel5 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.btnNext = new System.Windows.Forms.PictureBox();
-            this.lblScoreToPass = new System.Windows.Forms.Label();
             this.siticonePanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.siticonePanel1.SuspendLayout();
@@ -63,12 +63,12 @@
             // 
             // siticonePanel2
             // 
+            this.siticonePanel2.Controls.Add(this.btnStart);
             this.siticonePanel2.Controls.Add(this.lblScoreToPass);
             this.siticonePanel2.Controls.Add(this.lblTimer);
             this.siticonePanel2.Controls.Add(this.label2);
             this.siticonePanel2.Controls.Add(this.lblName);
             this.siticonePanel2.Controls.Add(this.picAvatar);
-            this.siticonePanel2.Controls.Add(this.btnStart);
             this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticonePanel2.Location = new System.Drawing.Point(0, 0);
             this.siticonePanel2.Name = "siticonePanel2";
@@ -76,20 +76,18 @@
             this.siticonePanel2.Size = new System.Drawing.Size(1228, 95);
             this.siticonePanel2.TabIndex = 2;
             // 
-            // btnStart
+            // lblScoreToPass
             // 
-            this.btnStart.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnStart.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnStart.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnStart.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnStart.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnStart.ForeColor = System.Drawing.Color.White;
-            this.btnStart.Location = new System.Drawing.Point(15, 24);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(150, 50);
-            this.btnStart.TabIndex = 18;
-            this.btnStart.Text = "Start";
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            this.lblScoreToPass.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.lblScoreToPass.Location = new System.Drawing.Point(188, 43);
+            this.lblScoreToPass.Margin = new System.Windows.Forms.Padding(20, 20, 0, 0);
+            this.lblScoreToPass.Name = "lblScoreToPass";
+            this.lblScoreToPass.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
+            this.lblScoreToPass.Size = new System.Drawing.Size(422, 33);
+            this.lblScoreToPass.TabIndex = 19;
+            this.lblScoreToPass.Text = "All Question";
+            this.lblScoreToPass.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblScoreToPass.Visible = false;
             // 
             // lblTimer
             // 
@@ -138,6 +136,21 @@
             this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picAvatar.TabIndex = 0;
             this.picAvatar.TabStop = false;
+            // 
+            // btnStart
+            // 
+            this.btnStart.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnStart.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnStart.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnStart.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnStart.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnStart.ForeColor = System.Drawing.Color.White;
+            this.btnStart.Location = new System.Drawing.Point(15, 24);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(150, 50);
+            this.btnStart.TabIndex = 18;
+            this.btnStart.Text = "Start";
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // timerTest
             // 
@@ -293,19 +306,6 @@
             this.btnNext.TabIndex = 24;
             this.btnNext.TabStop = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // lblScoreToPass
-            // 
-            this.lblScoreToPass.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.lblScoreToPass.Location = new System.Drawing.Point(188, 43);
-            this.lblScoreToPass.Margin = new System.Windows.Forms.Padding(20, 20, 0, 0);
-            this.lblScoreToPass.Name = "lblScoreToPass";
-            this.lblScoreToPass.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
-            this.lblScoreToPass.Size = new System.Drawing.Size(422, 33);
-            this.lblScoreToPass.TabIndex = 19;
-            this.lblScoreToPass.Text = "All Question";
-            this.lblScoreToPass.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblScoreToPass.Visible = false;
             // 
             // fCourseTest
             // 

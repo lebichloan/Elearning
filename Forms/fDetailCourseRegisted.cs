@@ -1,4 +1,5 @@
 ﻿using Elearning.Entities;
+using Elearning.UserControls;
 using Elearning.UserControls.CourseTest;
 using System;
 using System.Collections.Generic;
@@ -118,6 +119,41 @@ namespace Elearning.Forms
                 rateCourse.ShowDialog();
             }
         }
+
+        private void fRateCourseCloseForm(object sender, EventArgs e)
+        {
+            listCourseReviews = (
+                from review in Program.provider.CourseReviews
+                where review.register_id == register.register_id
+                select review
+                ).ToList();
+
+            if (listCourseReviews.Count == 0)
+            {
+                btnAddReview.Text = "Rate course";
+            }
+            else
+            {
+                btnAddReview.Text = "Edit rate";
+            }
+        }
+
+        private CourseReview getCourseReview(Course course, Account account)
+        {
+            List<CourseReview> courseReviews = (
+                from review in Program.provider.CourseReviews
+                where review.Register.course_id == course.course_id
+                && review.Register.learner_id == account.acc_id
+                select review
+                ).ToList();
+
+            if (courseReviews.Count == 0)
+            {
+                return null;
+            }
+            return courseReviews.FirstOrDefault();
+        }
+
 
         private void btnViewCertification_Click(object sender, EventArgs e)
         {

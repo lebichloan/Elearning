@@ -48,6 +48,11 @@ namespace Elearning.Forms
             ).ToList();
 
             InitUI();
+
+            lblScoreToPass.Text = String.Format("Score to pass: {0} / {1}",
+                currentTest.score_to_pass.ToString(),
+                currentTest.total_score.ToString());
+
             if (displayType == 0)
             {
                 LoadAllQuestion();
@@ -119,7 +124,9 @@ namespace Elearning.Forms
                 ucTest.isViewOnly = isView;
                 ucTest.SetUI();
                 ucTest.questionNumber = String.Format("Question {0}:", count);
-                ucTest.questionState = "";
+                ucTest.questionState = "Not yet";
+                ucTest.questionScore = String.Format("Score: {0}",
+                    question.score.ToString());
                 ucTest.questionContent = question.question_description;
                 ucTest.answerState = "False";
                 ucTest.trueAnswer = question.answer;
@@ -229,7 +236,9 @@ namespace Elearning.Forms
                 ucTest.isViewOnly = isView;
                 ucTest.SetUI();
                 ucTest.questionNumber = String.Format("Question {0}:", count);
-                ucTest.questionState = "";
+                ucTest.questionState = "Not yet";
+                ucTest.questionScore = String.Format("Score: {0}",
+                    question.score.ToString());
                 ucTest.questionContent = question.question_description;
                 ucTest.answerState = "False";
                 ucTest.trueAnswer = question.answer;
@@ -457,6 +466,7 @@ namespace Elearning.Forms
                     ).ToList();
 
                 double? total = 0;
+                int countTest = 0;
                 foreach(CourseTest test in listCourseTest)
                 {
                     List<TestResult> results = (
@@ -470,10 +480,11 @@ namespace Elearning.Forms
                     {
                         TestResult maxResult = getMaxResult(results);
                         total += maxResult.test_score;
+                        countTest++;
                     }
                 }
 
-                double? completeScore = total / listCourseTest.Count();
+                double? completeScore = total / countTest;
 
 
                 // luu thong tin
@@ -513,6 +524,7 @@ namespace Elearning.Forms
             timerTest.Start();
             startTime = DateTime.Now;
             isStarted = 1;
+            btnDone.Visible = true;
         }
 
         private void btnDone_Click(object sender, EventArgs e)

@@ -42,6 +42,28 @@ namespace Elearning.UserControls.User
             viewDetailTestResult?.Invoke(this, e);
         }
 
+        public void SetTestState(int isFinish)
+        {
+            if (isFinish == 0)
+            {
+                //not started
+                lblState.Text = "Not yet";
+                lblState.ForeColor = Color.Red;
+            }
+            else if (isFinish == 1)
+            {
+                // not pass
+                lblState.Text = "Not meeting the requirements";
+                lblState.ForeColor = Color.Red;
+            }
+            else
+            {
+                // pass
+                lblState.Text = "Finish";
+                lblState.ForeColor = Color.FromArgb(94, 148, 255);
+            }
+        }
+
         public void HideViewDetail(int flag)
         {
             if (flag == 0)

@@ -338,6 +338,7 @@
             this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picAvatar.TabIndex = 2;
             this.picAvatar.TabStop = false;
+            this.picAvatar.Click += new System.EventHandler(this.picAvatar_Click);
             // 
             // label1
             // 
@@ -566,6 +567,7 @@
             this.btnSave.Size = new System.Drawing.Size(220, 54);
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Save";
+            this.btnSave.Visible = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // tableLayoutPanel1

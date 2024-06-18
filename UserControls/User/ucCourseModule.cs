@@ -18,6 +18,12 @@ namespace Elearning.UserControls.User
             InitializeComponent();
         }
 
+        public Color backColor
+        {
+            get { return this.BackColor; }
+            set { this.BackColor = value; }
+        }
+
         private int moduleId;
         public ucCourseModule(int moduleID)
         {

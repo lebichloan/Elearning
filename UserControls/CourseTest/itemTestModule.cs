@@ -69,7 +69,9 @@ namespace Elearning.UserControls.CourseTest
         public void InitUI(TestResult testResult)
         {
             lblTimeFinish.Text = testResult.time_finish.ToString();
-            lblTotalScore.Text = testResult.test_score.ToString();
+            lblTotalScore.Text = String.Format("{0} / {1}",
+                testResult.test_score.ToString(),
+                testResult.CourseTest.total_score.ToString());
 
             if (testResult.CourseTest.mandatory == 1)
             {

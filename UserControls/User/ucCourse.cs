@@ -85,16 +85,17 @@ namespace Elearning.UserControls
                 if (module.course_id == course.course_id)
                 {
                     count++;
-                    if (count == 1)
-                    {
-                        LoadResourceOfModule(module.module_id);
-                    }
                     ucCourseModule uc = new ucCourseModule();
                     uc.Dock = DockStyle.Top;
                     uc.moduleID = module.module_id;
                     uc.moduleOrdinal = string.Format("Module {0}:", count);
                     uc.moduleName = module.module_name;
                     uc.courseModuleClick += ucCourseModule_viewModuleClicked;
+                    if (count == 1)
+                    {
+                        LoadResourceOfModule(module.module_id);
+                        uc.backColor = Color.FromArgb(228, 230, 233);
+                    }
                     layoutModule.Controls.Add(uc);
                 }
             }
@@ -143,7 +144,7 @@ namespace Elearning.UserControls
                         itemtest.Dock = DockStyle.Top;
                         itemtest.resourceId = resource.resource_id;
                         itemtest.testName = resource.resource_name;
-                        itemtest.goToTest += GoToTest;
+                        //itemtest.goToTest += GoToTest;
 
                         List<TestResult> testResults = (
                             from result in Program.provider.TestResults
@@ -158,16 +159,52 @@ namespace Elearning.UserControls
                         {
                             itemtest.HideViewDetail(1);
                             itemtest.viewDetailTestResult += ViewDetailTestResult;
+
+                            if (getMaxResult(testResults).is_passed == 1)
+                            {
+                                itemtest.SetTestState(2);
+                            }
+                            else
+                            {
+                                itemtest.SetTestState(1);
+                                itemtest.goToTest += GoToTest;
+                            }
                         }
                         else
                         {
                             itemtest.HideViewDetail(0);
+                            itemtest.SetTestState(0);
+                            itemtest.goToTest += GoToTest;
                         }
 
                         layoutResource.Controls.Add(itemtest);
                     }
                 }
             }
+        }
+
+        //private int CheckPassTheTest(CourseResource resource, TestResult maxResult)
+        //{
+        //    int scoreToPass = (
+        //        from test in Program.provider.CourseTests
+        //        where test.resource_id == resource.resource_id
+        //        select test
+        //        ).ToList().FirstOrDefault().score_to_pass;
+
+        //    if (maxResult.tes)
+        //}
+
+        private TestResult getMaxResult(List<TestResult> allTestResult)
+        {
+            TestResult maxResult = allTestResult.FirstOrDefault();
+            foreach (TestResult result in allTestResult)
+            {
+                if (result.test_score > maxResult.test_score)
+                {
+                    maxResult = result;
+                }
+            }
+            return maxResult;
         }
 
         private void GoToTest(object sender, EventArgs e)
@@ -196,6 +233,20 @@ namespace Elearning.UserControls
         {
             ucCourseModule ucCourseModule = sender as ucCourseModule;
             LoadResourceOfModule(ucCourseModule.moduleID);
+
+            foreach(Control control in layoutModule.Controls)
+            {
+                if (control != sender)
+                {
+                    ucCourseModule item = control as ucCourseModule;
+                    item.backColor = Color.White;
+                }
+                else
+                {
+                    ucCourseModule item = control as ucCourseModule;
+                    item.backColor = Color.FromArgb(228, 230, 233);
+                }
+            }
         }
 
         private void btnBackHome_Click(object sender, EventArgs e)

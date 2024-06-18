@@ -38,7 +38,9 @@ namespace Elearning.UserControls.CourseTest
 
             //lblTime.Text = testResult.test_time.ToString();
             lblTime.Text = formattedTime;
-            lblScore.Text = testResult.test_score.ToString();
+            lblScore.Text = String.Format("{0} / {1}",
+                testResult.test_score.ToString(),
+                testResult.CourseTest.total_score.ToString());
             if (testResult.is_passed == 0)
             {
                 lblState.Text = "Not met";

@@ -121,7 +121,10 @@ namespace Elearning.Forms
                 lblLastState.ForeColor = Color.FromArgb(94, 148, 255);
             }
 
-            lblLastScore.Text = maxResult.test_score.ToString();
+            lblLastScore.Text = String.Format("{0} / {1}",
+                maxResult.test_score.ToString(),
+                maxResult.CourseTest.total_score.ToString());
+
             lblOrdinalPass.Text = String.Format("Test oridinal {0}", maxResult.test_ordinal.ToString());
         }
 

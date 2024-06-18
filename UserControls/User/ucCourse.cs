@@ -1,5 +1,6 @@
 ﻿using Elearning.Entities;
 using Elearning.Forms;
+using Elearning.Properties;
 using Elearning.UserControls.User;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
 
 namespace Elearning.UserControls
 {
@@ -163,6 +165,7 @@ namespace Elearning.UserControls
                             if (getMaxResult(testResults).is_passed == 1)
                             {
                                 itemtest.SetTestState(2);
+                                itemtest.goToTest += GoToTest;
                             }
                             else
                             {
@@ -211,7 +214,53 @@ namespace Elearning.UserControls
         {
             itemTest itemtest = (itemTest)sender;
             fCourseTest courseTest = new fCourseTest(itemtest.resourceId, false, course);
+            courseTest.FormClosed += CourseTest_FormClosed;
             courseTest.ShowDialog();
+        }
+
+        private void CourseTest_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            foreach(Control control in layoutResource.Controls)
+            {
+                itemTest itemtest = control as itemTest;
+                if (itemtest != null)
+                {
+                    itemtest.viewDetailTestResult -= ViewDetailTestResult;
+                    itemtest.goToTest -= GoToTest;
+
+                    List<TestResult> testResults = (
+                        from result in Program.provider.TestResults
+                        join test in Program.provider.CourseTests
+                                        on result.test_id equals test.test_id
+                        where result.register_id == currentRegister.register_id
+                        && test.resource_id == itemtest.resourceId
+                    select result
+                    ).ToList();
+
+                    if (testResults.Count > 0)
+                    {
+                        itemtest.HideViewDetail(1);
+                        itemtest.viewDetailTestResult += ViewDetailTestResult;
+
+                        if (getMaxResult(testResults).is_passed == 1)
+                        {
+                            itemtest.SetTestState(2);
+                            itemtest.goToTest += GoToTest;
+                        }
+                        else
+                        {
+                            itemtest.SetTestState(1);
+                            itemtest.goToTest += GoToTest;
+                        }
+                    }
+                    else
+                    {
+                        itemtest.HideViewDetail(0);
+                        itemtest.SetTestState(0);
+                        itemtest.goToTest += GoToTest;
+                    }
+                }
+            }
         }
 
         private void ViewDetailTestResult(object sender, EventArgs e)

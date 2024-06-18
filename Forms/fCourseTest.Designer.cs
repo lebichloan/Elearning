@@ -44,12 +44,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel4 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.tbQuestion = new System.Windows.Forms.TableLayoutPanel();
+            this.lblScoreToPass = new System.Windows.Forms.Label();
             this.panPaging = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.btnPre = new System.Windows.Forms.PictureBox();
             this.siticonePanel5 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.btnNext = new System.Windows.Forms.PictureBox();
-            this.lblScoreToPass = new System.Windows.Forms.Label();
-            this.tbQuestion = new System.Windows.Forms.TableLayoutPanel();
             this.siticonePanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.siticonePanel1.SuspendLayout();
@@ -232,6 +232,32 @@
             this.siticonePanel4.Size = new System.Drawing.Size(874, 494);
             this.siticonePanel4.TabIndex = 5;
             // 
+            // tbQuestion
+            // 
+            this.tbQuestion.ColumnCount = 1;
+            this.tbQuestion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tbQuestion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbQuestion.Location = new System.Drawing.Point(5, 38);
+            this.tbQuestion.Name = "tbQuestion";
+            this.tbQuestion.RowCount = 1;
+            this.tbQuestion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tbQuestion.Size = new System.Drawing.Size(864, 451);
+            this.tbQuestion.TabIndex = 6;
+            this.tbQuestion.Visible = false;
+            // 
+            // lblScoreToPass
+            // 
+            this.lblScoreToPass.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblScoreToPass.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScoreToPass.Location = new System.Drawing.Point(5, 5);
+            this.lblScoreToPass.Margin = new System.Windows.Forms.Padding(20, 20, 0, 0);
+            this.lblScoreToPass.Name = "lblScoreToPass";
+            this.lblScoreToPass.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
+            this.lblScoreToPass.Size = new System.Drawing.Size(864, 33);
+            this.lblScoreToPass.TabIndex = 5;
+            this.lblScoreToPass.Text = "All Question";
+            this.lblScoreToPass.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
             // panPaging
             // 
             this.panPaging.Controls.Add(this.btnPre);
@@ -280,32 +306,6 @@
             this.btnNext.TabIndex = 24;
             this.btnNext.TabStop = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // lblScoreToPass
-            // 
-            this.lblScoreToPass.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblScoreToPass.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScoreToPass.Location = new System.Drawing.Point(5, 5);
-            this.lblScoreToPass.Margin = new System.Windows.Forms.Padding(20, 20, 0, 0);
-            this.lblScoreToPass.Name = "lblScoreToPass";
-            this.lblScoreToPass.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
-            this.lblScoreToPass.Size = new System.Drawing.Size(864, 33);
-            this.lblScoreToPass.TabIndex = 5;
-            this.lblScoreToPass.Text = "All Question";
-            this.lblScoreToPass.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // tbQuestion
-            // 
-            this.tbQuestion.ColumnCount = 1;
-            this.tbQuestion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbQuestion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbQuestion.Location = new System.Drawing.Point(5, 38);
-            this.tbQuestion.Name = "tbQuestion";
-            this.tbQuestion.RowCount = 1;
-            this.tbQuestion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbQuestion.Size = new System.Drawing.Size(864, 451);
-            this.tbQuestion.TabIndex = 6;
-            this.tbQuestion.Visible = false;
             // 
             // fCourseTest
             // 

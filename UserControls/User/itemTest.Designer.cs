@@ -30,10 +30,10 @@
         {
             this.panContainer = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.lblTestName = new System.Windows.Forms.Label();
+            this.lblState = new System.Windows.Forms.Label();
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.lblViewDetail = new System.Windows.Forms.Label();
-            this.lblState = new System.Windows.Forms.Label();
-            this.lblTestName = new System.Windows.Forms.Label();
             this.panContainer.SuspendLayout();
             this.siticonePanel1.SuspendLayout();
             this.siticonePanel2.SuspendLayout();
@@ -65,6 +65,30 @@
             this.siticonePanel1.TabIndex = 10;
             this.siticonePanel1.Click += new System.EventHandler(this.GoToTest_Click);
             // 
+            // lblTestName
+            // 
+            this.lblTestName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTestName.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTestName.ForeColor = System.Drawing.Color.Black;
+            this.lblTestName.Location = new System.Drawing.Point(30, 30);
+            this.lblTestName.Name = "lblTestName";
+            this.lblTestName.Size = new System.Drawing.Size(338, 42);
+            this.lblTestName.TabIndex = 11;
+            this.lblTestName.Text = "label1";
+            this.lblTestName.Click += new System.EventHandler(this.GoToTest_Click);
+            // 
+            // lblState
+            // 
+            this.lblState.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblState.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblState.ForeColor = System.Drawing.Color.Red;
+            this.lblState.Location = new System.Drawing.Point(30, 72);
+            this.lblState.Name = "lblState";
+            this.lblState.Size = new System.Drawing.Size(338, 23);
+            this.lblState.TabIndex = 10;
+            this.lblState.Text = "Not yet";
+            this.lblState.Click += new System.EventHandler(this.GoToTest_Click);
+            // 
             // siticonePanel2
             // 
             this.siticonePanel2.Controls.Add(this.lblViewDetail);
@@ -87,28 +111,6 @@
             this.lblViewDetail.Text = "View detail";
             this.lblViewDetail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblViewDetail.Click += new System.EventHandler(this.lblViewDetail_Click);
-            // 
-            // lblState
-            // 
-            this.lblState.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblState.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblState.ForeColor = System.Drawing.Color.Red;
-            this.lblState.Location = new System.Drawing.Point(30, 72);
-            this.lblState.Name = "lblState";
-            this.lblState.Size = new System.Drawing.Size(338, 23);
-            this.lblState.TabIndex = 10;
-            this.lblState.Text = "Not yet";
-            // 
-            // lblTestName
-            // 
-            this.lblTestName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTestName.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTestName.ForeColor = System.Drawing.Color.Black;
-            this.lblTestName.Location = new System.Drawing.Point(30, 30);
-            this.lblTestName.Name = "lblTestName";
-            this.lblTestName.Size = new System.Drawing.Size(338, 42);
-            this.lblTestName.TabIndex = 11;
-            this.lblTestName.Text = "label1";
             // 
             // itemTest
             // 

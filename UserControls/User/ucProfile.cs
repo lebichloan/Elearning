@@ -77,7 +77,7 @@ namespace Elearning.UserControls.User
             btnYourAccount.BackColor = Color.White;
         }
 
-        private void InitUI()
+        public void InitUI()
         {
             btnSave.Visible = false;
             picAvatar.Image = Image.FromFile(Program.AVARTAR_PATH + currentAccount.avatar);

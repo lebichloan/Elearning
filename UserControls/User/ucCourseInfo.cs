@@ -70,6 +70,7 @@ namespace Elearning.UserControls
                     newRegister.register_status = 1;
                     newRegister.completion_score = 0;
                     newRegister.course_certificate = null;
+                    newRegister.paid = (int)Math.Round((double)(course.price - (course.price * course.discount / 100.0)));
                     Program.provider.Registers.Add(newRegister);
                     Program.provider.SaveChanges();
 
@@ -130,18 +131,19 @@ namespace Elearning.UserControls
             lblCategory.Text = course.category;
             lblCategory1.Text = course.category;
 
-            lblDescriptionAuto.Text = course.course_description;
+            lblDescription.Text = course.course_description;
 
             if (course.stars != null)
             {
-                lblStar.Text = course.stars.ToString();
+                lblStar.Text = String.Format("{0}/5",
+                    FormatDecimal(course.stars.Value));
             }
             else
             {
-                lblStar.Text = "";
+                lblStar.Text = "5/5";
             }
 
-            if (course.discount_end_date <= DateTime.Now)
+            if (course.discount_end_date >= DateTime.Now)
             {
                 int? priceAfterDiscount =
                     course.price - course.price * course.discount;
@@ -155,6 +157,24 @@ namespace Elearning.UserControls
             LoadModuleOfCourse(course);
         }
 
+        public static string FormatDecimal(decimal? value)
+        {
+            if (!value.HasValue)
+            {
+                return string.Empty;
+            }
+
+            decimal roundedValue = Math.Round(value.Value, 1);
+
+            if (roundedValue == Math.Floor(roundedValue))
+            {
+                return roundedValue.ToString("0");
+            }
+            else
+            {
+                return roundedValue.ToString("0.0");
+            }
+        }
         private void LoadModuleOfCourse(Course course)
         {
             layoutModule.AutoScroll = true;

@@ -141,10 +141,11 @@ namespace Elearning.Forms
             {
                 panPayment.Visible = false;
 
-                if (course.discount_end_date <= DateTime.Now)
+                if (course.discount_end_date >= DateTime.Now)
                 {
                     int? priceAfterDiscount =
                         (int)Math.Round((double)(course.price - (course.price * course.discount / 100.0)));
+                    lblTotalCash.Text = Program.FormatNumberWithSpaces(priceAfterDiscount.Value);
                 }
                 else
                 {

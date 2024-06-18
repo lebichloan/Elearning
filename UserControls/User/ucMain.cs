@@ -41,6 +41,14 @@ namespace Elearning.UserControls
             tabAccount.Controls.Add(ucProfile);
         }
 
+        public void ucMain_Reload()
+        {
+            ucMyElearning.Load -= ucMyElearning.ucMyElearning_Load;
+            ucMyElearning.Load += ucMyElearning.ucMyElearning_Load;
+
+            ucProfile.InitUI();
+        }
+
         private Course coursePreview;
         public Course coursePreviewClicked
         {

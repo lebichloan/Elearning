@@ -48,10 +48,16 @@ namespace Elearning
         {
             panelMain.Controls.Clear();
             //panelMain.Controls.Add(this.ucMain);
-            this.ucMain = new ucMain();
-            this.ucMain.Dock = DockStyle.Fill;
-            this.ucMain.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
-            this.ucMain.viewMyCourseClicked += ucMyElearning_viewMyCourseClicked;
+            //this.ucMain = new ucMain();
+            //this.ucMain.Dock = DockStyle.Fill;
+            //this.ucMain.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
+            //this.ucMain.viewMyCourseClicked += ucMyElearning_viewMyCourseClicked;
+
+            //this.ucMain.Load -= ucMain.ucMain_Load;
+            //this.ucMain.Load += ucMain.ucMain_Load;
+
+            this.ucMain.ucMain_Reload();
+
             panelMain.Controls.Add(ucMain);
         }
 

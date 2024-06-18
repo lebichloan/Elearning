@@ -69,7 +69,6 @@ namespace Elearning.Forms
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            fResultTestClose?.Invoke(this, e);
             this.Close();
         }
 

@@ -214,7 +214,7 @@
             this.Text = "ELearning Admin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fAdminMain_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.fAdminMain_FormClosed);
+            //this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.fAdminMain_FormClosed);
             this.Load += new System.EventHandler(this.ucAdminMain_Load);
             this.panelTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnUserProfile)).EndInit();

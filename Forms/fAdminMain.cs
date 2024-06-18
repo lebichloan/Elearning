@@ -45,12 +45,12 @@ namespace Elearning.Forms
             ucHome.BringToFront();
         }
 
-        private void fAdminMain_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Hide();
-            fLogin fLogin = new fLogin();
-            fLogin.ShowDialog();
-        }
+        //private void fAdminMain_FormClosed(object sender, FormClosedEventArgs e)
+        //{
+        //    //this.Hide();
+        //    //fLogin fLogin = new fLogin();
+        //    //fLogin.ShowDialog();
+        //}
 
         private void fAdminMain_FormClosing(object sender, FormClosingEventArgs e)
         {

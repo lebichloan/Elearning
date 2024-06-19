@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PdfiumViewer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace Elearning.UserControls
         public itemFile()
         {
             InitializeComponent();
+            timerEvent.Start();
         }
 
         private int candownload = 0;
@@ -42,9 +44,11 @@ namespace Elearning.UserControls
             if (canDownload == 0)
             {
                 btnDownload.Visible = false;
+                panDownload.Size = new Size(0, 0);
             }
             else
             {
+                panDownload.Size = new Size(60, 870);
                 btnDownload.Visible = true;
             }
         }
@@ -65,6 +69,65 @@ namespace Elearning.UserControls
                 File.Copy(Program.RESOURCES_PATH + resourceFileName, destinationPath, true);
 
                 MessageBox.Show($"Lưu file thành công tại {destinationPath}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        public void LoadPDF(string filename)
+        {
+            if (System.IO.Path.GetExtension(filename) == ".pdf")
+            {
+                pdfViewer.Document = PdfDocument.Load(filename);
+                lblPage.Text = String.Format("{0}/{1}",
+                    pdfViewer.Renderer.Page + 1,
+                    pdfViewer.Document.PageCount);
+            }
+            else
+            {
+                pdfViewer.Visible = false;
+                panToolBar.Visible = false;
+                this.Size = new Size(600, 145);
+            }
+        }
+
+        private void btnZoomIn_Click(object sender, EventArgs e)
+        {
+            pdfViewer.ZoomMode = PdfViewerZoomMode.FitWidth;
+        }
+
+        private void btnZoomOut_Click(object sender, EventArgs e)
+        {
+            pdfViewer.ZoomMode = PdfViewerZoomMode.FitHeight;
+        }
+
+        private void btnPre_Click(object sender, EventArgs e)
+        {
+            if (pdfViewer.Renderer.Page > 0)
+            {
+                pdfViewer.Renderer.Page--;
+                lblPage.Text = String.Format("{0}/{1}",
+                    pdfViewer.Renderer.Page + 1,
+                    pdfViewer.Document.PageCount);
+            }
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (pdfViewer.Renderer.Page < pdfViewer.Document.PageCount -1)
+            {
+                pdfViewer.Renderer.Page++;
+                lblPage.Text = String.Format("{0}/{1}",
+                    pdfViewer.Renderer.Page + 1,
+                    pdfViewer.Document.PageCount);
+            }
+        }
+
+        private void timerEvent_Tick(object sender, EventArgs e)
+        {
+            if (System.IO.Path.GetExtension(resourceFileName) == ".pdf")
+            {
+                lblPage.Text = String.Format("{0}/{1}",
+                    pdfViewer.Renderer.Page + 1,
+                    pdfViewer.Document.PageCount);
             }
         }
     }

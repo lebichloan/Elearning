@@ -32,7 +32,7 @@ namespace Elearning.UserControls.User
             List<Register> allCoursesRegister = (
                 from course in Program.provider.Courses
                 join register in Program.provider.Registers on course.course_id equals register.course_id
-                join account in Program.provider.Accounts on register.learner_id equals account.acc_id
+                where register.learner_id == currentAccount.acc_id
                 select register
             ).ToList();
 

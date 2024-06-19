@@ -139,6 +139,7 @@ namespace Elearning.UserControls
                         itemfile.resourceFileName = resource.resource_filename;
                         itemfile.canDownload = resource.allow_download;
                         itemfile.SetCanDownload();
+                        itemfile.LoadPDF(Program.RESOURCES_PATH + resource.resource_filename);
                         layoutResource.Controls.Add(itemfile);
                     }
                     else if (resource.resource_type == 2)

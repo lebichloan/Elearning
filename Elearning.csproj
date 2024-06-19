@@ -223,6 +223,12 @@
     <Compile Include="Forms\fTestResult.Designer.cs">
       <DependentUpon>fTestResult.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\fZoomVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fZoomVideo.Designer.cs">
+      <DependentUpon>fZoomVideo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\RegisterPayment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -560,6 +566,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\fTestResult.resx">
       <DependentUpon>fTestResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fZoomVideo.resx">
+      <DependentUpon>fZoomVideo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RegisterPayment.resx">
       <DependentUpon>RegisterPayment.cs</DependentUpon>

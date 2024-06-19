@@ -1,5 +1,4 @@
-﻿using Elearning.Forms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,14 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Elearning.UserControls
+namespace Elearning.Forms
 {
-    public partial class itemVideo : UserControl
+    public partial class fZoomVideo : Form
     {
-        public itemVideo()
+        public fZoomVideo()
         {
             InitializeComponent();
             isPlay = 0;
+            HideContextMenu();
         }
 
         private int isPlay = 0;
@@ -27,12 +27,6 @@ namespace Elearning.UserControls
             btnPlay.Image = Image.FromFile(Program.ICONS_PATH + "play.png");
         }
 
-        public string resuorceName
-        {
-            get { return lblResourceName.Text; }
-            set { lblResourceName.Text = value; }
-        }
-        
         public string videoURL
         {
             get { return medVideo.URL; }
@@ -57,25 +51,17 @@ namespace Elearning.UserControls
             }
         }
 
-        private void timerVideo_Tick(object sender, EventArgs e)
+        private void btnVolume_Click(object sender, EventArgs e)
         {
-            if (medVideo.playState == WMPLib.WMPPlayState.wmppsPlaying)
+            if (trackBarVolume.Value == 0)
             {
-                progressBar.Maximum = (int)medVideo.Ctlcontrols.currentItem.duration;
-                progressBar.Value = (int)medVideo.Ctlcontrols.currentPosition;
+                btnVolume.Image = Image.FromFile(Program.ICONS_PATH + "volume.png");
+                trackBarVolume.Value = 100;
             }
-            lblTimePlay.Text = String.Format("{0} / {1}",
-                medVideo.Ctlcontrols.currentPositionString,
-                medVideo.Ctlcontrols.currentItem.durationString.ToString());
-
-            if (medVideo.Ctlcontrols.currentPositionString 
-                == medVideo.Ctlcontrols.currentItem.durationString.ToString())
+            else
             {
-                medVideo.Ctlcontrols.stop();
-                isPlay = 0;
-                btnPlay.Image = Image.FromFile(Program.ICONS_PATH + "play.png");
-                timerVideo.Stop();
-                progressBar.Value = (int)medVideo.Ctlcontrols.currentPosition;
+                btnVolume.Image = Image.FromFile(Program.ICONS_PATH + "mute_volume.png");
+                trackBarVolume.Value = 0;
             }
         }
 
@@ -92,25 +78,31 @@ namespace Elearning.UserControls
             }
         }
 
-        private void btnVolume_Click(object sender, EventArgs e)
-        {
-            if (trackBarVolume.Value == 0)
-            {
-                btnVolume.Image = Image.FromFile(Program.ICONS_PATH + "volume.png");
-                trackBarVolume.Value = 100;
-            }
-            else
-            {
-                btnVolume.Image = Image.FromFile(Program.ICONS_PATH + "mute_volume.png");
-                trackBarVolume.Value = 0;
-            }
-        }
-
         private void btnZoom_Click(object sender, EventArgs e)
         {
-            fZoomVideo fZoom = new fZoomVideo();
-            fZoom.videoURL = this.videoURL;
-            fZoom.ShowDialog();
+            this.Close();
+        }
+
+        private void timerVideo_Tick(object sender, EventArgs e)
+        {
+            if (medVideo.playState == WMPLib.WMPPlayState.wmppsPlaying)
+            {
+                progressBar.Maximum = (int)medVideo.Ctlcontrols.currentItem.duration;
+                progressBar.Value = (int)medVideo.Ctlcontrols.currentPosition;
+            }
+            lblTimePlay.Text = String.Format("{0} / {1}",
+                medVideo.Ctlcontrols.currentPositionString,
+                medVideo.Ctlcontrols.currentItem.durationString.ToString());
+
+            if (medVideo.Ctlcontrols.currentPositionString
+                == medVideo.Ctlcontrols.currentItem.durationString.ToString())
+            {
+                medVideo.Ctlcontrols.stop();
+                isPlay = 0;
+                btnPlay.Image = Image.FromFile(Program.ICONS_PATH + "play.png");
+                timerVideo.Stop();
+                progressBar.Value = (int)medVideo.Ctlcontrols.currentPosition;
+            }
         }
     }
 }

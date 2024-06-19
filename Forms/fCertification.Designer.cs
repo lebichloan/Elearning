@@ -35,12 +35,14 @@
             this.lblTimeFinish = new System.Windows.Forms.Label();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.lblLecturer = new System.Windows.Forms.Label();
+            this.btnShareFB = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShareFB)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
@@ -101,11 +103,23 @@
             this.lblLecturer.Text = "lecturer";
             this.lblLecturer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnShareFB
+            // 
+            this.btnShareFB.Image = ((System.Drawing.Image)(resources.GetObject("btnShareFB.Image")));
+            this.btnShareFB.Location = new System.Drawing.Point(545, 723);
+            this.btnShareFB.Name = "btnShareFB";
+            this.btnShareFB.Size = new System.Drawing.Size(50, 50);
+            this.btnShareFB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnShareFB.TabIndex = 6;
+            this.btnShareFB.TabStop = false;
+            this.btnShareFB.Click += new System.EventHandler(this.btnShareFB_Click);
+            // 
             // fCertification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1150, 813);
+            this.Controls.Add(this.btnShareFB);
             this.Controls.Add(this.lblLecturer);
             this.Controls.Add(this.siticonePanel1);
             this.Controls.Add(this.lblTimeFinish);
@@ -116,6 +130,7 @@
             this.Name = "fCertification";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShareFB)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -128,5 +143,6 @@
         private System.Windows.Forms.Label lblTimeFinish;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
         private System.Windows.Forms.Label lblLecturer;
+        private System.Windows.Forms.PictureBox btnShareFB;
     }
 }

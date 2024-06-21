@@ -20,6 +20,18 @@ namespace Elearning.UserControls
             InitializeComponent();
         }
 
+        public string rating
+        {
+            get { return lblStar.Text; }
+            set { lblStar.Text = value; }
+        }
+
+        public string price
+        {
+            get { return lblPrice.Text; }
+            set { lblPrice.Text = value; }
+        }
+
         private Course coursePreview;
         public Course coursePreviewClicked
         {

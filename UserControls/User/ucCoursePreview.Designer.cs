@@ -28,7 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucCoursePreview));
             this.conInfo = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
+            this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.lblStar = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblPrice = new System.Windows.Forms.Label();
             this.btnViewDetails = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.tbButton = new System.Windows.Forms.TableLayoutPanel();
@@ -36,6 +42,9 @@
             this.lbLecturer = new System.Windows.Forms.Label();
             this.picImage = new Siticone.Desktop.UI.WinForms.SiticonePictureBox();
             this.conInfo.SuspendLayout();
+            this.siticonePanel2.SuspendLayout();
+            this.siticonePanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,6 +53,7 @@
             this.conInfo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
             this.conInfo.BorderRadius = 8;
             this.conInfo.BorderThickness = 1;
+            this.conInfo.Controls.Add(this.siticonePanel2);
             this.conInfo.Controls.Add(this.btnViewDetails);
             this.conInfo.Controls.Add(this.siticonePanel1);
             this.conInfo.Controls.Add(this.tbButton);
@@ -56,9 +66,65 @@
             this.conInfo.Margin = new System.Windows.Forms.Padding(2);
             this.conInfo.Name = "conInfo";
             this.conInfo.Padding = new System.Windows.Forms.Padding(15);
-            this.conInfo.Size = new System.Drawing.Size(388, 450);
+            this.conInfo.Size = new System.Drawing.Size(388, 475);
             this.conInfo.TabIndex = 1;
             this.conInfo.Text = "siticoneContainerControl1";
+            // 
+            // siticonePanel2
+            // 
+            this.siticonePanel2.Controls.Add(this.siticonePanel3);
+            this.siticonePanel2.Controls.Add(this.lblPrice);
+            this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.siticonePanel2.Location = new System.Drawing.Point(15, 295);
+            this.siticonePanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticonePanel2.Name = "siticonePanel2";
+            this.siticonePanel2.Size = new System.Drawing.Size(358, 39);
+            this.siticonePanel2.TabIndex = 15;
+            // 
+            // siticonePanel3
+            // 
+            this.siticonePanel3.Controls.Add(this.lblStar);
+            this.siticonePanel3.Controls.Add(this.pictureBox1);
+            this.siticonePanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.siticonePanel3.Location = new System.Drawing.Point(0, 0);
+            this.siticonePanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticonePanel3.Name = "siticonePanel3";
+            this.siticonePanel3.Size = new System.Drawing.Size(358, 39);
+            this.siticonePanel3.TabIndex = 12;
+            // 
+            // lblStar
+            // 
+            this.lblStar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblStar.Font = new System.Drawing.Font("Segoe UI Variable Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStar.Location = new System.Drawing.Point(40, 0);
+            this.lblStar.Name = "lblStar";
+            this.lblStar.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.lblStar.Size = new System.Drawing.Size(318, 39);
+            this.lblStar.TabIndex = 15;
+            this.lblStar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Padding = new System.Windows.Forms.Padding(5);
+            this.pictureBox1.Size = new System.Drawing.Size(40, 39);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Location = new System.Drawing.Point(358, 0);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(0, 32);
+            this.lblPrice.TabIndex = 8;
             // 
             // btnViewDetails
             // 
@@ -71,7 +137,7 @@
             this.btnViewDetails.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
             this.btnViewDetails.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewDetails.ForeColor = System.Drawing.Color.White;
-            this.btnViewDetails.Location = new System.Drawing.Point(15, 331);
+            this.btnViewDetails.Location = new System.Drawing.Point(15, 356);
             this.btnViewDetails.Margin = new System.Windows.Forms.Padding(2);
             this.btnViewDetails.Name = "btnViewDetails";
             this.btnViewDetails.Size = new System.Drawing.Size(358, 54);
@@ -82,7 +148,7 @@
             // siticonePanel1
             // 
             this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.siticonePanel1.Location = new System.Drawing.Point(15, 385);
+            this.siticonePanel1.Location = new System.Drawing.Point(15, 410);
             this.siticonePanel1.Margin = new System.Windows.Forms.Padding(2);
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Size = new System.Drawing.Size(358, 5);
@@ -95,7 +161,7 @@
             this.tbButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
             this.tbButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tbButton.Location = new System.Drawing.Point(15, 390);
+            this.tbButton.Location = new System.Drawing.Point(15, 415);
             this.tbButton.Name = "tbButton";
             this.tbButton.RowCount = 1;
             this.tbButton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -149,10 +215,14 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.conInfo);
             this.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
-            this.MaximumSize = new System.Drawing.Size(400, 450);
+            this.MaximumSize = new System.Drawing.Size(400, 500);
             this.Name = "ucCoursePreview";
-            this.Size = new System.Drawing.Size(388, 450);
+            this.Size = new System.Drawing.Size(388, 475);
             this.conInfo.ResumeLayout(false);
+            this.siticonePanel2.ResumeLayout(false);
+            this.siticonePanel2.PerformLayout();
+            this.siticonePanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
             this.ResumeLayout(false);
 
@@ -168,5 +238,10 @@
         private System.Windows.Forms.TableLayoutPanel tbButton;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnViewDetails;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel2;
+        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel3;
+        private System.Windows.Forms.Label lblStar;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblPrice;
     }
 }

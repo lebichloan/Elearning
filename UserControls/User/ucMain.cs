@@ -72,6 +72,7 @@ namespace Elearning.UserControls
 
         private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ucMain_Reload();
             //if (tabControl.SelectedIndex == 0)
             //{
             //    //ucHome ucHome = new ucHome();
@@ -93,6 +94,11 @@ namespace Elearning.UserControls
             //    //ucProfile.Dock = DockStyle.Fill;
             //    //tabAccount.Controls.Add(ucProfile);
             //}
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+
         }
     }
 }

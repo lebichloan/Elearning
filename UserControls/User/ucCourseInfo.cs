@@ -132,24 +132,29 @@ namespace Elearning.UserControls
 
             lblDescription.Text = course.course_description;
 
-            if (course.stars != null)
+            Course course1 = (
+                from co in Program.provider.Courses
+                where co.course_id == course.course_id
+                select co).ToList().FirstOrDefault();
+
+            if (course1.stars != null)
             {
                 lblStar.Text = String.Format("{0}/5",
-                    FormatDecimal(course.stars.Value));
+                    FormatDecimal(course1.stars.Value));
             }
             else
             {
-                lblStar.Text = "5/5";
+                lblStar.Text = "0/5";
             }
 
-            if (course.discount_end_date >= DateTime.Now)
+            if (course1.discount_end_date >= DateTime.Now)
             {
-                int? priceAfterDiscount = (int)Math.Round(course.price - (course.price * (int)course.discount / 100.0));
+                int? priceAfterDiscount = (int)Math.Round(course1.price - (course1.price * (int)course1.discount / 100.0));
                 lblPrice.Text = Program.FormatNumberWithSpaces((int)priceAfterDiscount);
             }
             else
             {
-                lblPrice.Text = Program.FormatNumberWithSpaces(course.price);
+                lblPrice.Text = Program.FormatNumberWithSpaces(course1.price);
             }
 
             LoadModuleOfCourse(course);

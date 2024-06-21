@@ -21,6 +21,11 @@ namespace Elearning.UserControls
             InitUI();
         }
 
+        public void ReloadData()
+        {
+            courses = new List<Course>();
+        }
+
         private void InitUI()
         {
             txtSearch.Text = string.Empty;
@@ -147,6 +152,8 @@ namespace Elearning.UserControls
             LoadDataFilter(filterDifficulty, filterCategory);
         }
 
+        List<Course> courses;
+
         private void LoadDataSearch(string keySearch)
         {
             layoutCourses.Controls.Clear();
@@ -160,7 +167,7 @@ namespace Elearning.UserControls
                 layoutCourses.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100 / columns));
             }
 
-            var courses = Program.provider.Courses.ToList();
+            courses = Program.provider.Courses.ToList();
             foreach (Course course in courses)
             {
                 if (keySearch == null)
@@ -187,12 +194,51 @@ namespace Elearning.UserControls
                         ucCourse.courseImage = Image.FromFile(Program.COURSES_IMG_PATH + course.course_image);
                         ucCourse.courseLecturer = course.lecturer;
                         ucCourse.courseName = course.course_name;
+                        if (course.stars != null)
+                        {
+                            ucCourse.rating = String.Format("{0}/5",
+                                FormatDecimal(course.stars.Value));
+                        }
+                        else
+                        {
+                            ucCourse.rating = "0/5";
+                        }
+
+                        if (course.discount_end_date >= DateTime.Now)
+                        {
+                            int? priceAfterDiscount = (int)Math.Round(course.price - (course.price * (int)course.discount / 100.0));
+                            ucCourse.price = Program.FormatNumberWithSpaces((int)priceAfterDiscount);
+                        }
+                        else
+                        {
+                            ucCourse.price = Program.FormatNumberWithSpaces(course.price);
+                        }
+
                         ucCourse.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
                         ucCourse.SetUIRate(0, 0);
                         layoutCourses.Controls.Add(ucCourse);
                     }
 
                 }
+            }
+        }
+
+        public static string FormatDecimal(decimal? value)
+        {
+            if (!value.HasValue)
+            {
+                return string.Empty;
+            }
+
+            decimal roundedValue = Math.Round(value.Value, 1);
+
+            if (roundedValue == Math.Floor(roundedValue))
+            {
+                return roundedValue.ToString("0");
+            }
+            else
+            {
+                return roundedValue.ToString("0.0");
             }
         }
 
@@ -214,7 +260,7 @@ namespace Elearning.UserControls
                 layoutCourses.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100 / columns));
             }
 
-            var courses = Program.provider.Courses.ToList();
+            courses = Program.provider.Courses.ToList();
             foreach(Course course in courses)
             {
                 if (filterDifficulty == "All" && filterCategory == "All")
@@ -224,6 +270,27 @@ namespace Elearning.UserControls
                     ucCourse.courseImage = Image.FromFile(Program.COURSES_IMG_PATH + course.course_image);
                     ucCourse.courseLecturer = course.lecturer;
                     ucCourse.courseName = course.course_name;
+
+                    if (course.stars != null)
+                    {
+                        ucCourse.rating = String.Format("{0}/5",
+                            FormatDecimal(course.stars.Value));
+                    }
+                    else
+                    {
+                        ucCourse.rating = "0/5";
+                    }
+
+                    if (course.discount_end_date >= DateTime.Now)
+                    {
+                        int? priceAfterDiscount = (int)Math.Round(course.price - (course.price * (int)course.discount / 100.0));
+                        ucCourse.price = Program.FormatNumberWithSpaces((int)priceAfterDiscount);
+                    }
+                    else
+                    {
+                        ucCourse.price = Program.FormatNumberWithSpaces(course.price);
+                    }
+
                     ucCourse.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
                     ucCourse.SetUIRate(0, 0);
                     layoutCourses.Controls.Add(ucCourse);
@@ -235,6 +302,27 @@ namespace Elearning.UserControls
                     ucCourse.courseImage = Image.FromFile(Program.COURSES_IMG_PATH + course.course_image);
                     ucCourse.courseLecturer = course.lecturer;
                     ucCourse.courseName = course.course_name;
+
+                    if (course.stars != null)
+                    {
+                        ucCourse.rating = String.Format("{0}/5",
+                            FormatDecimal(course.stars.Value));
+                    }
+                    else
+                    {
+                        ucCourse.rating = "0/5";
+                    }
+
+                    if (course.discount_end_date >= DateTime.Now)
+                    {
+                        int? priceAfterDiscount = (int)Math.Round(course.price - (course.price * (int)course.discount / 100.0));
+                        ucCourse.price = Program.FormatNumberWithSpaces((int)priceAfterDiscount);
+                    }
+                    else
+                    {
+                        ucCourse.price = Program.FormatNumberWithSpaces(course.price);
+                    }
+
                     ucCourse.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
                     ucCourse.SetUIRate(0, 0);
                     layoutCourses.Controls.Add(ucCourse);
@@ -246,6 +334,27 @@ namespace Elearning.UserControls
                     ucCourse.courseImage = Image.FromFile(Program.COURSES_IMG_PATH + course.course_image);
                     ucCourse.courseLecturer = course.lecturer;
                     ucCourse.courseName = course.course_name;
+
+                    if (course.stars != null)
+                    {
+                        ucCourse.rating = String.Format("{0}/5",
+                            FormatDecimal(course.stars.Value));
+                    }
+                    else
+                    {
+                        ucCourse.rating = "0/5";
+                    }
+
+                    if (course.discount_end_date >= DateTime.Now)
+                    {
+                        int? priceAfterDiscount = (int)Math.Round(course.price - (course.price * (int)course.discount / 100.0));
+                        ucCourse.price = Program.FormatNumberWithSpaces((int)priceAfterDiscount);
+                    }
+                    else
+                    {
+                        ucCourse.price = Program.FormatNumberWithSpaces(course.price);
+                    }
+
                     ucCourse.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
                     ucCourse.SetUIRate(0, 0);
                     layoutCourses.Controls.Add(ucCourse);
@@ -259,6 +368,27 @@ namespace Elearning.UserControls
                         ucCourse.courseImage = Image.FromFile(Program.COURSES_IMG_PATH + course.course_image);
                         ucCourse.courseLecturer = course.lecturer;
                         ucCourse.courseName = course.course_name;
+
+                        if (course.stars != null)
+                        {
+                            ucCourse.rating = String.Format("{0}/5",
+                                FormatDecimal(course.stars.Value));
+                        }
+                        else
+                        {
+                            ucCourse.rating = "0/5";
+                        }
+
+                        if (course.discount_end_date >= DateTime.Now)
+                        {
+                            int? priceAfterDiscount = (int)Math.Round(course.price - (course.price * (int)course.discount / 100.0));
+                            ucCourse.price = Program.FormatNumberWithSpaces((int)priceAfterDiscount);
+                        }
+                        else
+                        {
+                            ucCourse.price = Program.FormatNumberWithSpaces(course.price);
+                        }
+
                         ucCourse.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
                         ucCourse.SetUIRate(0, 0);
                         layoutCourses.Controls.Add(ucCourse);

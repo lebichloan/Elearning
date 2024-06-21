@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl = new Siticone.Desktop.UI.WinForms.SiticoneTabControl();
             this.tabHome = new System.Windows.Forms.TabPage();
             this.tabMyLearning = new System.Windows.Forms.TabPage();
             this.tabAccount = new System.Windows.Forms.TabPage();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.tabControl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,6 +102,11 @@
             this.tabAccount.Text = "Account";
             this.tabAccount.UseVisualStyleBackColor = true;
             // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
             // ucMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -119,5 +126,6 @@
         private System.Windows.Forms.TabPage tabHome;
         private System.Windows.Forms.TabPage tabMyLearning;
         private System.Windows.Forms.TabPage tabAccount;
+        private System.Windows.Forms.Timer timer;
     }
 }

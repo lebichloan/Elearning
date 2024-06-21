@@ -88,6 +88,25 @@ namespace Elearning.UserControls.User
                 ucCourse.courseLecturer = course.lecturer;
                 ucCourse.courseName = course.course_name;
                 ucCourse.btnViewDetailText = "Go to course";
+                if (course.stars != null)
+                {
+                    ucCourse.rating = String.Format("{0}/5",
+                        FormatDecimal(course.stars.Value));
+                }
+                else
+                {
+                    ucCourse.rating = "0/5";
+                }
+
+                if (course.discount_end_date >= DateTime.Now)
+                {
+                    int? priceAfterDiscount = (int)Math.Round(course.price - (course.price * (int)course.discount / 100.0));
+                    ucCourse.price = Program.FormatNumberWithSpaces((int)priceAfterDiscount);
+                }
+                else
+                {
+                    ucCourse.price = Program.FormatNumberWithSpaces(course.price);
+                }
                 ucCourse.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
                 ucCourse.btnViewCertificateClick += ucCoursePreview_ViewCertificateClick;
                 if (getCourseReview(course, currentAccount) == null)
@@ -101,6 +120,25 @@ namespace Elearning.UserControls.User
                     ucCourse.btnRateClick += ucCoursePreview_btnEditRatingClick;
                 }
                 layoutMyCourses.Controls.Add(ucCourse);
+            }
+        }
+
+        public static string FormatDecimal(decimal? value)
+        {
+            if (!value.HasValue)
+            {
+                return string.Empty;
+            }
+
+            decimal roundedValue = Math.Round(value.Value, 1);
+
+            if (roundedValue == Math.Floor(roundedValue))
+            {
+                return roundedValue.ToString("0");
+            }
+            else
+            {
+                return roundedValue.ToString("0.0");
             }
         }
 
@@ -318,6 +356,25 @@ namespace Elearning.UserControls.User
                 ucCourse.courseLecturer = course.lecturer;
                 ucCourse.courseName = course.course_name;
                 ucCourse.btnViewDetailText = "Go to course";
+                if (course.stars != null)
+                {
+                    ucCourse.rating = String.Format("{0}/5",
+                        FormatDecimal(course.stars.Value));
+                }
+                else
+                {
+                    ucCourse.rating = "0/5";
+                }
+
+                if (course.discount_end_date >= DateTime.Now)
+                {
+                    int? priceAfterDiscount = (int)Math.Round(course.price - (course.price * (int)course.discount / 100.0));
+                    ucCourse.price = Program.FormatNumberWithSpaces((int)priceAfterDiscount);
+                }
+                else
+                {
+                    ucCourse.price = Program.FormatNumberWithSpaces(course.price);
+                }
                 ucCourse.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
                 ucCourse.btnViewCertificateClick += ucCoursePreview_ViewCertificateClick;
                 if (getCourseReview(course, currentAccount) == null)

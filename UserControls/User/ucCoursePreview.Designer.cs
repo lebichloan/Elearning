@@ -140,7 +140,7 @@
             this.btnViewDetails.Location = new System.Drawing.Point(15, 356);
             this.btnViewDetails.Margin = new System.Windows.Forms.Padding(2);
             this.btnViewDetails.Name = "btnViewDetails";
-            this.btnViewDetails.Size = new System.Drawing.Size(358, 54);
+            this.btnViewDetails.Size = new System.Drawing.Size(306, 54);
             this.btnViewDetails.TabIndex = 10;
             this.btnViewDetails.Text = "View details";
             this.btnViewDetails.Click += new System.EventHandler(this.btnViewDetails_Click);
@@ -151,7 +151,7 @@
             this.siticonePanel1.Location = new System.Drawing.Point(15, 410);
             this.siticonePanel1.Margin = new System.Windows.Forms.Padding(2);
             this.siticonePanel1.Name = "siticonePanel1";
-            this.siticonePanel1.Size = new System.Drawing.Size(358, 5);
+            this.siticonePanel1.Size = new System.Drawing.Size(306, 5);
             this.siticonePanel1.TabIndex = 9;
             // 
             // tbButton
@@ -165,7 +165,7 @@
             this.tbButton.Name = "tbButton";
             this.tbButton.RowCount = 1;
             this.tbButton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbButton.Size = new System.Drawing.Size(358, 45);
+            this.tbButton.Size = new System.Drawing.Size(306, 45);
             this.tbButton.TabIndex = 8;
             // 
             // lbCourseName
@@ -176,7 +176,7 @@
             this.lbCourseName.Location = new System.Drawing.Point(15, 240);
             this.lbCourseName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCourseName.Name = "lbCourseName";
-            this.lbCourseName.Size = new System.Drawing.Size(358, 55);
+            this.lbCourseName.Size = new System.Drawing.Size(306, 55);
             this.lbCourseName.TabIndex = 1;
             this.lbCourseName.Text = "Introduction to Programming with C++: Basic mini course I";
             this.lbCourseName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -189,7 +189,7 @@
             this.lbLecturer.Location = new System.Drawing.Point(15, 215);
             this.lbLecturer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbLecturer.Name = "lbLecturer";
-            this.lbLecturer.Size = new System.Drawing.Size(358, 25);
+            this.lbLecturer.Size = new System.Drawing.Size(306, 25);
             this.lbLecturer.TabIndex = 0;
             this.lbLecturer.Text = "Prof. Nguyen Tran Dang Vo";
             this.lbLecturer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -203,7 +203,7 @@
             this.picImage.Location = new System.Drawing.Point(15, 15);
             this.picImage.Margin = new System.Windows.Forms.Padding(2);
             this.picImage.Name = "picImage";
-            this.picImage.Size = new System.Drawing.Size(358, 200);
+            this.picImage.Size = new System.Drawing.Size(306, 200);
             this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picImage.TabIndex = 0;
             this.picImage.TabStop = false;

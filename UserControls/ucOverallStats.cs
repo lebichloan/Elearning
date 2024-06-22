@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LiveCharts;
+using LiveCharts.Wpf;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,91 +19,118 @@ namespace Elearning.UserControls
             InitializeComponent();
 
             tableLayoutPanel1.Visible = false;
-            cbMonth.SelectedIndex = 0;
-            cbYear.SelectedIndex = 0;
+            cbYear.SelectedIndex = 1;
+
+            chartEarnings.AxisX.Add(new LiveCharts.Wpf.Axis
+            {
+                Title = "Month",
+                Labels = new[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" }
+            });
+            chartEarnings.AxisY.Add(new LiveCharts.Wpf.Axis
+            {
+                Title = "Earnings",
+                LabelFormatter = value => value.ToString("N0") + "đ"
+            });
+            chartEarnings.LegendLocation = LiveCharts.LegendLocation.None;
+
+            chartNewLearners.AxisX.Add(new LiveCharts.Wpf.Axis
+            {
+                Title = "Month",
+                Labels = new[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" }
+            });
+            chartNewLearners.AxisY.Add(new LiveCharts.Wpf.Axis
+            {
+                Title = "New Learners",
+                LabelFormatter = value => value.ToString("N0")
+            });
+            chartNewLearners.LegendLocation = LiveCharts.LegendLocation.None;
+
+            chartNewCourses.AxisX.Add(new LiveCharts.Wpf.Axis
+            {
+                Title = "Month",
+                Labels = new[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" }
+            });
+            chartNewCourses.AxisY.Add(new LiveCharts.Wpf.Axis
+            {
+                Title = "New Courses",
+                LabelFormatter = value => value.ToString("N0")
+            });
+            chartNewCourses.LegendLocation = LiveCharts.LegendLocation.None;
+
+            pieEarnByCategory.LegendLocation = LiveCharts.LegendLocation.Right;
+
         }
 
         private void btnShow_Click(object sender, EventArgs e)
         {
-            int month = cbMonth.SelectedIndex;
+            tableLayoutPanel1.Visible = true;
+
             int year = Convert.ToInt32(cbYear.SelectedItem);
-            tableLayoutPanel1.Visible = true;
 
-            if (month == 0)
+            var stats = new List<Elearning.Entities.OverallStatistics>();
+
+            int totalEarnings = 0;
+            int totalNewLearners = 0;
+            for (int i = 1; i <= 12; i++)
             {
-                // Show statistics for all months in the selected year
-                var new_learner = Program.provider.Accounts.Where(a => a.created_at.Year == year && a.user_role == Program.ROLE_LEARNER).Count();
-                var new_course = Program.provider.Courses.Where(c => ((DateTime)c.created_at).Year == year).Count();
-                var new_enrollment = Program.provider.Registers.Where(en => ((DateTime)en.registered_date).Year == year).Count();
-                var year_registers = Program.provider.Registers.Where(en => ((DateTime)en.registered_date).Year == year).ToList();
-                var total_earnings = 0;
-                if (year_registers != null && year_registers.Count > 0) total_earnings = (int)year_registers.Sum(en => en.paid);
-                
-                // find course that have biggest total earnings
-                var top_earn_course = Program.provider.Courses.Where(c => c.Registers.Count > 0).OrderByDescending(c => c.Registers.Sum(r => r.paid)).FirstOrDefault();
-                var top_earnings = top_earn_course == null ? 0 : top_earn_course.Registers.Sum(r => r.paid);
-                // find course that have biggest number of enrollments
-                var top_enroll_course = Program.provider.Courses.Where(c => c.Registers.Count > 0).OrderByDescending(c => c.Registers.Count).FirstOrDefault();
-                var top_enrollments = top_enroll_course == null ? 0 : top_enroll_course.Registers.Count;
+                stats.Add(new Elearning.Entities.OverallStatistics(year, i));
+                totalEarnings += stats[i - 1].Earnings;
+                totalNewLearners += stats[i - 1].NewLearners;
+            }
 
-                lbNewLearners.Text = new_learner.ToString();
-                lbNewCourses.Text = new_course.ToString();
-                lbNewRegistrations.Text = new_enrollment.ToString();
-                lbTotalEarning.Text = total_earnings.ToString("N0") + "đ";
-                lbTopEarnCourse.Text = top_earn_course == null ? "No data" : top_earn_course.course_name + " (" + top_earnings.ToString("N0") + "đ)";
-                lbMostRegisCourse.Text = top_enroll_course == null ? "No data" : top_enroll_course.course_name + " (" + top_enrollments + " registrations)";
-            } 
-            else
+            lbTotalEarnings.Text = totalEarnings.ToString("N0") + "VND";
+            lbTotalLearners.Text = totalNewLearners.ToString("N0");
+
+            chartEarnings.Series.Clear();
+            chartNewLearners.Series.Clear();
+            chartNewCourses.Series.Clear();
+            bindSrcOverallStats.DataSource = stats;
+
+            var seriesEarnings = new LiveCharts.Wpf.LineSeries
             {
-                // Show statistics for the selected month in the selected year
-                var new_learner = Program.provider.Accounts.Where(a => a.created_at.Year == year && a.created_at.Month == month && a.user_role == Program.ROLE_LEARNER).Count();
-                var new_course = Program.provider.Courses.Where(c => ((DateTime)c.created_at).Year == year && ((DateTime)c.created_at).Month == month).Count();
-                var new_enrollment = Program.provider.Registers.Where(en => ((DateTime)en.registered_date).Year == year && ((DateTime)en.registered_date).Month == month).Count();
-                var total_earnings = 0;
-                var month_registers = Program.provider.Registers.Where(en => ((DateTime)en.registered_date).Year == year && ((DateTime)en.registered_date).Month == month).ToList();
-                if (month_registers != null && month_registers.Count > 0) total_earnings = (int)month_registers.Sum(en => en.paid);
+                Values = new LiveCharts.ChartValues<int>(stats.Select(s => s.Earnings)),
+                PointGeometry = null,
+                AreaLimit = 0
+            };
 
-                // find course that have biggest total earnings
-                var top_earn_course = Program.provider.Courses.Where(c => c.Registers.Count > 0 && ((DateTime)c.created_at).Year == year && ((DateTime)c.created_at).Month == month).OrderByDescending(c => c.Registers.Sum(r => r.paid)).FirstOrDefault();
-                var top_earnings = top_earn_course == null ? 0 : top_earn_course.Registers.Sum(r => r.paid);
-                // find course that have biggest number of enrollments
-                var top_enroll_course = Program.provider.Courses.Where(c => c.Registers.Count > 0 && ((DateTime)c.created_at).Year == year && ((DateTime)c.created_at).Month == month).OrderByDescending(c => c.Registers.Count).FirstOrDefault();
-                var top_enrollments = top_enroll_course == null ? 0 : top_enroll_course.Registers.Count;
+            var seriesNewLearners = new LiveCharts.Wpf.LineSeries
+            {
+                Values = new LiveCharts.ChartValues<int>(stats.Select(s => s.NewLearners)),
+                PointGeometry = null,
+                AreaLimit = 0
+            };
 
-                lbNewLearners.Text = new_learner.ToString();
-                lbNewCourses.Text = new_course.ToString();
-                lbNewRegistrations.Text = new_enrollment.ToString();
-                lbTotalEarning.Text = total_earnings.ToString("N0") + "đ";
-                lbTopEarnCourse.Text = top_earn_course == null ? "No data" : top_earn_course.course_name + " (" + top_earnings.ToString("N0") + "đ)";
-                lbMostRegisCourse.Text = top_enroll_course == null ? "No data" : top_enroll_course.course_name + " (" + top_enrollments + " registrations)";
-            }   
-        }
+            var seriesNewCourses = new LiveCharts.Wpf.LineSeries
+            {
+                Values = new LiveCharts.ChartValues<int>(stats.Select(s => s.NewCourses)),
+                PointGeometry = null,
+                AreaLimit = 0
+            };
 
-        private void btnShowAll_Click(object sender, EventArgs e)
-        {
-            // Show statistics for all time
-            tableLayoutPanel1.Visible = true;
+            chartEarnings.Series.Add(seriesEarnings);
+            chartNewLearners.Series.Add(seriesNewLearners);
+            chartNewCourses.Series.Add(seriesNewCourses);
 
-            var new_learner = Program.provider.Accounts.Where(a => a.user_role == Program.ROLE_LEARNER).Count();
-            var new_course = Program.provider.Courses.Count();
-            var new_enrollment = Program.provider.Registers.Count();
-            var total_earnings = 0;
-            var all_registers = Program.provider.Registers.ToList();
-            if (all_registers != null && all_registers.Count > 0) total_earnings = (int)all_registers.Sum(en => en.paid);
+            // Pie chart: Earnings by category
+            var data = new SeriesCollection();
+            foreach (var category in Program.COURSE_CATEGORIES)
+            {
+                var lst = Program.provider.Registers.Where(r => r.Course.category == category && r.registered_date.Year == year).ToList();
+                var total = lst != null ? lst.Sum(r => r.paid) : 0;
+                System.Diagnostics.Debug.WriteLine(category + ": " + total);
+                if (total > 0)
+                {
+                    data.Add(new PieSeries()
+                    {
+                        Title = category,
+                        Values = new ChartValues<int> { (int)total },
+                        DataLabels = true,
+                        LabelPoint = point => string.Format("{0} ({1:P})", point.Y.ToString("N0"), point.Participation)
+                    });
+                }
+            }
+            pieEarnByCategory.Series = data;
 
-            // find course that have biggest total earnings
-            var top_earn_course = Program.provider.Courses.Where(c => c.Registers.Count > 0).OrderByDescending(c => c.Registers.Sum(r => r.paid)).FirstOrDefault();
-            var top_earnings = top_earn_course.Registers.Sum(r => r.paid);
-            // find course that have biggest number of enrollments
-            var top_enroll_course = Program.provider.Courses.Where(c => c.Registers.Count > 0).OrderByDescending(c => c.Registers.Count).FirstOrDefault();
-            var top_enrollments = top_enroll_course.Registers.Count;
-
-            lbNewLearners.Text = new_learner.ToString();
-            lbNewCourses.Text = new_course.ToString();
-            lbNewRegistrations.Text = new_enrollment.ToString();
-            lbTotalEarning.Text = total_earnings.ToString("N0") + "đ";
-            lbTopEarnCourse.Text = top_earn_course.course_name + " (" + top_earnings.ToString("N0") + "đ)";
-            lbMostRegisCourse.Text = top_enroll_course.course_name + " (" + top_enrollments + " registrations)";
         }
     }
 }

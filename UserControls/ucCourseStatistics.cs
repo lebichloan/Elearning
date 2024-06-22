@@ -18,6 +18,7 @@ namespace Elearning.UserControls
         {
             InitializeComponent();
             this.course = course;
+            tbChart.Visible = false;
 
             // make three columns of the table layout panel have the same width
             tableLayoutPanel1.ColumnStyles[0].SizeType = SizeType.Percent;
@@ -33,17 +34,72 @@ namespace Elearning.UserControls
                 Program.LoadCoursesStatistics();
             }
             Program.CourseStats stat = Program.courseStats[course.course_id];
-            lbNumRegister.Text = stat.total_learners.ToString();
-            lbNumComplete.Text = stat.total_completed.ToString();
-            lbComRate.Text = stat.completion_rate.ToString() + "%";
             lbRankByRegister.Text = stat.rank_by_learners.ToString();
             lbRankByComRate.Text = stat.rank_by_completion_rate.ToString();
             lbRankByRatings.Text = stat.rank_by_rating.ToString();
+
+            cbYear.SelectedIndex = 1;
+
+            chartEarnings.AxisX.Add(new LiveCharts.Wpf.Axis
+            {
+                Title = "Month",
+                Labels = new[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" }
+            });
+            chartEarnings.AxisY.Add(new LiveCharts.Wpf.Axis
+            {
+                Title = "Earnings",
+                LabelFormatter = value => value.ToString("N0") + "đ"
+            });
+            chartEarnings.LegendLocation = LiveCharts.LegendLocation.None;
+
+            chartLearners.AxisX.Add(new LiveCharts.Wpf.Axis
+            {
+                Title = "Month",
+                Labels = new[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" }
+            });
+            chartLearners.AxisY.Add(new LiveCharts.Wpf.Axis
+            {
+                Title = "Learners",
+                LabelFormatter = value => value.ToString("N0")
+            });
+            chartLearners.LegendLocation = LiveCharts.LegendLocation.None;
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            tbChart.Visible = true;
+            int year = int.Parse(cbYear.SelectedItem.ToString());
+            var stats = new List<CourseStatistics>();
+            for (int i = 1; i <= 12; i++)
+            {
+                stats.Add(new CourseStatistics(course.course_id, year, i));
+            }
+
+            chartEarnings.Series.Clear();
+            chartLearners.Series.Clear();
+            bindSrcCourseStats.DataSource = stats;
+
+            var seriesEarnings = new LiveCharts.Wpf.LineSeries
+            {
+                Values = new LiveCharts.ChartValues<int>(stats.Select(s => s.Earnings)),
+                PointGeometry = null,
+                AreaLimit = 0
+            };
+
+            var seriesLearners = new LiveCharts.Wpf.LineSeries
+            {
+                Values = new LiveCharts.ChartValues<int>(stats.Select(s => s.TotalLearners)),
+                PointGeometry = null,
+                AreaLimit = 0
+            };
+
+            chartEarnings.Series.Add(seriesEarnings);
+            chartLearners.Series.Add(seriesLearners);
         }
     }
 }

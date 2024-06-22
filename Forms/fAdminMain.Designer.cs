@@ -121,8 +121,8 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(15, 4, 4, 4);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(904, 64);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(100, 4, 4, 4);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1184, 64);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // btnCourses
@@ -140,8 +140,8 @@
             this.btnCourses.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCourses.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
             this.btnCourses.ImageSize = new System.Drawing.Size(22, 22);
-            this.btnCourses.Location = new System.Drawing.Point(20, 9);
-            this.btnCourses.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnCourses.Location = new System.Drawing.Point(105, 9);
+            this.btnCourses.Margin = new System.Windows.Forms.Padding(5);
             this.btnCourses.Name = "btnCourses";
             this.btnCourses.Size = new System.Drawing.Size(124, 47);
             this.btnCourses.TabIndex = 10;
@@ -161,8 +161,8 @@
             this.btnStatistics.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStatistics.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
             this.btnStatistics.ImageSize = new System.Drawing.Size(22, 22);
-            this.btnStatistics.Location = new System.Drawing.Point(154, 9);
-            this.btnStatistics.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnStatistics.Location = new System.Drawing.Point(239, 9);
+            this.btnStatistics.Margin = new System.Windows.Forms.Padding(5);
             this.btnStatistics.Name = "btnStatistics";
             this.btnStatistics.Size = new System.Drawing.Size(124, 47);
             this.btnStatistics.TabIndex = 11;
@@ -182,8 +182,8 @@
             this.btnAccount.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
             this.btnAccount.ImageSize = new System.Drawing.Size(22, 22);
-            this.btnAccount.Location = new System.Drawing.Point(288, 9);
-            this.btnAccount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnAccount.Location = new System.Drawing.Point(373, 9);
+            this.btnAccount.Margin = new System.Windows.Forms.Padding(5);
             this.btnAccount.Name = "btnAccount";
             this.btnAccount.Size = new System.Drawing.Size(124, 47);
             this.btnAccount.TabIndex = 12;

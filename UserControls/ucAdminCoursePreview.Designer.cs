@@ -119,7 +119,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.siticoneContainerControl1);
-            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Margin = new System.Windows.Forms.Padding(10);
             this.MaximumSize = new System.Drawing.Size(300, 312);
             this.Name = "ucAdminCoursePreview";
             this.Size = new System.Drawing.Size(243, 297);

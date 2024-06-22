@@ -69,7 +69,7 @@
             this.layoutTools.Location = new System.Drawing.Point(4, 4);
             this.layoutTools.Margin = new System.Windows.Forms.Padding(2);
             this.layoutTools.Name = "layoutTools";
-            this.layoutTools.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.layoutTools.Padding = new System.Windows.Forms.Padding(0, 4, 100, 0);
             this.layoutTools.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.layoutTools.Size = new System.Drawing.Size(989, 50);
             this.layoutTools.TabIndex = 0;
@@ -86,7 +86,7 @@
             this.btnAddCourse.ForeColor = System.Drawing.Color.White;
             this.btnAddCourse.Image = global::Elearning.Properties.Resources.add_white;
             this.btnAddCourse.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddCourse.Location = new System.Drawing.Point(864, 6);
+            this.btnAddCourse.Location = new System.Drawing.Point(764, 6);
             this.btnAddCourse.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddCourse.Name = "btnAddCourse";
             this.btnAddCourse.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -101,7 +101,7 @@
             // 
             this.siticoneVSeparator1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticoneVSeparator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.siticoneVSeparator1.Location = new System.Drawing.Point(849, 7);
+            this.siticoneVSeparator1.Location = new System.Drawing.Point(749, 7);
             this.siticoneVSeparator1.Name = "siticoneVSeparator1";
             this.siticoneVSeparator1.Size = new System.Drawing.Size(10, 36);
             this.siticoneVSeparator1.TabIndex = 6;
@@ -118,7 +118,7 @@
             this.cbFilterCategory.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFilterCategory.ForeColor = System.Drawing.Color.Black;
             this.cbFilterCategory.ItemHeight = 30;
-            this.cbFilterCategory.Location = new System.Drawing.Point(619, 7);
+            this.cbFilterCategory.Location = new System.Drawing.Point(519, 7);
             this.cbFilterCategory.Name = "cbFilterCategory";
             this.cbFilterCategory.Size = new System.Drawing.Size(224, 36);
             this.cbFilterCategory.TabIndex = 4;
@@ -136,7 +136,7 @@
             this.cbFilterDiff.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFilterDiff.ForeColor = System.Drawing.Color.Black;
             this.cbFilterDiff.ItemHeight = 30;
-            this.cbFilterDiff.Location = new System.Drawing.Point(441, 7);
+            this.cbFilterDiff.Location = new System.Drawing.Point(341, 7);
             this.cbFilterDiff.Name = "cbFilterDiff";
             this.cbFilterDiff.Size = new System.Drawing.Size(172, 36);
             this.cbFilterDiff.TabIndex = 5;
@@ -154,7 +154,7 @@
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Image = global::Elearning.Properties.Resources.search_white;
             this.btnSearch.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSearch.Location = new System.Drawing.Point(313, 6);
+            this.btnSearch.Location = new System.Drawing.Point(213, 6);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -178,7 +178,7 @@
             this.tbSearch.Font = new System.Drawing.Font("Segoe UI Variable Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbSearch.ForeColor = System.Drawing.Color.Black;
             this.tbSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbSearch.Location = new System.Drawing.Point(44, 6);
+            this.tbSearch.Location = new System.Drawing.Point(622, 48);
             this.tbSearch.Margin = new System.Windows.Forms.Padding(2);
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.PasswordChar = '\0';
@@ -199,7 +199,7 @@
             this.btnRefresh.FillColor = System.Drawing.Color.Transparent;
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(3, 7);
+            this.btnRefresh.Location = new System.Drawing.Point(581, 49);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(36, 36);
             this.btnRefresh.TabIndex = 0;
@@ -214,8 +214,9 @@
             this.layoutCourses.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.layoutCourses.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutCourses.Location = new System.Drawing.Point(0, 58);
+            this.layoutCourses.Margin = new System.Windows.Forms.Padding(6);
             this.layoutCourses.Name = "layoutCourses";
-            this.layoutCourses.Padding = new System.Windows.Forms.Padding(3);
+            this.layoutCourses.Padding = new System.Windows.Forms.Padding(100, 3, 100, 3);
             this.layoutCourses.RowCount = 2;
             this.layoutCourses.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.layoutCourses.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));

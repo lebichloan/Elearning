@@ -332,5 +332,6 @@ namespace Elearning.UserControls
             Program.provider = new ELearningDbEntities();
             Reload();
         }
+
     }
 }

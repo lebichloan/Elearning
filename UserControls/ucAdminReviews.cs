@@ -22,7 +22,6 @@ namespace Elearning.UserControls
 
         private void LoadReviews()
         {
-            lbAvgRating.Text = course.stars.ToString() + "/5";
             int totalReviews = 0;
             // create an array to store the number of reviews for each star
             int[] total = new int[6];
@@ -51,6 +50,8 @@ namespace Elearning.UserControls
             {
 
                 lbNumReviews.Text = totalReviews.ToString() + " reviews";
+                var stars = Math.Round((decimal)course.stars, 2);
+                lbAvgRating.Text = stars.ToString() + "/5";
                 lbAvgRating.Visible = true;
 
                 bar1star.Value = (int)((total[1] * 1.0 / totalReviews) * 100.0);

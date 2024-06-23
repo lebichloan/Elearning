@@ -32,13 +32,13 @@
             this.panTop = new System.Windows.Forms.Panel();
             this.siticoneCustomGradientPanel1 = new Siticone.Desktop.UI.WinForms.SiticoneCustomGradientPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnFilter = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.cmbCategory = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.cmbDifficulty = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.btnClear = new System.Windows.Forms.PictureBox();
             this.btnSearch = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.txtSearch = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.layoutCourses = new System.Windows.Forms.TableLayoutPanel();
+            this.btnRefresh = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.panTop.SuspendLayout();
             this.siticoneCustomGradientPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -50,57 +50,37 @@
             this.panTop.BackColor = System.Drawing.Color.White;
             this.panTop.Controls.Add(this.siticoneCustomGradientPanel1);
             this.panTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panTop.Location = new System.Drawing.Point(0, 0);
+            this.panTop.Location = new System.Drawing.Point(100, 0);
             this.panTop.Margin = new System.Windows.Forms.Padding(2);
             this.panTop.Name = "panTop";
-            this.panTop.Size = new System.Drawing.Size(1101, 60);
+            this.panTop.Size = new System.Drawing.Size(681, 48);
             this.panTop.TabIndex = 3;
             // 
             // siticoneCustomGradientPanel1
             // 
             this.siticoneCustomGradientPanel1.Controls.Add(this.flowLayoutPanel1);
             this.siticoneCustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.siticoneCustomGradientPanel1.Location = new System.Drawing.Point(133, 0);
+            this.siticoneCustomGradientPanel1.Location = new System.Drawing.Point(-93, 0);
             this.siticoneCustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneCustomGradientPanel1.Name = "siticoneCustomGradientPanel1";
-            this.siticoneCustomGradientPanel1.Size = new System.Drawing.Size(968, 60);
+            this.siticoneCustomGradientPanel1.Size = new System.Drawing.Size(774, 48);
             this.siticoneCustomGradientPanel1.TabIndex = 2;
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.btnFilter);
             this.flowLayoutPanel1.Controls.Add(this.cmbCategory);
             this.flowLayoutPanel1.Controls.Add(this.cmbDifficulty);
             this.flowLayoutPanel1.Controls.Add(this.btnClear);
             this.flowLayoutPanel1.Controls.Add(this.btnSearch);
             this.flowLayoutPanel1.Controls.Add(this.txtSearch);
+            this.flowLayoutPanel1.Controls.Add(this.btnRefresh);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(968, 60);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(3);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(774, 48);
             this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // btnFilter
-            // 
-            this.btnFilter.BorderRadius = 8;
-            this.btnFilter.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnFilter.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnFilter.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnFilter.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnFilter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnFilter.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnFilter.ForeColor = System.Drawing.Color.White;
-            this.btnFilter.Image = global::Elearning.Properties.Resources.search_white;
-            this.btnFilter.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnFilter.Location = new System.Drawing.Point(906, 8);
-            this.btnFilter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(50, 44);
-            this.btnFilter.TabIndex = 9;
-            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // cmbCategory
             // 
@@ -114,10 +94,10 @@
             this.cmbCategory.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbCategory.ForeColor = System.Drawing.Color.Black;
             this.cmbCategory.ItemHeight = 30;
-            this.cmbCategory.Location = new System.Drawing.Point(677, 6);
+            this.cmbCategory.Location = new System.Drawing.Point(587, 5);
             this.cmbCategory.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCategory.Name = "cmbCategory";
-            this.cmbCategory.Size = new System.Drawing.Size(223, 36);
+            this.cmbCategory.Size = new System.Drawing.Size(179, 36);
             this.cmbCategory.TabIndex = 4;
             this.cmbCategory.SelectedIndexChanged += new System.EventHandler(this.cmbCategory_SelectedIndexChanged);
             // 
@@ -133,10 +113,10 @@
             this.cmbDifficulty.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbDifficulty.ForeColor = System.Drawing.Color.Black;
             this.cmbDifficulty.ItemHeight = 30;
-            this.cmbDifficulty.Location = new System.Drawing.Point(504, 6);
+            this.cmbDifficulty.Location = new System.Drawing.Point(447, 5);
             this.cmbDifficulty.Margin = new System.Windows.Forms.Padding(2);
             this.cmbDifficulty.Name = "cmbDifficulty";
-            this.cmbDifficulty.Size = new System.Drawing.Size(169, 36);
+            this.cmbDifficulty.Size = new System.Drawing.Size(136, 36);
             this.cmbDifficulty.TabIndex = 5;
             this.cmbDifficulty.SelectedIndexChanged += new System.EventHandler(this.cmbDifficulty_SelectedIndexChanged);
             // 
@@ -144,11 +124,11 @@
             // 
             this.btnClear.BackColor = System.Drawing.Color.White;
             this.btnClear.Image = ((System.Drawing.Image)(resources.GetObject("btnClear.Image")));
-            this.btnClear.Location = new System.Drawing.Point(470, 6);
+            this.btnClear.Location = new System.Drawing.Point(419, 5);
             this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btnClear.Size = new System.Drawing.Size(30, 30);
+            this.btnClear.Padding = new System.Windows.Forms.Padding(4);
+            this.btnClear.Size = new System.Drawing.Size(24, 24);
             this.btnClear.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnClear.TabIndex = 6;
             this.btnClear.TabStop = false;
@@ -167,10 +147,9 @@
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Image = global::Elearning.Properties.Resources.search_white;
             this.btnSearch.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSearch.Location = new System.Drawing.Point(414, 8);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearch.Location = new System.Drawing.Point(374, 6);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(50, 44);
+            this.btnSearch.Size = new System.Drawing.Size(40, 35);
             this.btnSearch.TabIndex = 8;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -185,15 +164,16 @@
             this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.Black;
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(8, 6);
+            this.txtSearch.Location = new System.Drawing.Point(49, 5);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(400, 45);
+            this.txtSearch.Size = new System.Drawing.Size(320, 36);
             this.txtSearch.TabIndex = 2;
             this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
             // 
@@ -206,25 +186,44 @@
             this.layoutCourses.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.layoutCourses.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.layoutCourses.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutCourses.Location = new System.Drawing.Point(0, 60);
-            this.layoutCourses.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.layoutCourses.Location = new System.Drawing.Point(100, 48);
             this.layoutCourses.Name = "layoutCourses";
-            this.layoutCourses.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.layoutCourses.Padding = new System.Windows.Forms.Padding(3);
             this.layoutCourses.RowCount = 2;
             this.layoutCourses.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.layoutCourses.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.layoutCourses.Size = new System.Drawing.Size(1101, 608);
+            this.layoutCourses.Size = new System.Drawing.Size(681, 486);
             this.layoutCourses.TabIndex = 4;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BorderRadius = 8;
+            this.btnRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRefresh.FillColor = System.Drawing.Color.White;
+            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Image = global::Elearning.Properties.Resources.refresh;
+            this.btnRefresh.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnRefresh.Location = new System.Drawing.Point(4, 6);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(40, 35);
+            this.btnRefresh.TabIndex = 9;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // ucHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.layoutCourses);
             this.Controls.Add(this.panTop);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ucHome";
-            this.Size = new System.Drawing.Size(1101, 668);
+            this.Padding = new System.Windows.Forms.Padding(100, 0, 100, 0);
+            this.Size = new System.Drawing.Size(881, 534);
             this.Load += new System.EventHandler(this.ucHome_Load);
             this.panTop.ResumeLayout(false);
             this.siticoneCustomGradientPanel1.ResumeLayout(false);
@@ -243,7 +242,7 @@
         private Siticone.Desktop.UI.WinForms.SiticoneComboBox cmbCategory;
         private System.Windows.Forms.PictureBox btnClear;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton btnFilter;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnSearch;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnRefresh;
     }
 }

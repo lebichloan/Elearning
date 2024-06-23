@@ -131,7 +131,7 @@ namespace Elearning.UserControls
             lblCategory1.Text = course.category;
 
             lblDescription.Text = course.course_description;
-
+            Program.provider.Courses.Local.Clear();
             Course course1 = (
                 from co in Program.provider.Courses
                 where co.course_id == course.course_id
@@ -142,19 +142,22 @@ namespace Elearning.UserControls
                 lblStar.Text = String.Format("{0}/5",
                     FormatDecimal(course1.stars.Value));
             }
-            else
-            {
-                lblStar.Text = "0/5";
+            else {
+                lblStar.Text = "No reviews";
             }
 
-            if (course1.discount_end_date >= DateTime.Now)
+            if (course1.discount != 0)
             {
-                int? priceAfterDiscount = (int)Math.Round(course1.price - (course1.price * (int)course1.discount / 100.0));
-                lblPrice.Text = Program.FormatNumberWithSpaces((int)priceAfterDiscount);
+                lblPrice.Text = course1.price.ToString("N0") + "đ";
+                int priceAfterDiscount = (int)Math.Round(course1.price - (course1.price * (int)course1.discount / 100.0));
+                lblFinalPrice.Text = priceAfterDiscount.ToString("N0") + "đ";
+                lblPrice.Font = new Font(lblPrice.Font, FontStyle.Strikeout);
             }
             else
             {
                 lblPrice.Text = Program.FormatNumberWithSpaces(course1.price);
+                lblPrice.Font = new Font(lblPrice.Font, FontStyle.Bold);
+                lblFinalPrice.Visible = false;
             }
 
             LoadModuleOfCourse(course);

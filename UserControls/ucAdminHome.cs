@@ -81,11 +81,16 @@ namespace Elearning.UserControls
 
         public void Reload()
         {
-            foreach (Control control in layoutCourses.Controls)
+            var courses = Program.provider.Courses.ToList();
+            for (int i = layoutCourses.Controls.Count - 1; i >= 0; --i)
             {
-                var uc = control as ucAdminCoursePreview;
-                uc.Reload();
-                uc.Visible = true;
+                if (layoutCourses.Controls[i] is ucAdminCoursePreview)
+                {
+                    var uc = layoutCourses.Controls[i] as ucAdminCoursePreview;
+                    var course = courses[i];
+                    uc.Reload(course);
+                    uc.Visible = true;
+                }
             }
 
             tbSearch.Text = "";
@@ -162,6 +167,7 @@ namespace Elearning.UserControls
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            Program.provider = new ELearningDbEntities();
             Reload();
         }
 

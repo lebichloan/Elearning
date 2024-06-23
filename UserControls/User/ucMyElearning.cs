@@ -80,47 +80,7 @@ namespace Elearning.UserControls.User
                 select course
             ).ToList();
 
-            foreach (Course course in allCourses)
-            {
-                ucCoursePreview ucCourse = new ucCoursePreview();
-                ucCourse.coursePreviewClicked = course;
-                ucCourse.courseImage = Image.FromFile(Program.COURSES_IMG_PATH + course.course_image);
-                ucCourse.courseLecturer = course.lecturer;
-                ucCourse.courseName = course.course_name;
-                ucCourse.btnViewDetailText = "Go to course";
-                if (course.stars != null)
-                {
-                    ucCourse.rating = String.Format("{0}/5",
-                        FormatDecimal(course.stars.Value));
-                }
-                else
-                {
-                    ucCourse.rating = "0/5";
-                }
-
-                if (course.discount_end_date >= DateTime.Now)
-                {
-                    int? priceAfterDiscount = (int)Math.Round(course.price - (course.price * (int)course.discount / 100.0));
-                    ucCourse.price = Program.FormatNumberWithSpaces((int)priceAfterDiscount);
-                }
-                else
-                {
-                    ucCourse.price = Program.FormatNumberWithSpaces(course.price);
-                }
-                ucCourse.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
-                ucCourse.btnViewCertificateClick += ucCoursePreview_ViewCertificateClick;
-                if (getCourseReview(course, currentAccount) == null)
-                {
-                    ucCourse.SetUIRate(1, CheckComplete(course));
-                    ucCourse.btnRateClick += ucCoursePreview_btnRatingClick;
-                }
-                else
-                {
-                    ucCourse.SetUIRate(2, CheckComplete(course));
-                    ucCourse.btnRateClick += ucCoursePreview_btnEditRatingClick;
-                }
-                layoutMyCourses.Controls.Add(ucCourse);
-            }
+            LoadData(allCourses, currentAccount);
         }
 
         public static string FormatDecimal(decimal? value)
@@ -363,17 +323,21 @@ namespace Elearning.UserControls.User
                 }
                 else
                 {
-                    ucCourse.rating = "0/5";
+                    ucCourse.rating = "No reviews";
                 }
 
-                if (course.discount_end_date >= DateTime.Now)
+                ucCourse.price = course.price.ToString("N0");
+                if (course.discount != 0)
                 {
-                    int? priceAfterDiscount = (int)Math.Round(course.price - (course.price * (int)course.discount / 100.0));
-                    ucCourse.price = Program.FormatNumberWithSpaces((int)priceAfterDiscount);
+                    int finalPrice = (int)(course.price - course.price * (int)course.discount / 100.0);
+                    ucCourse.finalPrice = finalPrice.ToString("N0") + "đ";
+                    // cross out the original price
+                    ucCourse.priceFont = new Font(ucCourse.priceFont, FontStyle.Strikeout);
                 }
                 else
                 {
-                    ucCourse.price = Program.FormatNumberWithSpaces(course.price);
+                    ucCourse.finalPrice = "";
+                    ucCourse.priceFont = new Font(ucCourse.priceFont, FontStyle.Bold);
                 }
                 ucCourse.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
                 ucCourse.btnViewCertificateClick += ucCoursePreview_ViewCertificateClick;

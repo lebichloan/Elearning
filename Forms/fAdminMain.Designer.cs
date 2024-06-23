@@ -32,12 +32,12 @@
             this.lbUserFullname = new System.Windows.Forms.Label();
             this.panelTop = new System.Windows.Forms.Panel();
             this.btnUserProfile = new Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox();
-            this.conControl = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnCourses = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.btnStatistics = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.btnAccount = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.conMain = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
+            this.conControl = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
+            this.btnAccount = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.btnStatistics = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.btnCourses = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnUserProfile)).BeginInit();
             this.conControl.SuspendLayout();
@@ -54,7 +54,7 @@
             this.lbAppName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbAppName.Name = "lbAppName";
             this.lbAppName.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.lbAppName.Size = new System.Drawing.Size(132, 37);
+            this.lbAppName.Size = new System.Drawing.Size(176, 37);
             this.lbAppName.TabIndex = 3;
             this.lbAppName.Text = "E-Learning";
             this.lbAppName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -102,94 +102,6 @@
             this.btnUserProfile.TabIndex = 6;
             this.btnUserProfile.TabStop = false;
             // 
-            // conControl
-            // 
-            this.conControl.Controls.Add(this.flowLayoutPanel1);
-            this.conControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.conControl.Location = new System.Drawing.Point(0, 41);
-            this.conControl.Name = "conControl";
-            this.conControl.Size = new System.Drawing.Size(904, 64);
-            this.conControl.TabIndex = 2;
-            this.conControl.Text = "siticoneContainerControl2";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.btnCourses);
-            this.flowLayoutPanel1.Controls.Add(this.btnStatistics);
-            this.flowLayoutPanel1.Controls.Add(this.btnAccount);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(100, 4, 4, 4);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1184, 64);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // btnCourses
-            // 
-            this.btnCourses.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnCourses.BorderRadius = 6;
-            this.btnCourses.BorderThickness = 1;
-            this.btnCourses.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.btnCourses.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnCourses.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnCourses.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnCourses.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.btnCourses.Enabled = false;
-            this.btnCourses.FillColor = System.Drawing.Color.White;
-            this.btnCourses.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCourses.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnCourses.ImageSize = new System.Drawing.Size(22, 22);
-            this.btnCourses.Location = new System.Drawing.Point(105, 9);
-            this.btnCourses.Margin = new System.Windows.Forms.Padding(5);
-            this.btnCourses.Name = "btnCourses";
-            this.btnCourses.Size = new System.Drawing.Size(124, 47);
-            this.btnCourses.TabIndex = 10;
-            this.btnCourses.Text = "Courses";
-            this.btnCourses.Click += new System.EventHandler(this.btnCourses_Click);
-            // 
-            // btnStatistics
-            // 
-            this.btnStatistics.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnStatistics.BorderRadius = 6;
-            this.btnStatistics.BorderThickness = 1;
-            this.btnStatistics.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnStatistics.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnStatistics.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnStatistics.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.btnStatistics.FillColor = System.Drawing.Color.White;
-            this.btnStatistics.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStatistics.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnStatistics.ImageSize = new System.Drawing.Size(22, 22);
-            this.btnStatistics.Location = new System.Drawing.Point(239, 9);
-            this.btnStatistics.Margin = new System.Windows.Forms.Padding(5);
-            this.btnStatistics.Name = "btnStatistics";
-            this.btnStatistics.Size = new System.Drawing.Size(124, 47);
-            this.btnStatistics.TabIndex = 11;
-            this.btnStatistics.Text = "Statistics";
-            this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click);
-            // 
-            // btnAccount
-            // 
-            this.btnAccount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnAccount.BorderRadius = 6;
-            this.btnAccount.BorderThickness = 1;
-            this.btnAccount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnAccount.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnAccount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnAccount.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.btnAccount.FillColor = System.Drawing.Color.White;
-            this.btnAccount.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnAccount.ImageSize = new System.Drawing.Size(22, 22);
-            this.btnAccount.Location = new System.Drawing.Point(373, 9);
-            this.btnAccount.Margin = new System.Windows.Forms.Padding(5);
-            this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Size = new System.Drawing.Size(124, 47);
-            this.btnAccount.TabIndex = 12;
-            this.btnAccount.Text = "Account";
-            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
-            // 
             // conMain
             // 
             this.conMain.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -198,6 +110,99 @@
             this.conMain.Size = new System.Drawing.Size(904, 440);
             this.conMain.TabIndex = 3;
             this.conMain.Text = "siticoneContainerControl2";
+            // 
+            // conControl
+            // 
+            this.conControl.Controls.Add(this.flowLayoutPanel1);
+            this.conControl.CustomBorderColor = System.Drawing.Color.LightGray;
+            this.conControl.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.conControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.conControl.Location = new System.Drawing.Point(0, 41);
+            this.conControl.Name = "conControl";
+            this.conControl.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
+            this.conControl.Size = new System.Drawing.Size(904, 64);
+            this.conControl.TabIndex = 2;
+            this.conControl.Text = "siticoneContainerControl2";
+            // 
+            // btnAccount
+            // 
+            this.btnAccount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.btnAccount.CustomBorderColor = System.Drawing.Color.White;
+            this.btnAccount.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.btnAccount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.btnAccount.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.btnAccount.DisabledState.FillColor = System.Drawing.Color.White;
+            this.btnAccount.DisabledState.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.btnAccount.FillColor = System.Drawing.Color.White;
+            this.btnAccount.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccount.ForeColor = System.Drawing.Color.DimGray;
+            this.btnAccount.ImageSize = new System.Drawing.Size(22, 22);
+            this.btnAccount.Location = new System.Drawing.Point(373, 5);
+            this.btnAccount.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAccount.Name = "btnAccount";
+            this.btnAccount.Size = new System.Drawing.Size(124, 57);
+            this.btnAccount.TabIndex = 12;
+            this.btnAccount.Text = "Account";
+            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
+            // 
+            // btnStatistics
+            // 
+            this.btnStatistics.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.btnStatistics.CustomBorderColor = System.Drawing.Color.White;
+            this.btnStatistics.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.btnStatistics.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.btnStatistics.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.btnStatistics.DisabledState.FillColor = System.Drawing.Color.White;
+            this.btnStatistics.DisabledState.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatistics.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.btnStatistics.FillColor = System.Drawing.Color.White;
+            this.btnStatistics.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatistics.ForeColor = System.Drawing.Color.DimGray;
+            this.btnStatistics.ImageSize = new System.Drawing.Size(22, 22);
+            this.btnStatistics.Location = new System.Drawing.Point(239, 5);
+            this.btnStatistics.Margin = new System.Windows.Forms.Padding(5);
+            this.btnStatistics.Name = "btnStatistics";
+            this.btnStatistics.Size = new System.Drawing.Size(124, 57);
+            this.btnStatistics.TabIndex = 11;
+            this.btnStatistics.Text = "Statistics";
+            this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click);
+            // 
+            // btnCourses
+            // 
+            this.btnCourses.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.btnCourses.CustomBorderColor = System.Drawing.Color.White;
+            this.btnCourses.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.btnCourses.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.btnCourses.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.btnCourses.DisabledState.FillColor = System.Drawing.Color.White;
+            this.btnCourses.DisabledState.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCourses.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.btnCourses.Enabled = false;
+            this.btnCourses.FillColor = System.Drawing.Color.White;
+            this.btnCourses.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCourses.ForeColor = System.Drawing.Color.DimGray;
+            this.btnCourses.ImageSize = new System.Drawing.Size(22, 22);
+            this.btnCourses.Location = new System.Drawing.Point(105, 5);
+            this.btnCourses.Margin = new System.Windows.Forms.Padding(5);
+            this.btnCourses.Name = "btnCourses";
+            this.btnCourses.Size = new System.Drawing.Size(124, 57);
+            this.btnCourses.TabIndex = 10;
+            this.btnCourses.Text = "Courses";
+            this.btnCourses.Click += new System.EventHandler(this.btnCourses_Click);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.btnCourses);
+            this.flowLayoutPanel1.Controls.Add(this.btnStatistics);
+            this.flowLayoutPanel1.Controls.Add(this.btnAccount);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(100, 0, 4, 0);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(904, 62);
+            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // fAdminMain
             // 
@@ -217,7 +222,6 @@
             this.Text = "ELearning Admin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fAdminMain_FormClosing);
-            //this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.fAdminMain_FormClosed);
             this.Load += new System.EventHandler(this.ucAdminMain_Load);
             this.panelTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnUserProfile)).EndInit();
@@ -232,8 +236,8 @@
         private Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox btnUserProfile;
         private System.Windows.Forms.Label lbUserFullname;
         private System.Windows.Forms.Panel panelTop;
-        private Siticone.Desktop.UI.WinForms.SiticoneContainerControl conControl;
         private Siticone.Desktop.UI.WinForms.SiticoneContainerControl conMain;
+        private Siticone.Desktop.UI.WinForms.SiticoneContainerControl conControl;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnCourses;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnStatistics;

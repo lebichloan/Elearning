@@ -70,7 +70,7 @@ namespace Elearning.UserControls
 
         }
 
-        private void btnView_Click(object sender, EventArgs e)
+        private void cbYear_SelectedIndexChanged(object sender, EventArgs e)
         {
             tbChart.Visible = true;
             int year = int.Parse(cbYear.SelectedItem.ToString());

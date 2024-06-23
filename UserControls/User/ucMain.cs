@@ -29,16 +29,20 @@ namespace Elearning.UserControls
             this.ucHome = new ucHome();
             ucHome.Dock = DockStyle.Fill;
             ucHome.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
-            tabHome.Controls.Add(ucHome);
+            conMain.Controls.Add(ucHome);
 
             this.ucMyElearning = new ucMyElearning();
             ucMyElearning.Dock = DockStyle.Fill;
             ucMyElearning.viewDetailsClicked += ucCoursePreview_viewMyCourse;
-            tabMyLearning.Controls.Add(ucMyElearning);
+            conMain.Controls.Add(ucMyElearning);
 
             this.ucProfile = new ucProfile();
             ucProfile.Dock = DockStyle.Fill;
-            tabAccount.Controls.Add(ucProfile);
+            conMain.Controls.Add(ucProfile);
+
+            ucHome.BringToFront();
+
+            btnHome.Enabled = false;
         }
 
         public void ucMain_Reload()
@@ -99,6 +103,30 @@ namespace Elearning.UserControls
         private void timer_Tick(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            btnHome.Enabled = false;
+            btnAccount.Enabled = true;
+            btnMyLearning.Enabled = true;
+            ucHome.BringToFront();
+        }
+
+        private void btnAccount_Click(object sender, EventArgs e)
+        {
+            btnHome.Enabled = true;
+            btnAccount.Enabled = false;
+            btnMyLearning.Enabled = true;
+            ucProfile.BringToFront();
+        }
+
+        private void btnMyLearning_Click(object sender, EventArgs e)
+        {
+            btnHome.Enabled = true;
+            btnAccount.Enabled = true;
+            btnMyLearning.Enabled = false;
+            ucMyElearning.BringToFront();
         }
     }
 }

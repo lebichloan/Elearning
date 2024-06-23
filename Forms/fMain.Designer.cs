@@ -52,7 +52,7 @@
             this.panelTop.Margin = new System.Windows.Forms.Padding(2);
             this.panelTop.Name = "panelTop";
             this.panelTop.Padding = new System.Windows.Forms.Padding(2, 2, 8, 2);
-            this.panelTop.Size = new System.Drawing.Size(982, 40);
+            this.panelTop.Size = new System.Drawing.Size(1001, 40);
             this.panelTop.TabIndex = 0;
             // 
             // lbUserFullname
@@ -61,7 +61,7 @@
             this.lbUserFullname.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbUserFullname.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUserFullname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbUserFullname.Location = new System.Drawing.Point(732, 2);
+            this.lbUserFullname.Location = new System.Drawing.Point(751, 2);
             this.lbUserFullname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbUserFullname.Name = "lbUserFullname";
             this.lbUserFullname.Padding = new System.Windows.Forms.Padding(0, 0, 4, 0);
@@ -75,7 +75,7 @@
             this.btnUserProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUserProfile.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnUserProfile.ImageRotate = 0F;
-            this.btnUserProfile.Location = new System.Drawing.Point(894, 2);
+            this.btnUserProfile.Location = new System.Drawing.Point(913, 2);
             this.btnUserProfile.Margin = new System.Windows.Forms.Padding(2);
             this.btnUserProfile.Name = "btnUserProfile";
             this.btnUserProfile.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
@@ -89,10 +89,10 @@
             this.btnSignOut.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSignOut.Image = ((System.Drawing.Image)(resources.GetObject("btnSignOut.Image")));
             this.btnSignOut.ImageRotate = 0F;
-            this.btnSignOut.Location = new System.Drawing.Point(934, 2);
-            this.btnSignOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSignOut.Location = new System.Drawing.Point(953, 2);
+            this.btnSignOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnSignOut.Name = "btnSignOut";
-            this.btnSignOut.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.btnSignOut.Padding = new System.Windows.Forms.Padding(8);
             this.btnSignOut.Size = new System.Drawing.Size(40, 36);
             this.btnSignOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnSignOut.TabIndex = 7;
@@ -121,14 +121,14 @@
             this.panelMain.Location = new System.Drawing.Point(0, 40);
             this.panelMain.Margin = new System.Windows.Forms.Padding(2);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(982, 503);
+            this.panelMain.Size = new System.Drawing.Size(1001, 471);
             this.panelMain.TabIndex = 1;
             // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(982, 543);
+            this.ClientSize = new System.Drawing.Size(1001, 511);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelTop);
             this.Margin = new System.Windows.Forms.Padding(2);

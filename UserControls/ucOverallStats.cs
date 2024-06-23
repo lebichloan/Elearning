@@ -61,7 +61,7 @@ namespace Elearning.UserControls
 
         }
 
-        private void btnShow_Click(object sender, EventArgs e)
+        private void cbYear_SelectedIndexChanged(object sender, EventArgs e)
         {
             tableLayoutPanel1.Visible = true;
 
@@ -130,7 +130,6 @@ namespace Elearning.UserControls
                 }
             }
             pieEarnByCategory.Series = data;
-
         }
     }
 }

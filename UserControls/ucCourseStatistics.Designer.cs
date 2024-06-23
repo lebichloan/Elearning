@@ -42,28 +42,27 @@
             this.lbRankByRegister = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.tbChart = new System.Windows.Forms.TableLayoutPanel();
-            this.siticoneContainerControl2 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnView = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.cbYear = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
-            this.bindSrcCourseStats = new System.Windows.Forms.BindingSource(this.components);
-            this.siticonePanel4 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.chartLearners = new LiveCharts.WinForms.CartesianChart();
-            this.lb = new System.Windows.Forms.Label();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.chartEarnings = new LiveCharts.WinForms.CartesianChart();
             this.label2 = new System.Windows.Forms.Label();
+            this.siticonePanel4 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.chartLearners = new LiveCharts.WinForms.CartesianChart();
+            this.lb = new System.Windows.Forms.Label();
+            this.siticoneContainerControl2 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.cbYear = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
+            this.bindSrcCourseStats = new System.Windows.Forms.BindingSource(this.components);
             this.siticoneContainerControl1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.siticonePanel8.SuspendLayout();
             this.siticonePanel7.SuspendLayout();
             this.siticonePanel6.SuspendLayout();
             this.tbChart.SuspendLayout();
+            this.siticonePanel1.SuspendLayout();
+            this.siticonePanel4.SuspendLayout();
             this.siticoneContainerControl2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindSrcCourseStats)).BeginInit();
-            this.siticonePanel4.SuspendLayout();
-            this.siticonePanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -248,65 +247,42 @@
             this.tbChart.Size = new System.Drawing.Size(910, 277);
             this.tbChart.TabIndex = 3;
             // 
-            // siticoneContainerControl2
+            // siticonePanel1
             // 
-            this.siticoneContainerControl2.Controls.Add(this.flowLayoutPanel1);
-            this.siticoneContainerControl2.Controls.Add(this.label1);
-            this.siticoneContainerControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticoneContainerControl2.Location = new System.Drawing.Point(0, 0);
-            this.siticoneContainerControl2.Name = "siticoneContainerControl2";
-            this.siticoneContainerControl2.Padding = new System.Windows.Forms.Padding(0, 0, 50, 0);
-            this.siticoneContainerControl2.Size = new System.Drawing.Size(910, 49);
-            this.siticoneContainerControl2.TabIndex = 4;
-            this.siticoneContainerControl2.Text = "siticoneContainerControl2";
+            this.siticonePanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.siticonePanel1.BorderRadius = 6;
+            this.siticonePanel1.BorderThickness = 1;
+            this.siticonePanel1.Controls.Add(this.chartEarnings);
+            this.siticonePanel1.Controls.Add(this.label2);
+            this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.siticonePanel1.Location = new System.Drawing.Point(457, 10);
+            this.siticonePanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.siticonePanel1.Name = "siticonePanel1";
+            this.siticonePanel1.Padding = new System.Windows.Forms.Padding(2);
+            this.siticonePanel1.Size = new System.Drawing.Size(401, 257);
+            this.siticonePanel1.TabIndex = 28;
             // 
-            // flowLayoutPanel1
+            // chartEarnings
             // 
-            this.flowLayoutPanel1.Controls.Add(this.btnView);
-            this.flowLayoutPanel1.Controls.Add(this.cbYear);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(245, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(615, 49);
-            this.flowLayoutPanel1.TabIndex = 2;
+            this.chartEarnings.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartEarnings.Location = new System.Drawing.Point(2, 48);
+            this.chartEarnings.Name = "chartEarnings";
+            this.chartEarnings.Size = new System.Drawing.Size(397, 207);
+            this.chartEarnings.TabIndex = 3;
+            this.chartEarnings.Text = "cartesianChart2";
             // 
-            // btnView
+            // label2
             // 
-            this.btnView.BorderRadius = 6;
-            this.btnView.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnView.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnView.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnView.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnView.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnView.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnView.ForeColor = System.Drawing.Color.White;
-            this.btnView.Location = new System.Drawing.Point(489, 3);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(123, 36);
-            this.btnView.TabIndex = 0;
-            this.btnView.Text = "View";
-            this.btnView.Click += new System.EventHandler(this.btnView_Click);
-            // 
-            // cbYear
-            // 
-            this.cbYear.BackColor = System.Drawing.Color.Transparent;
-            this.cbYear.BorderRadius = 6;
-            this.cbYear.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbYear.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbYear.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbYear.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cbYear.ItemHeight = 30;
-            this.cbYear.Items.AddRange(new object[] {
-            "2023",
-            "2024",
-            "2025"});
-            this.cbYear.Location = new System.Drawing.Point(347, 3);
-            this.cbYear.Name = "cbYear";
-            this.cbYear.Size = new System.Drawing.Size(136, 36);
-            this.cbYear.TabIndex = 1;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
+            this.label2.Location = new System.Drawing.Point(2, 2);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(397, 46);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Earnings";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // siticonePanel4
             // 
@@ -345,42 +321,48 @@
             this.lb.Text = "New registrations";
             this.lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // siticonePanel1
+            // siticoneContainerControl2
             // 
-            this.siticonePanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.siticonePanel1.BorderRadius = 6;
-            this.siticonePanel1.BorderThickness = 1;
-            this.siticonePanel1.Controls.Add(this.chartEarnings);
-            this.siticonePanel1.Controls.Add(this.label2);
-            this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.siticonePanel1.Location = new System.Drawing.Point(457, 10);
-            this.siticonePanel1.Margin = new System.Windows.Forms.Padding(2);
-            this.siticonePanel1.Name = "siticonePanel1";
-            this.siticonePanel1.Padding = new System.Windows.Forms.Padding(2);
-            this.siticonePanel1.Size = new System.Drawing.Size(401, 257);
-            this.siticonePanel1.TabIndex = 28;
+            this.siticoneContainerControl2.Controls.Add(this.flowLayoutPanel1);
+            this.siticoneContainerControl2.Controls.Add(this.label1);
+            this.siticoneContainerControl2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.siticoneContainerControl2.Location = new System.Drawing.Point(0, 0);
+            this.siticoneContainerControl2.Name = "siticoneContainerControl2";
+            this.siticoneContainerControl2.Padding = new System.Windows.Forms.Padding(0, 0, 50, 0);
+            this.siticoneContainerControl2.Size = new System.Drawing.Size(910, 49);
+            this.siticoneContainerControl2.TabIndex = 4;
+            this.siticoneContainerControl2.Text = "siticoneContainerControl2";
             // 
-            // chartEarnings
+            // flowLayoutPanel1
             // 
-            this.chartEarnings.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chartEarnings.Location = new System.Drawing.Point(2, 48);
-            this.chartEarnings.Name = "chartEarnings";
-            this.chartEarnings.Size = new System.Drawing.Size(397, 207);
-            this.chartEarnings.TabIndex = 3;
-            this.chartEarnings.Text = "cartesianChart2";
+            this.flowLayoutPanel1.Controls.Add(this.cbYear);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(245, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(615, 49);
+            this.flowLayoutPanel1.TabIndex = 2;
             // 
-            // label2
+            // cbYear
             // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.label2.Location = new System.Drawing.Point(2, 2);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(397, 46);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Earnings";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cbYear.BackColor = System.Drawing.Color.Transparent;
+            this.cbYear.BorderRadius = 6;
+            this.cbYear.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbYear.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbYear.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbYear.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cbYear.ItemHeight = 30;
+            this.cbYear.Items.AddRange(new object[] {
+            "2023",
+            "2024",
+            "2025"});
+            this.cbYear.Location = new System.Drawing.Point(3, 8);
+            this.cbYear.Name = "cbYear";
+            this.cbYear.Size = new System.Drawing.Size(136, 36);
+            this.cbYear.TabIndex = 1;
+            this.cbYear.SelectedIndexChanged += new System.EventHandler(this.cbYear_SelectedIndexChanged);
             // 
             // ucCourseStatistics
             // 
@@ -398,11 +380,11 @@
             this.siticonePanel7.ResumeLayout(false);
             this.siticonePanel6.ResumeLayout(false);
             this.tbChart.ResumeLayout(false);
+            this.siticonePanel1.ResumeLayout(false);
+            this.siticonePanel4.ResumeLayout(false);
             this.siticoneContainerControl2.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bindSrcCourseStats)).EndInit();
-            this.siticonePanel4.ResumeLayout(false);
-            this.siticonePanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -424,7 +406,6 @@
         private System.Windows.Forms.TableLayoutPanel tbChart;
         private Siticone.Desktop.UI.WinForms.SiticoneContainerControl siticoneContainerControl2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton btnView;
         private Siticone.Desktop.UI.WinForms.SiticoneComboBox cbYear;
         private System.Windows.Forms.BindingSource bindSrcCourseStats;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;

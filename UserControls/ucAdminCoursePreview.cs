@@ -44,8 +44,15 @@ namespace Elearning.UserControls
                 lbFinalPrice.Visible = true;
 
                 // calculate the final price, round to the nearest 1000
-                int finalPrice = (int)(course.price - course.price * (int)course.discount / 100.0);
-                lbFinalPrice.Text = finalPrice.ToString("N0") + "đ";
+                if (course.discount != null)
+                {
+                    int finalPrice = (int)(course.price - course.price * (int)course.discount / 100.0);
+                    lbFinalPrice.Text = finalPrice.ToString("N0") + "đ";
+                }
+                else
+                {
+                    lbFinalPrice.Text = course.price.ToString("N0") + "đ";
+                }
             }
         }
 
@@ -75,8 +82,15 @@ namespace Elearning.UserControls
                 lbFinalPrice.Visible = true;
 
                 // calculate the final price, round to the nearest 1000
-                int finalPrice = (int)(course.price - course.price * (int)course.discount / 100.0);
-                lbFinalPrice.Text = finalPrice.ToString("N0") + "đ";
+                if (course.discount != null)
+                {
+                    int finalPrice = (int)(course.price - course.price * (int)course.discount / 100.0);
+                    lbFinalPrice.Text = finalPrice.ToString("N0") + "đ";
+                }
+                else
+                {
+                    lbFinalPrice.Text = course.price.ToString("N0") + "đ";
+                }
             }
         }
 

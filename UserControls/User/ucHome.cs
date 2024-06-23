@@ -79,7 +79,7 @@ namespace Elearning.UserControls
                 var rating = course.stars != null ? Math.Round((decimal)course.stars, 2).ToString() + "/5" : "No reviews";
                 ucCourse.rating = rating;
                 ucCourse.price = course.price.ToString("N0") + "đ";
-                if (course.discount != 0)
+                if (course.discount != null)
                 {
                     int finalPrice = (int)(course.price - course.price * (int)course.discount / 100.0);
                     ucCourse.finalPrice = finalPrice.ToString("N0") + "đ";

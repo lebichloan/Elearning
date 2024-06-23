@@ -327,7 +327,7 @@ namespace Elearning.UserControls.User
                 }
 
                 ucCourse.price = course.price.ToString("N0");
-                if (course.discount != 0)
+                if (course.discount != null)
                 {
                     int finalPrice = (int)(course.price - course.price * (int)course.discount / 100.0);
                     ucCourse.finalPrice = finalPrice.ToString("N0") + "đ";

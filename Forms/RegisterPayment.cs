@@ -110,6 +110,7 @@ namespace Elearning.Forms
                     register.register_status = 1;
                     register.completion_score = 0;
                     register.course_certificate = null;
+                    register.paid = (int)Math.Round((double)(course.price - (course.price * course.discount / 100.0)));
                     Program.provider.Registers.Add(register);
                     Program.provider.SaveChanges();
 

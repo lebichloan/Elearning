@@ -34,9 +34,6 @@
             this.btnUserProfile = new Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox();
             this.conMain = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.conControl = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnCourses = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.btnStatistics = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnAccount = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnUserProfile)).BeginInit();
@@ -124,7 +121,7 @@
             this.conControl.TabIndex = 2;
             this.conControl.Text = "siticoneContainerControl2";
             // 
-            // flowLayoutPanel1
+            // btnAccount
             // 
             this.flowLayoutPanel1.Controls.Add(this.btnCourses);
             this.flowLayoutPanel1.Controls.Add(this.btnStatistics);
@@ -182,7 +179,7 @@
             this.btnStatistics.Text = "Statistics";
             this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click);
             // 
-            // btnAccount
+            // btnCourses
             // 
             this.btnAccount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
             this.btnAccount.CustomBorderColor = System.Drawing.Color.White;

@@ -332,5 +332,11 @@ namespace Elearning.UserControls
             Program.provider = new ELearningDbEntities();
             Reload();
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            Program.provider = new ELearningDbEntities();
+            Reload();
+        }
     }
 }

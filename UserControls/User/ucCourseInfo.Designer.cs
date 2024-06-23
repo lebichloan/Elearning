@@ -74,6 +74,7 @@
             this.siticoneContainerControl6.SuspendLayout();
             this.siticoneContainerControl7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCourseImage)).BeginInit();
+            this.siticonePanel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnBackHome
@@ -91,7 +92,7 @@
             this.btnBackHome.Location = new System.Drawing.Point(956, 0);
             this.btnBackHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBackHome.Name = "btnBackHome";
-            this.btnBackHome.Size = new System.Drawing.Size(60, 55);
+            this.btnBackHome.Size = new System.Drawing.Size(45, 45);
             this.btnBackHome.TabIndex = 12;
             this.btnBackHome.Click += new System.EventHandler(this.btnBackHome_Click);
             // 
@@ -102,7 +103,7 @@
             this.panCourseInfo.Controls.Add(this.panTop);
             this.panCourseInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panCourseInfo.Location = new System.Drawing.Point(0, 0);
-            this.panCourseInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panCourseInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panCourseInfo.Name = "panCourseInfo";
             this.panCourseInfo.Size = new System.Drawing.Size(1325, 601);
             this.panCourseInfo.TabIndex = 10;
@@ -236,7 +237,7 @@
             this.panTop.CustomBorderColor = System.Drawing.Color.Silver;
             this.panTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panTop.Location = new System.Drawing.Point(0, 0);
-            this.panTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panTop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panTop.Name = "panTop";
             this.panTop.Padding = new System.Windows.Forms.Padding(0, 0, 0, 7);
             this.panTop.Size = new System.Drawing.Size(1325, 327);
@@ -253,8 +254,8 @@
             this.siticoneContainerControl1.Controls.Add(this.lblLecturerName);
             this.siticoneContainerControl1.Controls.Add(this.lblCourseName);
             this.siticoneContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.siticoneContainerControl1.Location = new System.Drawing.Point(323, 0);
-            this.siticoneContainerControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticoneContainerControl1.Location = new System.Drawing.Point(242, 0);
+            this.siticoneContainerControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.siticoneContainerControl1.Name = "siticoneContainerControl1";
             this.siticoneContainerControl1.Padding = new System.Windows.Forms.Padding(8, 41, 0, 0);
             this.siticoneContainerControl1.Size = new System.Drawing.Size(1002, 320);
@@ -427,10 +428,11 @@
             this.lblCategory.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblCategory.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategory.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCategory.Location = new System.Drawing.Point(4, 0);
+            this.lblCategory.Location = new System.Drawing.Point(3, 0);
+            this.lblCategory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
-            this.lblCategory.Size = new System.Drawing.Size(80, 24);
+            this.lblCategory.Size = new System.Drawing.Size(66, 21);
             this.lblCategory.TabIndex = 4;
             this.lblCategory.Text = "Category";
             // 
@@ -444,7 +446,7 @@
             this.lblDifficulty.Location = new System.Drawing.Point(11, 7);
             this.lblDifficulty.Name = "lblDifficulty";
             this.lblDifficulty.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
-            this.lblDifficulty.Size = new System.Drawing.Size(77, 24);
+            this.lblDifficulty.Size = new System.Drawing.Size(63, 21);
             this.lblDifficulty.TabIndex = 3;
             this.lblDifficulty.Text = "Difficulty";
             // 
@@ -455,8 +457,8 @@
             this.lblLecturerName.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLecturerName.Location = new System.Drawing.Point(8, 85);
             this.lblLecturerName.Name = "lblLecturerName";
-            this.lblLecturerName.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.lblLecturerName.Size = new System.Drawing.Size(156, 27);
+            this.lblLecturerName.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.lblLecturerName.Size = new System.Drawing.Size(123, 21);
             this.lblLecturerName.TabIndex = 2;
             this.lblLecturerName.Text = "Lecturer name";
             // 
@@ -478,16 +480,38 @@
             this.picCourseImage.Dock = System.Windows.Forms.DockStyle.Left;
             this.picCourseImage.ImageRotate = 0F;
             this.picCourseImage.Location = new System.Drawing.Point(0, 0);
-            this.picCourseImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picCourseImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picCourseImage.Name = "picCourseImage";
             this.picCourseImage.Size = new System.Drawing.Size(323, 320);
             this.picCourseImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picCourseImage.TabIndex = 1;
             this.picCourseImage.TabStop = false;
             // 
+            // siticonePanel10
+            // 
+            this.siticonePanel10.Controls.Add(this.lblFinalPrice);
+            this.siticonePanel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.siticonePanel10.Location = new System.Drawing.Point(11, 158);
+            this.siticonePanel10.Margin = new System.Windows.Forms.Padding(2);
+            this.siticonePanel10.Name = "siticonePanel10";
+            this.siticonePanel10.Size = new System.Drawing.Size(330, 32);
+            this.siticonePanel10.TabIndex = 16;
+            // 
+            // lblFinalPrice
+            // 
+            this.lblFinalPrice.AutoSize = true;
+            this.lblFinalPrice.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblFinalPrice.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFinalPrice.Location = new System.Drawing.Point(253, 0);
+            this.lblFinalPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFinalPrice.Name = "lblFinalPrice";
+            this.lblFinalPrice.Size = new System.Drawing.Size(77, 28);
+            this.lblFinalPrice.TabIndex = 8;
+            this.lblFinalPrice.Text = "50.000";
+            // 
             // ucCourseInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panCourseInfo);
@@ -514,6 +538,8 @@
             this.siticoneContainerControl7.ResumeLayout(false);
             this.siticoneContainerControl7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCourseImage)).EndInit();
+            this.siticonePanel10.ResumeLayout(false);
+            this.siticonePanel10.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -837,6 +837,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\avatars\" />
+    <Folder Include="images\certificate\" />
     <Folder Include="images\courses_images\" />
     <Folder Include="images\resources\" />
   </ItemGroup>

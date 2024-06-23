@@ -24,6 +24,9 @@ namespace Elearning
         public static string ICONS_PATH = System.IO.Path.GetFullPath(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..")) 
                                             + "\\images\\icons\\";
 
+        public static string CERTIFICATE_PATH = System.IO.Path.GetFullPath(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\.."))
+                                    + "\\images\\certificate\\";
+
         public static int TYPE_VIDEO = 0;
         public static int TYPE_DOC = 1;
         public static int TYPE_TEST = 2;

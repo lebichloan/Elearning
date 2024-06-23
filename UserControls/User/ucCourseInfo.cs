@@ -45,7 +45,7 @@ namespace Elearning.UserControls
 
             listCourseReview = (
                 from review in Program.provider.CourseReviews
-                where review.Register.Course.course_id == course.course_id
+                where review.Register.Course.course_id == this.course.course_id
                 select review
                 ).ToList();
             LoadAllReview(listCourseReview);
@@ -70,6 +70,7 @@ namespace Elearning.UserControls
                     newRegister.register_status = 1;
                     newRegister.completion_score = 0;
                     newRegister.course_certificate = null;
+
                     Program.provider.Registers.Add(newRegister);
                     Program.provider.SaveChanges();
 
@@ -131,31 +132,26 @@ namespace Elearning.UserControls
             lblCategory1.Text = course.category;
 
             lblDescription.Text = course.course_description;
-            Program.provider.Courses.Local.Clear();
-            Course course1 = (
-                from co in Program.provider.Courses
-                where co.course_id == course.course_id
-                select co).ToList().FirstOrDefault();
 
-            if (course1.stars != null)
+            if (course.stars != null)
             {
                 lblStar.Text = String.Format("{0}/5",
-                    FormatDecimal(course1.stars.Value));
+                    FormatDecimal(course.stars.Value));
             }
             else {
                 lblStar.Text = "No reviews";
             }
 
-            if (course1.discount != 0)
+            if (course.discount != 0)
             {
-                lblPrice.Text = course1.price.ToString("N0") + "đ";
-                int priceAfterDiscount = (int)Math.Round(course1.price - (course1.price * (int)course1.discount / 100.0));
+                lblPrice.Text = course.price.ToString("N0") + "đ";
+                int priceAfterDiscount = (int)Math.Round(course.price - (course.price * (int)course.discount / 100.0));
                 lblFinalPrice.Text = priceAfterDiscount.ToString("N0") + "đ";
                 lblPrice.Font = new Font(lblPrice.Font, FontStyle.Strikeout);
             }
             else
             {
-                lblPrice.Text = Program.FormatNumberWithSpaces(course1.price);
+                lblPrice.Text = Program.FormatNumberWithSpaces(course.price);
                 lblPrice.Font = new Font(lblPrice.Font, FontStyle.Bold);
                 lblFinalPrice.Visible = false;
             }

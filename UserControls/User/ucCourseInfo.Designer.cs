@@ -74,7 +74,6 @@
             this.siticoneContainerControl6.SuspendLayout();
             this.siticoneContainerControl7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCourseImage)).BeginInit();
-            this.siticonePanel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnBackHome
@@ -487,16 +486,6 @@
             this.picCourseImage.TabIndex = 1;
             this.picCourseImage.TabStop = false;
             // 
-            // siticonePanel10
-            // 
-            this.siticonePanel10.Controls.Add(this.lblFinalPrice);
-            this.siticonePanel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticonePanel10.Location = new System.Drawing.Point(11, 158);
-            this.siticonePanel10.Margin = new System.Windows.Forms.Padding(2);
-            this.siticonePanel10.Name = "siticonePanel10";
-            this.siticonePanel10.Size = new System.Drawing.Size(330, 32);
-            this.siticonePanel10.TabIndex = 16;
-            // 
             // lblFinalPrice
             // 
             this.lblFinalPrice.AutoSize = true;
@@ -538,8 +527,6 @@
             this.siticoneContainerControl7.ResumeLayout(false);
             this.siticoneContainerControl7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCourseImage)).EndInit();
-            this.siticonePanel10.ResumeLayout(false);
-            this.siticonePanel10.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -38,18 +38,6 @@ namespace Elearning.UserControls
             set { lbFinalPrice.Text = value; }
         }
 
-        public string finalPrice
-        {
-            get { return lblFinalPrice.Text; }
-            set { lblFinalPrice.Text = value; }
-        }
-
-        public Font priceFont
-        {
-            get { return lblPrice.Font; }
-            set { lblPrice.Font = value; }
-        }
-
         private Course coursePreview;
         public Course coursePreviewClicked
         {

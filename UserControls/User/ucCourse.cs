@@ -287,15 +287,19 @@ namespace Elearning.UserControls
 
             foreach(Control control in layoutModule.Controls)
             {
-                if (control != sender)
+                if (control is ucCourseModule)
                 {
-                    ucCourseModule item = control as ucCourseModule;
-                    item.backColor = Color.White;
-                }
-                else
-                {
-                    ucCourseModule item = control as ucCourseModule;
-                    item.backColor = Color.FromArgb(228, 230, 233);
+                    if (control != sender)
+                    {
+                        ucCourseModule item = control as ucCourseModule;
+                        item.backColor = Color.White;
+                    }
+                    else
+                    {
+                        ucCourseModule item = control as ucCourseModule;
+                        item.backColor = Color.FromArgb(228, 230, 233);
+                    }
+
                 }
             }
         }

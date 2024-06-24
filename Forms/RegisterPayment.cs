@@ -101,6 +101,8 @@ namespace Elearning.Forms
         {
             if (idPayment == 0)
             {
+                int priceAfterDiscount =
+                        (int)Math.Round((double)(course.price - (course.price * course.discount / 100.0)));
                 try
                 {
                     Register register = new Register();
@@ -173,14 +175,18 @@ namespace Elearning.Forms
         {
             try
             {
-                Register register = new Register();
-                register.learner_id = currentAccount.acc_id;
-                register.course_id = course.course_id;
-                register.registered_date = DateTime.Now;
-                register.register_status = 1;
-                register.completion_score = 0;
-                register.course_certificate = null;
-                register.paid = (int)Math.Round((double)(course.price - (course.price * course.discount / 100.0)));
+                Register register = new Register
+                {
+                    learner_id = currentAccount.acc_id,
+                    course_id = course.course_id,
+                    registered_date = DateTime.Now,
+                    register_status = 1,
+                    completion_score = 0,
+                    course_certificate = "",
+                    paid = (int)Math.Round((double)(course.price - (course.price * course.discount / 100.0))),
+                    time_finish = null
+                };
+
                 Program.provider.Registers.Add(register);
                 Program.provider.SaveChanges();
 

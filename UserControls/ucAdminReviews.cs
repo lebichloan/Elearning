@@ -18,6 +18,10 @@ namespace Elearning.UserControls
         {
             InitializeComponent();
             this.course = course;
+            flpReviews.AutoScroll = true;
+            flpReviews.VerticalScroll.Enabled = true;
+            LoadReviews();
+
         }
 
         private void LoadReviews()
@@ -29,21 +33,28 @@ namespace Elearning.UserControls
             {
                 total[i] = 0;
             }
-            // for loop through all register of the course. each register has one or zero review
-            foreach (Register register in course.Registers)
+            // get list of reviews of the course through registers
+            List<CourseReview> reviews = new List<CourseReview>();
+            List<Register> registers = Program.provider.Registers.Where(x => x.course_id == course.course_id).ToList();
+            foreach (Register reg in registers)
             {
-                if (register.CourseReviews != null && register.CourseReviews.Count > 0)
+                   if (reg.CourseReviews != null && reg.CourseReviews.Count > 0)
                 {
-                    var review = register.CourseReviews.First();
-                    ucAdminReview ucReview = new ucAdminReview(review);
-                    ucReview.Dock = DockStyle.Top;
-                    ucReview.Size = ucReview.ClientSize = new Size(flpReviews.ClientSize.Width - 15, ucReview.Height);
-
-                    flpReviews.Controls.Add(ucReview);
-                    totalReviews++;
-
-                    total[(int)review.stars]++;
+                    reviews.Add(reg.CourseReviews.First());
                 }
+            }
+            reviews = reviews.OrderByDescending(x => x.review_id).ToList();
+            // for loop through all register of the course. each register has one or zero review
+            foreach (CourseReview review in reviews)
+            {
+                ucAdminReview ucReview = new ucAdminReview(review);
+                ucReview.Dock = DockStyle.Top;
+                ucReview.Size = ucReview.ClientSize = new Size(flpReviews.ClientSize.Width - 15, ucReview.Height);
+
+                flpReviews.Controls.Add(ucReview);
+                totalReviews++;
+
+                total[(int)review.stars]++;
             }
 
             if (totalReviews > 0)
@@ -88,7 +99,7 @@ namespace Elearning.UserControls
 
         private void ucAdminReviews_Load(object sender, EventArgs e)
         {
-            LoadReviews();
+            
         }
 
         private void cbFilterReviews_SelectedIndexChanged(object sender, EventArgs e)

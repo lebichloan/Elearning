@@ -41,15 +41,17 @@
             // 
             // panContainer
             // 
-            this.panContainer.BorderColor = System.Drawing.Color.Black;
+            this.panContainer.BackColor = System.Drawing.SystemColors.Control;
+            this.panContainer.BorderColor = System.Drawing.Color.Silver;
+            this.panContainer.BorderRadius = 10;
             this.panContainer.BorderThickness = 1;
             this.panContainer.Controls.Add(this.siticonePanel1);
             this.panContainer.Controls.Add(this.siticonePanel2);
             this.panContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panContainer.Location = new System.Drawing.Point(8, 8);
-            this.panContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panContainer.Margin = new System.Windows.Forms.Padding(2);
             this.panContainer.Name = "panContainer";
-            this.panContainer.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panContainer.Padding = new System.Windows.Forms.Padding(4);
             this.panContainer.Size = new System.Drawing.Size(464, 100);
             this.panContainer.TabIndex = 0;
             this.panContainer.Click += new System.EventHandler(this.GoToTest_Click);
@@ -60,7 +62,7 @@
             this.siticonePanel1.Controls.Add(this.lblState);
             this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticonePanel1.Location = new System.Drawing.Point(4, 4);
-            this.siticonePanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticonePanel1.Margin = new System.Windows.Forms.Padding(2);
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Padding = new System.Windows.Forms.Padding(24, 24, 24, 16);
             this.siticonePanel1.Size = new System.Drawing.Size(318, 92);
@@ -98,7 +100,7 @@
             this.siticonePanel2.Controls.Add(this.lblViewDetail);
             this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.siticonePanel2.Location = new System.Drawing.Point(322, 4);
-            this.siticonePanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticonePanel2.Margin = new System.Windows.Forms.Padding(2);
             this.siticonePanel2.Name = "siticonePanel2";
             this.siticonePanel2.Padding = new System.Windows.Forms.Padding(24, 16, 24, 16);
             this.siticonePanel2.Size = new System.Drawing.Size(138, 92);
@@ -124,9 +126,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panContainer);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "itemTest";
-            this.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.Padding = new System.Windows.Forms.Padding(8);
             this.Size = new System.Drawing.Size(480, 116);
             this.Click += new System.EventHandler(this.GoToTest_Click);
             this.panContainer.ResumeLayout(false);

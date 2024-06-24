@@ -26,13 +26,10 @@ namespace Elearning.Forms
             InitUI(course);
 
             Account currentUser = fLogin.currentAccount;
-            register = (
-                from registers in Program.provider.Registers
-                where registers.course_id == course.course_id
-                && currentUser.acc_id == registers.learner_id
-                select registers
-                ).ToList().FirstOrDefault();
-
+            register = Program.provider.Registers.Where(
+                               x => x.learner_id == currentUser.acc_id && x.course_id == course.course_id
+                                              ).FirstOrDefault();
+            Console.WriteLine(course.course_id + " " + currentUser.acc_id);
             btnEditReview.Visible = false;
             btnAddReview.Visible = true;
         }

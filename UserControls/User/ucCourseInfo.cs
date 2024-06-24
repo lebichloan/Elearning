@@ -21,6 +21,7 @@ namespace Elearning.UserControls
         private Course course;
         private Account currentAccount = fLogin.currentAccount;
         private Register register;
+        private ucAdminReviews ucReviews;
         public ucCourseInfo()
         {
             InitializeComponent();
@@ -36,19 +37,9 @@ namespace Elearning.UserControls
                 );
             InitUI(course);
 
-            cmbRating.Items.Add("All");
-            for (int i = 5; i > 0; i--)
-            {
-                cmbRating.Items.Add(i.ToString());
-            }
-            cmbRating.SelectedIndex = 0;
-
-            listCourseReview = (
-                from review in Program.provider.CourseReviews
-                where review.Register.Course.course_id == this.course.course_id
-                select review
-                ).ToList();
-            LoadAllReview(listCourseReview);
+            ucReviews = new ucAdminReviews(course);
+            ucReviews.Dock = DockStyle.Fill;
+            conReviews.Controls.Add(ucReviews);
         }
 
         private void btnBackHome_Click(object sender, EventArgs e)
@@ -118,18 +109,6 @@ namespace Elearning.UserControls
             }
 
             picCourseImage.Image = Image.FromFile(Program.COURSES_IMG_PATH + course.course_image);
-            
-            lblCourseName.Text = course.course_name;
-            lblCourseName1.Text = course.course_name;
-
-            lblLecturerName.Text = course.lecturer;
-            lblLecturerName1.Text = course.lecturer;
-
-            lblDifficulty.Text = course.difficulty;
-            lblDifficulty1.Text = course.difficulty;
-
-            lblCategory.Text = course.category;
-            lblCategory1.Text = course.category;
 
             lblDescription.Text = course.course_description;
 
@@ -205,7 +184,6 @@ namespace Elearning.UserControls
                 }
             }
 
-            lblTotalModule.Text = String.Format("Total modules: {0} moudules", count.ToString());
 
             int countMandatoryTest = (
                 from test in Program.provider.CourseTests
@@ -227,54 +205,9 @@ namespace Elearning.UserControls
 
         }
 
-        private void LoadAllReview(List<CourseReview> listReviews)
+        private void panTop_Paint(object sender, PaintEventArgs e)
         {
-            tbAllReview.Controls.Clear();
-            tbAllReview.AutoScroll = true;
-            tbAllReview.VerticalScroll.Visible = true;
-            tbAllReview.VerticalScroll.Enabled = true;
-            tbAllReview.HorizontalScroll.Visible = false;
-            tbAllReview.HorizontalScroll.Enabled = false;
-            tbAllReview.RowCount = 0;
-            tbAllReview.RowStyles.Clear();
-            tbAllReview.RowStyles.Add(new RowStyle(SizeType.AutoSize));
 
-            foreach (CourseReview review in listReviews)
-            {
-                //itemReview item = new itemReview();
-                //item.Dock = DockStyle.Fill;
-                //item.avatarPath = Image.FromFile(Program.AVARTAR_PATH + currentAccount.avatar);
-                //item.name = review.Register.Account.fullname;
-                //item.review = review.content;
-                //item.datetime = review.review_time.ToString();
-                //item.SetRating(review.stars);
-
-                ucAdminReview item = new ucAdminReview(review);
-
-                tbAllReview.Controls.Add(item);
-            }
-        }
-
-        private void cmbRating_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbRating.SelectedIndex == 0)
-            {
-                listCourseReview = (
-                    from review in Program.provider.CourseReviews
-                    where review.Register.Course.course_id == course.course_id
-                    select review
-                    ).ToList();
-            }
-            else
-            {
-                listCourseReview = (
-                    from review in Program.provider.CourseReviews
-                    where review.stars == (6 - cmbRating.SelectedIndex)
-                    && review.Register.Course.course_id == course.course_id
-                    select review
-                    ).ToList();
-            }
-            LoadAllReview(listCourseReview);
         }
     }
 }

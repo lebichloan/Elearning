@@ -47,7 +47,7 @@
             this.panTop.Controls.Add(this.btnAll);
             this.panTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panTop.Location = new System.Drawing.Point(100, 0);
-            this.panTop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panTop.Margin = new System.Windows.Forms.Padding(2);
             this.panTop.Name = "panTop";
             this.panTop.Padding = new System.Windows.Forms.Padding(12, 8, 12, 8);
             this.panTop.Size = new System.Drawing.Size(681, 52);
@@ -56,7 +56,7 @@
             // btnNotYet
             // 
             this.btnNotYet.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnNotYet.BorderRadius = 10;
+            this.btnNotYet.BorderRadius = 15;
             this.btnNotYet.BorderThickness = 1;
             this.btnNotYet.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnNotYet.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -67,7 +67,7 @@
             this.btnNotYet.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNotYet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
             this.btnNotYet.Location = new System.Drawing.Point(220, 8);
-            this.btnNotYet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNotYet.Margin = new System.Windows.Forms.Padding(2);
             this.btnNotYet.Name = "btnNotYet";
             this.btnNotYet.Size = new System.Drawing.Size(96, 36);
             this.btnNotYet.TabIndex = 7;
@@ -78,7 +78,7 @@
             // 
             this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.siticonePanel2.Location = new System.Drawing.Point(212, 8);
-            this.siticonePanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticonePanel2.Margin = new System.Windows.Forms.Padding(2);
             this.siticonePanel2.Name = "siticonePanel2";
             this.siticonePanel2.Size = new System.Drawing.Size(8, 36);
             this.siticonePanel2.TabIndex = 6;
@@ -86,7 +86,7 @@
             // btnComplete
             // 
             this.btnComplete.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnComplete.BorderRadius = 10;
+            this.btnComplete.BorderRadius = 15;
             this.btnComplete.BorderThickness = 1;
             this.btnComplete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnComplete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -97,7 +97,7 @@
             this.btnComplete.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnComplete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
             this.btnComplete.Location = new System.Drawing.Point(116, 8);
-            this.btnComplete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnComplete.Margin = new System.Windows.Forms.Padding(2);
             this.btnComplete.Name = "btnComplete";
             this.btnComplete.Size = new System.Drawing.Size(96, 36);
             this.btnComplete.TabIndex = 5;
@@ -108,7 +108,7 @@
             // 
             this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.siticonePanel1.Location = new System.Drawing.Point(108, 8);
-            this.siticonePanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticonePanel1.Margin = new System.Windows.Forms.Padding(2);
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Size = new System.Drawing.Size(8, 36);
             this.siticonePanel1.TabIndex = 4;
@@ -116,7 +116,7 @@
             // btnAll
             // 
             this.btnAll.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
-            this.btnAll.BorderRadius = 10;
+            this.btnAll.BorderRadius = 15;
             this.btnAll.BorderThickness = 1;
             this.btnAll.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAll.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -127,7 +127,7 @@
             this.btnAll.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAll.ForeColor = System.Drawing.Color.White;
             this.btnAll.Location = new System.Drawing.Point(12, 8);
-            this.btnAll.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAll.Margin = new System.Windows.Forms.Padding(2);
             this.btnAll.Name = "btnAll";
             this.btnAll.Size = new System.Drawing.Size(96, 36);
             this.btnAll.TabIndex = 3;
@@ -144,7 +144,7 @@
             this.layoutMyCourses.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutMyCourses.Location = new System.Drawing.Point(100, 52);
             this.layoutMyCourses.Name = "layoutMyCourses";
-            this.layoutMyCourses.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.layoutMyCourses.Padding = new System.Windows.Forms.Padding(3);
             this.layoutMyCourses.RowCount = 2;
             this.layoutMyCourses.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.layoutMyCourses.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -158,7 +158,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.layoutMyCourses);
             this.Controls.Add(this.panTop);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ucMyElearning";
             this.Padding = new System.Windows.Forms.Padding(100, 0, 100, 0);
             this.Size = new System.Drawing.Size(881, 534);

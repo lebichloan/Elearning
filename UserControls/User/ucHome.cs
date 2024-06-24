@@ -78,18 +78,17 @@ namespace Elearning.UserControls
                 ucCourse.courseName = course.course_name;
                 var rating = course.stars != null ? Math.Round((decimal)course.stars, 2).ToString() + "/5" : "No reviews";
                 ucCourse.rating = rating;
-                ucCourse.price = course.price.ToString("N0") + "đ";
-                if (course.discount != null)
+                if (course.discount != 0)
                 {
+                    ucCourse.price = course.price.ToString("N0") + "đ";
                     int finalPrice = (int)(course.price - course.price * (int)course.discount / 100.0);
-                    ucCourse.finalPrice = finalPrice.ToString("N0") + "đ";
+                    ucCourse.finalPrice = finalPrice > 0 ? finalPrice.ToString("N0") + "đ" : "Free";
                     // cross out the original price
-                    ucCourse.priceFont = new Font(ucCourse.priceFont, FontStyle.Strikeout);
                 }
                 else
                 {
-                    ucCourse.finalPrice = "";
-                    ucCourse.priceFont = new Font(ucCourse.priceFont, FontStyle.Bold);
+                    ucCourse.finalPrice = course.price == 0 ? "Free" : course.price.ToString("N0") + "đ";
+                    ucCourse.price = "";
                 }
                 ucCourse.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
                 layoutCourses.Controls.Add(ucCourse);
@@ -111,18 +110,17 @@ namespace Elearning.UserControls
                 ucCourse.courseName = course.course_name;
                 var rating = course.stars != null ? Math.Round((decimal)course.stars, 2).ToString() + "/5" : "No reviews";
                 ucCourse.rating = rating;
-                ucCourse.price = course.price.ToString("N0") + "đ";
                 if (course.discount != 0)
                 {
+                    ucCourse.price = course.price.ToString("N0") + "đ";
                     int finalPrice = (int)(course.price - course.price * (int)course.discount / 100.0);
-                    ucCourse.finalPrice = finalPrice.ToString("N0") + "đ";
+                    ucCourse.finalPrice = finalPrice > 0 ? finalPrice.ToString("N0") + "đ" : "Free";
                     // cross out the original price
-                    ucCourse.priceFont = new Font(ucCourse.priceFont, FontStyle.Strikeout);
                 }
                 else
                 {
-                    ucCourse.finalPrice = "";
-                    ucCourse.priceFont = new Font(ucCourse.priceFont, FontStyle.Bold);
+                    ucCourse.finalPrice = course.price == 0 ? "Free" : course.price.ToString("N0") + "đ";
+                    ucCourse.price = "";
                 }
             }
 
@@ -139,18 +137,17 @@ namespace Elearning.UserControls
                     ucCourse.courseName = course.course_name;
                     var rating = course.stars != null ? Math.Round((decimal)course.stars, 2).ToString() + "/5" : "No reviews";
                     ucCourse.rating = rating;
-                    ucCourse.price = course.price.ToString("N0") + "đ";
                     if (course.discount != 0)
                     {
+                        ucCourse.price = course.price.ToString("N0") + "đ";
                         int finalPrice = (int)(course.price - course.price * (int)course.discount / 100.0);
-                        ucCourse.finalPrice = finalPrice.ToString("N0") + "đ";
+                        ucCourse.finalPrice = finalPrice > 0 ? finalPrice.ToString("N0") + "đ" : "Free";
                         // cross out the original price
-                        ucCourse.priceFont = new Font(ucCourse.priceFont, FontStyle.Strikeout);
                     }
                     else
                     {
-                        ucCourse.finalPrice = "";
-                        ucCourse.priceFont = new Font(ucCourse.priceFont, FontStyle.Bold);
+                        ucCourse.finalPrice = course.price == 0 ? "Free" : course.price.ToString("N0") + "đ";
+                        ucCourse.price = "";
                     }
                     ucCourse.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
                     layoutCourses.Controls.Add(ucCourse);
@@ -328,6 +325,12 @@ namespace Elearning.UserControls
                     btnClear.Visible = false;
                 }
             }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            Program.provider = new ELearningDbEntities();
+            Reload();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)

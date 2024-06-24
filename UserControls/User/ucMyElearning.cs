@@ -326,18 +326,17 @@ namespace Elearning.UserControls.User
                     ucCourse.rating = "No reviews";
                 }
 
-                ucCourse.price = course.price.ToString("N0");
-                if (course.discount != null)
+                if (course.discount != 0)
                 {
+                    ucCourse.price = course.price.ToString("N0") + "đ";
                     int finalPrice = (int)(course.price - course.price * (int)course.discount / 100.0);
                     ucCourse.finalPrice = finalPrice.ToString("N0") + "đ";
                     // cross out the original price
-                    ucCourse.priceFont = new Font(ucCourse.priceFont, FontStyle.Strikeout);
                 }
                 else
                 {
-                    ucCourse.finalPrice = "";
-                    ucCourse.priceFont = new Font(ucCourse.priceFont, FontStyle.Bold);
+                    ucCourse.finalPrice = course.price.ToString("N0") + "đ";
+                    ucCourse.price = "";
                 }
                 ucCourse.viewDetailsClicked += ucCoursePreview_viewDetailsClicked;
                 ucCourse.btnViewCertificateClick += ucCoursePreview_ViewCertificateClick;

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ELearningDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ELearningDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Account">
           <Key>
             <PropertyRef Name="acc_id" />
@@ -78,6 +78,7 @@
           <Property Name="score_to_pass" Type="int" Nullable="false" />
           <Property Name="display_type" Type="int" />
           <Property Name="max_attempt" Type="int" />
+          <Property Name="shuffle" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Register">
           <Key>
@@ -90,8 +91,8 @@
           <Property Name="register_status" Type="int" Nullable="false" />
           <Property Name="completion_score" Type="float" />
           <Property Name="course_certificate" Type="nvarchar(max)" />
-          <Property Name="time_finish" Type="datetime" />
           <Property Name="paid" Type="money" Nullable="false" />
+          <Property Name="time_finish" Type="datetime" />
         </EntityType>
         <EntityType Name="TestQuestion">
           <Key>
@@ -307,8 +308,7 @@
             <End Role="TestResult" EntitySet="TestResult" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ELearningDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -398,6 +398,7 @@
           <NavigationProperty Name="CourseResource" Relationship="Self.FK__CourseTes__resou__47DBAE45" FromRole="CourseTest" ToRole="CourseResource" />
           <NavigationProperty Name="TestQuestions" Relationship="Self.FK__TestQuest__test___4AB81AF0" FromRole="CourseTest" ToRole="TestQuestion" />
           <NavigationProperty Name="TestResults" Relationship="Self.FK__TestResul__test___5629CD9C" FromRole="CourseTest" ToRole="TestResult" />
+          <Property Name="shuffle" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="Register">
           <Key>
@@ -709,6 +710,7 @@
           <EntitySetMapping Name="CourseTests">
             <EntityTypeMapping TypeName="ELearningDbModel.CourseTest">
               <MappingFragment StoreEntitySet="CourseTest">
+                <ScalarProperty Name="shuffle" ColumnName="shuffle" />
                 <ScalarProperty Name="test_id" ColumnName="test_id" />
                 <ScalarProperty Name="resource_id" ColumnName="resource_id" />
                 <ScalarProperty Name="mandatory" ColumnName="mandatory" />

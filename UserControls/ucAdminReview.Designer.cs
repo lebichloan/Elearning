@@ -30,31 +30,36 @@
         {
             this.siticoneContainerControl1 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.lbName = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.pbAvatar = new Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox();
             this.siticoneContainerControl2 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
+            this.pbAvatar = new Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox();
+            this.siticoneContainerControl3 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.siticoneContainerControl4 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.tbContent = new System.Windows.Forms.RichTextBox();
-            this.siticoneContainerControl3 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
+            this.siticoneContainerControl5 = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
             this.lbDate = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.lbStar = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.siticonePictureBox1 = new Siticone.Desktop.UI.WinForms.SiticonePictureBox();
             this.siticoneContainerControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.siticoneContainerControl2.SuspendLayout();
-            this.siticoneContainerControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.siticoneContainerControl3.SuspendLayout();
+            this.siticoneContainerControl4.SuspendLayout();
+            this.siticoneContainerControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // siticoneContainerControl1
             // 
-            this.siticoneContainerControl1.Controls.Add(this.lbName);
-            this.siticoneContainerControl1.Controls.Add(this.pbAvatar);
-            this.siticoneContainerControl1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.siticoneContainerControl1.BorderColor = System.Drawing.Color.Silver;
+            this.siticoneContainerControl1.BorderRadius = 8;
+            this.siticoneContainerControl1.BorderThickness = 1;
+            this.siticoneContainerControl1.Controls.Add(this.siticoneContainerControl3);
+            this.siticoneContainerControl1.Controls.Add(this.siticoneContainerControl2);
+            this.siticoneContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.siticoneContainerControl1.Location = new System.Drawing.Point(0, 0);
             this.siticoneContainerControl1.Name = "siticoneContainerControl1";
-            this.siticoneContainerControl1.Padding = new System.Windows.Forms.Padding(10, 22, 10, 22);
-            this.siticoneContainerControl1.Size = new System.Drawing.Size(139, 89);
+            this.siticoneContainerControl1.Padding = new System.Windows.Forms.Padding(3);
+            this.siticoneContainerControl1.Size = new System.Drawing.Size(645, 113);
             this.siticoneContainerControl1.TabIndex = 0;
             this.siticoneContainerControl1.Text = "siticoneContainerControl1";
             // 
@@ -63,12 +68,25 @@
             this.lbName.AutoSize = false;
             this.lbName.BackColor = System.Drawing.Color.Transparent;
             this.lbName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbName.Location = new System.Drawing.Point(57, 22);
+            this.lbName.Font = new System.Drawing.Font("Segoe UI Variable Text", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.Location = new System.Drawing.Point(77, 22);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(72, 45);
+            this.lbName.Size = new System.Drawing.Size(96, 63);
             this.lbName.TabIndex = 1;
             this.lbName.Text = "Name";
             this.lbName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // siticoneContainerControl2
+            // 
+            this.siticoneContainerControl2.Controls.Add(this.lbName);
+            this.siticoneContainerControl2.Controls.Add(this.pbAvatar);
+            this.siticoneContainerControl2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.siticoneContainerControl2.Location = new System.Drawing.Point(3, 3);
+            this.siticoneContainerControl2.Name = "siticoneContainerControl2";
+            this.siticoneContainerControl2.Padding = new System.Windows.Forms.Padding(10, 22, 10, 22);
+            this.siticoneContainerControl2.Size = new System.Drawing.Size(183, 107);
+            this.siticoneContainerControl2.TabIndex = 2;
+            this.siticoneContainerControl2.Text = "siticoneContainerControl2";
             // 
             // pbAvatar
             // 
@@ -78,20 +96,20 @@
             this.pbAvatar.Location = new System.Drawing.Point(10, 22);
             this.pbAvatar.Name = "pbAvatar";
             this.pbAvatar.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
-            this.pbAvatar.Size = new System.Drawing.Size(47, 45);
+            this.pbAvatar.Size = new System.Drawing.Size(67, 63);
             this.pbAvatar.TabIndex = 0;
             this.pbAvatar.TabStop = false;
             // 
-            // siticoneContainerControl2
+            // siticoneContainerControl3
             // 
-            this.siticoneContainerControl2.Controls.Add(this.siticoneContainerControl4);
-            this.siticoneContainerControl2.Controls.Add(this.siticoneContainerControl3);
-            this.siticoneContainerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.siticoneContainerControl2.Location = new System.Drawing.Point(139, 0);
-            this.siticoneContainerControl2.Name = "siticoneContainerControl2";
-            this.siticoneContainerControl2.Size = new System.Drawing.Size(599, 89);
-            this.siticoneContainerControl2.TabIndex = 1;
-            this.siticoneContainerControl2.Text = "siticoneContainerControl2";
+            this.siticoneContainerControl3.Controls.Add(this.siticoneContainerControl4);
+            this.siticoneContainerControl3.Controls.Add(this.siticoneContainerControl5);
+            this.siticoneContainerControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.siticoneContainerControl3.Location = new System.Drawing.Point(186, 3);
+            this.siticoneContainerControl3.Name = "siticoneContainerControl3";
+            this.siticoneContainerControl3.Size = new System.Drawing.Size(456, 107);
+            this.siticoneContainerControl3.TabIndex = 3;
+            this.siticoneContainerControl3.Text = "siticoneContainerControl2";
             // 
             // siticoneContainerControl4
             // 
@@ -100,7 +118,7 @@
             this.siticoneContainerControl4.Location = new System.Drawing.Point(0, 30);
             this.siticoneContainerControl4.Name = "siticoneContainerControl4";
             this.siticoneContainerControl4.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.siticoneContainerControl4.Size = new System.Drawing.Size(599, 59);
+            this.siticoneContainerControl4.Size = new System.Drawing.Size(456, 77);
             this.siticoneContainerControl4.TabIndex = 1;
             this.siticoneContainerControl4.Text = "siticoneContainerControl4";
             // 
@@ -108,37 +126,37 @@
             // 
             this.tbContent.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbContent.Font = new System.Drawing.Font("Segoe UI Variable Text", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbContent.Font = new System.Drawing.Font("Segoe UI Variable Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbContent.Location = new System.Drawing.Point(0, 0);
             this.tbContent.Name = "tbContent";
-            this.tbContent.Size = new System.Drawing.Size(579, 59);
+            this.tbContent.Size = new System.Drawing.Size(436, 77);
             this.tbContent.TabIndex = 0;
             this.tbContent.Text = "This course is simple and easy to understand. It provides the base for upcoming c" +
     "ourses and tracks for the Data Analytics world. Concept understanding was amazin" +
     "g!! Thank you. Keep up the great work";
             // 
-            // siticoneContainerControl3
+            // siticoneContainerControl5
             // 
-            this.siticoneContainerControl3.Controls.Add(this.lbDate);
-            this.siticoneContainerControl3.Controls.Add(this.lbStar);
-            this.siticoneContainerControl3.Controls.Add(this.siticonePictureBox1);
-            this.siticoneContainerControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.siticoneContainerControl3.Location = new System.Drawing.Point(0, 0);
-            this.siticoneContainerControl3.Name = "siticoneContainerControl3";
-            this.siticoneContainerControl3.Padding = new System.Windows.Forms.Padding(0, 5, 20, 0);
-            this.siticoneContainerControl3.Size = new System.Drawing.Size(599, 30);
-            this.siticoneContainerControl3.TabIndex = 0;
-            this.siticoneContainerControl3.Text = "siticoneContainerControl3";
+            this.siticoneContainerControl5.Controls.Add(this.lbDate);
+            this.siticoneContainerControl5.Controls.Add(this.lbStar);
+            this.siticoneContainerControl5.Controls.Add(this.siticonePictureBox1);
+            this.siticoneContainerControl5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.siticoneContainerControl5.Location = new System.Drawing.Point(0, 0);
+            this.siticoneContainerControl5.Name = "siticoneContainerControl5";
+            this.siticoneContainerControl5.Padding = new System.Windows.Forms.Padding(0, 5, 20, 0);
+            this.siticoneContainerControl5.Size = new System.Drawing.Size(456, 30);
+            this.siticoneContainerControl5.TabIndex = 0;
+            this.siticoneContainerControl5.Text = "siticoneContainerControl3";
             // 
             // lbDate
             // 
             this.lbDate.AutoSize = false;
             this.lbDate.BackColor = System.Drawing.Color.Transparent;
             this.lbDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbDate.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDate.Font = new System.Drawing.Font("Segoe UI Variable Display", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDate.Location = new System.Drawing.Point(39, 5);
             this.lbDate.Name = "lbDate";
-            this.lbDate.Size = new System.Drawing.Size(540, 25);
+            this.lbDate.Size = new System.Drawing.Size(397, 25);
             this.lbDate.TabIndex = 2;
             this.lbDate.Text = "- Reviewed on Nov 1, 2024";
             this.lbDate.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -148,7 +166,7 @@
             this.lbStar.AutoSize = false;
             this.lbStar.BackColor = System.Drawing.Color.Transparent;
             this.lbStar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbStar.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStar.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStar.Location = new System.Drawing.Point(22, 5);
             this.lbStar.Name = "lbStar";
             this.lbStar.Size = new System.Drawing.Size(17, 25);
@@ -178,17 +196,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.siticoneContainerControl2);
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.siticoneContainerControl1);
             this.Name = "ucAdminReview";
-            this.Size = new System.Drawing.Size(738, 89);
+            this.Size = new System.Drawing.Size(645, 113);
             this.siticoneContainerControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.siticoneContainerControl2.ResumeLayout(false);
-            this.siticoneContainerControl4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.siticoneContainerControl3.ResumeLayout(false);
+            this.siticoneContainerControl4.ResumeLayout(false);
+            this.siticoneContainerControl5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -197,13 +214,14 @@
         #endregion
 
         private Siticone.Desktop.UI.WinForms.SiticoneContainerControl siticoneContainerControl1;
-        private Siticone.Desktop.UI.WinForms.SiticoneContainerControl siticoneContainerControl2;
         private Siticone.Desktop.UI.WinForms.SiticoneContainerControl siticoneContainerControl3;
-        private Siticone.Desktop.UI.WinForms.SiticonePictureBox siticonePictureBox1;
         private Siticone.Desktop.UI.WinForms.SiticoneContainerControl siticoneContainerControl4;
         private System.Windows.Forms.RichTextBox tbContent;
+        private Siticone.Desktop.UI.WinForms.SiticoneContainerControl siticoneContainerControl5;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel lbDate;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel lbStar;
+        private Siticone.Desktop.UI.WinForms.SiticonePictureBox siticonePictureBox1;
+        private Siticone.Desktop.UI.WinForms.SiticoneContainerControl siticoneContainerControl2;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel lbName;
         private Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox pbAvatar;
     }

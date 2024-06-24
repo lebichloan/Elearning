@@ -557,9 +557,9 @@
             // flpReviews
             // 
             this.flpReviews.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpReviews.Location = new System.Drawing.Point(324, 54);
+            this.flpReviews.Location = new System.Drawing.Point(344, 54);
             this.flpReviews.Name = "flpReviews";
-            this.flpReviews.Size = new System.Drawing.Size(892, 500);
+            this.flpReviews.Size = new System.Drawing.Size(872, 500);
             this.flpReviews.TabIndex = 2;
             // 
             // siticoneVSeparator1
@@ -567,7 +567,7 @@
             this.siticoneVSeparator1.Dock = System.Windows.Forms.DockStyle.Left;
             this.siticoneVSeparator1.Location = new System.Drawing.Point(291, 54);
             this.siticoneVSeparator1.Name = "siticoneVSeparator1";
-            this.siticoneVSeparator1.Size = new System.Drawing.Size(33, 500);
+            this.siticoneVSeparator1.Size = new System.Drawing.Size(53, 500);
             this.siticoneVSeparator1.TabIndex = 3;
             // 
             // ucAdminReviews

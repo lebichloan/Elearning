@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucCoursePreview));
             this.conInfo = new Siticone.Desktop.UI.WinForms.SiticoneContainerControl();
-            this.lblFinalPrice = new System.Windows.Forms.Label();
+            this.lbPrice = new System.Windows.Forms.Label();
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.lblStar = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblPrice = new System.Windows.Forms.Label();
+            this.lbFinalPrice = new System.Windows.Forms.Label();
             this.btnViewDetails = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.tbButton = new System.Windows.Forms.TableLayoutPanel();
@@ -54,7 +54,7 @@
             this.conInfo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(202)))));
             this.conInfo.BorderRadius = 8;
             this.conInfo.BorderThickness = 1;
-            this.conInfo.Controls.Add(this.lblFinalPrice);
+            this.conInfo.Controls.Add(this.lbPrice);
             this.conInfo.Controls.Add(this.siticonePanel2);
             this.conInfo.Controls.Add(this.btnViewDetails);
             this.conInfo.Controls.Add(this.siticonePanel1);
@@ -72,21 +72,21 @@
             this.conInfo.TabIndex = 1;
             this.conInfo.Text = "siticoneContainerControl1";
             // 
-            // lblFinalPrice
+            // lbPrice
             // 
-            this.lblFinalPrice.AutoSize = true;
-            this.lblFinalPrice.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblFinalPrice.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFinalPrice.Location = new System.Drawing.Point(201, 267);
-            this.lblFinalPrice.Name = "lblFinalPrice";
-            this.lblFinalPrice.Size = new System.Drawing.Size(97, 26);
-            this.lblFinalPrice.TabIndex = 16;
-            this.lblFinalPrice.Text = "final price";
+            this.lbPrice.AutoSize = true;
+            this.lbPrice.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbPrice.Font = new System.Drawing.Font("Segoe UI Variable Display", 9.75F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPrice.Location = new System.Drawing.Point(237, 267);
+            this.lbPrice.Name = "lbPrice";
+            this.lbPrice.Size = new System.Drawing.Size(61, 17);
+            this.lbPrice.TabIndex = 16;
+            this.lbPrice.Text = "pre price";
             // 
             // siticonePanel2
             // 
             this.siticonePanel2.Controls.Add(this.siticonePanel3);
-            this.siticonePanel2.Controls.Add(this.lblPrice);
+            this.siticonePanel2.Controls.Add(this.lbFinalPrice);
             this.siticonePanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticonePanel2.Location = new System.Drawing.Point(12, 236);
             this.siticonePanel2.Margin = new System.Windows.Forms.Padding(2);
@@ -130,16 +130,16 @@
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
-            // lblPrice
+            // lbFinalPrice
             // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblPrice.Font = new System.Drawing.Font("Segoe UI Variable Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(286, 0);
-            this.lblPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(0, 26);
-            this.lblPrice.TabIndex = 8;
+            this.lbFinalPrice.AutoSize = true;
+            this.lbFinalPrice.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbFinalPrice.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFinalPrice.Location = new System.Drawing.Point(286, 0);
+            this.lbFinalPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbFinalPrice.Name = "lbFinalPrice";
+            this.lbFinalPrice.Size = new System.Drawing.Size(0, 26);
+            this.lbFinalPrice.TabIndex = 8;
             // 
             // btnViewDetails
             // 
@@ -259,7 +259,7 @@
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel3;
         private System.Windows.Forms.Label lblStar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.Label lblFinalPrice;
+        private System.Windows.Forms.Label lbFinalPrice;
+        private System.Windows.Forms.Label lbPrice;
     }
 }

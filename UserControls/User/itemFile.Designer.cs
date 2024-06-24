@@ -57,16 +57,18 @@
             // 
             // panContainer
             // 
-            this.panContainer.BorderColor = System.Drawing.Color.Black;
+            this.panContainer.BackColor = System.Drawing.SystemColors.Control;
+            this.panContainer.BorderColor = System.Drawing.Color.Silver;
+            this.panContainer.BorderRadius = 10;
             this.panContainer.BorderThickness = 1;
             this.panContainer.Controls.Add(this.siticonePanel1);
             this.panContainer.Controls.Add(this.panDownload);
             this.panContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panContainer.Location = new System.Drawing.Point(10, 10);
+            this.panContainer.Location = new System.Drawing.Point(8, 8);
             this.panContainer.Margin = new System.Windows.Forms.Padding(2);
             this.panContainer.Name = "panContainer";
-            this.panContainer.Padding = new System.Windows.Forms.Padding(5);
-            this.panContainer.Size = new System.Drawing.Size(580, 880);
+            this.panContainer.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panContainer.Size = new System.Drawing.Size(464, 704);
             this.panContainer.TabIndex = 0;
             // 
             // siticonePanel1
@@ -76,20 +78,20 @@
             this.siticonePanel1.Controls.Add(this.lblLinkFile);
             this.siticonePanel1.Controls.Add(this.lblResourceName);
             this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.siticonePanel1.Location = new System.Drawing.Point(5, 5);
+            this.siticonePanel1.Location = new System.Drawing.Point(4, 4);
+            this.siticonePanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.siticonePanel1.Name = "siticonePanel1";
-            this.siticonePanel1.Padding = new System.Windows.Forms.Padding(25);
-            this.siticonePanel1.Size = new System.Drawing.Size(510, 870);
+            this.siticonePanel1.Padding = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.siticonePanel1.Size = new System.Drawing.Size(408, 696);
             this.siticonePanel1.TabIndex = 11;
             // 
             // pdfViewer
             // 
             this.pdfViewer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pdfViewer.Location = new System.Drawing.Point(25, 158);
-            this.pdfViewer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pdfViewer.Location = new System.Drawing.Point(20, 127);
             this.pdfViewer.Name = "pdfViewer";
             this.pdfViewer.ShowToolbar = false;
-            this.pdfViewer.Size = new System.Drawing.Size(460, 687);
+            this.pdfViewer.Size = new System.Drawing.Size(368, 549);
             this.pdfViewer.TabIndex = 15;
             // 
             // panToolBar
@@ -100,21 +102,22 @@
             this.panToolBar.Controls.Add(this.btnZoomOut);
             this.panToolBar.Controls.Add(this.btnZoomIn);
             this.panToolBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panToolBar.Location = new System.Drawing.Point(25, 108);
+            this.panToolBar.Location = new System.Drawing.Point(20, 87);
+            this.panToolBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panToolBar.Name = "panToolBar";
-            this.panToolBar.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.panToolBar.Size = new System.Drawing.Size(460, 50);
+            this.panToolBar.Padding = new System.Windows.Forms.Padding(8, 4, 8, 4);
+            this.panToolBar.Size = new System.Drawing.Size(368, 40);
             this.panToolBar.TabIndex = 12;
             // 
             // btnPre
             // 
             this.btnPre.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnPre.Image = ((System.Drawing.Image)(resources.GetObject("btnPre.Image")));
-            this.btnPre.Location = new System.Drawing.Point(274, 5);
-            this.btnPre.Margin = new System.Windows.Forms.Padding(5, 5, 2, 2);
+            this.btnPre.Location = new System.Drawing.Point(219, 4);
+            this.btnPre.Margin = new System.Windows.Forms.Padding(4, 4, 2, 2);
             this.btnPre.Name = "btnPre";
-            this.btnPre.Padding = new System.Windows.Forms.Padding(5);
-            this.btnPre.Size = new System.Drawing.Size(40, 40);
+            this.btnPre.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPre.Size = new System.Drawing.Size(32, 32);
             this.btnPre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnPre.TabIndex = 12;
             this.btnPre.TabStop = false;
@@ -124,10 +127,10 @@
             // 
             this.lblPage.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblPage.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPage.Location = new System.Drawing.Point(314, 5);
+            this.lblPage.Location = new System.Drawing.Point(251, 4);
             this.lblPage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPage.Name = "lblPage";
-            this.lblPage.Size = new System.Drawing.Size(96, 40);
+            this.lblPage.Size = new System.Drawing.Size(77, 32);
             this.lblPage.TabIndex = 11;
             this.lblPage.Text = "label1";
             this.lblPage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -136,11 +139,11 @@
             // 
             this.btnNext.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
-            this.btnNext.Location = new System.Drawing.Point(410, 5);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(5, 5, 2, 2);
+            this.btnNext.Location = new System.Drawing.Point(328, 4);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(4, 4, 2, 2);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Padding = new System.Windows.Forms.Padding(5);
-            this.btnNext.Size = new System.Drawing.Size(40, 40);
+            this.btnNext.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNext.Size = new System.Drawing.Size(32, 32);
             this.btnNext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnNext.TabIndex = 5;
             this.btnNext.TabStop = false;
@@ -149,11 +152,11 @@
             // btnZoomOut
             // 
             this.btnZoomOut.Image = ((System.Drawing.Image)(resources.GetObject("btnZoomOut.Image")));
-            this.btnZoomOut.Location = new System.Drawing.Point(57, 5);
-            this.btnZoomOut.Margin = new System.Windows.Forms.Padding(5, 5, 2, 2);
+            this.btnZoomOut.Location = new System.Drawing.Point(46, 4);
+            this.btnZoomOut.Margin = new System.Windows.Forms.Padding(4, 4, 2, 2);
             this.btnZoomOut.Name = "btnZoomOut";
-            this.btnZoomOut.Padding = new System.Windows.Forms.Padding(5);
-            this.btnZoomOut.Size = new System.Drawing.Size(40, 40);
+            this.btnZoomOut.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnZoomOut.Size = new System.Drawing.Size(32, 32);
             this.btnZoomOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnZoomOut.TabIndex = 4;
             this.btnZoomOut.TabStop = false;
@@ -163,11 +166,11 @@
             // 
             this.btnZoomIn.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnZoomIn.Image = ((System.Drawing.Image)(resources.GetObject("btnZoomIn.Image")));
-            this.btnZoomIn.Location = new System.Drawing.Point(10, 5);
-            this.btnZoomIn.Margin = new System.Windows.Forms.Padding(5, 5, 2, 2);
+            this.btnZoomIn.Location = new System.Drawing.Point(8, 4);
+            this.btnZoomIn.Margin = new System.Windows.Forms.Padding(4, 4, 2, 2);
             this.btnZoomIn.Name = "btnZoomIn";
-            this.btnZoomIn.Padding = new System.Windows.Forms.Padding(5);
-            this.btnZoomIn.Size = new System.Drawing.Size(40, 40);
+            this.btnZoomIn.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnZoomIn.Size = new System.Drawing.Size(32, 32);
             this.btnZoomIn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnZoomIn.TabIndex = 3;
             this.btnZoomIn.TabStop = false;
@@ -179,11 +182,11 @@
             this.lblLinkFile.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblLinkFile.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLinkFile.Location = new System.Drawing.Point(25, 75);
+            this.lblLinkFile.Location = new System.Drawing.Point(20, 60);
             this.lblLinkFile.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLinkFile.Name = "lblLinkFile";
-            this.lblLinkFile.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.lblLinkFile.Size = new System.Drawing.Size(56, 33);
+            this.lblLinkFile.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
+            this.lblLinkFile.Size = new System.Drawing.Size(46, 27);
             this.lblLinkFile.TabIndex = 10;
             this.lblLinkFile.Text = "label1";
             // 
@@ -191,10 +194,10 @@
             // 
             this.lblResourceName.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblResourceName.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResourceName.Location = new System.Drawing.Point(25, 25);
+            this.lblResourceName.Location = new System.Drawing.Point(20, 20);
             this.lblResourceName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblResourceName.Name = "lblResourceName";
-            this.lblResourceName.Size = new System.Drawing.Size(460, 50);
+            this.lblResourceName.Size = new System.Drawing.Size(368, 40);
             this.lblResourceName.TabIndex = 9;
             this.lblResourceName.Text = "label1";
             // 
@@ -202,20 +205,20 @@
             // 
             this.panDownload.Controls.Add(this.btnDownload);
             this.panDownload.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panDownload.Location = new System.Drawing.Point(515, 5);
+            this.panDownload.Location = new System.Drawing.Point(412, 4);
             this.panDownload.Margin = new System.Windows.Forms.Padding(2);
             this.panDownload.Name = "panDownload";
-            this.panDownload.Size = new System.Drawing.Size(60, 870);
+            this.panDownload.Size = new System.Drawing.Size(48, 696);
             this.panDownload.TabIndex = 6;
             // 
             // btnDownload
             // 
             this.btnDownload.Image = ((System.Drawing.Image)(resources.GetObject("btnDownload.Image")));
-            this.btnDownload.Location = new System.Drawing.Point(10, 40);
+            this.btnDownload.Location = new System.Drawing.Point(8, 32);
             this.btnDownload.Margin = new System.Windows.Forms.Padding(2);
             this.btnDownload.Name = "btnDownload";
-            this.btnDownload.Padding = new System.Windows.Forms.Padding(10);
-            this.btnDownload.Size = new System.Drawing.Size(40, 40);
+            this.btnDownload.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.btnDownload.Size = new System.Drawing.Size(32, 32);
             this.btnDownload.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnDownload.TabIndex = 3;
             this.btnDownload.TabStop = false;
@@ -228,14 +231,14 @@
             // 
             // itemFile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panContainer);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "itemFile";
-            this.Padding = new System.Windows.Forms.Padding(10);
-            this.Size = new System.Drawing.Size(600, 900);
+            this.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.Size = new System.Drawing.Size(480, 720);
             this.panContainer.ResumeLayout(false);
             this.siticonePanel1.ResumeLayout(false);
             this.siticonePanel1.PerformLayout();

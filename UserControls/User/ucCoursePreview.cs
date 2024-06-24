@@ -28,8 +28,14 @@ namespace Elearning.UserControls
 
         public string price
         {
-            get { return lblPrice.Text; }
-            set { lblPrice.Text = value; }
+            get { return lbPrice.Text; }
+            set { lbPrice.Text = value; }
+        }
+
+        public string finalPrice
+        {
+            get { return lbFinalPrice.Text; }
+            set { lbFinalPrice.Text = value; }
         }
 
         public string finalPrice
